@@ -1,15 +1,15 @@
 {
-  "name": "eth-lightwallet",
-  "version": "2.4.1",
-  "description": "A lightweight ethereum javascript wallet.",
+  "name": "eth-signer",
+  "version": "0.1.0",
+  "description": "A lightweight ethereum javascript signer.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ConsenSys/eth-lightwallet.git"
+    "url": "https://github.com/ConsenSys/eth-signer.git"
   },
   "scripts": {
-    "build-js": "browserify index.js --s lightwallet | derequire | uglifyjs -c > dist/lightwallet.min.js",
-    "build-dev": "browserify index.js --s lightwallet | derequire > dist/lightwallet.js",
+    "build-js": "browserify index.js --s EthSigner | derequire | uglifyjs -c > dist/eth-signer.min.js",
+    "build-dev": "browserify index.js --s EthSigner | derequire > dist/eth-signer.js",
     "test": "./node_modules/.bin/mocha --reporter spec --recursive",
     "autotest": "./node_modules/.bin/supervisor -q -n exit -x ./node_modules/.bin/mocha -- --reporter spec --recursive",
     "coverage": "istanbul cover _mocha -- -R spec; open coverage/lcov-report/index.html"
@@ -49,6 +49,10 @@
     {
       "name": "John McDowall",
       "email": "john@kantan.io"
+    },
+    {
+      "name": "Pelle Braendgaard",
+      "email": "pelleb@gmail.com"
     }
   ],
   "license": "MIT",
