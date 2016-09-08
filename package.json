@@ -8,8 +8,10 @@
     "url": "https://github.com/ConsenSys/eth-signer.git"
   },
   "scripts": {
-    "build-js": "browserify index.js --s EthSigner | derequire | uglifyjs -c > dist/eth-signer.min.js",
-    "build-dev": "browserify index.js --s EthSigner | derequire > dist/eth-signer.js",
+    "build-js": "./node_modules/.bin/browserify index.js --s EthSigner | ./node_modules/.bin/derequire | ./node_modules/.bin/babili --minified > dist/eth-signer.min.js",
+    "build-dev": "./node_modules/.bin/browserify index.js --s EthSigner | ./node_modules/.bin/derequire > dist/eth-signer.js",
+    "build-simple": "./node_modules/.bin/browserify simple.js -i scrypt-async -i bitcore-mnemonic  -i bitcore-lib --s EthSigner | ./node_modules/.bin/derequire > dist/eth-signer-simple.js",
+    "build-simple-js": "./node_modules/.bin/browserify simple.js -i scrypt-async -i bitcore-mnemonic  -i bitcore-lib --s EthSigner | ./node_modules/.bin/derequire  | ./node_modules/.bin/babili --minified > dist/eth-signer-simple.min.js",
     "test": "./node_modules/.bin/mocha --reporter spec --recursive",
     "autotest": "./node_modules/.bin/supervisor -q -n exit -x ./node_modules/.bin/mocha -- --reporter spec --recursive",
     "coverage": "istanbul cover _mocha -- -R spec; open coverage/lcov-report/index.html"
@@ -61,7 +63,6 @@
     "bitcore-lib": "^0.13.19",
     "bitcore-mnemonic": "^1.1.1",
     "buffer": "^4.9.1",
-    "crypto-js": "^3.1.6",
     "elliptic": "^6.3.1",
     "ethereumjs-tx": "^1.1.2",
     "ethereumjs-util": "^4.5.0",
@@ -74,6 +75,7 @@
   },
   "devDependencies": {
     "async": "^1.4.2",
+    "babili": "0.0.4",
     "bluebird": "^3.3.1",
     "browserify": "^13.1.0",
     "chai": "^3.0.0",

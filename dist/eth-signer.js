@@ -54,7 +54,7 @@ var KeyPair = {
 };
 module.exports = KeyPair;
 }).call(this,_dereq_("buffer").Buffer)
-},{"./random":4,"buffer":142,"ethereumjs-tx":215,"ethereumjs-util":216}],3:[function(_dereq_,module,exports){
+},{"./random":4,"buffer":142,"ethereumjs-tx":214,"ethereumjs-util":215}],3:[function(_dereq_,module,exports){
 var Random = _dereq_('./random');
 var Mnemonic = _dereq_('bitcore-mnemonic');
 var util = _dereq_("ethereumjs-util");
@@ -84,7 +84,7 @@ var Phrase = {
   toHDPrivateKey: toHDPrivateKey
 };
 module.exports = Phrase;
-},{"./random":4,"bitcore-mnemonic":100,"ethereumjs-util":216}],4:[function(_dereq_,module,exports){
+},{"./random":4,"bitcore-mnemonic":101,"ethereumjs-util":215}],4:[function(_dereq_,module,exports){
 (function (Buffer){
 var nacl = _dereq_('tweetnacl');
 
@@ -101,7 +101,7 @@ Random.randomBytes = Random.naclRandom = function(length, callback) {
 module.exports = Random;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"tweetnacl":283}],5:[function(_dereq_,module,exports){
+},{"buffer":142,"tweetnacl":282}],5:[function(_dereq_,module,exports){
 var Transaction = _dereq_('ethereumjs-tx');
 var util = _dereq_("ethereumjs-util");
 var SimpleSigner = _dereq_('./simple_signer');
@@ -135,7 +135,7 @@ function bip44path(index) {
   return ["m","44'", "60'", "0'","0", index].join("/");
 }
 module.exports = HDSigner;
-},{"./generators/key_pair":2,"./simple_signer":8,"bitcore-lib":27,"ethereumjs-tx":215,"ethereumjs-util":216}],6:[function(_dereq_,module,exports){
+},{"./generators/key_pair":2,"./simple_signer":8,"bitcore-lib":28,"ethereumjs-tx":214,"ethereumjs-util":215}],6:[function(_dereq_,module,exports){
 (function (Buffer){
 var Random = _dereq_('./generators/random');
 var Transaction = _dereq_('ethereumjs-tx');
@@ -177,7 +177,7 @@ ProxySigner.prototype.signRawTx = function(rawTx, callback) {
 
 module.exports = ProxySigner;
 }).call(this,_dereq_("buffer").Buffer)
-},{"./generators/random":4,"./txutils":9,"buffer":142,"ethereumjs-tx":215,"ethereumjs-util":216}],7:[function(_dereq_,module,exports){
+},{"./generators/random":4,"./txutils":9,"buffer":142,"ethereumjs-tx":214,"ethereumjs-util":215}],7:[function(_dereq_,module,exports){
 var Transaction = _dereq_('ethereumjs-tx');
 var util = _dereq_("ethereumjs-util");
 // Implementation should support 3 functions:
@@ -223,7 +223,7 @@ Signer.prototype.signTransaction = function (txParams, callback) {
 };
 
 module.exports = Signer;
-},{"ethereumjs-tx":215,"ethereumjs-util":216}],8:[function(_dereq_,module,exports){
+},{"ethereumjs-tx":214,"ethereumjs-util":215}],8:[function(_dereq_,module,exports){
 (function (Buffer){
 var Transaction = _dereq_('ethereumjs-tx');
 var util = _dereq_("ethereumjs-util");
@@ -249,7 +249,7 @@ SimpleSigner.prototype.signRawTx = function(rawTx, callback) {
 
 module.exports = SimpleSigner;
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"ethereumjs-tx":215,"ethereumjs-util":216}],9:[function(_dereq_,module,exports){
+},{"buffer":142,"ethereumjs-tx":214,"ethereumjs-util":215}],9:[function(_dereq_,module,exports){
 (function (Buffer){
 var Transaction = _dereq_('ethereumjs-tx');
 var coder = _dereq_('web3/lib/solidity/coder');
@@ -360,7 +360,7 @@ module.exports = {
 };
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"crypto-js":160,"ethereumjs-tx":215,"rlp":252,"web3/lib/solidity/coder":295}],10:[function(_dereq_,module,exports){
+},{"buffer":142,"crypto-js":159,"ethereumjs-tx":214,"rlp":263,"web3/lib/solidity/coder":295}],10:[function(_dereq_,module,exports){
 (function (Buffer){
 var nacl = _dereq_('tweetnacl');
 nacl.util = _dereq_('tweetnacl-util');
@@ -498,7 +498,7 @@ function nacl_decodeHex(msgHex) {
 module.exports = Vault;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./generators/random":4,"buffer":142,"scrypt-async":253,"tweetnacl":283,"tweetnacl-util":282}],11:[function(_dereq_,module,exports){
+},{"./generators/random":4,"buffer":142,"scrypt-async":264,"tweetnacl":282,"tweetnacl-util":281}],11:[function(_dereq_,module,exports){
 var asn1 = exports;
 
 asn1.bignum = _dereq_('bn.js');
@@ -509,7 +509,7 @@ asn1.constants = _dereq_('./asn1/constants');
 asn1.decoders = _dereq_('./asn1/decoders');
 asn1.encoders = _dereq_('./asn1/encoders');
 
-},{"./asn1/api":12,"./asn1/base":14,"./asn1/constants":18,"./asn1/decoders":20,"./asn1/encoders":23,"bn.js":111}],12:[function(_dereq_,module,exports){
+},{"./asn1/api":12,"./asn1/base":14,"./asn1/constants":18,"./asn1/decoders":20,"./asn1/encoders":23,"bn.js":112}],12:[function(_dereq_,module,exports){
 var asn1 = _dereq_('../asn1');
 var inherits = _dereq_('inherits');
 
@@ -572,7 +572,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":11,"inherits":228,"vm":291}],13:[function(_dereq_,module,exports){
+},{"../asn1":11,"inherits":226,"vm":291}],13:[function(_dereq_,module,exports){
 var inherits = _dereq_('inherits');
 var Reporter = _dereq_('../base').Reporter;
 var Buffer = _dereq_('buffer').Buffer;
@@ -690,7 +690,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":14,"buffer":142,"inherits":228}],14:[function(_dereq_,module,exports){
+},{"../base":14,"buffer":142,"inherits":226}],14:[function(_dereq_,module,exports){
 var base = exports;
 
 base.Reporter = _dereq_('./reporter').Reporter;
@@ -1452,7 +1452,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":228}],17:[function(_dereq_,module,exports){
+},{"inherits":226}],17:[function(_dereq_,module,exports){
 var constants = _dereq_('../constants');
 
 exports.tagClass = {
@@ -1841,7 +1841,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":11,"inherits":228}],20:[function(_dereq_,module,exports){
+},{"../../asn1":11,"inherits":226}],20:[function(_dereq_,module,exports){
 var decoders = exports;
 
 decoders.der = _dereq_('./der');
@@ -1898,7 +1898,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"./der":19,"buffer":142,"inherits":228}],22:[function(_dereq_,module,exports){
+},{"./der":19,"buffer":142,"inherits":226}],22:[function(_dereq_,module,exports){
 var inherits = _dereq_('inherits');
 var Buffer = _dereq_('buffer').Buffer;
 
@@ -2193,7 +2193,7 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":11,"buffer":142,"inherits":228}],23:[function(_dereq_,module,exports){
+},{"../../asn1":11,"buffer":142,"inherits":226}],23:[function(_dereq_,module,exports){
 var encoders = exports;
 
 encoders.der = _dereq_('./der');
@@ -2222,7 +2222,368 @@ PEMEncoder.prototype.encode = function encode(data, options) {
   return out.join('\n');
 };
 
-},{"./der":22,"inherits":228}],25:[function(_dereq_,module,exports){
+},{"./der":22,"inherits":226}],25:[function(_dereq_,module,exports){
+// http://wiki.commonjs.org/wiki/Unit_Testing/1.0
+//
+// THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
+//
+// Originally from narwhal.js (http://narwhaljs.org)
+// Copyright (c) 2009 Thomas Robinson <280north.com>
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the 'Software'), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// when used in node, this will actually load the util module we depend on
+// versus loading the builtin util module as happens otherwise
+// this is a bug in node module loading as far as I am concerned
+var util = _dereq_('util/');
+
+var pSlice = Array.prototype.slice;
+var hasOwn = Object.prototype.hasOwnProperty;
+
+// 1. The assert module provides functions that throw
+// AssertionError's when particular conditions are not met. The
+// assert module must conform to the following interface.
+
+var assert = module.exports = ok;
+
+// 2. The AssertionError is defined in assert.
+// new assert.AssertionError({ message: message,
+//                             actual: actual,
+//                             expected: expected })
+
+assert.AssertionError = function AssertionError(options) {
+  this.name = 'AssertionError';
+  this.actual = options.actual;
+  this.expected = options.expected;
+  this.operator = options.operator;
+  if (options.message) {
+    this.message = options.message;
+    this.generatedMessage = false;
+  } else {
+    this.message = getMessage(this);
+    this.generatedMessage = true;
+  }
+  var stackStartFunction = options.stackStartFunction || fail;
+
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, stackStartFunction);
+  }
+  else {
+    // non v8 browsers so we can have a stacktrace
+    var err = new Error();
+    if (err.stack) {
+      var out = err.stack;
+
+      // try to strip useless frames
+      var fn_name = stackStartFunction.name;
+      var idx = out.indexOf('\n' + fn_name);
+      if (idx >= 0) {
+        // once we have located the function frame
+        // we need to strip out everything before it (and its line)
+        var next_line = out.indexOf('\n', idx + 1);
+        out = out.substring(next_line + 1);
+      }
+
+      this.stack = out;
+    }
+  }
+};
+
+// assert.AssertionError instanceof Error
+util.inherits(assert.AssertionError, Error);
+
+function replacer(key, value) {
+  if (util.isUndefined(value)) {
+    return '' + value;
+  }
+  if (util.isNumber(value) && !isFinite(value)) {
+    return value.toString();
+  }
+  if (util.isFunction(value) || util.isRegExp(value)) {
+    return value.toString();
+  }
+  return value;
+}
+
+function truncate(s, n) {
+  if (util.isString(s)) {
+    return s.length < n ? s : s.slice(0, n);
+  } else {
+    return s;
+  }
+}
+
+function getMessage(self) {
+  return truncate(JSON.stringify(self.actual, replacer), 128) + ' ' +
+         self.operator + ' ' +
+         truncate(JSON.stringify(self.expected, replacer), 128);
+}
+
+// At present only the three keys mentioned above are used and
+// understood by the spec. Implementations or sub modules can pass
+// other keys to the AssertionError's constructor - they will be
+// ignored.
+
+// 3. All of the following functions must throw an AssertionError
+// when a corresponding condition is not met, with a message that
+// may be undefined if not provided.  All assertion methods provide
+// both the actual and expected values to the assertion error for
+// display purposes.
+
+function fail(actual, expected, message, operator, stackStartFunction) {
+  throw new assert.AssertionError({
+    message: message,
+    actual: actual,
+    expected: expected,
+    operator: operator,
+    stackStartFunction: stackStartFunction
+  });
+}
+
+// EXTENSION! allows for well behaved errors defined elsewhere.
+assert.fail = fail;
+
+// 4. Pure assertion tests whether a value is truthy, as determined
+// by !!guard.
+// assert.ok(guard, message_opt);
+// This statement is equivalent to assert.equal(true, !!guard,
+// message_opt);. To test strictly for the value true, use
+// assert.strictEqual(true, guard, message_opt);.
+
+function ok(value, message) {
+  if (!value) fail(value, true, message, '==', assert.ok);
+}
+assert.ok = ok;
+
+// 5. The equality assertion tests shallow, coercive equality with
+// ==.
+// assert.equal(actual, expected, message_opt);
+
+assert.equal = function equal(actual, expected, message) {
+  if (actual != expected) fail(actual, expected, message, '==', assert.equal);
+};
+
+// 6. The non-equality assertion tests for whether two objects are not equal
+// with != assert.notEqual(actual, expected, message_opt);
+
+assert.notEqual = function notEqual(actual, expected, message) {
+  if (actual == expected) {
+    fail(actual, expected, message, '!=', assert.notEqual);
+  }
+};
+
+// 7. The equivalence assertion tests a deep equality relation.
+// assert.deepEqual(actual, expected, message_opt);
+
+assert.deepEqual = function deepEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected)) {
+    fail(actual, expected, message, 'deepEqual', assert.deepEqual);
+  }
+};
+
+function _deepEqual(actual, expected) {
+  // 7.1. All identical values are equivalent, as determined by ===.
+  if (actual === expected) {
+    return true;
+
+  } else if (util.isBuffer(actual) && util.isBuffer(expected)) {
+    if (actual.length != expected.length) return false;
+
+    for (var i = 0; i < actual.length; i++) {
+      if (actual[i] !== expected[i]) return false;
+    }
+
+    return true;
+
+  // 7.2. If the expected value is a Date object, the actual value is
+  // equivalent if it is also a Date object that refers to the same time.
+  } else if (util.isDate(actual) && util.isDate(expected)) {
+    return actual.getTime() === expected.getTime();
+
+  // 7.3 If the expected value is a RegExp object, the actual value is
+  // equivalent if it is also a RegExp object with the same source and
+  // properties (`global`, `multiline`, `lastIndex`, `ignoreCase`).
+  } else if (util.isRegExp(actual) && util.isRegExp(expected)) {
+    return actual.source === expected.source &&
+           actual.global === expected.global &&
+           actual.multiline === expected.multiline &&
+           actual.lastIndex === expected.lastIndex &&
+           actual.ignoreCase === expected.ignoreCase;
+
+  // 7.4. Other pairs that do not both pass typeof value == 'object',
+  // equivalence is determined by ==.
+  } else if (!util.isObject(actual) && !util.isObject(expected)) {
+    return actual == expected;
+
+  // 7.5 For all other Object pairs, including Array objects, equivalence is
+  // determined by having the same number of owned properties (as verified
+  // with Object.prototype.hasOwnProperty.call), the same set of keys
+  // (although not necessarily the same order), equivalent values for every
+  // corresponding key, and an identical 'prototype' property. Note: this
+  // accounts for both named and indexed properties on Arrays.
+  } else {
+    return objEquiv(actual, expected);
+  }
+}
+
+function isArguments(object) {
+  return Object.prototype.toString.call(object) == '[object Arguments]';
+}
+
+function objEquiv(a, b) {
+  if (util.isNullOrUndefined(a) || util.isNullOrUndefined(b))
+    return false;
+  // an identical 'prototype' property.
+  if (a.prototype !== b.prototype) return false;
+  // if one is a primitive, the other must be same
+  if (util.isPrimitive(a) || util.isPrimitive(b)) {
+    return a === b;
+  }
+  var aIsArgs = isArguments(a),
+      bIsArgs = isArguments(b);
+  if ((aIsArgs && !bIsArgs) || (!aIsArgs && bIsArgs))
+    return false;
+  if (aIsArgs) {
+    a = pSlice.call(a);
+    b = pSlice.call(b);
+    return _deepEqual(a, b);
+  }
+  var ka = objectKeys(a),
+      kb = objectKeys(b),
+      key, i;
+  // having the same number of owned properties (keys incorporates
+  // hasOwnProperty)
+  if (ka.length != kb.length)
+    return false;
+  //the same set of keys (although not necessarily the same order),
+  ka.sort();
+  kb.sort();
+  //~~~cheap key test
+  for (i = ka.length - 1; i >= 0; i--) {
+    if (ka[i] != kb[i])
+      return false;
+  }
+  //equivalent values for every corresponding key, and
+  //~~~possibly expensive deep test
+  for (i = ka.length - 1; i >= 0; i--) {
+    key = ka[i];
+    if (!_deepEqual(a[key], b[key])) return false;
+  }
+  return true;
+}
+
+// 8. The non-equivalence assertion tests for any deep inequality.
+// assert.notDeepEqual(actual, expected, message_opt);
+
+assert.notDeepEqual = function notDeepEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected)) {
+    fail(actual, expected, message, 'notDeepEqual', assert.notDeepEqual);
+  }
+};
+
+// 9. The strict equality assertion tests strict equality, as determined by ===.
+// assert.strictEqual(actual, expected, message_opt);
+
+assert.strictEqual = function strictEqual(actual, expected, message) {
+  if (actual !== expected) {
+    fail(actual, expected, message, '===', assert.strictEqual);
+  }
+};
+
+// 10. The strict non-equality assertion tests for strict inequality, as
+// determined by !==.  assert.notStrictEqual(actual, expected, message_opt);
+
+assert.notStrictEqual = function notStrictEqual(actual, expected, message) {
+  if (actual === expected) {
+    fail(actual, expected, message, '!==', assert.notStrictEqual);
+  }
+};
+
+function expectedException(actual, expected) {
+  if (!actual || !expected) {
+    return false;
+  }
+
+  if (Object.prototype.toString.call(expected) == '[object RegExp]') {
+    return expected.test(actual);
+  } else if (actual instanceof expected) {
+    return true;
+  } else if (expected.call({}, actual) === true) {
+    return true;
+  }
+
+  return false;
+}
+
+function _throws(shouldThrow, block, expected, message) {
+  var actual;
+
+  if (util.isString(expected)) {
+    message = expected;
+    expected = null;
+  }
+
+  try {
+    block();
+  } catch (e) {
+    actual = e;
+  }
+
+  message = (expected && expected.name ? ' (' + expected.name + ').' : '.') +
+            (message ? ' ' + message : '.');
+
+  if (shouldThrow && !actual) {
+    fail(actual, expected, 'Missing expected exception' + message);
+  }
+
+  if (!shouldThrow && expectedException(actual, expected)) {
+    fail(actual, expected, 'Got unwanted exception' + message);
+  }
+
+  if ((shouldThrow && actual && expected &&
+      !expectedException(actual, expected)) || (!shouldThrow && actual)) {
+    throw actual;
+  }
+}
+
+// 11. Expected to throw an error:
+// assert.throws(block, Error_opt, message_opt);
+
+assert.throws = function(block, /*optional*/error, /*optional*/message) {
+  _throws.apply(this, [true].concat(pSlice.call(arguments)));
+};
+
+// EXTENSION! This is annoying to write outside this module.
+assert.doesNotThrow = function(block, /*optional*/message) {
+  _throws.apply(this, [false].concat(pSlice.call(arguments)));
+};
+
+assert.ifError = function(err) { if (err) {throw err;}};
+
+var objectKeys = Object.keys || function (obj) {
+  var keys = [];
+  for (var key in obj) {
+    if (hasOwn.call(obj, key)) keys.push(key);
+  }
+  return keys;
+};
+
+},{"util/":290}],26:[function(_dereq_,module,exports){
 'use strict'
 
 exports.toByteArray = toByteArray
@@ -2333,7 +2694,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],26:[function(_dereq_,module,exports){
+},{}],27:[function(_dereq_,module,exports){
 (function (Buffer){
 // Reference https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki
 // Format: 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S]
@@ -2448,7 +2809,7 @@ module.exports = {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],27:[function(_dereq_,module,exports){
+},{"buffer":142}],28:[function(_dereq_,module,exports){
 (function (global,Buffer){
 'use strict';
 
@@ -2522,7 +2883,7 @@ bitcore._HDKeyCache = _dereq_('./lib/hdkeycache');
 bitcore.Transaction.sighash = _dereq_('./lib/transaction/sighash');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},_dereq_("buffer").Buffer)
-},{"./lib/address":28,"./lib/block":31,"./lib/block/blockheader":30,"./lib/block/merkleblock":32,"./lib/crypto/bn":33,"./lib/crypto/ecdsa":34,"./lib/crypto/hash":35,"./lib/crypto/point":36,"./lib/crypto/random":37,"./lib/crypto/signature":38,"./lib/encoding/base58":39,"./lib/encoding/base58check":40,"./lib/encoding/bufferreader":41,"./lib/encoding/bufferwriter":42,"./lib/encoding/varint":43,"./lib/errors":44,"./lib/hdkeycache":46,"./lib/hdprivatekey.js":47,"./lib/hdpublickey.js":48,"./lib/networks":49,"./lib/opcode":50,"./lib/privatekey":51,"./lib/publickey":52,"./lib/script":53,"./lib/transaction":56,"./lib/transaction/sighash":64,"./lib/unit":68,"./lib/uri":69,"./lib/util/buffer":70,"./lib/util/js":71,"./lib/util/preconditions":72,"./package.json":99,"bn.js":73,"bs58":74,"buffer":142,"elliptic":76,"lodash":98}],28:[function(_dereq_,module,exports){
+},{"./lib/address":29,"./lib/block":32,"./lib/block/blockheader":31,"./lib/block/merkleblock":33,"./lib/crypto/bn":34,"./lib/crypto/ecdsa":35,"./lib/crypto/hash":36,"./lib/crypto/point":37,"./lib/crypto/random":38,"./lib/crypto/signature":39,"./lib/encoding/base58":40,"./lib/encoding/base58check":41,"./lib/encoding/bufferreader":42,"./lib/encoding/bufferwriter":43,"./lib/encoding/varint":44,"./lib/errors":45,"./lib/hdkeycache":47,"./lib/hdprivatekey.js":48,"./lib/hdpublickey.js":49,"./lib/networks":50,"./lib/opcode":51,"./lib/privatekey":52,"./lib/publickey":53,"./lib/script":54,"./lib/transaction":57,"./lib/transaction/sighash":65,"./lib/unit":69,"./lib/uri":70,"./lib/util/buffer":71,"./lib/util/js":72,"./lib/util/preconditions":73,"./package.json":100,"bn.js":74,"bs58":75,"buffer":142,"elliptic":77,"lodash":99}],29:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3024,7 +3385,7 @@ module.exports = Address;
 var Script = _dereq_('./script');
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./crypto/hash":35,"./encoding/base58check":40,"./errors":44,"./networks":49,"./publickey":52,"./script":53,"./util/js":71,"./util/preconditions":72,"buffer":142,"lodash":98}],29:[function(_dereq_,module,exports){
+},{"./crypto/hash":36,"./encoding/base58check":41,"./errors":45,"./networks":50,"./publickey":53,"./script":54,"./util/js":72,"./util/preconditions":73,"buffer":142,"lodash":99}],30:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3309,7 +3670,7 @@ Block.Values = {
 module.exports = Block;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"../crypto/hash":35,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../transaction":56,"../util/buffer":70,"../util/preconditions":72,"./blockheader":30,"buffer":142,"lodash":98}],30:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../crypto/hash":36,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../transaction":57,"../util/buffer":71,"../util/preconditions":73,"./blockheader":31,"buffer":142,"lodash":99}],31:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3609,13 +3970,13 @@ BlockHeader.Constants = {
 module.exports = BlockHeader;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"../crypto/hash":35,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"buffer":142,"lodash":98}],31:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../crypto/hash":36,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"buffer":142,"lodash":99}],32:[function(_dereq_,module,exports){
 module.exports = _dereq_('./block');
 
 module.exports.BlockHeader = _dereq_('./blockheader');
 module.exports.MerkleBlock = _dereq_('./merkleblock');
 
-},{"./block":29,"./blockheader":30,"./merkleblock":32}],32:[function(_dereq_,module,exports){
+},{"./block":30,"./blockheader":31,"./merkleblock":33}],33:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3891,7 +4252,7 @@ MerkleBlock.fromObject = function fromObject(obj) {
 module.exports = MerkleBlock;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/hash":35,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../transaction":56,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"./blockheader":30,"buffer":142,"lodash":98}],33:[function(_dereq_,module,exports){
+},{"../crypto/hash":36,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../transaction":57,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"./blockheader":31,"buffer":142,"lodash":99}],34:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -4097,7 +4458,7 @@ BN.pad = function(buf, natlen, size) {
 module.exports = BN;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../util/preconditions":72,"bn.js":73,"buffer":142,"lodash":98}],34:[function(_dereq_,module,exports){
+},{"../util/preconditions":73,"bn.js":74,"buffer":142,"lodash":99}],35:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -4397,7 +4758,7 @@ ECDSA.verify = function(hashbuf, sig, pubkey, endian) {
 module.exports = ECDSA;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../publickey":52,"../util/buffer":70,"../util/preconditions":72,"./bn":33,"./hash":35,"./point":36,"./random":37,"./signature":38,"buffer":142,"lodash":98}],35:[function(_dereq_,module,exports){
+},{"../publickey":53,"../util/buffer":71,"../util/preconditions":73,"./bn":34,"./hash":36,"./point":37,"./random":38,"./signature":39,"buffer":142,"lodash":99}],36:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -4486,7 +4847,7 @@ Hash.sha512hmac = function(data, key) {
 };
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../util/buffer":70,"../util/preconditions":72,"buffer":142,"crypto":151}],36:[function(_dereq_,module,exports){
+},{"../util/buffer":71,"../util/preconditions":73,"buffer":142,"crypto":150}],37:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -4635,7 +4996,7 @@ Point.pointToCompressed = function pointToCompressed(point) {
 module.exports = Point;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../util/buffer":70,"./bn":33,"buffer":142,"elliptic":76}],37:[function(_dereq_,module,exports){
+},{"../util/buffer":71,"./bn":34,"buffer":142,"elliptic":77}],38:[function(_dereq_,module,exports){
 (function (process,Buffer){
 'use strict';
 
@@ -4696,7 +5057,7 @@ Random.getPseudoRandomBuffer = function(size) {
 module.exports = Random;
 
 }).call(this,_dereq_('_process'),_dereq_("buffer").Buffer)
-},{"_process":239,"buffer":142,"crypto":151}],38:[function(_dereq_,module,exports){
+},{"_process":239,"buffer":142,"crypto":150}],39:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5012,7 +5373,7 @@ Signature.SIGHASH_ANYONECANPAY = 0x80;
 module.exports = Signature;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"./bn":33,"buffer":142,"lodash":98}],39:[function(_dereq_,module,exports){
+},{"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"./bn":34,"buffer":142,"lodash":99}],40:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5086,7 +5447,7 @@ Base58.prototype.toString = function() {
 module.exports = Base58;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"bs58":74,"buffer":142,"lodash":98}],40:[function(_dereq_,module,exports){
+},{"bs58":75,"buffer":142,"lodash":99}],41:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5185,7 +5546,7 @@ Base58Check.prototype.toString = function() {
 module.exports = Base58Check;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/hash":35,"./base58":39,"buffer":142,"lodash":98}],41:[function(_dereq_,module,exports){
+},{"../crypto/hash":36,"./base58":40,"buffer":142,"lodash":99}],42:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5381,7 +5742,7 @@ BufferReader.prototype.readReverse = function(len) {
 module.exports = BufferReader;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"../util/buffer":70,"../util/preconditions":72,"buffer":142,"lodash":98}],42:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../util/buffer":71,"../util/preconditions":73,"buffer":142,"lodash":99}],43:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5536,7 +5897,7 @@ BufferWriter.varintBufBN = function(bn) {
 module.exports = BufferWriter;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../util/buffer":70,"assert":139,"buffer":142}],43:[function(_dereq_,module,exports){
+},{"../util/buffer":71,"assert":25,"buffer":142}],44:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5612,7 +5973,7 @@ Varint.prototype.toNumber = function() {
 module.exports = Varint;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"./bufferreader":41,"./bufferwriter":42,"buffer":142}],44:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"./bufferreader":42,"./bufferwriter":43,"buffer":142}],45:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -5675,7 +6036,7 @@ module.exports.extend = function(spec) {
   return traverseNode(bitcore.Error, spec);
 };
 
-},{"./spec":45,"lodash":98}],45:[function(_dereq_,module,exports){
+},{"./spec":46,"lodash":99}],46:[function(_dereq_,module,exports){
 'use strict';
 
 var docsURL = 'http://bitcore.io/';
@@ -5854,7 +6215,7 @@ module.exports = [{
   }]
 }];
 
-},{}],46:[function(_dereq_,module,exports){
+},{}],47:[function(_dereq_,module,exports){
 'use strict';
 
 module.exports = {
@@ -5901,7 +6262,7 @@ module.exports = {
   }
 };
 
-},{}],47:[function(_dereq_,module,exports){
+},{}],48:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6482,7 +6843,7 @@ assert(HDPrivateKey.ChecksumEnd === HDPrivateKey.SerializedByteSize);
 module.exports = HDPrivateKey;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./crypto/bn":33,"./crypto/hash":35,"./crypto/point":36,"./crypto/random":37,"./encoding/base58":39,"./encoding/base58check":40,"./errors":44,"./hdkeycache":46,"./hdpublickey":48,"./networks":49,"./privatekey":51,"./util/buffer":70,"./util/js":71,"./util/preconditions":72,"assert":139,"buffer":142,"lodash":98}],48:[function(_dereq_,module,exports){
+},{"./crypto/bn":34,"./crypto/hash":36,"./crypto/point":37,"./crypto/random":38,"./encoding/base58":40,"./encoding/base58check":41,"./errors":45,"./hdkeycache":47,"./hdpublickey":49,"./networks":50,"./privatekey":52,"./util/buffer":71,"./util/js":72,"./util/preconditions":73,"assert":25,"buffer":142,"lodash":99}],49:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6950,7 +7311,7 @@ assert(HDPublicKey.ChecksumEnd === HDPublicKey.SerializedByteSize);
 module.exports = HDPublicKey;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./crypto/bn":33,"./crypto/hash":35,"./crypto/point":36,"./encoding/base58":39,"./encoding/base58check":40,"./errors":44,"./hdkeycache":46,"./hdprivatekey":47,"./networks":49,"./publickey":52,"./util/buffer":70,"./util/js":71,"./util/preconditions":72,"assert":139,"buffer":142,"lodash":98}],49:[function(_dereq_,module,exports){
+},{"./crypto/bn":34,"./crypto/hash":36,"./crypto/point":37,"./encoding/base58":40,"./encoding/base58check":41,"./errors":45,"./hdkeycache":47,"./hdprivatekey":48,"./networks":50,"./publickey":53,"./util/buffer":71,"./util/js":72,"./util/preconditions":73,"assert":25,"buffer":142,"lodash":99}],50:[function(_dereq_,module,exports){
 'use strict';
 var _ = _dereq_('lodash');
 
@@ -7221,7 +7582,7 @@ module.exports = {
   disableRegtest: disableRegtest
 };
 
-},{"./util/buffer":70,"./util/js":71,"lodash":98}],50:[function(_dereq_,module,exports){
+},{"./util/buffer":71,"./util/js":72,"lodash":99}],51:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7473,7 +7834,7 @@ Opcode.prototype.inspect = function() {
 module.exports = Opcode;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./util/buffer":70,"./util/js":71,"./util/preconditions":72,"buffer":142,"lodash":98}],51:[function(_dereq_,module,exports){
+},{"./util/buffer":71,"./util/js":72,"./util/preconditions":73,"buffer":142,"lodash":99}],52:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7864,7 +8225,7 @@ PrivateKey.prototype.inspect = function() {
 module.exports = PrivateKey;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./address":28,"./crypto/bn":33,"./crypto/point":36,"./crypto/random":37,"./encoding/base58check":40,"./networks":49,"./publickey":52,"./util/js":71,"./util/preconditions":72,"buffer":142,"lodash":98}],52:[function(_dereq_,module,exports){
+},{"./address":29,"./crypto/bn":34,"./crypto/point":37,"./crypto/random":38,"./encoding/base58check":41,"./networks":50,"./publickey":53,"./util/js":72,"./util/preconditions":73,"buffer":142,"lodash":99}],53:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -8261,12 +8622,12 @@ PublicKey.prototype.inspect = function() {
 module.exports = PublicKey;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./address":28,"./crypto/bn":33,"./crypto/hash":35,"./crypto/point":36,"./networks":49,"./privatekey":51,"./util/js":71,"./util/preconditions":72,"buffer":142,"lodash":98}],53:[function(_dereq_,module,exports){
+},{"./address":29,"./crypto/bn":34,"./crypto/hash":36,"./crypto/point":37,"./networks":50,"./privatekey":52,"./util/js":72,"./util/preconditions":73,"buffer":142,"lodash":99}],54:[function(_dereq_,module,exports){
 module.exports = _dereq_('./script');
 
 module.exports.Interpreter = _dereq_('./interpreter');
 
-},{"./interpreter":54,"./script":55}],54:[function(_dereq_,module,exports){
+},{"./interpreter":55,"./script":56}],55:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -9535,7 +9896,7 @@ Interpreter.prototype.step = function() {
 
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"../crypto/hash":35,"../crypto/signature":38,"../opcode":50,"../publickey":52,"../transaction":56,"./script":55,"buffer":142,"lodash":98}],55:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../crypto/hash":36,"../crypto/signature":39,"../opcode":51,"../publickey":53,"../transaction":57,"./script":56,"buffer":142,"lodash":99}],56:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -10623,7 +10984,7 @@ Script.prototype.getSignatureOperationsCount = function(accurate) {
 module.exports = Script;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../address":28,"../crypto/hash":35,"../crypto/signature":38,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../errors":44,"../networks":49,"../opcode":50,"../publickey":52,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"buffer":142,"lodash":98}],56:[function(_dereq_,module,exports){
+},{"../address":29,"../crypto/hash":36,"../crypto/signature":39,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../errors":45,"../networks":50,"../opcode":51,"../publickey":53,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"buffer":142,"lodash":99}],57:[function(_dereq_,module,exports){
 module.exports = _dereq_('./transaction');
 
 module.exports.Input = _dereq_('./input');
@@ -10632,7 +10993,7 @@ module.exports.UnspentOutput = _dereq_('./unspentoutput');
 module.exports.Signature = _dereq_('./signature');
 module.exports.Sighash = _dereq_('./sighash');
 
-},{"./input":57,"./output":63,"./sighash":64,"./signature":65,"./transaction":66,"./unspentoutput":67}],57:[function(_dereq_,module,exports){
+},{"./input":58,"./output":64,"./sighash":65,"./signature":66,"./transaction":67,"./unspentoutput":68}],58:[function(_dereq_,module,exports){
 module.exports = _dereq_('./input');
 
 module.exports.PublicKey = _dereq_('./publickey');
@@ -10640,7 +11001,7 @@ module.exports.PublicKeyHash = _dereq_('./publickeyhash');
 module.exports.MultiSig = _dereq_('./multisig.js');
 module.exports.MultiSigScriptHash = _dereq_('./multisigscripthash.js');
 
-},{"./input":58,"./multisig.js":59,"./multisigscripthash.js":60,"./publickey":61,"./publickeyhash":62}],58:[function(_dereq_,module,exports){
+},{"./input":59,"./multisig.js":60,"./multisigscripthash.js":61,"./publickey":62,"./publickeyhash":63}],59:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -10838,7 +11199,7 @@ Input.prototype._estimateSize = function() {
 
 module.exports = Input;
 
-},{"../../encoding/bufferwriter":42,"../../errors":44,"../../script":53,"../../util/buffer":70,"../../util/js":71,"../../util/preconditions":72,"../output":63,"../sighash":64,"buffer":142,"lodash":98}],59:[function(_dereq_,module,exports){
+},{"../../encoding/bufferwriter":43,"../../errors":45,"../../script":54,"../../util/buffer":71,"../../util/js":72,"../../util/preconditions":73,"../output":64,"../sighash":65,"buffer":142,"lodash":99}],60:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -11051,7 +11412,7 @@ MultiSigInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigInput;
 
-},{"../../crypto/signature":38,"../../publickey":52,"../../script":53,"../../util/buffer":70,"../../util/preconditions":72,"../output":63,"../sighash":64,"../signature":65,"../transaction":66,"./input":58,"inherits":97,"lodash":98}],60:[function(_dereq_,module,exports){
+},{"../../crypto/signature":39,"../../publickey":53,"../../script":54,"../../util/buffer":71,"../../util/preconditions":73,"../output":64,"../sighash":65,"../signature":66,"../transaction":67,"./input":59,"inherits":98,"lodash":99}],61:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -11219,7 +11580,7 @@ MultiSigScriptHashInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigScriptHashInput;
 
-},{"../../crypto/signature":38,"../../publickey":52,"../../script":53,"../../util/buffer":70,"../../util/preconditions":72,"../output":63,"../sighash":64,"../signature":65,"./input":58,"inherits":97,"lodash":98}],61:[function(_dereq_,module,exports){
+},{"../../crypto/signature":39,"../../publickey":53,"../../script":54,"../../util/buffer":71,"../../util/preconditions":73,"../output":64,"../sighash":65,"../signature":66,"./input":59,"inherits":98,"lodash":99}],62:[function(_dereq_,module,exports){
 'use strict';
 
 var inherits = _dereq_('inherits');
@@ -11310,7 +11671,7 @@ PublicKeyInput.prototype._estimateSize = function() {
 
 module.exports = PublicKeyInput;
 
-},{"../../crypto/signature":38,"../../script":53,"../../util/buffer":70,"../../util/preconditions":72,"../output":63,"../sighash":64,"../signature":65,"./input":58,"inherits":97}],62:[function(_dereq_,module,exports){
+},{"../../crypto/signature":39,"../../script":54,"../../util/buffer":71,"../../util/preconditions":73,"../output":64,"../sighash":65,"../signature":66,"./input":59,"inherits":98}],63:[function(_dereq_,module,exports){
 'use strict';
 
 var inherits = _dereq_('inherits');
@@ -11407,7 +11768,7 @@ PublicKeyHashInput.prototype._estimateSize = function() {
 
 module.exports = PublicKeyHashInput;
 
-},{"../../crypto/hash":35,"../../crypto/signature":38,"../../script":53,"../../util/buffer":70,"../../util/preconditions":72,"../output":63,"../sighash":64,"../signature":65,"./input":58,"inherits":97}],63:[function(_dereq_,module,exports){
+},{"../../crypto/hash":36,"../../crypto/signature":39,"../../script":54,"../../util/buffer":71,"../../util/preconditions":73,"../output":64,"../sighash":65,"../signature":66,"./input":59,"inherits":98}],64:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -11577,7 +11938,7 @@ Output.prototype.toBufferWriter = function(writer) {
 
 module.exports = Output;
 
-},{"../crypto/bn":33,"../encoding/bufferwriter":42,"../errors":44,"../script":53,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"buffer":142,"lodash":98}],64:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../encoding/bufferwriter":43,"../errors":45,"../script":54,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"buffer":142,"lodash":99}],65:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -11717,7 +12078,7 @@ module.exports = {
 };
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/bn":33,"../crypto/ecdsa":34,"../crypto/hash":35,"../crypto/signature":38,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../script":53,"../util/preconditions":72,"./input":57,"./output":63,"./transaction":66,"buffer":142,"lodash":98}],65:[function(_dereq_,module,exports){
+},{"../crypto/bn":34,"../crypto/ecdsa":35,"../crypto/hash":36,"../crypto/signature":39,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../script":54,"../util/preconditions":73,"./input":58,"./output":64,"./transaction":67,"buffer":142,"lodash":99}],66:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -11810,7 +12171,7 @@ TransactionSignature.fromObject = function(object) {
 module.exports = TransactionSignature;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../crypto/signature":38,"../errors":44,"../publickey":52,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"buffer":142,"inherits":97,"lodash":98}],66:[function(_dereq_,module,exports){
+},{"../crypto/signature":39,"../errors":45,"../publickey":53,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"buffer":142,"inherits":98,"lodash":99}],67:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -13044,7 +13405,7 @@ Transaction.prototype.enableRBF = function() {
 module.exports = Transaction;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../address":28,"../crypto/bn":33,"../crypto/hash":35,"../crypto/signature":38,"../encoding/bufferreader":41,"../encoding/bufferwriter":42,"../errors":44,"../privatekey":51,"../script":53,"../util/buffer":70,"../util/js":71,"../util/preconditions":72,"./input":57,"./output":63,"./sighash":64,"./unspentoutput":67,"buffer":142,"buffer-compare":75,"lodash":98}],67:[function(_dereq_,module,exports){
+},{"../address":29,"../crypto/bn":34,"../crypto/hash":36,"../crypto/signature":39,"../encoding/bufferreader":42,"../encoding/bufferwriter":43,"../errors":45,"../privatekey":52,"../script":54,"../util/buffer":71,"../util/js":72,"../util/preconditions":73,"./input":58,"./output":64,"./sighash":65,"./unspentoutput":68,"buffer":142,"buffer-compare":76,"lodash":99}],68:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -13146,7 +13507,7 @@ UnspentOutput.prototype.toObject = UnspentOutput.prototype.toJSON = function toO
 
 module.exports = UnspentOutput;
 
-},{"../address":28,"../script":53,"../unit":68,"../util/js":71,"../util/preconditions":72,"lodash":98}],68:[function(_dereq_,module,exports){
+},{"../address":29,"../script":54,"../unit":69,"../util/js":72,"../util/preconditions":73,"lodash":99}],69:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -13386,7 +13747,7 @@ Unit.prototype.inspect = function() {
 
 module.exports = Unit;
 
-},{"./errors":44,"./util/preconditions":72,"lodash":98}],69:[function(_dereq_,module,exports){
+},{"./errors":45,"./util/preconditions":73,"lodash":99}],70:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -13611,7 +13972,7 @@ URI.prototype.inspect = function() {
 
 module.exports = URI;
 
-},{"./address":28,"./unit":68,"lodash":98,"url":285}],70:[function(_dereq_,module,exports){
+},{"./address":29,"./unit":69,"lodash":99,"url":284}],71:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -13792,7 +14153,7 @@ module.exports.NULL_HASH = module.exports.fill(new Buffer(32), 0);
 module.exports.EMPTY_BUFFER = new Buffer(0);
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./js":71,"./preconditions":72,"assert":139,"buffer":142}],71:[function(_dereq_,module,exports){
+},{"./js":72,"./preconditions":73,"assert":25,"buffer":142}],72:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('lodash');
@@ -13878,7 +14239,7 @@ module.exports = {
   }
 };
 
-},{"lodash":98}],72:[function(_dereq_,module,exports){
+},{"lodash":99}],73:[function(_dereq_,module,exports){
 'use strict';
 
 var errors = _dereq_('../errors');
@@ -13914,7 +14275,7 @@ module.exports = {
   }
 };
 
-},{"../errors":44,"./buffer":70,"lodash":98}],73:[function(_dereq_,module,exports){
+},{"../errors":45,"./buffer":71,"lodash":99}],74:[function(_dereq_,module,exports){
 (function (module, exports) {
 
 'use strict';
@@ -16202,7 +16563,7 @@ Mont.prototype.invm = function invm(a) {
 
 })(typeof module === 'undefined' || module, this);
 
-},{}],74:[function(_dereq_,module,exports){
+},{}],75:[function(_dereq_,module,exports){
 // Base58 encoding/decoding
 // Originally written by Mike Hearn for BitcoinJ
 // Copyright (c) 2011 Google Inc
@@ -16284,7 +16645,7 @@ module.exports = {
   decode: decode
 }
 
-},{}],75:[function(_dereq_,module,exports){
+},{}],76:[function(_dereq_,module,exports){
 
 
 module.exports = function(cmp,to){
@@ -16302,7 +16663,7 @@ module.exports = function(cmp,to){
 }
 
 
-},{}],76:[function(_dereq_,module,exports){
+},{}],77:[function(_dereq_,module,exports){
 'use strict';
 
 var elliptic = exports;
@@ -16317,7 +16678,7 @@ elliptic.curves = _dereq_('./elliptic/curves');
 // Protocols
 elliptic.ec = _dereq_('./elliptic/ec');
 
-},{"../package.json":96,"./elliptic/curve":79,"./elliptic/curves":82,"./elliptic/ec":83,"./elliptic/hmac-drbg":86,"./elliptic/utils":88,"brorand":89}],77:[function(_dereq_,module,exports){
+},{"../package.json":97,"./elliptic/curve":80,"./elliptic/curves":83,"./elliptic/ec":84,"./elliptic/hmac-drbg":87,"./elliptic/utils":89,"brorand":90}],78:[function(_dereq_,module,exports){
 'use strict';
 
 var bn = _dereq_('bn.js');
@@ -16622,7 +16983,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":76,"bn.js":73}],78:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"bn.js":74}],79:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -16995,7 +17356,7 @@ Point.prototype.getY = function getY() {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":76,"../curve":79,"bn.js":73,"inherits":97}],79:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"../curve":80,"bn.js":74,"inherits":98}],80:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = exports;
@@ -17005,7 +17366,7 @@ curve.short = _dereq_('./short');
 curve.mont = _dereq_('./mont');
 curve.edwards = _dereq_('./edwards');
 
-},{"./base":77,"./edwards":78,"./mont":80,"./short":81}],80:[function(_dereq_,module,exports){
+},{"./base":78,"./edwards":79,"./mont":81,"./short":82}],81:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -17168,7 +17529,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../curve":79,"bn.js":73,"inherits":97}],81:[function(_dereq_,module,exports){
+},{"../curve":80,"bn.js":74,"inherits":98}],82:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -18077,7 +18438,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":76,"../curve":79,"bn.js":73,"inherits":97}],82:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"../curve":80,"bn.js":74,"inherits":98}],83:[function(_dereq_,module,exports){
 'use strict';
 
 var curves = exports;
@@ -18236,7 +18597,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":76,"./precomputed/secp256k1":87,"hash.js":90}],83:[function(_dereq_,module,exports){
+},{"../elliptic":77,"./precomputed/secp256k1":88,"hash.js":91}],84:[function(_dereq_,module,exports){
 'use strict';
 
 var bn = _dereq_('bn.js');
@@ -18404,7 +18765,7 @@ EC.prototype.verify = function verify(msg, signature, key, enc) {
   return p.getX().mod(this.n).cmp(r) === 0;
 };
 
-},{"../../elliptic":76,"./key":84,"./signature":85,"bn.js":73}],84:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"./key":85,"./signature":86,"bn.js":74}],85:[function(_dereq_,module,exports){
 'use strict';
 
 var bn = _dereq_('bn.js');
@@ -18556,7 +18917,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"../../elliptic":76,"bn.js":73}],85:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"bn.js":74}],86:[function(_dereq_,module,exports){
 'use strict';
 
 var bn = _dereq_('bn.js');
@@ -18623,7 +18984,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":76,"bn.js":73}],86:[function(_dereq_,module,exports){
+},{"../../elliptic":77,"bn.js":74}],87:[function(_dereq_,module,exports){
 'use strict';
 
 var hash = _dereq_('hash.js');
@@ -18739,7 +19100,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"../elliptic":76,"hash.js":90}],87:[function(_dereq_,module,exports){
+},{"../elliptic":77,"hash.js":91}],88:[function(_dereq_,module,exports){
 module.exports = {
   doubles: {
     step: 4,
@@ -19521,7 +19882,7 @@ module.exports = {
   }
 };
 
-},{}],88:[function(_dereq_,module,exports){
+},{}],89:[function(_dereq_,module,exports){
 'use strict';
 
 var utils = exports;
@@ -19673,7 +20034,7 @@ function getJSF(k1, k2) {
 }
 utils.getJSF = getJSF;
 
-},{}],89:[function(_dereq_,module,exports){
+},{}],90:[function(_dereq_,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -19732,7 +20093,7 @@ if (typeof window === 'object') {
   }
 }
 
-},{}],90:[function(_dereq_,module,exports){
+},{}],91:[function(_dereq_,module,exports){
 var hash = exports;
 
 hash.utils = _dereq_('./hash/utils');
@@ -19749,7 +20110,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":91,"./hash/hmac":92,"./hash/ripemd":93,"./hash/sha":94,"./hash/utils":95}],91:[function(_dereq_,module,exports){
+},{"./hash/common":92,"./hash/hmac":93,"./hash/ripemd":94,"./hash/sha":95,"./hash/utils":96}],92:[function(_dereq_,module,exports){
 var hash = _dereq_('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -19842,7 +20203,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":90}],92:[function(_dereq_,module,exports){
+},{"../hash":91}],93:[function(_dereq_,module,exports){
 var hmac = exports;
 
 var hash = _dereq_('../hash');
@@ -19892,7 +20253,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":90}],93:[function(_dereq_,module,exports){
+},{"../hash":91}],94:[function(_dereq_,module,exports){
 var hash = _dereq_('../hash');
 var utils = hash.utils;
 
@@ -20038,7 +20399,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":90}],94:[function(_dereq_,module,exports){
+},{"../hash":91}],95:[function(_dereq_,module,exports){
 var hash = _dereq_('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -20604,7 +20965,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":90}],95:[function(_dereq_,module,exports){
+},{"../hash":91}],96:[function(_dereq_,module,exports){
 var utils = exports;
 var inherits = _dereq_('inherits');
 
@@ -20863,11 +21224,19 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":97}],96:[function(_dereq_,module,exports){
+},{"inherits":98}],97:[function(_dereq_,module,exports){
 module.exports={
   "_args": [
     [
-      "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+      {
+        "raw": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+        "scope": null,
+        "escapedName": "elliptic",
+        "name": "elliptic",
+        "rawSpec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+        "spec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+        "type": "remote"
+      },
       "/Users/pelleb/code/clients/consensys/eth-signer/node_modules/bitcore-lib"
     ]
   ],
@@ -20879,10 +21248,11 @@ module.exports={
     "inherits": "2.0.1"
   },
   "_requested": {
-    "name": "elliptic",
     "raw": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-    "rawSpec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
     "scope": null,
+    "escapedName": "elliptic",
+    "name": "elliptic",
+    "rawSpec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
     "spec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
     "type": "remote"
   },
@@ -20895,8 +21265,8 @@ module.exports={
   "_spec": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_where": "/Users/pelleb/code/clients/consensys/eth-signer/node_modules/bitcore-lib",
   "author": {
-    "email": "fedor@indutny.com",
-    "name": "Fedor Indutny"
+    "name": "Fedor Indutny",
+    "email": "fedor@indutny.com"
   },
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
@@ -20917,10 +21287,10 @@ module.exports={
   },
   "homepage": "https://github.com/indutny/elliptic",
   "keywords": [
-    "Cryptography",
     "EC",
     "Elliptic",
-    "curve"
+    "curve",
+    "Cryptography"
   ],
   "license": "MIT",
   "main": "lib/elliptic.js",
@@ -20938,7 +21308,7 @@ module.exports={
   "version": "3.0.3"
 }
 
-},{}],97:[function(_dereq_,module,exports){
+},{}],98:[function(_dereq_,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -20963,7 +21333,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],98:[function(_dereq_,module,exports){
+},{}],99:[function(_dereq_,module,exports){
 (function (global){
 /**
  * @license
@@ -33318,7 +33688,7 @@ if (typeof Object.create === 'function') {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],99:[function(_dereq_,module,exports){
+},{}],100:[function(_dereq_,module,exports){
 module.exports={
   "_args": [
     [
@@ -33546,10 +33916,10 @@ module.exports={
   "version": "0.13.19"
 }
 
-},{}],100:[function(_dereq_,module,exports){
+},{}],101:[function(_dereq_,module,exports){
 module.exports = _dereq_('./lib/mnemonic');
 
-},{"./lib/mnemonic":102}],101:[function(_dereq_,module,exports){
+},{"./lib/mnemonic":103}],102:[function(_dereq_,module,exports){
 'use strict';
 
 var spec = {
@@ -33569,7 +33939,7 @@ var spec = {
 
 module.exports = _dereq_('bitcore-lib').errors.extend(spec);
 
-},{"bitcore-lib":27}],102:[function(_dereq_,module,exports){
+},{"bitcore-lib":28}],103:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -33868,7 +34238,7 @@ Mnemonic._entropyChecksum = function(entropy) {
 module.exports = Mnemonic;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./errors":101,"./pbkdf2":103,"./words":107,"bitcore-lib":27,"buffer":142,"unorm":284}],103:[function(_dereq_,module,exports){
+},{"./errors":102,"./pbkdf2":104,"./words":108,"bitcore-lib":28,"buffer":142,"unorm":283}],104:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -33943,25 +34313,25 @@ function pbkdf2(key, salt, iterations, dkLen) {
 module.exports = pbkdf2;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"crypto":151}],104:[function(_dereq_,module,exports){
+},{"buffer":142,"crypto":150}],105:[function(_dereq_,module,exports){
 'use strict';
 
 var chinese = ['的', '一', '是', '在', '不', '了', '有', '和', '人', '这', '中', '大', '为', '上', '个', '国', '我', '以', '要', '他', '时', '来', '用', '们', '生', '到', '作', '地', '于', '出', '就', '分', '对', '成', '会', '可', '主', '发', '年', '动', '同', '工', '也', '能', '下', '过', '子', '说', '产', '种', '面', '而', '方', '后', '多', '定', '行', '学', '法', '所', '民', '得', '经', '十', '三', '之', '进', '着', '等', '部', '度', '家', '电', '力', '里', '如', '水', '化', '高', '自', '二', '理', '起', '小', '物', '现', '实', '加', '量', '都', '两', '体', '制', '机', '当', '使', '点', '从', '业', '本', '去', '把', '性', '好', '应', '开', '它', '合', '还', '因', '由', '其', '些', '然', '前', '外', '天', '政', '四', '日', '那', '社', '义', '事', '平', '形', '相', '全', '表', '间', '样', '与', '关', '各', '重', '新', '线', '内', '数', '正', '心', '反', '你', '明', '看', '原', '又', '么', '利', '比', '或', '但', '质', '气', '第', '向', '道', '命', '此', '变', '条', '只', '没', '结', '解', '问', '意', '建', '月', '公', '无', '系', '军', '很', '情', '者', '最', '立', '代', '想', '已', '通', '并', '提', '直', '题', '党', '程', '展', '五', '果', '料', '象', '员', '革', '位', '入', '常', '文', '总', '次', '品', '式', '活', '设', '及', '管', '特', '件', '长', '求', '老', '头', '基', '资', '边', '流', '路', '级', '少', '图', '山', '统', '接', '知', '较', '将', '组', '见', '计', '别', '她', '手', '角', '期', '根', '论', '运', '农', '指', '几', '九', '区', '强', '放', '决', '西', '被', '干', '做', '必', '战', '先', '回', '则', '任', '取', '据', '处', '队', '南', '给', '色', '光', '门', '即', '保', '治', '北', '造', '百', '规', '热', '领', '七', '海', '口', '东', '导', '器', '压', '志', '世', '金', '增', '争', '济', '阶', '油', '思', '术', '极', '交', '受', '联', '什', '认', '六', '共', '权', '收', '证', '改', '清', '美', '再', '采', '转', '更', '单', '风', '切', '打', '白', '教', '速', '花', '带', '安', '场', '身', '车', '例', '真', '务', '具', '万', '每', '目', '至', '达', '走', '积', '示', '议', '声', '报', '斗', '完', '类', '八', '离', '华', '名', '确', '才', '科', '张', '信', '马', '节', '话', '米', '整', '空', '元', '况', '今', '集', '温', '传', '土', '许', '步', '群', '广', '石', '记', '需', '段', '研', '界', '拉', '林', '律', '叫', '且', '究', '观', '越', '织', '装', '影', '算', '低', '持', '音', '众', '书', '布', '复', '容', '儿', '须', '际', '商', '非', '验', '连', '断', '深', '难', '近', '矿', '千', '周', '委', '素', '技', '备', '半', '办', '青', '省', '列', '习', '响', '约', '支', '般', '史', '感', '劳', '便', '团', '往', '酸', '历', '市', '克', '何', '除', '消', '构', '府', '称', '太', '准', '精', '值', '号', '率', '族', '维', '划', '选', '标', '写', '存', '候', '毛', '亲', '快', '效', '斯', '院', '查', '江', '型', '眼', '王', '按', '格', '养', '易', '置', '派', '层', '片', '始', '却', '专', '状', '育', '厂', '京', '识', '适', '属', '圆', '包', '火', '住', '调', '满', '县', '局', '照', '参', '红', '细', '引', '听', '该', '铁', '价', '严', '首', '底', '液', '官', '德', '随', '病', '苏', '失', '尔', '死', '讲', '配', '女', '黄', '推', '显', '谈', '罪', '神', '艺', '呢', '席', '含', '企', '望', '密', '批', '营', '项', '防', '举', '球', '英', '氧', '势', '告', '李', '台', '落', '木', '帮', '轮', '破', '亚', '师', '围', '注', '远', '字', '材', '排', '供', '河', '态', '封', '另', '施', '减', '树', '溶', '怎', '止', '案', '言', '士', '均', '武', '固', '叶', '鱼', '波', '视', '仅', '费', '紧', '爱', '左', '章', '早', '朝', '害', '续', '轻', '服', '试', '食', '充', '兵', '源', '判', '护', '司', '足', '某', '练', '差', '致', '板', '田', '降', '黑', '犯', '负', '击', '范', '继', '兴', '似', '余', '坚', '曲', '输', '修', '故', '城', '夫', '够', '送', '笔', '船', '占', '右', '财', '吃', '富', '春', '职', '觉', '汉', '画', '功', '巴', '跟', '虽', '杂', '飞', '检', '吸', '助', '升', '阳', '互', '初', '创', '抗', '考', '投', '坏', '策', '古', '径', '换', '未', '跑', '留', '钢', '曾', '端', '责', '站', '简', '述', '钱', '副', '尽', '帝', '射', '草', '冲', '承', '独', '令', '限', '阿', '宣', '环', '双', '请', '超', '微', '让', '控', '州', '良', '轴', '找', '否', '纪', '益', '依', '优', '顶', '础', '载', '倒', '房', '突', '坐', '粉', '敌', '略', '客', '袁', '冷', '胜', '绝', '析', '块', '剂', '测', '丝', '协', '诉', '念', '陈', '仍', '罗', '盐', '友', '洋', '错', '苦', '夜', '刑', '移', '频', '逐', '靠', '混', '母', '短', '皮', '终', '聚', '汽', '村', '云', '哪', '既', '距', '卫', '停', '烈', '央', '察', '烧', '迅', '境', '若', '印', '洲', '刻', '括', '激', '孔', '搞', '甚', '室', '待', '核', '校', '散', '侵', '吧', '甲', '游', '久', '菜', '味', '旧', '模', '湖', '货', '损', '预', '阻', '毫', '普', '稳', '乙', '妈', '植', '息', '扩', '银', '语', '挥', '酒', '守', '拿', '序', '纸', '医', '缺', '雨', '吗', '针', '刘', '啊', '急', '唱', '误', '训', '愿', '审', '附', '获', '茶', '鲜', '粮', '斤', '孩', '脱', '硫', '肥', '善', '龙', '演', '父', '渐', '血', '欢', '械', '掌', '歌', '沙', '刚', '攻', '谓', '盾', '讨', '晚', '粒', '乱', '燃', '矛', '乎', '杀', '药', '宁', '鲁', '贵', '钟', '煤', '读', '班', '伯', '香', '介', '迫', '句', '丰', '培', '握', '兰', '担', '弦', '蛋', '沉', '假', '穿', '执', '答', '乐', '谁', '顺', '烟', '缩', '征', '脸', '喜', '松', '脚', '困', '异', '免', '背', '星', '福', '买', '染', '井', '概', '慢', '怕', '磁', '倍', '祖', '皇', '促', '静', '补', '评', '翻', '肉', '践', '尼', '衣', '宽', '扬', '棉', '希', '伤', '操', '垂', '秋', '宜', '氢', '套', '督', '振', '架', '亮', '末', '宪', '庆', '编', '牛', '触', '映', '雷', '销', '诗', '座', '居', '抓', '裂', '胞', '呼', '娘', '景', '威', '绿', '晶', '厚', '盟', '衡', '鸡', '孙', '延', '危', '胶', '屋', '乡', '临', '陆', '顾', '掉', '呀', '灯', '岁', '措', '束', '耐', '剧', '玉', '赵', '跳', '哥', '季', '课', '凯', '胡', '额', '款', '绍', '卷', '齐', '伟', '蒸', '殖', '永', '宗', '苗', '川', '炉', '岩', '弱', '零', '杨', '奏', '沿', '露', '杆', '探', '滑', '镇', '饭', '浓', '航', '怀', '赶', '库', '夺', '伊', '灵', '税', '途', '灭', '赛', '归', '召', '鼓', '播', '盘', '裁', '险', '康', '唯', '录', '菌', '纯', '借', '糖', '盖', '横', '符', '私', '努', '堂', '域', '枪', '润', '幅', '哈', '竟', '熟', '虫', '泽', '脑', '壤', '碳', '欧', '遍', '侧', '寨', '敢', '彻', '虑', '斜', '薄', '庭', '纳', '弹', '饲', '伸', '折', '麦', '湿', '暗', '荷', '瓦', '塞', '床', '筑', '恶', '户', '访', '塔', '奇', '透', '梁', '刀', '旋', '迹', '卡', '氯', '遇', '份', '毒', '泥', '退', '洗', '摆', '灰', '彩', '卖', '耗', '夏', '择', '忙', '铜', '献', '硬', '予', '繁', '圈', '雪', '函', '亦', '抽', '篇', '阵', '阴', '丁', '尺', '追', '堆', '雄', '迎', '泛', '爸', '楼', '避', '谋', '吨', '野', '猪', '旗', '累', '偏', '典', '馆', '索', '秦', '脂', '潮', '爷', '豆', '忽', '托', '惊', '塑', '遗', '愈', '朱', '替', '纤', '粗', '倾', '尚', '痛', '楚', '谢', '奋', '购', '磨', '君', '池', '旁', '碎', '骨', '监', '捕', '弟', '暴', '割', '贯', '殊', '释', '词', '亡', '壁', '顿', '宝', '午', '尘', '闻', '揭', '炮', '残', '冬', '桥', '妇', '警', '综', '招', '吴', '付', '浮', '遭', '徐', '您', '摇', '谷', '赞', '箱', '隔', '订', '男', '吹', '园', '纷', '唐', '败', '宋', '玻', '巨', '耕', '坦', '荣', '闭', '湾', '键', '凡', '驻', '锅', '救', '恩', '剥', '凝', '碱', '齿', '截', '炼', '麻', '纺', '禁', '废', '盛', '版', '缓', '净', '睛', '昌', '婚', '涉', '筒', '嘴', '插', '岸', '朗', '庄', '街', '藏', '姑', '贸', '腐', '奴', '啦', '惯', '乘', '伙', '恢', '匀', '纱', '扎', '辩', '耳', '彪', '臣', '亿', '璃', '抵', '脉', '秀', '萨', '俄', '网', '舞', '店', '喷', '纵', '寸', '汗', '挂', '洪', '贺', '闪', '柬', '爆', '烯', '津', '稻', '墙', '软', '勇', '像', '滚', '厘', '蒙', '芳', '肯', '坡', '柱', '荡', '腿', '仪', '旅', '尾', '轧', '冰', '贡', '登', '黎', '削', '钻', '勒', '逃', '障', '氨', '郭', '峰', '币', '港', '伏', '轨', '亩', '毕', '擦', '莫', '刺', '浪', '秘', '援', '株', '健', '售', '股', '岛', '甘', '泡', '睡', '童', '铸', '汤', '阀', '休', '汇', '舍', '牧', '绕', '炸', '哲', '磷', '绩', '朋', '淡', '尖', '启', '陷', '柴', '呈', '徒', '颜', '泪', '稍', '忘', '泵', '蓝', '拖', '洞', '授', '镜', '辛', '壮', '锋', '贫', '虚', '弯', '摩', '泰', '幼', '廷', '尊', '窗', '纲', '弄', '隶', '疑', '氏', '宫', '姐', '震', '瑞', '怪', '尤', '琴', '循', '描', '膜', '违', '夹', '腰', '缘', '珠', '穷', '森', '枝', '竹', '沟', '催', '绳', '忆', '邦', '剩', '幸', '浆', '栏', '拥', '牙', '贮', '礼', '滤', '钠', '纹', '罢', '拍', '咱', '喊', '袖', '埃', '勤', '罚', '焦', '潜', '伍', '墨', '欲', '缝', '姓', '刊', '饱', '仿', '奖', '铝', '鬼', '丽', '跨', '默', '挖', '链', '扫', '喝', '袋', '炭', '污', '幕', '诸', '弧', '励', '梅', '奶', '洁', '灾', '舟', '鉴', '苯', '讼', '抱', '毁', '懂', '寒', '智', '埔', '寄', '届', '跃', '渡', '挑', '丹', '艰', '贝', '碰', '拔', '爹', '戴', '码', '梦', '芽', '熔', '赤', '渔', '哭', '敬', '颗', '奔', '铅', '仲', '虎', '稀', '妹', '乏', '珍', '申', '桌', '遵', '允', '隆', '螺', '仓', '魏', '锐', '晓', '氮', '兼', '隐', '碍', '赫', '拨', '忠', '肃', '缸', '牵', '抢', '博', '巧', '壳', '兄', '杜', '讯', '诚', '碧', '祥', '柯', '页', '巡', '矩', '悲', '灌', '龄', '伦', '票', '寻', '桂', '铺', '圣', '恐', '恰', '郑', '趣', '抬', '荒', '腾', '贴', '柔', '滴', '猛', '阔', '辆', '妻', '填', '撤', '储', '签', '闹', '扰', '紫', '砂', '递', '戏', '吊', '陶', '伐', '喂', '疗', '瓶', '婆', '抚', '臂', '摸', '忍', '虾', '蜡', '邻', '胸', '巩', '挤', '偶', '弃', '槽', '劲', '乳', '邓', '吉', '仁', '烂', '砖', '租', '乌', '舰', '伴', '瓜', '浅', '丙', '暂', '燥', '橡', '柳', '迷', '暖', '牌', '秧', '胆', '详', '簧', '踏', '瓷', '谱', '呆', '宾', '糊', '洛', '辉', '愤', '竞', '隙', '怒', '粘', '乃', '绪', '肩', '籍', '敏', '涂', '熙', '皆', '侦', '悬', '掘', '享', '纠', '醒', '狂', '锁', '淀', '恨', '牲', '霸', '爬', '赏', '逆', '玩', '陵', '祝', '秒', '浙', '貌', '役', '彼', '悉', '鸭', '趋', '凤', '晨', '畜', '辈', '秩', '卵', '署', '梯', '炎', '滩', '棋', '驱', '筛', '峡', '冒', '啥', '寿', '译', '浸', '泉', '帽', '迟', '硅', '疆', '贷', '漏', '稿', '冠', '嫩', '胁', '芯', '牢', '叛', '蚀', '奥', '鸣', '岭', '羊', '凭', '串', '塘', '绘', '酵', '融', '盆', '锡', '庙', '筹', '冻', '辅', '摄', '袭', '筋', '拒', '僚', '旱', '钾', '鸟', '漆', '沈', '眉', '疏', '添', '棒', '穗', '硝', '韩', '逼', '扭', '侨', '凉', '挺', '碗', '栽', '炒', '杯', '患', '馏', '劝', '豪', '辽', '勃', '鸿', '旦', '吏', '拜', '狗', '埋', '辊', '掩', '饮', '搬', '骂', '辞', '勾', '扣', '估', '蒋', '绒', '雾', '丈', '朵', '姆', '拟', '宇', '辑', '陕', '雕', '偿', '蓄', '崇', '剪', '倡', '厅', '咬', '驶', '薯', '刷', '斥', '番', '赋', '奉', '佛', '浇', '漫', '曼', '扇', '钙', '桃', '扶', '仔', '返', '俗', '亏', '腔', '鞋', '棱', '覆', '框', '悄', '叔', '撞', '骗', '勘', '旺', '沸', '孤', '吐', '孟', '渠', '屈', '疾', '妙', '惜', '仰', '狠', '胀', '谐', '抛', '霉', '桑', '岗', '嘛', '衰', '盗', '渗', '脏', '赖', '涌', '甜', '曹', '阅', '肌', '哩', '厉', '烃', '纬', '毅', '昨', '伪', '症', '煮', '叹', '钉', '搭', '茎', '笼', '酷', '偷', '弓', '锥', '恒', '杰', '坑', '鼻', '翼', '纶', '叙', '狱', '逮', '罐', '络', '棚', '抑', '膨', '蔬', '寺', '骤', '穆', '冶', '枯', '册', '尸', '凸', '绅', '坯', '牺', '焰', '轰', '欣', '晋', '瘦', '御', '锭', '锦', '丧', '旬', '锻', '垄', '搜', '扑', '邀', '亭', '酯', '迈', '舒', '脆', '酶', '闲', '忧', '酚', '顽', '羽', '涨', '卸', '仗', '陪', '辟', '惩', '杭', '姚', '肚', '捉', '飘', '漂', '昆', '欺', '吾', '郎', '烷', '汁', '呵', '饰', '萧', '雅', '邮', '迁', '燕', '撒', '姻', '赴', '宴', '烦', '债', '帐', '斑', '铃', '旨', '醇', '董', '饼', '雏', '姿', '拌', '傅', '腹', '妥', '揉', '贤', '拆', '歪', '葡', '胺', '丢', '浩', '徽', '昂', '垫', '挡', '览', '贪', '慰', '缴', '汪', '慌', '冯', '诺', '姜', '谊', '凶', '劣', '诬', '耀', '昏', '躺', '盈', '骑', '乔', '溪', '丛', '卢', '抹', '闷', '咨', '刮', '驾', '缆', '悟', '摘', '铒', '掷', '颇', '幻', '柄', '惠', '惨', '佳', '仇', '腊', '窝', '涤', '剑', '瞧', '堡', '泼', '葱', '罩', '霍', '捞', '胎', '苍', '滨', '俩', '捅', '湘', '砍', '霞', '邵', '萄', '疯', '淮', '遂', '熊', '粪', '烘', '宿', '档', '戈', '驳', '嫂', '裕', '徙', '箭', '捐', '肠', '撑', '晒', '辨', '殿', '莲', '摊', '搅', '酱', '屏', '疫', '哀', '蔡', '堵', '沫', '皱', '畅', '叠', '阁', '莱', '敲', '辖', '钩', '痕', '坝', '巷', '饿', '祸', '丘', '玄', '溜', '曰', '逻', '彭', '尝', '卿', '妨', '艇', '吞', '韦', '怨', '矮', '歇'];
 
 module.exports = chinese;
-},{}],105:[function(_dereq_,module,exports){
+},{}],106:[function(_dereq_,module,exports){
 'use strict';
 
 var english = ['abandon', 'ability', 'able', 'about', 'above', 'absent', 'absorb', 'abstract', 'absurd', 'abuse', 'access', 'accident', 'account', 'accuse', 'achieve', 'acid', 'acoustic', 'acquire', 'across', 'act', 'action', 'actor', 'actress', 'actual', 'adapt', 'add', 'addict', 'address', 'adjust', 'admit', 'adult', 'advance', 'advice', 'aerobic', 'affair', 'afford', 'afraid', 'again', 'age', 'agent', 'agree', 'ahead', 'aim', 'air', 'airport', 'aisle', 'alarm', 'album', 'alcohol', 'alert', 'alien', 'all', 'alley', 'allow', 'almost', 'alone', 'alpha', 'already', 'also', 'alter', 'always', 'amateur', 'amazing', 'among', 'amount', 'amused', 'analyst', 'anchor', 'ancient', 'anger', 'angle', 'angry', 'animal', 'ankle', 'announce', 'annual', 'another', 'answer', 'antenna', 'antique', 'anxiety', 'any', 'apart', 'apology', 'appear', 'apple', 'approve', 'april', 'arch', 'arctic', 'area', 'arena', 'argue', 'arm', 'armed', 'armor', 'army', 'around', 'arrange', 'arrest', 'arrive', 'arrow', 'art', 'artefact', 'artist', 'artwork', 'ask', 'aspect', 'assault', 'asset', 'assist', 'assume', 'asthma', 'athlete', 'atom', 'attack', 'attend', 'attitude', 'attract', 'auction', 'audit', 'august', 'aunt', 'author', 'auto', 'autumn', 'average', 'avocado', 'avoid', 'awake', 'aware', 'away', 'awesome', 'awful', 'awkward', 'axis', 'baby', 'bachelor', 'bacon', 'badge', 'bag', 'balance', 'balcony', 'ball', 'bamboo', 'banana', 'banner', 'bar', 'barely', 'bargain', 'barrel', 'base', 'basic', 'basket', 'battle', 'beach', 'bean', 'beauty', 'because', 'become', 'beef', 'before', 'begin', 'behave', 'behind', 'believe', 'below', 'belt', 'bench', 'benefit', 'best', 'betray', 'better', 'between', 'beyond', 'bicycle', 'bid', 'bike', 'bind', 'biology', 'bird', 'birth', 'bitter', 'black', 'blade', 'blame', 'blanket', 'blast', 'bleak', 'bless', 'blind', 'blood', 'blossom', 'blouse', 'blue', 'blur', 'blush', 'board', 'boat', 'body', 'boil', 'bomb', 'bone', 'bonus', 'book', 'boost', 'border', 'boring', 'borrow', 'boss', 'bottom', 'bounce', 'box', 'boy', 'bracket', 'brain', 'brand', 'brass', 'brave', 'bread', 'breeze', 'brick', 'bridge', 'brief', 'bright', 'bring', 'brisk', 'broccoli', 'broken', 'bronze', 'broom', 'brother', 'brown', 'brush', 'bubble', 'buddy', 'budget', 'buffalo', 'build', 'bulb', 'bulk', 'bullet', 'bundle', 'bunker', 'burden', 'burger', 'burst', 'bus', 'business', 'busy', 'butter', 'buyer', 'buzz', 'cabbage', 'cabin', 'cable', 'cactus', 'cage', 'cake', 'call', 'calm', 'camera', 'camp', 'can', 'canal', 'cancel', 'candy', 'cannon', 'canoe', 'canvas', 'canyon', 'capable', 'capital', 'captain', 'car', 'carbon', 'card', 'cargo', 'carpet', 'carry', 'cart', 'case', 'cash', 'casino', 'castle', 'casual', 'cat', 'catalog', 'catch', 'category', 'cattle', 'caught', 'cause', 'caution', 'cave', 'ceiling', 'celery', 'cement', 'census', 'century', 'cereal', 'certain', 'chair', 'chalk', 'champion', 'change', 'chaos', 'chapter', 'charge', 'chase', 'chat', 'cheap', 'check', 'cheese', 'chef', 'cherry', 'chest', 'chicken', 'chief', 'child', 'chimney', 'choice', 'choose', 'chronic', 'chuckle', 'chunk', 'churn', 'cigar', 'cinnamon', 'circle', 'citizen', 'city', 'civil', 'claim', 'clap', 'clarify', 'claw', 'clay', 'clean', 'clerk', 'clever', 'click', 'client', 'cliff', 'climb', 'clinic', 'clip', 'clock', 'clog', 'close', 'cloth', 'cloud', 'clown', 'club', 'clump', 'cluster', 'clutch', 'coach', 'coast', 'coconut', 'code', 'coffee', 'coil', 'coin', 'collect', 'color', 'column', 'combine', 'come', 'comfort', 'comic', 'common', 'company', 'concert', 'conduct', 'confirm', 'congress', 'connect', 'consider', 'control', 'convince', 'cook', 'cool', 'copper', 'copy', 'coral', 'core', 'corn', 'correct', 'cost', 'cotton', 'couch', 'country', 'couple', 'course', 'cousin', 'cover', 'coyote', 'crack', 'cradle', 'craft', 'cram', 'crane', 'crash', 'crater', 'crawl', 'crazy', 'cream', 'credit', 'creek', 'crew', 'cricket', 'crime', 'crisp', 'critic', 'crop', 'cross', 'crouch', 'crowd', 'crucial', 'cruel', 'cruise', 'crumble', 'crunch', 'crush', 'cry', 'crystal', 'cube', 'culture', 'cup', 'cupboard', 'curious', 'current', 'curtain', 'curve', 'cushion', 'custom', 'cute', 'cycle', 'dad', 'damage', 'damp', 'dance', 'danger', 'daring', 'dash', 'daughter', 'dawn', 'day', 'deal', 'debate', 'debris', 'decade', 'december', 'decide', 'decline', 'decorate', 'decrease', 'deer', 'defense', 'define', 'defy', 'degree', 'delay', 'deliver', 'demand', 'demise', 'denial', 'dentist', 'deny', 'depart', 'depend', 'deposit', 'depth', 'deputy', 'derive', 'describe', 'desert', 'design', 'desk', 'despair', 'destroy', 'detail', 'detect', 'develop', 'device', 'devote', 'diagram', 'dial', 'diamond', 'diary', 'dice', 'diesel', 'diet', 'differ', 'digital', 'dignity', 'dilemma', 'dinner', 'dinosaur', 'direct', 'dirt', 'disagree', 'discover', 'disease', 'dish', 'dismiss', 'disorder', 'display', 'distance', 'divert', 'divide', 'divorce', 'dizzy', 'doctor', 'document', 'dog', 'doll', 'dolphin', 'domain', 'donate', 'donkey', 'donor', 'door', 'dose', 'double', 'dove', 'draft', 'dragon', 'drama', 'drastic', 'draw', 'dream', 'dress', 'drift', 'drill', 'drink', 'drip', 'drive', 'drop', 'drum', 'dry', 'duck', 'dumb', 'dune', 'during', 'dust', 'dutch', 'duty', 'dwarf', 'dynamic', 'eager', 'eagle', 'early', 'earn', 'earth', 'easily', 'east', 'easy', 'echo', 'ecology', 'economy', 'edge', 'edit', 'educate', 'effort', 'egg', 'eight', 'either', 'elbow', 'elder', 'electric', 'elegant', 'element', 'elephant', 'elevator', 'elite', 'else', 'embark', 'embody', 'embrace', 'emerge', 'emotion', 'employ', 'empower', 'empty', 'enable', 'enact', 'end', 'endless', 'endorse', 'enemy', 'energy', 'enforce', 'engage', 'engine', 'enhance', 'enjoy', 'enlist', 'enough', 'enrich', 'enroll', 'ensure', 'enter', 'entire', 'entry', 'envelope', 'episode', 'equal', 'equip', 'era', 'erase', 'erode', 'erosion', 'error', 'erupt', 'escape', 'essay', 'essence', 'estate', 'eternal', 'ethics', 'evidence', 'evil', 'evoke', 'evolve', 'exact', 'example', 'excess', 'exchange', 'excite', 'exclude', 'excuse', 'execute', 'exercise', 'exhaust', 'exhibit', 'exile', 'exist', 'exit', 'exotic', 'expand', 'expect', 'expire', 'explain', 'expose', 'express', 'extend', 'extra', 'eye', 'eyebrow', 'fabric', 'face', 'faculty', 'fade', 'faint', 'faith', 'fall', 'false', 'fame', 'family', 'famous', 'fan', 'fancy', 'fantasy', 'farm', 'fashion', 'fat', 'fatal', 'father', 'fatigue', 'fault', 'favorite', 'feature', 'february', 'federal', 'fee', 'feed', 'feel', 'female', 'fence', 'festival', 'fetch', 'fever', 'few', 'fiber', 'fiction', 'field', 'figure', 'file', 'film', 'filter', 'final', 'find', 'fine', 'finger', 'finish', 'fire', 'firm', 'first', 'fiscal', 'fish', 'fit', 'fitness', 'fix', 'flag', 'flame', 'flash', 'flat', 'flavor', 'flee', 'flight', 'flip', 'float', 'flock', 'floor', 'flower', 'fluid', 'flush', 'fly', 'foam', 'focus', 'fog', 'foil', 'fold', 'follow', 'food', 'foot', 'force', 'forest', 'forget', 'fork', 'fortune', 'forum', 'forward', 'fossil', 'foster', 'found', 'fox', 'fragile', 'frame', 'frequent', 'fresh', 'friend', 'fringe', 'frog', 'front', 'frost', 'frown', 'frozen', 'fruit', 'fuel', 'fun', 'funny', 'furnace', 'fury', 'future', 'gadget', 'gain', 'galaxy', 'gallery', 'game', 'gap', 'garage', 'garbage', 'garden', 'garlic', 'garment', 'gas', 'gasp', 'gate', 'gather', 'gauge', 'gaze', 'general', 'genius', 'genre', 'gentle', 'genuine', 'gesture', 'ghost', 'giant', 'gift', 'giggle', 'ginger', 'giraffe', 'girl', 'give', 'glad', 'glance', 'glare', 'glass', 'glide', 'glimpse', 'globe', 'gloom', 'glory', 'glove', 'glow', 'glue', 'goat', 'goddess', 'gold', 'good', 'goose', 'gorilla', 'gospel', 'gossip', 'govern', 'gown', 'grab', 'grace', 'grain', 'grant', 'grape', 'grass', 'gravity', 'great', 'green', 'grid', 'grief', 'grit', 'grocery', 'group', 'grow', 'grunt', 'guard', 'guess', 'guide', 'guilt', 'guitar', 'gun', 'gym', 'habit', 'hair', 'half', 'hammer', 'hamster', 'hand', 'happy', 'harbor', 'hard', 'harsh', 'harvest', 'hat', 'have', 'hawk', 'hazard', 'head', 'health', 'heart', 'heavy', 'hedgehog', 'height', 'hello', 'helmet', 'help', 'hen', 'hero', 'hidden', 'high', 'hill', 'hint', 'hip', 'hire', 'history', 'hobby', 'hockey', 'hold', 'hole', 'holiday', 'hollow', 'home', 'honey', 'hood', 'hope', 'horn', 'horror', 'horse', 'hospital', 'host', 'hotel', 'hour', 'hover', 'hub', 'huge', 'human', 'humble', 'humor', 'hundred', 'hungry', 'hunt', 'hurdle', 'hurry', 'hurt', 'husband', 'hybrid', 'ice', 'icon', 'idea', 'identify', 'idle', 'ignore', 'ill', 'illegal', 'illness', 'image', 'imitate', 'immense', 'immune', 'impact', 'impose', 'improve', 'impulse', 'inch', 'include', 'income', 'increase', 'index', 'indicate', 'indoor', 'industry', 'infant', 'inflict', 'inform', 'inhale', 'inherit', 'initial', 'inject', 'injury', 'inmate', 'inner', 'innocent', 'input', 'inquiry', 'insane', 'insect', 'inside', 'inspire', 'install', 'intact', 'interest', 'into', 'invest', 'invite', 'involve', 'iron', 'island', 'isolate', 'issue', 'item', 'ivory', 'jacket', 'jaguar', 'jar', 'jazz', 'jealous', 'jeans', 'jelly', 'jewel', 'job', 'join', 'joke', 'journey', 'joy', 'judge', 'juice', 'jump', 'jungle', 'junior', 'junk', 'just', 'kangaroo', 'keen', 'keep', 'ketchup', 'key', 'kick', 'kid', 'kidney', 'kind', 'kingdom', 'kiss', 'kit', 'kitchen', 'kite', 'kitten', 'kiwi', 'knee', 'knife', 'knock', 'know', 'lab', 'label', 'labor', 'ladder', 'lady', 'lake', 'lamp', 'language', 'laptop', 'large', 'later', 'latin', 'laugh', 'laundry', 'lava', 'law', 'lawn', 'lawsuit', 'layer', 'lazy', 'leader', 'leaf', 'learn', 'leave', 'lecture', 'left', 'leg', 'legal', 'legend', 'leisure', 'lemon', 'lend', 'length', 'lens', 'leopard', 'lesson', 'letter', 'level', 'liar', 'liberty', 'library', 'license', 'life', 'lift', 'light', 'like', 'limb', 'limit', 'link', 'lion', 'liquid', 'list', 'little', 'live', 'lizard', 'load', 'loan', 'lobster', 'local', 'lock', 'logic', 'lonely', 'long', 'loop', 'lottery', 'loud', 'lounge', 'love', 'loyal', 'lucky', 'luggage', 'lumber', 'lunar', 'lunch', 'luxury', 'lyrics', 'machine', 'mad', 'magic', 'magnet', 'maid', 'mail', 'main', 'major', 'make', 'mammal', 'man', 'manage', 'mandate', 'mango', 'mansion', 'manual', 'maple', 'marble', 'march', 'margin', 'marine', 'market', 'marriage', 'mask', 'mass', 'master', 'match', 'material', 'math', 'matrix', 'matter', 'maximum', 'maze', 'meadow', 'mean', 'measure', 'meat', 'mechanic', 'medal', 'media', 'melody', 'melt', 'member', 'memory', 'mention', 'menu', 'mercy', 'merge', 'merit', 'merry', 'mesh', 'message', 'metal', 'method', 'middle', 'midnight', 'milk', 'million', 'mimic', 'mind', 'minimum', 'minor', 'minute', 'miracle', 'mirror', 'misery', 'miss', 'mistake', 'mix', 'mixed', 'mixture', 'mobile', 'model', 'modify', 'mom', 'moment', 'monitor', 'monkey', 'monster', 'month', 'moon', 'moral', 'more', 'morning', 'mosquito', 'mother', 'motion', 'motor', 'mountain', 'mouse', 'move', 'movie', 'much', 'muffin', 'mule', 'multiply', 'muscle', 'museum', 'mushroom', 'music', 'must', 'mutual', 'myself', 'mystery', 'myth', 'naive', 'name', 'napkin', 'narrow', 'nasty', 'nation', 'nature', 'near', 'neck', 'need', 'negative', 'neglect', 'neither', 'nephew', 'nerve', 'nest', 'net', 'network', 'neutral', 'never', 'news', 'next', 'nice', 'night', 'noble', 'noise', 'nominee', 'noodle', 'normal', 'north', 'nose', 'notable', 'note', 'nothing', 'notice', 'novel', 'now', 'nuclear', 'number', 'nurse', 'nut', 'oak', 'obey', 'object', 'oblige', 'obscure', 'observe', 'obtain', 'obvious', 'occur', 'ocean', 'october', 'odor', 'off', 'offer', 'office', 'often', 'oil', 'okay', 'old', 'olive', 'olympic', 'omit', 'once', 'one', 'onion', 'online', 'only', 'open', 'opera', 'opinion', 'oppose', 'option', 'orange', 'orbit', 'orchard', 'order', 'ordinary', 'organ', 'orient', 'original', 'orphan', 'ostrich', 'other', 'outdoor', 'outer', 'output', 'outside', 'oval', 'oven', 'over', 'own', 'owner', 'oxygen', 'oyster', 'ozone', 'pact', 'paddle', 'page', 'pair', 'palace', 'palm', 'panda', 'panel', 'panic', 'panther', 'paper', 'parade', 'parent', 'park', 'parrot', 'party', 'pass', 'patch', 'path', 'patient', 'patrol', 'pattern', 'pause', 'pave', 'payment', 'peace', 'peanut', 'pear', 'peasant', 'pelican', 'pen', 'penalty', 'pencil', 'people', 'pepper', 'perfect', 'permit', 'person', 'pet', 'phone', 'photo', 'phrase', 'physical', 'piano', 'picnic', 'picture', 'piece', 'pig', 'pigeon', 'pill', 'pilot', 'pink', 'pioneer', 'pipe', 'pistol', 'pitch', 'pizza', 'place', 'planet', 'plastic', 'plate', 'play', 'please', 'pledge', 'pluck', 'plug', 'plunge', 'poem', 'poet', 'point', 'polar', 'pole', 'police', 'pond', 'pony', 'pool', 'popular', 'portion', 'position', 'possible', 'post', 'potato', 'pottery', 'poverty', 'powder', 'power', 'practice', 'praise', 'predict', 'prefer', 'prepare', 'present', 'pretty', 'prevent', 'price', 'pride', 'primary', 'print', 'priority', 'prison', 'private', 'prize', 'problem', 'process', 'produce', 'profit', 'program', 'project', 'promote', 'proof', 'property', 'prosper', 'protect', 'proud', 'provide', 'public', 'pudding', 'pull', 'pulp', 'pulse', 'pumpkin', 'punch', 'pupil', 'puppy', 'purchase', 'purity', 'purpose', 'purse', 'push', 'put', 'puzzle', 'pyramid', 'quality', 'quantum', 'quarter', 'question', 'quick', 'quit', 'quiz', 'quote', 'rabbit', 'raccoon', 'race', 'rack', 'radar', 'radio', 'rail', 'rain', 'raise', 'rally', 'ramp', 'ranch', 'random', 'range', 'rapid', 'rare', 'rate', 'rather', 'raven', 'raw', 'razor', 'ready', 'real', 'reason', 'rebel', 'rebuild', 'recall', 'receive', 'recipe', 'record', 'recycle', 'reduce', 'reflect', 'reform', 'refuse', 'region', 'regret', 'regular', 'reject', 'relax', 'release', 'relief', 'rely', 'remain', 'remember', 'remind', 'remove', 'render', 'renew', 'rent', 'reopen', 'repair', 'repeat', 'replace', 'report', 'require', 'rescue', 'resemble', 'resist', 'resource', 'response', 'result', 'retire', 'retreat', 'return', 'reunion', 'reveal', 'review', 'reward', 'rhythm', 'rib', 'ribbon', 'rice', 'rich', 'ride', 'ridge', 'rifle', 'right', 'rigid', 'ring', 'riot', 'ripple', 'risk', 'ritual', 'rival', 'river', 'road', 'roast', 'robot', 'robust', 'rocket', 'romance', 'roof', 'rookie', 'room', 'rose', 'rotate', 'rough', 'round', 'route', 'royal', 'rubber', 'rude', 'rug', 'rule', 'run', 'runway', 'rural', 'sad', 'saddle', 'sadness', 'safe', 'sail', 'salad', 'salmon', 'salon', 'salt', 'salute', 'same', 'sample', 'sand', 'satisfy', 'satoshi', 'sauce', 'sausage', 'save', 'say', 'scale', 'scan', 'scare', 'scatter', 'scene', 'scheme', 'school', 'science', 'scissors', 'scorpion', 'scout', 'scrap', 'screen', 'script', 'scrub', 'sea', 'search', 'season', 'seat', 'second', 'secret', 'section', 'security', 'seed', 'seek', 'segment', 'select', 'sell', 'seminar', 'senior', 'sense', 'sentence', 'series', 'service', 'session', 'settle', 'setup', 'seven', 'shadow', 'shaft', 'shallow', 'share', 'shed', 'shell', 'sheriff', 'shield', 'shift', 'shine', 'ship', 'shiver', 'shock', 'shoe', 'shoot', 'shop', 'short', 'shoulder', 'shove', 'shrimp', 'shrug', 'shuffle', 'shy', 'sibling', 'sick', 'side', 'siege', 'sight', 'sign', 'silent', 'silk', 'silly', 'silver', 'similar', 'simple', 'since', 'sing', 'siren', 'sister', 'situate', 'six', 'size', 'skate', 'sketch', 'ski', 'skill', 'skin', 'skirt', 'skull', 'slab', 'slam', 'sleep', 'slender', 'slice', 'slide', 'slight', 'slim', 'slogan', 'slot', 'slow', 'slush', 'small', 'smart', 'smile', 'smoke', 'smooth', 'snack', 'snake', 'snap', 'sniff', 'snow', 'soap', 'soccer', 'social', 'sock', 'soda', 'soft', 'solar', 'soldier', 'solid', 'solution', 'solve', 'someone', 'song', 'soon', 'sorry', 'sort', 'soul', 'sound', 'soup', 'source', 'south', 'space', 'spare', 'spatial', 'spawn', 'speak', 'special', 'speed', 'spell', 'spend', 'sphere', 'spice', 'spider', 'spike', 'spin', 'spirit', 'split', 'spoil', 'sponsor', 'spoon', 'sport', 'spot', 'spray', 'spread', 'spring', 'spy', 'square', 'squeeze', 'squirrel', 'stable', 'stadium', 'staff', 'stage', 'stairs', 'stamp', 'stand', 'start', 'state', 'stay', 'steak', 'steel', 'stem', 'step', 'stereo', 'stick', 'still', 'sting', 'stock', 'stomach', 'stone', 'stool', 'story', 'stove', 'strategy', 'street', 'strike', 'strong', 'struggle', 'student', 'stuff', 'stumble', 'style', 'subject', 'submit', 'subway', 'success', 'such', 'sudden', 'suffer', 'sugar', 'suggest', 'suit', 'summer', 'sun', 'sunny', 'sunset', 'super', 'supply', 'supreme', 'sure', 'surface', 'surge', 'surprise', 'surround', 'survey', 'suspect', 'sustain', 'swallow', 'swamp', 'swap', 'swarm', 'swear', 'sweet', 'swift', 'swim', 'swing', 'switch', 'sword', 'symbol', 'symptom', 'syrup', 'system', 'table', 'tackle', 'tag', 'tail', 'talent', 'talk', 'tank', 'tape', 'target', 'task', 'taste', 'tattoo', 'taxi', 'teach', 'team', 'tell', 'ten', 'tenant', 'tennis', 'tent', 'term', 'test', 'text', 'thank', 'that', 'theme', 'then', 'theory', 'there', 'they', 'thing', 'this', 'thought', 'three', 'thrive', 'throw', 'thumb', 'thunder', 'ticket', 'tide', 'tiger', 'tilt', 'timber', 'time', 'tiny', 'tip', 'tired', 'tissue', 'title', 'toast', 'tobacco', 'today', 'toddler', 'toe', 'together', 'toilet', 'token', 'tomato', 'tomorrow', 'tone', 'tongue', 'tonight', 'tool', 'tooth', 'top', 'topic', 'topple', 'torch', 'tornado', 'tortoise', 'toss', 'total', 'tourist', 'toward', 'tower', 'town', 'toy', 'track', 'trade', 'traffic', 'tragic', 'train', 'transfer', 'trap', 'trash', 'travel', 'tray', 'treat', 'tree', 'trend', 'trial', 'tribe', 'trick', 'trigger', 'trim', 'trip', 'trophy', 'trouble', 'truck', 'true', 'truly', 'trumpet', 'trust', 'truth', 'try', 'tube', 'tuition', 'tumble', 'tuna', 'tunnel', 'turkey', 'turn', 'turtle', 'twelve', 'twenty', 'twice', 'twin', 'twist', 'two', 'type', 'typical', 'ugly', 'umbrella', 'unable', 'unaware', 'uncle', 'uncover', 'under', 'undo', 'unfair', 'unfold', 'unhappy', 'uniform', 'unique', 'unit', 'universe', 'unknown', 'unlock', 'until', 'unusual', 'unveil', 'update', 'upgrade', 'uphold', 'upon', 'upper', 'upset', 'urban', 'urge', 'usage', 'use', 'used', 'useful', 'useless', 'usual', 'utility', 'vacant', 'vacuum', 'vague', 'valid', 'valley', 'valve', 'van', 'vanish', 'vapor', 'various', 'vast', 'vault', 'vehicle', 'velvet', 'vendor', 'venture', 'venue', 'verb', 'verify', 'version', 'very', 'vessel', 'veteran', 'viable', 'vibrant', 'vicious', 'victory', 'video', 'view', 'village', 'vintage', 'violin', 'virtual', 'virus', 'visa', 'visit', 'visual', 'vital', 'vivid', 'vocal', 'voice', 'void', 'volcano', 'volume', 'vote', 'voyage', 'wage', 'wagon', 'wait', 'walk', 'wall', 'walnut', 'want', 'warfare', 'warm', 'warrior', 'wash', 'wasp', 'waste', 'water', 'wave', 'way', 'wealth', 'weapon', 'wear', 'weasel', 'weather', 'web', 'wedding', 'weekend', 'weird', 'welcome', 'west', 'wet', 'whale', 'what', 'wheat', 'wheel', 'when', 'where', 'whip', 'whisper', 'wide', 'width', 'wife', 'wild', 'will', 'win', 'window', 'wine', 'wing', 'wink', 'winner', 'winter', 'wire', 'wisdom', 'wise', 'wish', 'witness', 'wolf', 'woman', 'wonder', 'wood', 'wool', 'word', 'work', 'world', 'worry', 'worth', 'wrap', 'wreck', 'wrestle', 'wrist', 'write', 'wrong', 'yard', 'year', 'yellow', 'you', 'young', 'youth', 'zebra', 'zero', 'zone', 'zoo'];
 
 module.exports = english;
-},{}],106:[function(_dereq_,module,exports){
+},{}],107:[function(_dereq_,module,exports){
 'use string';
 
 var french = ['abaisser', 'abandon', 'abdiquer', 'abeille', 'abolir', 'aborder', 'aboutir', 'aboyer', 'abrasif', 'abreuver', 'abriter', 'abroger', 'abrupt', 'absence', 'absolu', 'absurde', 'abusif', 'abyssal', 'académie', 'acajou', 'acarien', 'accabler', 'accepter', 'acclamer', 'accolade', 'accroche', 'accuser', 'acerbe', 'achat', 'acheter', 'aciduler', 'acier', 'acompte', 'acquérir', 'acronyme', 'acteur', 'actif', 'actuel', 'adepte', 'adéquat', 'adhésif', 'adjectif', 'adjuger', 'admettre', 'admirer', 'adopter', 'adorer', 'adoucir', 'adresse', 'adroit', 'adulte', 'adverbe', 'aérer', 'aéronef', 'affaire', 'affecter', 'affiche', 'affreux', 'affubler', 'agacer', 'agencer', 'agile', 'agiter', 'agrafer', 'agréable', 'agrume', 'aider', 'aiguille', 'ailier', 'aimable', 'aisance', 'ajouter', 'ajuster', 'alarmer', 'alchimie', 'alerte', 'algèbre', 'algue', 'aliéner', 'aliment', 'alléger', 'alliage', 'allouer', 'allumer', 'alourdir', 'alpaga', 'altesse', 'alvéole', 'amateur', 'ambigu', 'ambre', 'aménager', 'amertume', 'amidon', 'amiral', 'amorcer', 'amour', 'amovible', 'amphibie', 'ampleur', 'amusant', 'analyse', 'anaphore', 'anarchie', 'anatomie', 'ancien', 'anéantir', 'angle', 'angoisse', 'anguleux', 'animal', 'annexer', 'annonce', 'annuel', 'anodin', 'anomalie', 'anonyme', 'anormal', 'antenne', 'antidote', 'anxieux', 'apaiser', 'apéritif', 'aplanir', 'apologie', 'appareil', 'appeler', 'apporter', 'appuyer', 'aquarium', 'aqueduc', 'arbitre', 'arbuste', 'ardeur', 'ardoise', 'argent', 'arlequin', 'armature', 'armement', 'armoire', 'armure', 'arpenter', 'arracher', 'arriver', 'arroser', 'arsenic', 'artériel', 'article', 'aspect', 'asphalte', 'aspirer', 'assaut', 'asservir', 'assiette', 'associer', 'assurer', 'asticot', 'astre', 'astuce', 'atelier', 'atome', 'atrium', 'atroce', 'attaque', 'attentif', 'attirer', 'attraper', 'aubaine', 'auberge', 'audace', 'audible', 'augurer', 'aurore', 'automne', 'autruche', 'avaler', 'avancer', 'avarice', 'avenir', 'averse', 'aveugle', 'aviateur', 'avide', 'avion', 'aviser', 'avoine', 'avouer', 'avril', 'axial', 'axiome', 'badge', 'bafouer', 'bagage', 'baguette', 'baignade', 'balancer', 'balcon', 'baleine', 'balisage', 'bambin', 'bancaire', 'bandage', 'banlieue', 'bannière', 'banquier', 'barbier', 'baril', 'baron', 'barque', 'barrage', 'bassin', 'bastion', 'bataille', 'bateau', 'batterie', 'baudrier', 'bavarder', 'belette', 'bélier', 'belote', 'bénéfice', 'berceau', 'berger', 'berline', 'bermuda', 'besace', 'besogne', 'bétail', 'beurre', 'biberon', 'bicycle', 'bidule', 'bijou', 'bilan', 'bilingue', 'billard', 'binaire', 'biologie', 'biopsie', 'biotype', 'biscuit', 'bison', 'bistouri', 'bitume', 'bizarre', 'blafard', 'blague', 'blanchir', 'blessant', 'blinder', 'blond', 'bloquer', 'blouson', 'bobard', 'bobine', 'boire', 'boiser', 'bolide', 'bonbon', 'bondir', 'bonheur', 'bonifier', 'bonus', 'bordure', 'borne', 'botte', 'boucle', 'boueux', 'bougie', 'boulon', 'bouquin', 'bourse', 'boussole', 'boutique', 'boxeur', 'branche', 'brasier', 'brave', 'brebis', 'brèche', 'breuvage', 'bricoler', 'brigade', 'brillant', 'brioche', 'brique', 'brochure', 'broder', 'bronzer', 'brousse', 'broyeur', 'brume', 'brusque', 'brutal', 'bruyant', 'buffle', 'buisson', 'bulletin', 'bureau', 'burin', 'bustier', 'butiner', 'butoir', 'buvable', 'buvette', 'cabanon', 'cabine', 'cachette', 'cadeau', 'cadre', 'caféine', 'caillou', 'caisson', 'calculer', 'calepin', 'calibre', 'calmer', 'calomnie', 'calvaire', 'camarade', 'caméra', 'camion', 'campagne', 'canal', 'caneton', 'canon', 'cantine', 'canular', 'capable', 'caporal', 'caprice', 'capsule', 'capter', 'capuche', 'carabine', 'carbone', 'caresser', 'caribou', 'carnage', 'carotte', 'carreau', 'carton', 'cascade', 'casier', 'casque', 'cassure', 'causer', 'caution', 'cavalier', 'caverne', 'caviar', 'cédille', 'ceinture', 'céleste', 'cellule', 'cendrier', 'censurer', 'central', 'cercle', 'cérébral', 'cerise', 'cerner', 'cerveau', 'cesser', 'chagrin', 'chaise', 'chaleur', 'chambre', 'chance', 'chapitre', 'charbon', 'chasseur', 'chaton', 'chausson', 'chavirer', 'chemise', 'chenille', 'chéquier', 'chercher', 'cheval', 'chien', 'chiffre', 'chignon', 'chimère', 'chiot', 'chlorure', 'chocolat', 'choisir', 'chose', 'chouette', 'chrome', 'chute', 'cigare', 'cigogne', 'cimenter', 'cinéma', 'cintrer', 'circuler', 'cirer', 'cirque', 'citerne', 'citoyen', 'citron', 'civil', 'clairon', 'clameur', 'claquer', 'classe', 'clavier', 'client', 'cligner', 'climat', 'clivage', 'cloche', 'clonage', 'cloporte', 'cobalt', 'cobra', 'cocasse', 'cocotier', 'coder', 'codifier', 'coffre', 'cogner', 'cohésion', 'coiffer', 'coincer', 'colère', 'colibri', 'colline', 'colmater', 'colonel', 'combat', 'comédie', 'commande', 'compact', 'concert', 'conduire', 'confier', 'congeler', 'connoter', 'consonne', 'contact', 'convexe', 'copain', 'copie', 'corail', 'corbeau', 'cordage', 'corniche', 'corpus', 'correct', 'cortège', 'cosmique', 'costume', 'coton', 'coude', 'coupure', 'courage', 'couteau', 'couvrir', 'coyote', 'crabe', 'crainte', 'cravate', 'crayon', 'créature', 'créditer', 'crémeux', 'creuser', 'crevette', 'cribler', 'crier', 'cristal', 'critère', 'croire', 'croquer', 'crotale', 'crucial', 'cruel', 'crypter', 'cubique', 'cueillir', 'cuillère', 'cuisine', 'cuivre', 'culminer', 'cultiver', 'cumuler', 'cupide', 'curatif', 'curseur', 'cyanure', 'cycle', 'cylindre', 'cynique', 'daigner', 'damier', 'danger', 'danseur', 'dauphin', 'débattre', 'débiter', 'déborder', 'débrider', 'débutant', 'décaler', 'décembre', 'déchirer', 'décider', 'déclarer', 'décorer', 'décrire', 'décupler', 'dédale', 'déductif', 'déesse', 'défensif', 'défiler', 'défrayer', 'dégager', 'dégivrer', 'déglutir', 'dégrafer', 'déjeuner', 'délice', 'déloger', 'demander', 'demeurer', 'démolir', 'dénicher', 'dénouer', 'dentelle', 'dénuder', 'départ', 'dépenser', 'déphaser', 'déplacer', 'déposer', 'déranger', 'dérober', 'désastre', 'descente', 'désert', 'désigner', 'désobéir', 'dessiner', 'destrier', 'détacher', 'détester', 'détourer', 'détresse', 'devancer', 'devenir', 'deviner', 'devoir', 'diable', 'dialogue', 'diamant', 'dicter', 'différer', 'digérer', 'digital', 'digne', 'diluer', 'dimanche', 'diminuer', 'dioxyde', 'directif', 'diriger', 'discuter', 'disposer', 'dissiper', 'distance', 'divertir', 'diviser', 'docile', 'docteur', 'dogme', 'doigt', 'domaine', 'domicile', 'dompter', 'donateur', 'donjon', 'donner', 'dopamine', 'dortoir', 'dorure', 'dosage', 'doseur', 'dossier', 'dotation', 'douanier', 'double', 'douceur', 'douter', 'doyen', 'dragon', 'draper', 'dresser', 'dribbler', 'droiture', 'duperie', 'duplexe', 'durable', 'durcir', 'dynastie', 'éblouir', 'écarter', 'écharpe', 'échelle', 'éclairer', 'éclipse', 'éclore', 'écluse', 'école', 'économie', 'écorce', 'écouter', 'écraser', 'écrémer', 'écrivain', 'écrou', 'écume', 'écureuil', 'édifier', 'éduquer', 'effacer', 'effectif', 'effigie', 'effort', 'effrayer', 'effusion', 'égaliser', 'égarer', 'éjecter', 'élaborer', 'élargir', 'électron', 'élégant', 'éléphant', 'élève', 'éligible', 'élitisme', 'éloge', 'élucider', 'éluder', 'emballer', 'embellir', 'embryon', 'émeraude', 'émission', 'emmener', 'émotion', 'émouvoir', 'empereur', 'employer', 'emporter', 'emprise', 'émulsion', 'encadrer', 'enchère', 'enclave', 'encoche', 'endiguer', 'endosser', 'endroit', 'enduire', 'énergie', 'enfance', 'enfermer', 'enfouir', 'engager', 'engin', 'englober', 'énigme', 'enjamber', 'enjeu', 'enlever', 'ennemi', 'ennuyeux', 'enrichir', 'enrobage', 'enseigne', 'entasser', 'entendre', 'entier', 'entourer', 'entraver', 'énumérer', 'envahir', 'enviable', 'envoyer', 'enzyme', 'éolien', 'épaissir', 'épargne', 'épatant', 'épaule', 'épicerie', 'épidémie', 'épier', 'épilogue', 'épine', 'épisode', 'épitaphe', 'époque', 'épreuve', 'éprouver', 'épuisant', 'équerre', 'équipe', 'ériger', 'érosion', 'erreur', 'éruption', 'escalier', 'espadon', 'espèce', 'espiègle', 'espoir', 'esprit', 'esquiver', 'essayer', 'essence', 'essieu', 'essorer', 'estime', 'estomac', 'estrade', 'étagère', 'étaler', 'étanche', 'étatique', 'éteindre', 'étendoir', 'éternel', 'éthanol', 'éthique', 'ethnie', 'étirer', 'étoffer', 'étoile', 'étonnant', 'étourdir', 'étrange', 'étroit', 'étude', 'euphorie', 'évaluer', 'évasion', 'éventail', 'évidence', 'éviter', 'évolutif', 'évoquer', 'exact', 'exagérer', 'exaucer', 'exceller', 'excitant', 'exclusif', 'excuse', 'exécuter', 'exemple', 'exercer', 'exhaler', 'exhorter', 'exigence', 'exiler', 'exister', 'exotique', 'expédier', 'explorer', 'exposer', 'exprimer', 'exquis', 'extensif', 'extraire', 'exulter', 'fable', 'fabuleux', 'facette', 'facile', 'facture', 'faiblir', 'falaise', 'fameux', 'famille', 'farceur', 'farfelu', 'farine', 'farouche', 'fasciner', 'fatal', 'fatigue', 'faucon', 'fautif', 'faveur', 'favori', 'fébrile', 'féconder', 'fédérer', 'félin', 'femme', 'fémur', 'fendoir', 'féodal', 'fermer', 'féroce', 'ferveur', 'festival', 'feuille', 'feutre', 'février', 'fiasco', 'ficeler', 'fictif', 'fidèle', 'figure', 'filature', 'filetage', 'filière', 'filleul', 'filmer', 'filou', 'filtrer', 'financer', 'finir', 'fiole', 'firme', 'fissure', 'fixer', 'flairer', 'flamme', 'flasque', 'flatteur', 'fléau', 'flèche', 'fleur', 'flexion', 'flocon', 'flore', 'fluctuer', 'fluide', 'fluvial', 'folie', 'fonderie', 'fongible', 'fontaine', 'forcer', 'forgeron', 'formuler', 'fortune', 'fossile', 'foudre', 'fougère', 'fouiller', 'foulure', 'fourmi', 'fragile', 'fraise', 'franchir', 'frapper', 'frayeur', 'frégate', 'freiner', 'frelon', 'frémir', 'frénésie', 'frère', 'friable', 'friction', 'frisson', 'frivole', 'froid', 'fromage', 'frontal', 'frotter', 'fruit', 'fugitif', 'fuite', 'fureur', 'furieux', 'furtif', 'fusion', 'futur', 'gagner', 'galaxie', 'galerie', 'gambader', 'garantir', 'gardien', 'garnir', 'garrigue', 'gazelle', 'gazon', 'géant', 'gélatine', 'gélule', 'gendarme', 'général', 'génie', 'genou', 'gentil', 'géologie', 'géomètre', 'géranium', 'germe', 'gestuel', 'geyser', 'gibier', 'gicler', 'girafe', 'givre', 'glace', 'glaive', 'glisser', 'globe', 'gloire', 'glorieux', 'golfeur', 'gomme', 'gonfler', 'gorge', 'gorille', 'goudron', 'gouffre', 'goulot', 'goupille', 'gourmand', 'goutte', 'graduel', 'graffiti', 'graine', 'grand', 'grappin', 'gratuit', 'gravir', 'grenat', 'griffure', 'griller', 'grimper', 'grogner', 'gronder', 'grotte', 'groupe', 'gruger', 'grutier', 'gruyère', 'guépard', 'guerrier', 'guide', 'guimauve', 'guitare', 'gustatif', 'gymnaste', 'gyrostat', 'habitude', 'hachoir', 'halte', 'hameau', 'hangar', 'hanneton', 'haricot', 'harmonie', 'harpon', 'hasard', 'hélium', 'hématome', 'herbe', 'hérisson', 'hermine', 'héron', 'hésiter', 'heureux', 'hiberner', 'hibou', 'hilarant', 'histoire', 'hiver', 'homard', 'hommage', 'homogène', 'honneur', 'honorer', 'honteux', 'horde', 'horizon', 'horloge', 'hormone', 'horrible', 'houleux', 'housse', 'hublot', 'huileux', 'humain', 'humble', 'humide', 'humour', 'hurler', 'hydromel', 'hygiène', 'hymne', 'hypnose', 'idylle', 'ignorer', 'iguane', 'illicite', 'illusion', 'image', 'imbiber', 'imiter', 'immense', 'immobile', 'immuable', 'impact', 'impérial', 'implorer', 'imposer', 'imprimer', 'imputer', 'incarner', 'incendie', 'incident', 'incliner', 'incolore', 'indexer', 'indice', 'inductif', 'inédit', 'ineptie', 'inexact', 'infini', 'infliger', 'informer', 'infusion', 'ingérer', 'inhaler', 'inhiber', 'injecter', 'injure', 'innocent', 'inoculer', 'inonder', 'inscrire', 'insecte', 'insigne', 'insolite', 'inspirer', 'instinct', 'insulter', 'intact', 'intense', 'intime', 'intrigue', 'intuitif', 'inutile', 'invasion', 'inventer', 'inviter', 'invoquer', 'ironique', 'irradier', 'irréel', 'irriter', 'isoler', 'ivoire', 'ivresse', 'jaguar', 'jaillir', 'jambe', 'janvier', 'jardin', 'jauger', 'jaune', 'javelot', 'jetable', 'jeton', 'jeudi', 'jeunesse', 'joindre', 'joncher', 'jongler', 'joueur', 'jouissif', 'journal', 'jovial', 'joyau', 'joyeux', 'jubiler', 'jugement', 'junior', 'jupon', 'juriste', 'justice', 'juteux', 'juvénile', 'kayak', 'kimono', 'kiosque', 'label', 'labial', 'labourer', 'lacérer', 'lactose', 'lagune', 'laine', 'laisser', 'laitier', 'lambeau', 'lamelle', 'lampe', 'lanceur', 'langage', 'lanterne', 'lapin', 'largeur', 'larme', 'laurier', 'lavabo', 'lavoir', 'lecture', 'légal', 'léger', 'légume', 'lessive', 'lettre', 'levier', 'lexique', 'lézard', 'liasse', 'libérer', 'libre', 'licence', 'licorne', 'liège', 'lièvre', 'ligature', 'ligoter', 'ligue', 'limer', 'limite', 'limonade', 'limpide', 'linéaire', 'lingot', 'lionceau', 'liquide', 'lisière', 'lister', 'lithium', 'litige', 'littoral', 'livreur', 'logique', 'lointain', 'loisir', 'lombric', 'loterie', 'louer', 'lourd', 'loutre', 'louve', 'loyal', 'lubie', 'lucide', 'lucratif', 'lueur', 'lugubre', 'luisant', 'lumière', 'lunaire', 'lundi', 'luron', 'lutter', 'luxueux', 'machine', 'magasin', 'magenta', 'magique', 'maigre', 'maillon', 'maintien', 'mairie', 'maison', 'majorer', 'malaxer', 'maléfice', 'malheur', 'malice', 'mallette', 'mammouth', 'mandater', 'maniable', 'manquant', 'manteau', 'manuel', 'marathon', 'marbre', 'marchand', 'mardi', 'maritime', 'marqueur', 'marron', 'marteler', 'mascotte', 'massif', 'matériel', 'matière', 'matraque', 'maudire', 'maussade', 'mauve', 'maximal', 'méchant', 'méconnu', 'médaille', 'médecin', 'méditer', 'méduse', 'meilleur', 'mélange', 'mélodie', 'membre', 'mémoire', 'menacer', 'mener', 'menhir', 'mensonge', 'mentor', 'mercredi', 'mérite', 'merle', 'messager', 'mesure', 'métal', 'météore', 'méthode', 'métier', 'meuble', 'miauler', 'microbe', 'miette', 'mignon', 'migrer', 'milieu', 'million', 'mimique', 'mince', 'minéral', 'minimal', 'minorer', 'minute', 'miracle', 'miroiter', 'missile', 'mixte', 'mobile', 'moderne', 'moelleux', 'mondial', 'moniteur', 'monnaie', 'monotone', 'monstre', 'montagne', 'monument', 'moqueur', 'morceau', 'morsure', 'mortier', 'moteur', 'motif', 'mouche', 'moufle', 'moulin', 'mousson', 'mouton', 'mouvant', 'multiple', 'munition', 'muraille', 'murène', 'murmure', 'muscle', 'muséum', 'musicien', 'mutation', 'muter', 'mutuel', 'myriade', 'myrtille', 'mystère', 'mythique', 'nageur', 'nappe', 'narquois', 'narrer', 'natation', 'nation', 'nature', 'naufrage', 'nautique', 'navire', 'nébuleux', 'nectar', 'néfaste', 'négation', 'négliger', 'négocier', 'neige', 'nerveux', 'nettoyer', 'neurone', 'neutron', 'neveu', 'niche', 'nickel', 'nitrate', 'niveau', 'noble', 'nocif', 'nocturne', 'noirceur', 'noisette', 'nomade', 'nombreux', 'nommer', 'normatif', 'notable', 'notifier', 'notoire', 'nourrir', 'nouveau', 'novateur', 'novembre', 'novice', 'nuage', 'nuancer', 'nuire', 'nuisible', 'numéro', 'nuptial', 'nuque', 'nutritif', 'obéir', 'objectif', 'obliger', 'obscur', 'observer', 'obstacle', 'obtenir', 'obturer', 'occasion', 'occuper', 'océan', 'octobre', 'octroyer', 'octupler', 'oculaire', 'odeur', 'odorant', 'offenser', 'officier', 'offrir', 'ogive', 'oiseau', 'oisillon', 'olfactif', 'olivier', 'ombrage', 'omettre', 'onctueux', 'onduler', 'onéreux', 'onirique', 'opale', 'opaque', 'opérer', 'opinion', 'opportun', 'opprimer', 'opter', 'optique', 'orageux', 'orange', 'orbite', 'ordonner', 'oreille', 'organe', 'orgueil', 'orifice', 'ornement', 'orque', 'ortie', 'osciller', 'osmose', 'ossature', 'otarie', 'ouragan', 'ourson', 'outil', 'outrager', 'ouvrage', 'ovation', 'oxyde', 'oxygène', 'ozone', 'paisible', 'palace', 'palmarès', 'palourde', 'palper', 'panache', 'panda', 'pangolin', 'paniquer', 'panneau', 'panorama', 'pantalon', 'papaye', 'papier', 'papoter', 'papyrus', 'paradoxe', 'parcelle', 'paresse', 'parfumer', 'parler', 'parole', 'parrain', 'parsemer', 'partager', 'parure', 'parvenir', 'passion', 'pastèque', 'paternel', 'patience', 'patron', 'pavillon', 'pavoiser', 'payer', 'paysage', 'peigne', 'peintre', 'pelage', 'pélican', 'pelle', 'pelouse', 'peluche', 'pendule', 'pénétrer', 'pénible', 'pensif', 'pénurie', 'pépite', 'péplum', 'perdrix', 'perforer', 'période', 'permuter', 'perplexe', 'persil', 'perte', 'peser', 'pétale', 'petit', 'pétrir', 'peuple', 'pharaon', 'phobie', 'phoque', 'photon', 'phrase', 'physique', 'piano', 'pictural', 'pièce', 'pierre', 'pieuvre', 'pilote', 'pinceau', 'pipette', 'piquer', 'pirogue', 'piscine', 'piston', 'pivoter', 'pixel', 'pizza', 'placard', 'plafond', 'plaisir', 'planer', 'plaque', 'plastron', 'plateau', 'pleurer', 'plexus', 'pliage', 'plomb', 'plonger', 'pluie', 'plumage', 'pochette', 'poésie', 'poète', 'pointe', 'poirier', 'poisson', 'poivre', 'polaire', 'policier', 'pollen', 'polygone', 'pommade', 'pompier', 'ponctuel', 'pondérer', 'poney', 'portique', 'position', 'posséder', 'posture', 'potager', 'poteau', 'potion', 'pouce', 'poulain', 'poumon', 'pourpre', 'poussin', 'pouvoir', 'prairie', 'pratique', 'précieux', 'prédire', 'préfixe', 'prélude', 'prénom', 'présence', 'prétexte', 'prévoir', 'primitif', 'prince', 'prison', 'priver', 'problème', 'procéder', 'prodige', 'profond', 'progrès', 'proie', 'projeter', 'prologue', 'promener', 'propre', 'prospère', 'protéger', 'prouesse', 'proverbe', 'prudence', 'pruneau', 'psychose', 'public', 'puceron', 'puiser', 'pulpe', 'pulsar', 'punaise', 'punitif', 'pupitre', 'purifier', 'puzzle', 'pyramide', 'quasar', 'querelle', 'question', 'quiétude', 'quitter', 'quotient', 'racine', 'raconter', 'radieux', 'ragondin', 'raideur', 'raisin', 'ralentir', 'rallonge', 'ramasser', 'rapide', 'rasage', 'ratisser', 'ravager', 'ravin', 'rayonner', 'réactif', 'réagir', 'réaliser', 'réanimer', 'recevoir', 'réciter', 'réclamer', 'récolter', 'recruter', 'reculer', 'recycler', 'rédiger', 'redouter', 'refaire', 'réflexe', 'réformer', 'refrain', 'refuge', 'régalien', 'région', 'réglage', 'régulier', 'réitérer', 'rejeter', 'rejouer', 'relatif', 'relever', 'relief', 'remarque', 'remède', 'remise', 'remonter', 'remplir', 'remuer', 'renard', 'renfort', 'renifler', 'renoncer', 'rentrer', 'renvoi', 'replier', 'reporter', 'reprise', 'reptile', 'requin', 'réserve', 'résineux', 'résoudre', 'respect', 'rester', 'résultat', 'rétablir', 'retenir', 'réticule', 'retomber', 'retracer', 'réunion', 'réussir', 'revanche', 'revivre', 'révolte', 'révulsif', 'richesse', 'rideau', 'rieur', 'rigide', 'rigoler', 'rincer', 'riposter', 'risible', 'risque', 'rituel', 'rival', 'rivière', 'rocheux', 'romance', 'rompre', 'ronce', 'rondin', 'roseau', 'rosier', 'rotatif', 'rotor', 'rotule', 'rouge', 'rouille', 'rouleau', 'routine', 'royaume', 'ruban', 'rubis', 'ruche', 'ruelle', 'rugueux', 'ruiner', 'ruisseau', 'ruser', 'rustique', 'rythme', 'sabler', 'saboter', 'sabre', 'sacoche', 'safari', 'sagesse', 'saisir', 'salade', 'salive', 'salon', 'saluer', 'samedi', 'sanction', 'sanglier', 'sarcasme', 'sardine', 'saturer', 'saugrenu', 'saumon', 'sauter', 'sauvage', 'savant', 'savonner', 'scalpel', 'scandale', 'scélérat', 'scénario', 'sceptre', 'schéma', 'science', 'scinder', 'score', 'scrutin', 'sculpter', 'séance', 'sécable', 'sécher', 'secouer', 'sécréter', 'sédatif', 'séduire', 'seigneur', 'séjour', 'sélectif', 'semaine', 'sembler', 'semence', 'séminal', 'sénateur', 'sensible', 'sentence', 'séparer', 'séquence', 'serein', 'sergent', 'sérieux', 'serrure', 'sérum', 'service', 'sésame', 'sévir', 'sevrage', 'sextuple', 'sidéral', 'siècle', 'siéger', 'siffler', 'sigle', 'signal', 'silence', 'silicium', 'simple', 'sincère', 'sinistre', 'siphon', 'sirop', 'sismique', 'situer', 'skier', 'social', 'socle', 'sodium', 'soigneux', 'soldat', 'soleil', 'solitude', 'soluble', 'sombre', 'sommeil', 'somnoler', 'sonde', 'songeur', 'sonnette', 'sonore', 'sorcier', 'sortir', 'sosie', 'sottise', 'soucieux', 'soudure', 'souffle', 'soulever', 'soupape', 'source', 'soutirer', 'souvenir', 'spacieux', 'spatial', 'spécial', 'sphère', 'spiral', 'stable', 'station', 'sternum', 'stimulus', 'stipuler', 'strict', 'studieux', 'stupeur', 'styliste', 'sublime', 'substrat', 'subtil', 'subvenir', 'succès', 'sucre', 'suffixe', 'suggérer', 'suiveur', 'sulfate', 'superbe', 'supplier', 'surface', 'suricate', 'surmener', 'surprise', 'sursaut', 'survie', 'suspect', 'syllabe', 'symbole', 'symétrie', 'synapse', 'syntaxe', 'système', 'tabac', 'tablier', 'tactile', 'tailler', 'talent', 'talisman', 'talonner', 'tambour', 'tamiser', 'tangible', 'tapis', 'taquiner', 'tarder', 'tarif', 'tartine', 'tasse', 'tatami', 'tatouage', 'taupe', 'taureau', 'taxer', 'témoin', 'temporel', 'tenaille', 'tendre', 'teneur', 'tenir', 'tension', 'terminer', 'terne', 'terrible', 'tétine', 'texte', 'thème', 'théorie', 'thérapie', 'thorax', 'tibia', 'tiède', 'timide', 'tirelire', 'tiroir', 'tissu', 'titane', 'titre', 'tituber', 'toboggan', 'tolérant', 'tomate', 'tonique', 'tonneau', 'toponyme', 'torche', 'tordre', 'tornade', 'torpille', 'torrent', 'torse', 'tortue', 'totem', 'toucher', 'tournage', 'tousser', 'toxine', 'traction', 'trafic', 'tragique', 'trahir', 'train', 'trancher', 'travail', 'trèfle', 'tremper', 'trésor', 'treuil', 'triage', 'tribunal', 'tricoter', 'trilogie', 'triomphe', 'tripler', 'triturer', 'trivial', 'trombone', 'tronc', 'tropical', 'troupeau', 'tuile', 'tulipe', 'tumulte', 'tunnel', 'turbine', 'tuteur', 'tutoyer', 'tuyau', 'tympan', 'typhon', 'typique', 'tyran', 'ubuesque', 'ultime', 'ultrason', 'unanime', 'unifier', 'union', 'unique', 'unitaire', 'univers', 'uranium', 'urbain', 'urticant', 'usage', 'usine', 'usuel', 'usure', 'utile', 'utopie', 'vacarme', 'vaccin', 'vagabond', 'vague', 'vaillant', 'vaincre', 'vaisseau', 'valable', 'valise', 'vallon', 'valve', 'vampire', 'vanille', 'vapeur', 'varier', 'vaseux', 'vassal', 'vaste', 'vecteur', 'vedette', 'végétal', 'véhicule', 'veinard', 'véloce', 'vendredi', 'vénérer', 'venger', 'venimeux', 'ventouse', 'verdure', 'vérin', 'vernir', 'verrou', 'verser', 'vertu', 'veston', 'vétéran', 'vétuste', 'vexant', 'vexer', 'viaduc', 'viande', 'victoire', 'vidange', 'vidéo', 'vignette', 'vigueur', 'vilain', 'village', 'vinaigre', 'violon', 'vipère', 'virement', 'virtuose', 'virus', 'visage', 'viseur', 'vision', 'visqueux', 'visuel', 'vital', 'vitesse', 'viticole', 'vitrine', 'vivace', 'vivipare', 'vocation', 'voguer', 'voile', 'voisin', 'voiture', 'volaille', 'volcan', 'voltiger', 'volume', 'vorace', 'vortex', 'voter', 'vouloir', 'voyage', 'voyelle', 'wagon', 'xénon', 'yacht', 'zèbre', 'zénith', 'zeste', 'zoologie'];
 
 module.exports = french;
-},{}],107:[function(_dereq_,module,exports){
+},{}],108:[function(_dereq_,module,exports){
 module.exports = {
   'CHINESE': _dereq_('./chinese'),
   'ENGLISH': _dereq_('./english'),
@@ -33971,28 +34341,28 @@ module.exports = {
   'SPANISH': _dereq_('./spanish')
 };
 
-},{"./chinese":104,"./english":105,"./french":106,"./italian":108,"./japanese":109,"./spanish":110}],108:[function(_dereq_,module,exports){
+},{"./chinese":105,"./english":106,"./french":107,"./italian":109,"./japanese":110,"./spanish":111}],109:[function(_dereq_,module,exports){
 'use strict';
 
 var italian = ['abaco', 'abbaglio', 'abbinato', 'abete', 'abisso', 'abolire', 'abrasivo', 'abrogato', 'accadere', 'accenno', 'accusato', 'acetone', 'achille', 'acido', 'acqua', 'acre', 'acrilico', 'acrobata', 'acuto', 'adagio', 'addebito', 'addome', 'adeguato', 'aderire', 'adipe', 'adottare', 'adulare', 'affabile', 'affetto', 'affisso', 'affranto', 'aforisma', 'afoso', 'africano', 'agave', 'agente', 'agevole', 'aggancio', 'agire', 'agitare', 'agonismo', 'agricolo', 'agrumeto', 'aguzzo', 'alabarda', 'alato', 'albatro', 'alberato', 'albo', 'albume', 'alce', 'alcolico', 'alettone', 'alfa', 'algebra', 'aliante', 'alibi', 'alimento', 'allagato', 'allegro', 'allievo', 'allodola', 'allusivo', 'almeno', 'alogeno', 'alpaca', 'alpestre', 'altalena', 'alterno', 'alticcio', 'altrove', 'alunno', 'alveolo', 'alzare', 'amalgama', 'amanita', 'amarena', 'ambito', 'ambrato', 'ameba', 'america', 'ametista', 'amico', 'ammasso', 'ammenda', 'ammirare', 'ammonito', 'amore', 'ampio', 'ampliare', 'amuleto', 'anacardo', 'anagrafe', 'analista', 'anarchia', 'anatra', 'anca', 'ancella', 'ancora', 'andare', 'andrea', 'anello', 'angelo', 'angolare', 'angusto', 'anima', 'annegare', 'annidato', 'anno', 'annuncio', 'anonimo', 'anticipo', 'anzi', 'apatico', 'apertura', 'apode', 'apparire', 'appetito', 'appoggio', 'approdo', 'appunto', 'aprile', 'arabica', 'arachide', 'aragosta', 'araldica', 'arancio', 'aratura', 'arazzo', 'arbitro', 'archivio', 'ardito', 'arenile', 'argento', 'argine', 'arguto', 'aria', 'armonia', 'arnese', 'arredato', 'arringa', 'arrosto', 'arsenico', 'arso', 'artefice', 'arzillo', 'asciutto', 'ascolto', 'asepsi', 'asettico', 'asfalto', 'asino', 'asola', 'aspirato', 'aspro', 'assaggio', 'asse', 'assoluto', 'assurdo', 'asta', 'astenuto', 'astice', 'astratto', 'atavico', 'ateismo', 'atomico', 'atono', 'attesa', 'attivare', 'attorno', 'attrito', 'attuale', 'ausilio', 'austria', 'autista', 'autonomo', 'autunno', 'avanzato', 'avere', 'avvenire', 'avviso', 'avvolgere', 'azione', 'azoto', 'azzimo', 'azzurro', 'babele', 'baccano', 'bacino', 'baco', 'badessa', 'badilata', 'bagnato', 'baita', 'balcone', 'baldo', 'balena', 'ballata', 'balzano', 'bambino', 'bandire', 'baraonda', 'barbaro', 'barca', 'baritono', 'barlume', 'barocco', 'basilico', 'basso', 'batosta', 'battuto', 'baule', 'bava', 'bavosa', 'becco', 'beffa', 'belgio', 'belva', 'benda', 'benevole', 'benigno', 'benzina', 'bere', 'berlina', 'beta', 'bibita', 'bici', 'bidone', 'bifido', 'biga', 'bilancia', 'bimbo', 'binocolo', 'biologo', 'bipede', 'bipolare', 'birbante', 'birra', 'biscotto', 'bisesto', 'bisnonno', 'bisonte', 'bisturi', 'bizzarro', 'blando', 'blatta', 'bollito', 'bonifico', 'bordo', 'bosco', 'botanico', 'bottino', 'bozzolo', 'braccio', 'bradipo', 'brama', 'branca', 'bravura', 'bretella', 'brevetto', 'brezza', 'briglia', 'brillante', 'brindare', 'broccolo', 'brodo', 'bronzina', 'brullo', 'bruno', 'bubbone', 'buca', 'budino', 'buffone', 'buio', 'bulbo', 'buono', 'burlone', 'burrasca', 'bussola', 'busta', 'cadetto', 'caduco', 'calamaro', 'calcolo', 'calesse', 'calibro', 'calmo', 'caloria', 'cambusa', 'camerata', 'camicia', 'cammino', 'camola', 'campale', 'canapa', 'candela', 'cane', 'canino', 'canotto', 'cantina', 'capace', 'capello', 'capitolo', 'capogiro', 'cappero', 'capra', 'capsula', 'carapace', 'carcassa', 'cardo', 'carisma', 'carovana', 'carretto', 'cartolina', 'casaccio', 'cascata', 'caserma', 'caso', 'cassone', 'castello', 'casuale', 'catasta', 'catena', 'catrame', 'cauto', 'cavillo', 'cedibile', 'cedrata', 'cefalo', 'celebre', 'cellulare', 'cena', 'cenone', 'centesimo', 'ceramica', 'cercare', 'certo', 'cerume', 'cervello', 'cesoia', 'cespo', 'ceto', 'chela', 'chiaro', 'chicca', 'chiedere', 'chimera', 'china', 'chirurgo', 'chitarra', 'ciao', 'ciclismo', 'cifrare', 'cigno', 'cilindro', 'ciottolo', 'circa', 'cirrosi', 'citrico', 'cittadino', 'ciuffo', 'civetta', 'civile', 'classico', 'clinica', 'cloro', 'cocco', 'codardo', 'codice', 'coerente', 'cognome', 'collare', 'colmato', 'colore', 'colposo', 'coltivato', 'colza', 'coma', 'cometa', 'commando', 'comodo', 'computer', 'comune', 'conciso', 'condurre', 'conferma', 'congelare', 'coniuge', 'connesso', 'conoscere', 'consumo', 'continuo', 'convegno', 'coperto', 'copione', 'coppia', 'copricapo', 'corazza', 'cordata', 'coricato', 'cornice', 'corolla', 'corpo', 'corredo', 'corsia', 'cortese', 'cosmico', 'costante', 'cottura', 'covato', 'cratere', 'cravatta', 'creato', 'credere', 'cremoso', 'crescita', 'creta', 'criceto', 'crinale', 'crisi', 'critico', 'croce', 'cronaca', 'crostata', 'cruciale', 'crusca', 'cucire', 'cuculo', 'cugino', 'cullato', 'cupola', 'curatore', 'cursore', 'curvo', 'cuscino', 'custode', 'dado', 'daino', 'dalmata', 'damerino', 'daniela', 'dannoso', 'danzare', 'datato', 'davanti', 'davvero', 'debutto', 'decennio', 'deciso', 'declino', 'decollo', 'decreto', 'dedicato', 'definito', 'deforme', 'degno', 'delegare', 'delfino', 'delirio', 'delta', 'demenza', 'denotato', 'dentro', 'deposito', 'derapata', 'derivare', 'deroga', 'descritto', 'deserto', 'desiderio', 'desumere', 'detersivo', 'devoto', 'diametro', 'dicembre', 'diedro', 'difeso', 'diffuso', 'digerire', 'digitale', 'diluvio', 'dinamico', 'dinnanzi', 'dipinto', 'diploma', 'dipolo', 'diradare', 'dire', 'dirotto', 'dirupo', 'disagio', 'discreto', 'disfare', 'disgelo', 'disposto', 'distanza', 'disumano', 'dito', 'divano', 'divelto', 'dividere', 'divorato', 'doblone', 'docente', 'doganale', 'dogma', 'dolce', 'domato', 'domenica', 'dominare', 'dondolo', 'dono', 'dormire', 'dote', 'dottore', 'dovuto', 'dozzina', 'drago', 'druido', 'dubbio', 'dubitare', 'ducale', 'duna', 'duomo', 'duplice', 'duraturo', 'ebano', 'eccesso', 'ecco', 'eclissi', 'economia', 'edera', 'edicola', 'edile', 'editoria', 'educare', 'egemonia', 'egli', 'egoismo', 'egregio', 'elaborato', 'elargire', 'elegante', 'elencato', 'eletto', 'elevare', 'elfico', 'elica', 'elmo', 'elsa', 'eluso', 'emanato', 'emblema', 'emesso', 'emiro', 'emotivo', 'emozione', 'empirico', 'emulo', 'endemico', 'enduro', 'energia', 'enfasi', 'enoteca', 'entrare', 'enzima', 'epatite', 'epilogo', 'episodio', 'epocale', 'eppure', 'equatore', 'erario', 'erba', 'erboso', 'erede', 'eremita', 'erigere', 'ermetico', 'eroe', 'erosivo', 'errante', 'esagono', 'esame', 'esanime', 'esaudire', 'esca', 'esempio', 'esercito', 'esibito', 'esigente', 'esistere', 'esito', 'esofago', 'esortato', 'esoso', 'espanso', 'espresso', 'essenza', 'esso', 'esteso', 'estimare', 'estonia', 'estroso', 'esultare', 'etilico', 'etnico', 'etrusco', 'etto', 'euclideo', 'europa', 'evaso', 'evidenza', 'evitato', 'evoluto', 'evviva', 'fabbrica', 'faccenda', 'fachiro', 'falco', 'famiglia', 'fanale', 'fanfara', 'fango', 'fantasma', 'fare', 'farfalla', 'farinoso', 'farmaco', 'fascia', 'fastoso', 'fasullo', 'faticare', 'fato', 'favoloso', 'febbre', 'fecola', 'fede', 'fegato', 'felpa', 'feltro', 'femmina', 'fendere', 'fenomeno', 'fermento', 'ferro', 'fertile', 'fessura', 'festivo', 'fetta', 'feudo', 'fiaba', 'fiducia', 'fifa', 'figurato', 'filo', 'finanza', 'finestra', 'finire', 'fiore', 'fiscale', 'fisico', 'fiume', 'flacone', 'flamenco', 'flebo', 'flemma', 'florido', 'fluente', 'fluoro', 'fobico', 'focaccia', 'focoso', 'foderato', 'foglio', 'folata', 'folclore', 'folgore', 'fondente', 'fonetico', 'fonia', 'fontana', 'forbito', 'forchetta', 'foresta', 'formica', 'fornaio', 'foro', 'fortezza', 'forzare', 'fosfato', 'fosso', 'fracasso', 'frana', 'frassino', 'fratello', 'freccetta', 'frenata', 'fresco', 'frigo', 'frollino', 'fronde', 'frugale', 'frutta', 'fucilata', 'fucsia', 'fuggente', 'fulmine', 'fulvo', 'fumante', 'fumetto', 'fumoso', 'fune', 'funzione', 'fuoco', 'furbo', 'furgone', 'furore', 'fuso', 'futile', 'gabbiano', 'gaffe', 'galateo', 'gallina', 'galoppo', 'gambero', 'gamma', 'garanzia', 'garbo', 'garofano', 'garzone', 'gasdotto', 'gasolio', 'gastrico', 'gatto', 'gaudio', 'gazebo', 'gazzella', 'geco', 'gelatina', 'gelso', 'gemello', 'gemmato', 'gene', 'genitore', 'gennaio', 'genotipo', 'gergo', 'ghepardo', 'ghiaccio', 'ghisa', 'giallo', 'gilda', 'ginepro', 'giocare', 'gioiello', 'giorno', 'giove', 'girato', 'girone', 'gittata', 'giudizio', 'giurato', 'giusto', 'globulo', 'glutine', 'gnomo', 'gobba', 'golf', 'gomito', 'gommone', 'gonfio', 'gonna', 'governo', 'gracile', 'grado', 'grafico', 'grammo', 'grande', 'grattare', 'gravoso', 'grazia', 'greca', 'gregge', 'grifone', 'grigio', 'grinza', 'grotta', 'gruppo', 'guadagno', 'guaio', 'guanto', 'guardare', 'gufo', 'guidare', 'ibernato', 'icona', 'identico', 'idillio', 'idolo', 'idra', 'idrico', 'idrogeno', 'igiene', 'ignaro', 'ignorato', 'ilare', 'illeso', 'illogico', 'illudere', 'imballo', 'imbevuto', 'imbocco', 'imbuto', 'immane', 'immerso', 'immolato', 'impacco', 'impeto', 'impiego', 'importo', 'impronta', 'inalare', 'inarcare', 'inattivo', 'incanto', 'incendio', 'inchino', 'incisivo', 'incluso', 'incontro', 'incrocio', 'incubo', 'indagine', 'india', 'indole', 'inedito', 'infatti', 'infilare', 'inflitto', 'ingaggio', 'ingegno', 'inglese', 'ingordo', 'ingrosso', 'innesco', 'inodore', 'inoltrare', 'inondato', 'insano', 'insetto', 'insieme', 'insonnia', 'insulina', 'intasato', 'intero', 'intonaco', 'intuito', 'inumidire', 'invalido', 'invece', 'invito', 'iperbole', 'ipnotico', 'ipotesi', 'ippica', 'iride', 'irlanda', 'ironico', 'irrigato', 'irrorare', 'isolato', 'isotopo', 'isterico', 'istituto', 'istrice', 'italia', 'iterare', 'labbro', 'labirinto', 'lacca', 'lacerato', 'lacrima', 'lacuna', 'laddove', 'lago', 'lampo', 'lancetta', 'lanterna', 'lardoso', 'larga', 'laringe', 'lastra', 'latenza', 'latino', 'lattuga', 'lavagna', 'lavoro', 'legale', 'leggero', 'lembo', 'lentezza', 'lenza', 'leone', 'lepre', 'lesivo', 'lessato', 'lesto', 'letterale', 'leva', 'levigato', 'libero', 'lido', 'lievito', 'lilla', 'limatura', 'limitare', 'limpido', 'lineare', 'lingua', 'liquido', 'lira', 'lirica', 'lisca', 'lite', 'litigio', 'livrea', 'locanda', 'lode', 'logica', 'lombare', 'londra', 'longevo', 'loquace', 'lorenzo', 'loto', 'lotteria', 'luce', 'lucidato', 'lumaca', 'luminoso', 'lungo', 'lupo', 'luppolo', 'lusinga', 'lusso', 'lutto', 'macabro', 'macchina', 'macero', 'macinato', 'madama', 'magico', 'maglia', 'magnete', 'magro', 'maiolica', 'malafede', 'malgrado', 'malinteso', 'malsano', 'malto', 'malumore', 'mana', 'mancia', 'mandorla', 'mangiare', 'manifesto', 'mannaro', 'manovra', 'mansarda', 'mantide', 'manubrio', 'mappa', 'maratona', 'marcire', 'maretta', 'marmo', 'marsupio', 'maschera', 'massaia', 'mastino', 'materasso', 'matricola', 'mattone', 'maturo', 'mazurca', 'meandro', 'meccanico', 'mecenate', 'medesimo', 'meditare', 'mega', 'melassa', 'melis', 'melodia', 'meninge', 'meno', 'mensola', 'mercurio', 'merenda', 'merlo', 'meschino', 'mese', 'messere', 'mestolo', 'metallo', 'metodo', 'mettere', 'miagolare', 'mica', 'micelio', 'michele', 'microbo', 'midollo', 'miele', 'migliore', 'milano', 'milite', 'mimosa', 'minerale', 'mini', 'minore', 'mirino', 'mirtillo', 'miscela', 'missiva', 'misto', 'misurare', 'mitezza', 'mitigare', 'mitra', 'mittente', 'mnemonico', 'modello', 'modifica', 'modulo', 'mogano', 'mogio', 'mole', 'molosso', 'monastero', 'monco', 'mondina', 'monetario', 'monile', 'monotono', 'monsone', 'montato', 'monviso', 'mora', 'mordere', 'morsicato', 'mostro', 'motivato', 'motosega', 'motto', 'movenza', 'movimento', 'mozzo', 'mucca', 'mucosa', 'muffa', 'mughetto', 'mugnaio', 'mulatto', 'mulinello', 'multiplo', 'mummia', 'munto', 'muovere', 'murale', 'musa', 'muscolo', 'musica', 'mutevole', 'muto', 'nababbo', 'nafta', 'nanometro', 'narciso', 'narice', 'narrato', 'nascere', 'nastrare', 'naturale', 'nautica', 'naviglio', 'nebulosa', 'necrosi', 'negativo', 'negozio', 'nemmeno', 'neofita', 'neretto', 'nervo', 'nessuno', 'nettuno', 'neutrale', 'neve', 'nevrotico', 'nicchia', 'ninfa', 'nitido', 'nobile', 'nocivo', 'nodo', 'nome', 'nomina', 'nordico', 'normale', 'norvegese', 'nostrano', 'notare', 'notizia', 'notturno', 'novella', 'nucleo', 'nulla', 'numero', 'nuovo', 'nutrire', 'nuvola', 'nuziale', 'oasi', 'obbedire', 'obbligo', 'obelisco', 'oblio', 'obolo', 'obsoleto', 'occasione', 'occhio', 'occidente', 'occorrere', 'occultare', 'ocra', 'oculato', 'odierno', 'odorare', 'offerta', 'offrire', 'offuscato', 'oggetto', 'oggi', 'ognuno', 'olandese', 'olfatto', 'oliato', 'oliva', 'ologramma', 'oltre', 'omaggio', 'ombelico', 'ombra', 'omega', 'omissione', 'ondoso', 'onere', 'onice', 'onnivoro', 'onorevole', 'onta', 'operato', 'opinione', 'opposto', 'oracolo', 'orafo', 'ordine', 'orecchino', 'orefice', 'orfano', 'organico', 'origine', 'orizzonte', 'orma', 'ormeggio', 'ornativo', 'orologio', 'orrendo', 'orribile', 'ortensia', 'ortica', 'orzata', 'orzo', 'osare', 'oscurare', 'osmosi', 'ospedale', 'ospite', 'ossa', 'ossidare', 'ostacolo', 'oste', 'otite', 'otre', 'ottagono', 'ottimo', 'ottobre', 'ovale', 'ovest', 'ovino', 'oviparo', 'ovocito', 'ovunque', 'ovviare', 'ozio', 'pacchetto', 'pace', 'pacifico', 'padella', 'padrone', 'paese', 'paga', 'pagina', 'palazzina', 'palesare', 'pallido', 'palo', 'palude', 'pandoro', 'pannello', 'paolo', 'paonazzo', 'paprica', 'parabola', 'parcella', 'parere', 'pargolo', 'pari', 'parlato', 'parola', 'partire', 'parvenza', 'parziale', 'passivo', 'pasticca', 'patacca', 'patologia', 'pattume', 'pavone', 'peccato', 'pedalare', 'pedonale', 'peggio', 'peloso', 'penare', 'pendice', 'penisola', 'pennuto', 'penombra', 'pensare', 'pentola', 'pepe', 'pepita', 'perbene', 'percorso', 'perdonato', 'perforare', 'pergamena', 'periodo', 'permesso', 'perno', 'perplesso', 'persuaso', 'pertugio', 'pervaso', 'pesatore', 'pesista', 'peso', 'pestifero', 'petalo', 'pettine', 'petulante', 'pezzo', 'piacere', 'pianta', 'piattino', 'piccino', 'picozza', 'piega', 'pietra', 'piffero', 'pigiama', 'pigolio', 'pigro', 'pila', 'pilifero', 'pillola', 'pilota', 'pimpante', 'pineta', 'pinna', 'pinolo', 'pioggia', 'piombo', 'piramide', 'piretico', 'pirite', 'pirolisi', 'pitone', 'pizzico', 'placebo', 'planare', 'plasma', 'platano', 'plenario', 'pochezza', 'poderoso', 'podismo', 'poesia', 'poggiare', 'polenta', 'poligono', 'pollice', 'polmonite', 'polpetta', 'polso', 'poltrona', 'polvere', 'pomice', 'pomodoro', 'ponte', 'popoloso', 'porfido', 'poroso', 'porpora', 'porre', 'portata', 'posa', 'positivo', 'possesso', 'postulato', 'potassio', 'potere', 'pranzo', 'prassi', 'pratica', 'precluso', 'predica', 'prefisso', 'pregiato', 'prelievo', 'premere', 'prenotare', 'preparato', 'presenza', 'pretesto', 'prevalso', 'prima', 'principe', 'privato', 'problema', 'procura', 'produrre', 'profumo', 'progetto', 'prolunga', 'promessa', 'pronome', 'proposta', 'proroga', 'proteso', 'prova', 'prudente', 'prugna', 'prurito', 'psiche', 'pubblico', 'pudica', 'pugilato', 'pugno', 'pulce', 'pulito', 'pulsante', 'puntare', 'pupazzo', 'pupilla', 'puro', 'quadro', 'qualcosa', 'quasi', 'querela', 'quota', 'raccolto', 'raddoppio', 'radicale', 'radunato', 'raffica', 'ragazzo', 'ragione', 'ragno', 'ramarro', 'ramingo', 'ramo', 'randagio', 'rantolare', 'rapato', 'rapina', 'rappreso', 'rasatura', 'raschiato', 'rasente', 'rassegna', 'rastrello', 'rata', 'ravveduto', 'reale', 'recepire', 'recinto', 'recluta', 'recondito', 'recupero', 'reddito', 'redimere', 'regalato', 'registro', 'regola', 'regresso', 'relazione', 'remare', 'remoto', 'renna', 'replica', 'reprimere', 'reputare', 'resa', 'residente', 'responso', 'restauro', 'rete', 'retina', 'retorica', 'rettifica', 'revocato', 'riassunto', 'ribadire', 'ribelle', 'ribrezzo', 'ricarica', 'ricco', 'ricevere', 'riciclato', 'ricordo', 'ricreduto', 'ridicolo', 'ridurre', 'rifasare', 'riflesso', 'riforma', 'rifugio', 'rigare', 'rigettato', 'righello', 'rilassato', 'rilevato', 'rimanere', 'rimbalzo', 'rimedio', 'rimorchio', 'rinascita', 'rincaro', 'rinforzo', 'rinnovo', 'rinomato', 'rinsavito', 'rintocco', 'rinuncia', 'rinvenire', 'riparato', 'ripetuto', 'ripieno', 'riportare', 'ripresa', 'ripulire', 'risata', 'rischio', 'riserva', 'risibile', 'riso', 'rispetto', 'ristoro', 'risultato', 'risvolto', 'ritardo', 'ritegno', 'ritmico', 'ritrovo', 'riunione', 'riva', 'riverso', 'rivincita', 'rivolto', 'rizoma', 'roba', 'robotico', 'robusto', 'roccia', 'roco', 'rodaggio', 'rodere', 'roditore', 'rogito', 'rollio', 'romantico', 'rompere', 'ronzio', 'rosolare', 'rospo', 'rotante', 'rotondo', 'rotula', 'rovescio', 'rubizzo', 'rubrica', 'ruga', 'rullino', 'rumine', 'rumoroso', 'ruolo', 'rupe', 'russare', 'rustico', 'sabato', 'sabbiare', 'sabotato', 'sagoma', 'salasso', 'saldatura', 'salgemma', 'salivare', 'salmone', 'salone', 'saltare', 'saluto', 'salvo', 'sapere', 'sapido', 'saporito', 'saraceno', 'sarcasmo', 'sarto', 'sassoso', 'satellite', 'satira', 'satollo', 'saturno', 'savana', 'savio', 'saziato', 'sbadiglio', 'sbalzo', 'sbancato', 'sbarra', 'sbattere', 'sbavare', 'sbendare', 'sbirciare', 'sbloccato', 'sbocciato', 'sbrinare', 'sbruffone', 'sbuffare', 'scabroso', 'scadenza', 'scala', 'scambiare', 'scandalo', 'scapola', 'scarso', 'scatenare', 'scavato', 'scelto', 'scenico', 'scettro', 'scheda', 'schiena', 'sciarpa', 'scienza', 'scindere', 'scippo', 'sciroppo', 'scivolo', 'sclerare', 'scodella', 'scolpito', 'scomparto', 'sconforto', 'scoprire', 'scorta', 'scossone', 'scozzese', 'scriba', 'scrollare', 'scrutinio', 'scuderia', 'scultore', 'scuola', 'scuro', 'scusare', 'sdebitare', 'sdoganare', 'seccatura', 'secondo', 'sedano', 'seggiola', 'segnalato', 'segregato', 'seguito', 'selciato', 'selettivo', 'sella', 'selvaggio', 'semaforo', 'sembrare', 'seme', 'seminato', 'sempre', 'senso', 'sentire', 'sepolto', 'sequenza', 'serata', 'serbato', 'sereno', 'serio', 'serpente', 'serraglio', 'servire', 'sestina', 'setola', 'settimana', 'sfacelo', 'sfaldare', 'sfamato', 'sfarzoso', 'sfaticato', 'sfera', 'sfida', 'sfilato', 'sfinge', 'sfocato', 'sfoderare', 'sfogo', 'sfoltire', 'sforzato', 'sfratto', 'sfruttato', 'sfuggito', 'sfumare', 'sfuso', 'sgabello', 'sgarbato', 'sgonfiare', 'sgorbio', 'sgrassato', 'sguardo', 'sibilo', 'siccome', 'sierra', 'sigla', 'signore', 'silenzio', 'sillaba', 'simbolo', 'simpatico', 'simulato', 'sinfonia', 'singolo', 'sinistro', 'sino', 'sintesi', 'sinusoide', 'sipario', 'sisma', 'sistole', 'situato', 'slitta', 'slogatura', 'sloveno', 'smarrito', 'smemorato', 'smentito', 'smeraldo', 'smilzo', 'smontare', 'smottato', 'smussato', 'snellire', 'snervato', 'snodo', 'sobbalzo', 'sobrio', 'soccorso', 'sociale', 'sodale', 'soffitto', 'sogno', 'soldato', 'solenne', 'solido', 'sollazzo', 'solo', 'solubile', 'solvente', 'somatico', 'somma', 'sonda', 'sonetto', 'sonnifero', 'sopire', 'soppeso', 'sopra', 'sorgere', 'sorpasso', 'sorriso', 'sorso', 'sorteggio', 'sorvolato', 'sospiro', 'sosta', 'sottile', 'spada', 'spalla', 'spargere', 'spatola', 'spavento', 'spazzola', 'specie', 'spedire', 'spegnere', 'spelatura', 'speranza', 'spessore', 'spettrale', 'spezzato', 'spia', 'spigoloso', 'spillato', 'spinoso', 'spirale', 'splendido', 'sportivo', 'sposo', 'spranga', 'sprecare', 'spronato', 'spruzzo', 'spuntino', 'squillo', 'sradicare', 'srotolato', 'stabile', 'stacco', 'staffa', 'stagnare', 'stampato', 'stantio', 'starnuto', 'stasera', 'statuto', 'stelo', 'steppa', 'sterzo', 'stiletto', 'stima', 'stirpe', 'stivale', 'stizzoso', 'stonato', 'storico', 'strappo', 'stregato', 'stridulo', 'strozzare', 'strutto', 'stuccare', 'stufo', 'stupendo', 'subentro', 'succoso', 'sudore', 'suggerito', 'sugo', 'sultano', 'suonare', 'superbo', 'supporto', 'surgelato', 'surrogato', 'sussurro', 'sutura', 'svagare', 'svedese', 'sveglio', 'svelare', 'svenuto', 'svezia', 'sviluppo', 'svista', 'svizzera', 'svolta', 'svuotare', 'tabacco', 'tabulato', 'tacciare', 'taciturno', 'tale', 'talismano', 'tampone', 'tannino', 'tara', 'tardivo', 'targato', 'tariffa', 'tarpare', 'tartaruga', 'tasto', 'tattico', 'taverna', 'tavolata', 'tazza', 'teca', 'tecnico', 'telefono', 'temerario', 'tempo', 'temuto', 'tendone', 'tenero', 'tensione', 'tentacolo', 'teorema', 'terme', 'terrazzo', 'terzetto', 'tesi', 'tesserato', 'testato', 'tetro', 'tettoia', 'tifare', 'tigella', 'timbro', 'tinto', 'tipico', 'tipografo', 'tiraggio', 'tiro', 'titanio', 'titolo', 'titubante', 'tizio', 'tizzone', 'toccare', 'tollerare', 'tolto', 'tombola', 'tomo', 'tonfo', 'tonsilla', 'topazio', 'topologia', 'toppa', 'torba', 'tornare', 'torrone', 'tortora', 'toscano', 'tossire', 'tostatura', 'totano', 'trabocco', 'trachea', 'trafila', 'tragedia', 'tralcio', 'tramonto', 'transito', 'trapano', 'trarre', 'trasloco', 'trattato', 'trave', 'treccia', 'tremolio', 'trespolo', 'tributo', 'tricheco', 'trifoglio', 'trillo', 'trincea', 'trio', 'tristezza', 'triturato', 'trivella', 'tromba', 'trono', 'troppo', 'trottola', 'trovare', 'truccato', 'tubatura', 'tuffato', 'tulipano', 'tumulto', 'tunisia', 'turbare', 'turchino', 'tuta', 'tutela', 'ubicato', 'uccello', 'uccisore', 'udire', 'uditivo', 'uffa', 'ufficio', 'uguale', 'ulisse', 'ultimato', 'umano', 'umile', 'umorismo', 'uncinetto', 'ungere', 'ungherese', 'unicorno', 'unificato', 'unisono', 'unitario', 'unte', 'uovo', 'upupa', 'uragano', 'urgenza', 'urlo', 'usanza', 'usato', 'uscito', 'usignolo', 'usuraio', 'utensile', 'utilizzo', 'utopia', 'vacante', 'vaccinato', 'vagabondo', 'vagliato', 'valanga', 'valgo', 'valico', 'valletta', 'valoroso', 'valutare', 'valvola', 'vampata', 'vangare', 'vanitoso', 'vano', 'vantaggio', 'vanvera', 'vapore', 'varano', 'varcato', 'variante', 'vasca', 'vedetta', 'vedova', 'veduto', 'vegetale', 'veicolo', 'velcro', 'velina', 'velluto', 'veloce', 'venato', 'vendemmia', 'vento', 'verace', 'verbale', 'vergogna', 'verifica', 'vero', 'verruca', 'verticale', 'vescica', 'vessillo', 'vestale', 'veterano', 'vetrina', 'vetusto', 'viandante', 'vibrante', 'vicenda', 'vichingo', 'vicinanza', 'vidimare', 'vigilia', 'vigneto', 'vigore', 'vile', 'villano', 'vimini', 'vincitore', 'viola', 'vipera', 'virgola', 'virologo', 'virulento', 'viscoso', 'visione', 'vispo', 'vissuto', 'visura', 'vita', 'vitello', 'vittima', 'vivanda', 'vivido', 'viziare', 'voce', 'voga', 'volatile', 'volere', 'volpe', 'voragine', 'vulcano', 'zampogna', 'zanna', 'zappato', 'zattera', 'zavorra', 'zefiro', 'zelante', 'zelo', 'zenzero', 'zerbino', 'zibetto', 'zinco', 'zircone', 'zitto', 'zolla', 'zotico', 'zucchero', 'zufolo', 'zulu', 'zuppa'];
 
 module.exports = italian;
 
-},{}],109:[function(_dereq_,module,exports){
+},{}],110:[function(_dereq_,module,exports){
 'use strict';
 
 var japanese = ['あいこくしん', 'あいさつ', 'あいだ', 'あおぞら', 'あかちゃん', 'あきる', 'あけがた', 'あける', 'あこがれる', 'あさい', 'あさひ', 'あしあと', 'あじわう', 'あずかる', 'あずき', 'あそぶ', 'あたえる', 'あたためる', 'あたりまえ', 'あたる', 'あつい', 'あつかう', 'あっしゅく', 'あつまり', 'あつめる', 'あてな', 'あてはまる', 'あひる', 'あぶら', 'あぶる', 'あふれる', 'あまい', 'あまど', 'あまやかす', 'あまり', 'あみもの', 'あめりか', 'あやまる', 'あゆむ', 'あらいぐま', 'あらし', 'あらすじ', 'あらためる', 'あらゆる', 'あらわす', 'ありがとう', 'あわせる', 'あわてる', 'あんい', 'あんがい', 'あんこ', 'あんぜん', 'あんてい', 'あんない', 'あんまり', 'いいだす', 'いおん', 'いがい', 'いがく', 'いきおい', 'いきなり', 'いきもの', 'いきる', 'いくじ', 'いくぶん', 'いけばな', 'いけん', 'いこう', 'いこく', 'いこつ', 'いさましい', 'いさん', 'いしき', 'いじゅう', 'いじょう', 'いじわる', 'いずみ', 'いずれ', 'いせい', 'いせえび', 'いせかい', 'いせき', 'いぜん', 'いそうろう', 'いそがしい', 'いだい', 'いだく', 'いたずら', 'いたみ', 'いたりあ', 'いちおう', 'いちじ', 'いちど', 'いちば', 'いちぶ', 'いちりゅう', 'いつか', 'いっしゅん', 'いっせい', 'いっそう', 'いったん', 'いっち', 'いってい', 'いっぽう', 'いてざ', 'いてん', 'いどう', 'いとこ', 'いない', 'いなか', 'いねむり', 'いのち', 'いのる', 'いはつ', 'いばる', 'いはん', 'いびき', 'いひん', 'いふく', 'いへん', 'いほう', 'いみん', 'いもうと', 'いもたれ', 'いもり', 'いやがる', 'いやす', 'いよかん', 'いよく', 'いらい', 'いらすと', 'いりぐち', 'いりょう', 'いれい', 'いれもの', 'いれる', 'いろえんぴつ', 'いわい', 'いわう', 'いわかん', 'いわば', 'いわゆる', 'いんげんまめ', 'いんさつ', 'いんしょう', 'いんよう', 'うえき', 'うえる', 'うおざ', 'うがい', 'うかぶ', 'うかべる', 'うきわ', 'うくらいな', 'うくれれ', 'うけたまわる', 'うけつけ', 'うけとる', 'うけもつ', 'うける', 'うごかす', 'うごく', 'うこん', 'うさぎ', 'うしなう', 'うしろがみ', 'うすい', 'うすぎ', 'うすぐらい', 'うすめる', 'うせつ', 'うちあわせ', 'うちがわ', 'うちき', 'うちゅう', 'うっかり', 'うつくしい', 'うったえる', 'うつる', 'うどん', 'うなぎ', 'うなじ', 'うなずく', 'うなる', 'うねる', 'うのう', 'うぶげ', 'うぶごえ', 'うまれる', 'うめる', 'うもう', 'うやまう', 'うよく', 'うらがえす', 'うらぐち', 'うらない', 'うりあげ', 'うりきれ', 'うるさい', 'うれしい', 'うれゆき', 'うれる', 'うろこ', 'うわき', 'うわさ', 'うんこう', 'うんちん', 'うんてん', 'うんどう', 'えいえん', 'えいが', 'えいきょう', 'えいご', 'えいせい', 'えいぶん', 'えいよう', 'えいわ', 'えおり', 'えがお', 'えがく', 'えきたい', 'えくせる', 'えしゃく', 'えすて', 'えつらん', 'えのぐ', 'えほうまき', 'えほん', 'えまき', 'えもじ', 'えもの', 'えらい', 'えらぶ', 'えりあ', 'えんえん', 'えんかい', 'えんぎ', 'えんげき', 'えんしゅう', 'えんぜつ', 'えんそく', 'えんちょう', 'えんとつ', 'おいかける', 'おいこす', 'おいしい', 'おいつく', 'おうえん', 'おうさま', 'おうじ', 'おうせつ', 'おうたい', 'おうふく', 'おうべい', 'おうよう', 'おえる', 'おおい', 'おおう', 'おおどおり', 'おおや', 'おおよそ', 'おかえり', 'おかず', 'おがむ', 'おかわり', 'おぎなう', 'おきる', 'おくさま', 'おくじょう', 'おくりがな', 'おくる', 'おくれる', 'おこす', 'おこなう', 'おこる', 'おさえる', 'おさない', 'おさめる', 'おしいれ', 'おしえる', 'おじぎ', 'おじさん', 'おしゃれ', 'おそらく', 'おそわる', 'おたがい', 'おたく', 'おだやか', 'おちつく', 'おっと', 'おつり', 'おでかけ', 'おとしもの', 'おとなしい', 'おどり', 'おどろかす', 'おばさん', 'おまいり', 'おめでとう', 'おもいで', 'おもう', 'おもたい', 'おもちゃ', 'おやつ', 'おやゆび', 'およぼす', 'おらんだ', 'おろす', 'おんがく', 'おんけい', 'おんしゃ', 'おんせん', 'おんだん', 'おんちゅう', 'おんどけい', 'かあつ', 'かいが', 'がいき', 'がいけん', 'がいこう', 'かいさつ', 'かいしゃ', 'かいすいよく', 'かいぜん', 'かいぞうど', 'かいつう', 'かいてん', 'かいとう', 'かいふく', 'がいへき', 'かいほう', 'かいよう', 'がいらい', 'かいわ', 'かえる', 'かおり', 'かかえる', 'かがく', 'かがし', 'かがみ', 'かくご', 'かくとく', 'かざる', 'がぞう', 'かたい', 'かたち', 'がちょう', 'がっきゅう', 'がっこう', 'がっさん', 'がっしょう', 'かなざわし', 'かのう', 'がはく', 'かぶか', 'かほう', 'かほご', 'かまう', 'かまぼこ', 'かめれおん', 'かゆい', 'かようび', 'からい', 'かるい', 'かろう', 'かわく', 'かわら', 'がんか', 'かんけい', 'かんこう', 'かんしゃ', 'かんそう', 'かんたん', 'かんち', 'がんばる', 'きあい', 'きあつ', 'きいろ', 'ぎいん', 'きうい', 'きうん', 'きえる', 'きおう', 'きおく', 'きおち', 'きおん', 'きかい', 'きかく', 'きかんしゃ', 'ききて', 'きくばり', 'きくらげ', 'きけんせい', 'きこう', 'きこえる', 'きこく', 'きさい', 'きさく', 'きさま', 'きさらぎ', 'ぎじかがく', 'ぎしき', 'ぎじたいけん', 'ぎじにってい', 'ぎじゅつしゃ', 'きすう', 'きせい', 'きせき', 'きせつ', 'きそう', 'きぞく', 'きぞん', 'きたえる', 'きちょう', 'きつえん', 'ぎっちり', 'きつつき', 'きつね', 'きてい', 'きどう', 'きどく', 'きない', 'きなが', 'きなこ', 'きぬごし', 'きねん', 'きのう', 'きのした', 'きはく', 'きびしい', 'きひん', 'きふく', 'きぶん', 'きぼう', 'きほん', 'きまる', 'きみつ', 'きむずかしい', 'きめる', 'きもだめし', 'きもち', 'きもの', 'きゃく', 'きやく', 'ぎゅうにく', 'きよう', 'きょうりゅう', 'きらい', 'きらく', 'きりん', 'きれい', 'きれつ', 'きろく', 'ぎろん', 'きわめる', 'ぎんいろ', 'きんかくじ', 'きんじょ', 'きんようび', 'ぐあい', 'くいず', 'くうかん', 'くうき', 'くうぐん', 'くうこう', 'ぐうせい', 'くうそう', 'ぐうたら', 'くうふく', 'くうぼ', 'くかん', 'くきょう', 'くげん', 'ぐこう', 'くさい', 'くさき', 'くさばな', 'くさる', 'くしゃみ', 'くしょう', 'くすのき', 'くすりゆび', 'くせげ', 'くせん', 'ぐたいてき', 'くださる', 'くたびれる', 'くちこみ', 'くちさき', 'くつした', 'ぐっすり', 'くつろぐ', 'くとうてん', 'くどく', 'くなん', 'くねくね', 'くのう', 'くふう', 'くみあわせ', 'くみたてる', 'くめる', 'くやくしょ', 'くらす', 'くらべる', 'くるま', 'くれる', 'くろう', 'くわしい', 'ぐんかん', 'ぐんしょく', 'ぐんたい', 'ぐんて', 'けあな', 'けいかく', 'けいけん', 'けいこ', 'けいさつ', 'げいじゅつ', 'けいたい', 'げいのうじん', 'けいれき', 'けいろ', 'けおとす', 'けおりもの', 'げきか', 'げきげん', 'げきだん', 'げきちん', 'げきとつ', 'げきは', 'げきやく', 'げこう', 'げこくじょう', 'げざい', 'けさき', 'げざん', 'けしき', 'けしごむ', 'けしょう', 'げすと', 'けたば', 'けちゃっぷ', 'けちらす', 'けつあつ', 'けつい', 'けつえき', 'けっこん', 'けつじょ', 'けっせき', 'けってい', 'けつまつ', 'げつようび', 'げつれい', 'けつろん', 'げどく', 'けとばす', 'けとる', 'けなげ', 'けなす', 'けなみ', 'けぬき', 'げねつ', 'けねん', 'けはい', 'げひん', 'けぶかい', 'げぼく', 'けまり', 'けみかる', 'けむし', 'けむり', 'けもの', 'けらい', 'けろけろ', 'けわしい', 'けんい', 'けんえつ', 'けんお', 'けんか', 'げんき', 'けんげん', 'けんこう', 'けんさく', 'けんしゅう', 'けんすう', 'げんそう', 'けんちく', 'けんてい', 'けんとう', 'けんない', 'けんにん', 'げんぶつ', 'けんま', 'けんみん', 'けんめい', 'けんらん', 'けんり', 'こあくま', 'こいぬ', 'こいびと', 'ごうい', 'こうえん', 'こうおん', 'こうかん', 'ごうきゅう', 'ごうけい', 'こうこう', 'こうさい', 'こうじ', 'こうすい', 'ごうせい', 'こうそく', 'こうたい', 'こうちゃ', 'こうつう', 'こうてい', 'こうどう', 'こうない', 'こうはい', 'ごうほう', 'ごうまん', 'こうもく', 'こうりつ', 'こえる', 'こおり', 'ごかい', 'ごがつ', 'ごかん', 'こくご', 'こくさい', 'こくとう', 'こくない', 'こくはく', 'こぐま', 'こけい', 'こける', 'ここのか', 'こころ', 'こさめ', 'こしつ', 'こすう', 'こせい', 'こせき', 'こぜん', 'こそだて', 'こたい', 'こたえる', 'こたつ', 'こちょう', 'こっか', 'こつこつ', 'こつばん', 'こつぶ', 'こてい', 'こてん', 'ことがら', 'ことし', 'ことば', 'ことり', 'こなごな', 'こねこね', 'このまま', 'このみ', 'このよ', 'ごはん', 'こひつじ', 'こふう', 'こふん', 'こぼれる', 'ごまあぶら', 'こまかい', 'ごますり', 'こまつな', 'こまる', 'こむぎこ', 'こもじ', 'こもち', 'こもの', 'こもん', 'こやく', 'こやま', 'こゆう', 'こゆび', 'こよい', 'こよう', 'こりる', 'これくしょん', 'ころっけ', 'こわもて', 'こわれる', 'こんいん', 'こんかい', 'こんき', 'こんしゅう', 'こんすい', 'こんだて', 'こんとん', 'こんなん', 'こんびに', 'こんぽん', 'こんまけ', 'こんや', 'こんれい', 'こんわく', 'ざいえき', 'さいかい', 'さいきん', 'ざいげん', 'ざいこ', 'さいしょ', 'さいせい', 'ざいたく', 'ざいちゅう', 'さいてき', 'ざいりょう', 'さうな', 'さかいし', 'さがす', 'さかな', 'さかみち', 'さがる', 'さぎょう', 'さくし', 'さくひん', 'さくら', 'さこく', 'さこつ', 'さずかる', 'ざせき', 'さたん', 'さつえい', 'ざつおん', 'ざっか', 'ざつがく', 'さっきょく', 'ざっし', 'さつじん', 'ざっそう', 'さつたば', 'さつまいも', 'さてい', 'さといも', 'さとう', 'さとおや', 'さとし', 'さとる', 'さのう', 'さばく', 'さびしい', 'さべつ', 'さほう', 'さほど', 'さます', 'さみしい', 'さみだれ', 'さむけ', 'さめる', 'さやえんどう', 'さゆう', 'さよう', 'さよく', 'さらだ', 'ざるそば', 'さわやか', 'さわる', 'さんいん', 'さんか', 'さんきゃく', 'さんこう', 'さんさい', 'ざんしょ', 'さんすう', 'さんせい', 'さんそ', 'さんち', 'さんま', 'さんみ', 'さんらん', 'しあい', 'しあげ', 'しあさって', 'しあわせ', 'しいく', 'しいん', 'しうち', 'しえい', 'しおけ', 'しかい', 'しかく', 'じかん', 'しごと', 'しすう', 'じだい', 'したうけ', 'したぎ', 'したて', 'したみ', 'しちょう', 'しちりん', 'しっかり', 'しつじ', 'しつもん', 'してい', 'してき', 'してつ', 'じてん', 'じどう', 'しなぎれ', 'しなもの', 'しなん', 'しねま', 'しねん', 'しのぐ', 'しのぶ', 'しはい', 'しばかり', 'しはつ', 'しはらい', 'しはん', 'しひょう', 'しふく', 'じぶん', 'しへい', 'しほう', 'しほん', 'しまう', 'しまる', 'しみん', 'しむける', 'じむしょ', 'しめい', 'しめる', 'しもん', 'しゃいん', 'しゃうん', 'しゃおん', 'じゃがいも', 'しやくしょ', 'しゃくほう', 'しゃけん', 'しゃこ', 'しゃざい', 'しゃしん', 'しゃせん', 'しゃそう', 'しゃたい', 'しゃちょう', 'しゃっきん', 'じゃま', 'しゃりん', 'しゃれい', 'じゆう', 'じゅうしょ', 'しゅくはく', 'じゅしん', 'しゅっせき', 'しゅみ', 'しゅらば', 'じゅんばん', 'しょうかい', 'しょくたく', 'しょっけん', 'しょどう', 'しょもつ', 'しらせる', 'しらべる', 'しんか', 'しんこう', 'じんじゃ', 'しんせいじ', 'しんちく', 'しんりん', 'すあげ', 'すあし', 'すあな', 'ずあん', 'すいえい', 'すいか', 'すいとう', 'ずいぶん', 'すいようび', 'すうがく', 'すうじつ', 'すうせん', 'すおどり', 'すきま', 'すくう', 'すくない', 'すける', 'すごい', 'すこし', 'ずさん', 'すずしい', 'すすむ', 'すすめる', 'すっかり', 'ずっしり', 'ずっと', 'すてき', 'すてる', 'すねる', 'すのこ', 'すはだ', 'すばらしい', 'ずひょう', 'ずぶぬれ', 'すぶり', 'すふれ', 'すべて', 'すべる', 'ずほう', 'すぼん', 'すまい', 'すめし', 'すもう', 'すやき', 'すらすら', 'するめ', 'すれちがう', 'すろっと', 'すわる', 'すんぜん', 'すんぽう', 'せあぶら', 'せいかつ', 'せいげん', 'せいじ', 'せいよう', 'せおう', 'せかいかん', 'せきにん', 'せきむ', 'せきゆ', 'せきらんうん', 'せけん', 'せこう', 'せすじ', 'せたい', 'せたけ', 'せっかく', 'せっきゃく', 'ぜっく', 'せっけん', 'せっこつ', 'せっさたくま', 'せつぞく', 'せつだん', 'せつでん', 'せっぱん', 'せつび', 'せつぶん', 'せつめい', 'せつりつ', 'せなか', 'せのび', 'せはば', 'せびろ', 'せぼね', 'せまい', 'せまる', 'せめる', 'せもたれ', 'せりふ', 'ぜんあく', 'せんい', 'せんえい', 'せんか', 'せんきょ', 'せんく', 'せんげん', 'ぜんご', 'せんさい', 'せんしゅ', 'せんすい', 'せんせい', 'せんぞ', 'せんたく', 'せんちょう', 'せんてい', 'せんとう', 'せんぬき', 'せんねん', 'せんぱい', 'ぜんぶ', 'ぜんぽう', 'せんむ', 'せんめんじょ', 'せんもん', 'せんやく', 'せんゆう', 'せんよう', 'ぜんら', 'ぜんりゃく', 'せんれい', 'せんろ', 'そあく', 'そいとげる', 'そいね', 'そうがんきょう', 'そうき', 'そうご', 'そうしん', 'そうだん', 'そうなん', 'そうび', 'そうめん', 'そうり', 'そえもの', 'そえん', 'そがい', 'そげき', 'そこう', 'そこそこ', 'そざい', 'そしな', 'そせい', 'そせん', 'そそぐ', 'そだてる', 'そつう', 'そつえん', 'そっかん', 'そつぎょう', 'そっけつ', 'そっこう', 'そっせん', 'そっと', 'そとがわ', 'そとづら', 'そなえる', 'そなた', 'そふぼ', 'そぼく', 'そぼろ', 'そまつ', 'そまる', 'そむく', 'そむりえ', 'そめる', 'そもそも', 'そよかぜ', 'そらまめ', 'そろう', 'そんかい', 'そんけい', 'そんざい', 'そんしつ', 'そんぞく', 'そんちょう', 'ぞんび', 'ぞんぶん', 'そんみん', 'たあい', 'たいいん', 'たいうん', 'たいえき', 'たいおう', 'だいがく', 'たいき', 'たいぐう', 'たいけん', 'たいこ', 'たいざい', 'だいじょうぶ', 'だいすき', 'たいせつ', 'たいそう', 'だいたい', 'たいちょう', 'たいてい', 'だいどころ', 'たいない', 'たいねつ', 'たいのう', 'たいはん', 'だいひょう', 'たいふう', 'たいへん', 'たいほ', 'たいまつばな', 'たいみんぐ', 'たいむ', 'たいめん', 'たいやき', 'たいよう', 'たいら', 'たいりょく', 'たいる', 'たいわん', 'たうえ', 'たえる', 'たおす', 'たおる', 'たおれる', 'たかい', 'たかね', 'たきび', 'たくさん', 'たこく', 'たこやき', 'たさい', 'たしざん', 'だじゃれ', 'たすける', 'たずさわる', 'たそがれ', 'たたかう', 'たたく', 'ただしい', 'たたみ', 'たちばな', 'だっかい', 'だっきゃく', 'だっこ', 'だっしゅつ', 'だったい', 'たてる', 'たとえる', 'たなばた', 'たにん', 'たぬき', 'たのしみ', 'たはつ', 'たぶん', 'たべる', 'たぼう', 'たまご', 'たまる', 'だむる', 'ためいき', 'ためす', 'ためる', 'たもつ', 'たやすい', 'たよる', 'たらす', 'たりきほんがん', 'たりょう', 'たりる', 'たると', 'たれる', 'たれんと', 'たろっと', 'たわむれる', 'だんあつ', 'たんい', 'たんおん', 'たんか', 'たんき', 'たんけん', 'たんご', 'たんさん', 'たんじょうび', 'だんせい', 'たんそく', 'たんたい', 'だんち', 'たんてい', 'たんとう', 'だんな', 'たんにん', 'だんねつ', 'たんのう', 'たんぴん', 'だんぼう', 'たんまつ', 'たんめい', 'だんれつ', 'だんろ', 'だんわ', 'ちあい', 'ちあん', 'ちいき', 'ちいさい', 'ちえん', 'ちかい', 'ちから', 'ちきゅう', 'ちきん', 'ちけいず', 'ちけん', 'ちこく', 'ちさい', 'ちしき', 'ちしりょう', 'ちせい', 'ちそう', 'ちたい', 'ちたん', 'ちちおや', 'ちつじょ', 'ちてき', 'ちてん', 'ちぬき', 'ちぬり', 'ちのう', 'ちひょう', 'ちへいせん', 'ちほう', 'ちまた', 'ちみつ', 'ちみどろ', 'ちめいど', 'ちゃんこなべ', 'ちゅうい', 'ちゆりょく', 'ちょうし', 'ちょさくけん', 'ちらし', 'ちらみ', 'ちりがみ', 'ちりょう', 'ちるど', 'ちわわ', 'ちんたい', 'ちんもく', 'ついか', 'ついたち', 'つうか', 'つうじょう', 'つうはん', 'つうわ', 'つかう', 'つかれる', 'つくね', 'つくる', 'つけね', 'つける', 'つごう', 'つたえる', 'つづく', 'つつじ', 'つつむ', 'つとめる', 'つながる', 'つなみ', 'つねづね', 'つのる', 'つぶす', 'つまらない', 'つまる', 'つみき', 'つめたい', 'つもり', 'つもる', 'つよい', 'つるぼ', 'つるみく', 'つわもの', 'つわり', 'てあし', 'てあて', 'てあみ', 'ていおん', 'ていか', 'ていき', 'ていけい', 'ていこく', 'ていさつ', 'ていし', 'ていせい', 'ていたい', 'ていど', 'ていねい', 'ていひょう', 'ていへん', 'ていぼう', 'てうち', 'ておくれ', 'てきとう', 'てくび', 'でこぼこ', 'てさぎょう', 'てさげ', 'てすり', 'てそう', 'てちがい', 'てちょう', 'てつがく', 'てつづき', 'でっぱ', 'てつぼう', 'てつや', 'でぬかえ', 'てぬき', 'てぬぐい', 'てのひら', 'てはい', 'てぶくろ', 'てふだ', 'てほどき', 'てほん', 'てまえ', 'てまきずし', 'てみじか', 'てみやげ', 'てらす', 'てれび', 'てわけ', 'てわたし', 'でんあつ', 'てんいん', 'てんかい', 'てんき', 'てんぐ', 'てんけん', 'てんごく', 'てんさい', 'てんし', 'てんすう', 'でんち', 'てんてき', 'てんとう', 'てんない', 'てんぷら', 'てんぼうだい', 'てんめつ', 'てんらんかい', 'でんりょく', 'でんわ', 'どあい', 'といれ', 'どうかん', 'とうきゅう', 'どうぐ', 'とうし', 'とうむぎ', 'とおい', 'とおか', 'とおく', 'とおす', 'とおる', 'とかい', 'とかす', 'ときおり', 'ときどき', 'とくい', 'とくしゅう', 'とくてん', 'とくに', 'とくべつ', 'とけい', 'とける', 'とこや', 'とさか', 'としょかん', 'とそう', 'とたん', 'とちゅう', 'とっきゅう', 'とっくん', 'とつぜん', 'とつにゅう', 'とどける', 'ととのえる', 'とない', 'となえる', 'となり', 'とのさま', 'とばす', 'どぶがわ', 'とほう', 'とまる', 'とめる', 'ともだち', 'ともる', 'どようび', 'とらえる', 'とんかつ', 'どんぶり', 'ないかく', 'ないこう', 'ないしょ', 'ないす', 'ないせん', 'ないそう', 'なおす', 'ながい', 'なくす', 'なげる', 'なこうど', 'なさけ', 'なたでここ', 'なっとう', 'なつやすみ', 'ななおし', 'なにごと', 'なにもの', 'なにわ', 'なのか', 'なふだ', 'なまいき', 'なまえ', 'なまみ', 'なみだ', 'なめらか', 'なめる', 'なやむ', 'ならう', 'ならび', 'ならぶ', 'なれる', 'なわとび', 'なわばり', 'にあう', 'にいがた', 'にうけ', 'におい', 'にかい', 'にがて', 'にきび', 'にくしみ', 'にくまん', 'にげる', 'にさんかたんそ', 'にしき', 'にせもの', 'にちじょう', 'にちようび', 'にっか', 'にっき', 'にっけい', 'にっこう', 'にっさん', 'にっしょく', 'にっすう', 'にっせき', 'にってい', 'になう', 'にほん', 'にまめ', 'にもつ', 'にやり', 'にゅういん', 'にりんしゃ', 'にわとり', 'にんい', 'にんか', 'にんき', 'にんげん', 'にんしき', 'にんずう', 'にんそう', 'にんたい', 'にんち', 'にんてい', 'にんにく', 'にんぷ', 'にんまり', 'にんむ', 'にんめい', 'にんよう', 'ぬいくぎ', 'ぬかす', 'ぬぐいとる', 'ぬぐう', 'ぬくもり', 'ぬすむ', 'ぬまえび', 'ぬめり', 'ぬらす', 'ぬんちゃく', 'ねあげ', 'ねいき', 'ねいる', 'ねいろ', 'ねぐせ', 'ねくたい', 'ねくら', 'ねこぜ', 'ねこむ', 'ねさげ', 'ねすごす', 'ねそべる', 'ねだん', 'ねつい', 'ねっしん', 'ねつぞう', 'ねったいぎょ', 'ねぶそく', 'ねふだ', 'ねぼう', 'ねほりはほり', 'ねまき', 'ねまわし', 'ねみみ', 'ねむい', 'ねむたい', 'ねもと', 'ねらう', 'ねわざ', 'ねんいり', 'ねんおし', 'ねんかん', 'ねんきん', 'ねんぐ', 'ねんざ', 'ねんし', 'ねんちゃく', 'ねんど', 'ねんぴ', 'ねんぶつ', 'ねんまつ', 'ねんりょう', 'ねんれい', 'のいず', 'のおづま', 'のがす', 'のきなみ', 'のこぎり', 'のこす', 'のこる', 'のせる', 'のぞく', 'のぞむ', 'のたまう', 'のちほど', 'のっく', 'のばす', 'のはら', 'のべる', 'のぼる', 'のみもの', 'のやま', 'のらいぬ', 'のらねこ', 'のりもの', 'のりゆき', 'のれん', 'のんき', 'ばあい', 'はあく', 'ばあさん', 'ばいか', 'ばいく', 'はいけん', 'はいご', 'はいしん', 'はいすい', 'はいせん', 'はいそう', 'はいち', 'ばいばい', 'はいれつ', 'はえる', 'はおる', 'はかい', 'ばかり', 'はかる', 'はくしゅ', 'はけん', 'はこぶ', 'はさみ', 'はさん', 'はしご', 'ばしょ', 'はしる', 'はせる', 'ぱそこん', 'はそん', 'はたん', 'はちみつ', 'はつおん', 'はっかく', 'はづき', 'はっきり', 'はっくつ', 'はっけん', 'はっこう', 'はっさん', 'はっしん', 'はったつ', 'はっちゅう', 'はってん', 'はっぴょう', 'はっぽう', 'はなす', 'はなび', 'はにかむ', 'はぶらし', 'はみがき', 'はむかう', 'はめつ', 'はやい', 'はやし', 'はらう', 'はろうぃん', 'はわい', 'はんい', 'はんえい', 'はんおん', 'はんかく', 'はんきょう', 'ばんぐみ', 'はんこ', 'はんしゃ', 'はんすう', 'はんだん', 'ぱんち', 'ぱんつ', 'はんてい', 'はんとし', 'はんのう', 'はんぱ', 'はんぶん', 'はんぺん', 'はんぼうき', 'はんめい', 'はんらん', 'はんろん', 'ひいき', 'ひうん', 'ひえる', 'ひかく', 'ひかり', 'ひかる', 'ひかん', 'ひくい', 'ひけつ', 'ひこうき', 'ひこく', 'ひさい', 'ひさしぶり', 'ひさん', 'びじゅつかん', 'ひしょ', 'ひそか', 'ひそむ', 'ひたむき', 'ひだり', 'ひたる', 'ひつぎ', 'ひっこし', 'ひっし', 'ひつじゅひん', 'ひっす', 'ひつぜん', 'ぴったり', 'ぴっちり', 'ひつよう', 'ひてい', 'ひとごみ', 'ひなまつり', 'ひなん', 'ひねる', 'ひはん', 'ひびく', 'ひひょう', 'ひほう', 'ひまわり', 'ひまん', 'ひみつ', 'ひめい', 'ひめじし', 'ひやけ', 'ひやす', 'ひよう', 'びょうき', 'ひらがな', 'ひらく', 'ひりつ', 'ひりょう', 'ひるま', 'ひるやすみ', 'ひれい', 'ひろい', 'ひろう', 'ひろき', 'ひろゆき', 'ひんかく', 'ひんけつ', 'ひんこん', 'ひんしゅ', 'ひんそう', 'ぴんち', 'ひんぱん', 'びんぼう', 'ふあん', 'ふいうち', 'ふうけい', 'ふうせん', 'ぷうたろう', 'ふうとう', 'ふうふ', 'ふえる', 'ふおん', 'ふかい', 'ふきん', 'ふくざつ', 'ふくぶくろ', 'ふこう', 'ふさい', 'ふしぎ', 'ふじみ', 'ふすま', 'ふせい', 'ふせぐ', 'ふそく', 'ぶたにく', 'ふたん', 'ふちょう', 'ふつう', 'ふつか', 'ふっかつ', 'ふっき', 'ふっこく', 'ぶどう', 'ふとる', 'ふとん', 'ふのう', 'ふはい', 'ふひょう', 'ふへん', 'ふまん', 'ふみん', 'ふめつ', 'ふめん', 'ふよう', 'ふりこ', 'ふりる', 'ふるい', 'ふんいき', 'ぶんがく', 'ぶんぐ', 'ふんしつ', 'ぶんせき', 'ふんそう', 'ぶんぽう', 'へいあん', 'へいおん', 'へいがい', 'へいき', 'へいげん', 'へいこう', 'へいさ', 'へいしゃ', 'へいせつ', 'へいそ', 'へいたく', 'へいてん', 'へいねつ', 'へいわ', 'へきが', 'へこむ', 'べにいろ', 'べにしょうが', 'へらす', 'へんかん', 'べんきょう', 'べんごし', 'へんさい', 'へんたい', 'べんり', 'ほあん', 'ほいく', 'ぼうぎょ', 'ほうこく', 'ほうそう', 'ほうほう', 'ほうもん', 'ほうりつ', 'ほえる', 'ほおん', 'ほかん', 'ほきょう', 'ぼきん', 'ほくろ', 'ほけつ', 'ほけん', 'ほこう', 'ほこる', 'ほしい', 'ほしつ', 'ほしゅ', 'ほしょう', 'ほせい', 'ほそい', 'ほそく', 'ほたて', 'ほたる', 'ぽちぶくろ', 'ほっきょく', 'ほっさ', 'ほったん', 'ほとんど', 'ほめる', 'ほんい', 'ほんき', 'ほんけ', 'ほんしつ', 'ほんやく', 'まいにち', 'まかい', 'まかせる', 'まがる', 'まける', 'まこと', 'まさつ', 'まじめ', 'ますく', 'まぜる', 'まつり', 'まとめ', 'まなぶ', 'まぬけ', 'まねく', 'まほう', 'まもる', 'まゆげ', 'まよう', 'まろやか', 'まわす', 'まわり', 'まわる', 'まんが', 'まんきつ', 'まんぞく', 'まんなか', 'みいら', 'みうち', 'みえる', 'みがく', 'みかた', 'みかん', 'みけん', 'みこん', 'みじかい', 'みすい', 'みすえる', 'みせる', 'みっか', 'みつかる', 'みつける', 'みてい', 'みとめる', 'みなと', 'みなみかさい', 'みねらる', 'みのう', 'みのがす', 'みほん', 'みもと', 'みやげ', 'みらい', 'みりょく', 'みわく', 'みんか', 'みんぞく', 'むいか', 'むえき', 'むえん', 'むかい', 'むかう', 'むかえ', 'むかし', 'むぎちゃ', 'むける', 'むげん', 'むさぼる', 'むしあつい', 'むしば', 'むじゅん', 'むしろ', 'むすう', 'むすこ', 'むすぶ', 'むすめ', 'むせる', 'むせん', 'むちゅう', 'むなしい', 'むのう', 'むやみ', 'むよう', 'むらさき', 'むりょう', 'むろん', 'めいあん', 'めいうん', 'めいえん', 'めいかく', 'めいきょく', 'めいさい', 'めいし', 'めいそう', 'めいぶつ', 'めいれい', 'めいわく', 'めぐまれる', 'めざす', 'めした', 'めずらしい', 'めだつ', 'めまい', 'めやす', 'めんきょ', 'めんせき', 'めんどう', 'もうしあげる', 'もうどうけん', 'もえる', 'もくし', 'もくてき', 'もくようび', 'もちろん', 'もどる', 'もらう', 'もんく', 'もんだい', 'やおや', 'やける', 'やさい', 'やさしい', 'やすい', 'やすたろう', 'やすみ', 'やせる', 'やそう', 'やたい', 'やちん', 'やっと', 'やっぱり', 'やぶる', 'やめる', 'ややこしい', 'やよい', 'やわらかい', 'ゆうき', 'ゆうびんきょく', 'ゆうべ', 'ゆうめい', 'ゆけつ', 'ゆしゅつ', 'ゆせん', 'ゆそう', 'ゆたか', 'ゆちゃく', 'ゆでる', 'ゆにゅう', 'ゆびわ', 'ゆらい', 'ゆれる', 'ようい', 'ようか', 'ようきゅう', 'ようじ', 'ようす', 'ようちえん', 'よかぜ', 'よかん', 'よきん', 'よくせい', 'よくぼう', 'よけい', 'よごれる', 'よさん', 'よしゅう', 'よそう', 'よそく', 'よっか', 'よてい', 'よどがわく', 'よねつ', 'よやく', 'よゆう', 'よろこぶ', 'よろしい', 'らいう', 'らくがき', 'らくご', 'らくさつ', 'らくだ', 'らしんばん', 'らせん', 'らぞく', 'らたい', 'らっか', 'られつ', 'りえき', 'りかい', 'りきさく', 'りきせつ', 'りくぐん', 'りくつ', 'りけん', 'りこう', 'りせい', 'りそう', 'りそく', 'りてん', 'りねん', 'りゆう', 'りゅうがく', 'りよう', 'りょうり', 'りょかん', 'りょくちゃ', 'りょこう', 'りりく', 'りれき', 'りろん', 'りんご', 'るいけい', 'るいさい', 'るいじ', 'るいせき', 'るすばん', 'るりがわら', 'れいかん', 'れいぎ', 'れいせい', 'れいぞうこ', 'れいとう', 'れいぼう', 'れきし', 'れきだい', 'れんあい', 'れんけい', 'れんこん', 'れんさい', 'れんしゅう', 'れんぞく', 'れんらく', 'ろうか', 'ろうご', 'ろうじん', 'ろうそく', 'ろくが', 'ろこつ', 'ろじうら', 'ろしゅつ', 'ろせん', 'ろてん', 'ろめん', 'ろれつ', 'ろんぎ', 'ろんぱ', 'ろんぶん', 'ろんり', 'わかす', 'わかめ', 'わかやま', 'わかれる', 'わしつ', 'わじまし', 'わすれもの', 'わらう', 'われる'];
 
 module.exports = japanese;
 
-},{}],110:[function(_dereq_,module,exports){
+},{}],111:[function(_dereq_,module,exports){
 'use strict';
 
 var spanish = ['ábaco', 'abdomen', 'abeja', 'abierto', 'abogado', 'abono', 'aborto', 'abrazo', 'abrir', 'abuelo', 'abuso', 'acabar', 'academia', 'acceso', 'acción', 'aceite', 'acelga', 'acento', 'aceptar', 'ácido', 'aclarar', 'acné', 'acoger', 'acoso', 'activo', 'acto', 'actriz', 'actuar', 'acudir', 'acuerdo', 'acusar', 'adicto', 'admitir', 'adoptar', 'adorno', 'aduana', 'adulto', 'aéreo', 'afectar', 'afición', 'afinar', 'afirmar', 'ágil', 'agitar', 'agonía', 'agosto', 'agotar', 'agregar', 'agrio', 'agua', 'agudo', 'águila', 'aguja', 'ahogo', 'ahorro', 'aire', 'aislar', 'ajedrez', 'ajeno', 'ajuste', 'alacrán', 'alambre', 'alarma', 'alba', 'álbum', 'alcalde', 'aldea', 'alegre', 'alejar', 'alerta', 'aleta', 'alfiler', 'alga', 'algodón', 'aliado', 'aliento', 'alivio', 'alma', 'almeja', 'almíbar', 'altar', 'alteza', 'altivo', 'alto', 'altura', 'alumno', 'alzar', 'amable', 'amante', 'amapola', 'amargo', 'amasar', 'ámbar', 'ámbito', 'ameno', 'amigo', 'amistad', 'amor', 'amparo', 'amplio', 'ancho', 'anciano', 'ancla', 'andar', 'andén', 'anemia', 'ángulo', 'anillo', 'ánimo', 'anís', 'anotar', 'antena', 'antiguo', 'antojo', 'anual', 'anular', 'anuncio', 'añadir', 'añejo', 'año', 'apagar', 'aparato', 'apetito', 'apio', 'aplicar', 'apodo', 'aporte', 'apoyo', 'aprender', 'aprobar', 'apuesta', 'apuro', 'arado', 'araña', 'arar', 'árbitro', 'árbol', 'arbusto', 'archivo', 'arco', 'arder', 'ardilla', 'arduo', 'área', 'árido', 'aries', 'armonía', 'arnés', 'aroma', 'arpa', 'arpón', 'arreglo', 'arroz', 'arruga', 'arte', 'artista', 'asa', 'asado', 'asalto', 'ascenso', 'asegurar', 'aseo', 'asesor', 'asiento', 'asilo', 'asistir', 'asno', 'asombro', 'áspero', 'astilla', 'astro', 'astuto', 'asumir', 'asunto', 'atajo', 'ataque', 'atar', 'atento', 'ateo', 'ático', 'atleta', 'átomo', 'atraer', 'atroz', 'atún', 'audaz', 'audio', 'auge', 'aula', 'aumento', 'ausente', 'autor', 'aval', 'avance', 'avaro', 'ave', 'avellana', 'avena', 'avestruz', 'avión', 'aviso', 'ayer', 'ayuda', 'ayuno', 'azafrán', 'azar', 'azote', 'azúcar', 'azufre', 'azul', 'baba', 'babor', 'bache', 'bahía', 'baile', 'bajar', 'balanza', 'balcón', 'balde', 'bambú', 'banco', 'banda', 'baño', 'barba', 'barco', 'barniz', 'barro', 'báscula', 'bastón', 'basura', 'batalla', 'batería', 'batir', 'batuta', 'baúl', 'bazar', 'bebé', 'bebida', 'bello', 'besar', 'beso', 'bestia', 'bicho', 'bien', 'bingo', 'blanco', 'bloque', 'blusa', 'boa', 'bobina', 'bobo', 'boca', 'bocina', 'boda', 'bodega', 'boina', 'bola', 'bolero', 'bolsa', 'bomba', 'bondad', 'bonito', 'bono', 'bonsái', 'borde', 'borrar', 'bosque', 'bote', 'botín', 'bóveda', 'bozal', 'bravo', 'brazo', 'brecha', 'breve', 'brillo', 'brinco', 'brisa', 'broca', 'broma', 'bronce', 'brote', 'bruja', 'brusco', 'bruto', 'buceo', 'bucle', 'bueno', 'buey', 'bufanda', 'bufón', 'búho', 'buitre', 'bulto', 'burbuja', 'burla', 'burro', 'buscar', 'butaca', 'buzón', 'caballo', 'cabeza', 'cabina', 'cabra', 'cacao', 'cadáver', 'cadena', 'caer', 'café', 'caída', 'caimán', 'caja', 'cajón', 'cal', 'calamar', 'calcio', 'caldo', 'calidad', 'calle', 'calma', 'calor', 'calvo', 'cama', 'cambio', 'camello', 'camino', 'campo', 'cáncer', 'candil', 'canela', 'canguro', 'canica', 'canto', 'caña', 'cañón', 'caoba', 'caos', 'capaz', 'capitán', 'capote', 'captar', 'capucha', 'cara', 'carbón', 'cárcel', 'careta', 'carga', 'cariño', 'carne', 'carpeta', 'carro', 'carta', 'casa', 'casco', 'casero', 'caspa', 'castor', 'catorce', 'catre', 'caudal', 'causa', 'cazo', 'cebolla', 'ceder', 'cedro', 'celda', 'célebre', 'celoso', 'célula', 'cemento', 'ceniza', 'centro', 'cerca', 'cerdo', 'cereza', 'cero', 'cerrar', 'certeza', 'césped', 'cetro', 'chacal', 'chaleco', 'champú', 'chancla', 'chapa', 'charla', 'chico', 'chiste', 'chivo', 'choque', 'choza', 'chuleta', 'chupar', 'ciclón', 'ciego', 'cielo', 'cien', 'cierto', 'cifra', 'cigarro', 'cima', 'cinco', 'cine', 'cinta', 'ciprés', 'circo', 'ciruela', 'cisne', 'cita', 'ciudad', 'clamor', 'clan', 'claro', 'clase', 'clave', 'cliente', 'clima', 'clínica', 'cobre', 'cocción', 'cochino', 'cocina', 'coco', 'código', 'codo', 'cofre', 'coger', 'cohete', 'cojín', 'cojo', 'cola', 'colcha', 'colegio', 'colgar', 'colina', 'collar', 'colmo', 'columna', 'combate', 'comer', 'comida', 'cómodo', 'compra', 'conde', 'conejo', 'conga', 'conocer', 'consejo', 'contar', 'copa', 'copia', 'corazón', 'corbata', 'corcho', 'cordón', 'corona', 'correr', 'coser', 'cosmos', 'costa', 'cráneo', 'cráter', 'crear', 'crecer', 'creído', 'crema', 'cría', 'crimen', 'cripta', 'crisis', 'cromo', 'crónica', 'croqueta', 'crudo', 'cruz', 'cuadro', 'cuarto', 'cuatro', 'cubo', 'cubrir', 'cuchara', 'cuello', 'cuento', 'cuerda', 'cuesta', 'cueva', 'cuidar', 'culebra', 'culpa', 'culto', 'cumbre', 'cumplir', 'cuna', 'cuneta', 'cuota', 'cupón', 'cúpula', 'curar', 'curioso', 'curso', 'curva', 'cutis', 'dama', 'danza', 'dar', 'dardo', 'dátil', 'deber', 'débil', 'década', 'decir', 'dedo', 'defensa', 'definir', 'dejar', 'delfín', 'delgado', 'delito', 'demora', 'denso', 'dental', 'deporte', 'derecho', 'derrota', 'desayuno', 'deseo', 'desfile', 'desnudo', 'destino', 'desvío', 'detalle', 'detener', 'deuda', 'día', 'diablo', 'diadema', 'diamante', 'diana', 'diario', 'dibujo', 'dictar', 'diente', 'dieta', 'diez', 'difícil', 'digno', 'dilema', 'diluir', 'dinero', 'directo', 'dirigir', 'disco', 'diseño', 'disfraz', 'diva', 'divino', 'doble', 'doce', 'dolor', 'domingo', 'don', 'donar', 'dorado', 'dormir', 'dorso', 'dos', 'dosis', 'dragón', 'droga', 'ducha', 'duda', 'duelo', 'dueño', 'dulce', 'dúo', 'duque', 'durar', 'dureza', 'duro', 'ébano', 'ebrio', 'echar', 'eco', 'ecuador', 'edad', 'edición', 'edificio', 'editor', 'educar', 'efecto', 'eficaz', 'eje', 'ejemplo', 'elefante', 'elegir', 'elemento', 'elevar', 'elipse', 'élite', 'elixir', 'elogio', 'eludir', 'embudo', 'emitir', 'emoción', 'empate', 'empeño', 'empleo', 'empresa', 'enano', 'encargo', 'enchufe', 'encía', 'enemigo', 'enero', 'enfado', 'enfermo', 'engaño', 'enigma', 'enlace', 'enorme', 'enredo', 'ensayo', 'enseñar', 'entero', 'entrar', 'envase', 'envío', 'época', 'equipo', 'erizo', 'escala', 'escena', 'escolar', 'escribir', 'escudo', 'esencia', 'esfera', 'esfuerzo', 'espada', 'espejo', 'espía', 'esposa', 'espuma', 'esquí', 'estar', 'este', 'estilo', 'estufa', 'etapa', 'eterno', 'ética', 'etnia', 'evadir', 'evaluar', 'evento', 'evitar', 'exacto', 'examen', 'exceso', 'excusa', 'exento', 'exigir', 'exilio', 'existir', 'éxito', 'experto', 'explicar', 'exponer', 'extremo', 'fábrica', 'fábula', 'fachada', 'fácil', 'factor', 'faena', 'faja', 'falda', 'fallo', 'falso', 'faltar', 'fama', 'familia', 'famoso', 'faraón', 'farmacia', 'farol', 'farsa', 'fase', 'fatiga', 'fauna', 'favor', 'fax', 'febrero', 'fecha', 'feliz', 'feo', 'feria', 'feroz', 'fértil', 'fervor', 'festín', 'fiable', 'fianza', 'fiar', 'fibra', 'ficción', 'ficha', 'fideo', 'fiebre', 'fiel', 'fiera', 'fiesta', 'figura', 'fijar', 'fijo', 'fila', 'filete', 'filial', 'filtro', 'fin', 'finca', 'fingir', 'finito', 'firma', 'flaco', 'flauta', 'flecha', 'flor', 'flota', 'fluir', 'flujo', 'flúor', 'fobia', 'foca', 'fogata', 'fogón', 'folio', 'folleto', 'fondo', 'forma', 'forro', 'fortuna', 'forzar', 'fosa', 'foto', 'fracaso', 'frágil', 'franja', 'frase', 'fraude', 'freír', 'freno', 'fresa', 'frío', 'frito', 'fruta', 'fuego', 'fuente', 'fuerza', 'fuga', 'fumar', 'función', 'funda', 'furgón', 'furia', 'fusil', 'fútbol', 'futuro', 'gacela', 'gafas', 'gaita', 'gajo', 'gala', 'galería', 'gallo', 'gamba', 'ganar', 'gancho', 'ganga', 'ganso', 'garaje', 'garza', 'gasolina', 'gastar', 'gato', 'gavilán', 'gemelo', 'gemir', 'gen', 'género', 'genio', 'gente', 'geranio', 'gerente', 'germen', 'gesto', 'gigante', 'gimnasio', 'girar', 'giro', 'glaciar', 'globo', 'gloria', 'gol', 'golfo', 'goloso', 'golpe', 'goma', 'gordo', 'gorila', 'gorra', 'gota', 'goteo', 'gozar', 'grada', 'gráfico', 'grano', 'grasa', 'gratis', 'grave', 'grieta', 'grillo', 'gripe', 'gris', 'grito', 'grosor', 'grúa', 'grueso', 'grumo', 'grupo', 'guante', 'guapo', 'guardia', 'guerra', 'guía', 'guiño', 'guion', 'guiso', 'guitarra', 'gusano', 'gustar', 'haber', 'hábil', 'hablar', 'hacer', 'hacha', 'hada', 'hallar', 'hamaca', 'harina', 'haz', 'hazaña', 'hebilla', 'hebra', 'hecho', 'helado', 'helio', 'hembra', 'herir', 'hermano', 'héroe', 'hervir', 'hielo', 'hierro', 'hígado', 'higiene', 'hijo', 'himno', 'historia', 'hocico', 'hogar', 'hoguera', 'hoja', 'hombre', 'hongo', 'honor', 'honra', 'hora', 'hormiga', 'horno', 'hostil', 'hoyo', 'hueco', 'huelga', 'huerta', 'hueso', 'huevo', 'huida', 'huir', 'humano', 'húmedo', 'humilde', 'humo', 'hundir', 'huracán', 'hurto', 'icono', 'ideal', 'idioma', 'ídolo', 'iglesia', 'iglú', 'igual', 'ilegal', 'ilusión', 'imagen', 'imán', 'imitar', 'impar', 'imperio', 'imponer', 'impulso', 'incapaz', 'índice', 'inerte', 'infiel', 'informe', 'ingenio', 'inicio', 'inmenso', 'inmune', 'innato', 'insecto', 'instante', 'interés', 'íntimo', 'intuir', 'inútil', 'invierno', 'ira', 'iris', 'ironía', 'isla', 'islote', 'jabalí', 'jabón', 'jamón', 'jarabe', 'jardín', 'jarra', 'jaula', 'jazmín', 'jefe', 'jeringa', 'jinete', 'jornada', 'joroba', 'joven', 'joya', 'juerga', 'jueves', 'juez', 'jugador', 'jugo', 'juguete', 'juicio', 'junco', 'jungla', 'junio', 'juntar', 'júpiter', 'jurar', 'justo', 'juvenil', 'juzgar', 'kilo', 'koala', 'labio', 'lacio', 'lacra', 'lado', 'ladrón', 'lagarto', 'lágrima', 'laguna', 'laico', 'lamer', 'lámina', 'lámpara', 'lana', 'lancha', 'langosta', 'lanza', 'lápiz', 'largo', 'larva', 'lástima', 'lata', 'látex', 'latir', 'laurel', 'lavar', 'lazo', 'leal', 'lección', 'leche', 'lector', 'leer', 'legión', 'legumbre', 'lejano', 'lengua', 'lento', 'leña', 'león', 'leopardo', 'lesión', 'letal', 'letra', 'leve', 'leyenda', 'libertad', 'libro', 'licor', 'líder', 'lidiar', 'lienzo', 'liga', 'ligero', 'lima', 'límite', 'limón', 'limpio', 'lince', 'lindo', 'línea', 'lingote', 'lino', 'linterna', 'líquido', 'liso', 'lista', 'litera', 'litio', 'litro', 'llaga', 'llama', 'llanto', 'llave', 'llegar', 'llenar', 'llevar', 'llorar', 'llover', 'lluvia', 'lobo', 'loción', 'loco', 'locura', 'lógica', 'logro', 'lombriz', 'lomo', 'lonja', 'lote', 'lucha', 'lucir', 'lugar', 'lujo', 'luna', 'lunes', 'lupa', 'lustro', 'luto', 'luz', 'maceta', 'macho', 'madera', 'madre', 'maduro', 'maestro', 'mafia', 'magia', 'mago', 'maíz', 'maldad', 'maleta', 'malla', 'malo', 'mamá', 'mambo', 'mamut', 'manco', 'mando', 'manejar', 'manga', 'maniquí', 'manjar', 'mano', 'manso', 'manta', 'mañana', 'mapa', 'máquina', 'mar', 'marco', 'marea', 'marfil', 'margen', 'marido', 'mármol', 'marrón', 'martes', 'marzo', 'masa', 'máscara', 'masivo', 'matar', 'materia', 'matiz', 'matriz', 'máximo', 'mayor', 'mazorca', 'mecha', 'medalla', 'medio', 'médula', 'mejilla', 'mejor', 'melena', 'melón', 'memoria', 'menor', 'mensaje', 'mente', 'menú', 'mercado', 'merengue', 'mérito', 'mes', 'mesón', 'meta', 'meter', 'método', 'metro', 'mezcla', 'miedo', 'miel', 'miembro', 'miga', 'mil', 'milagro', 'militar', 'millón', 'mimo', 'mina', 'minero', 'mínimo', 'minuto', 'miope', 'mirar', 'misa', 'miseria', 'misil', 'mismo', 'mitad', 'mito', 'mochila', 'moción', 'moda', 'modelo', 'moho', 'mojar', 'molde', 'moler', 'molino', 'momento', 'momia', 'monarca', 'moneda', 'monja', 'monto', 'moño', 'morada', 'morder', 'moreno', 'morir', 'morro', 'morsa', 'mortal', 'mosca', 'mostrar', 'motivo', 'mover', 'móvil', 'mozo', 'mucho', 'mudar', 'mueble', 'muela', 'muerte', 'muestra', 'mugre', 'mujer', 'mula', 'muleta', 'multa', 'mundo', 'muñeca', 'mural', 'muro', 'músculo', 'museo', 'musgo', 'música', 'muslo', 'nácar', 'nación', 'nadar', 'naipe', 'naranja', 'nariz', 'narrar', 'nasal', 'natal', 'nativo', 'natural', 'náusea', 'naval', 'nave', 'navidad', 'necio', 'néctar', 'negar', 'negocio', 'negro', 'neón', 'nervio', 'neto', 'neutro', 'nevar', 'nevera', 'nicho', 'nido', 'niebla', 'nieto', 'niñez', 'niño', 'nítido', 'nivel', 'nobleza', 'noche', 'nómina', 'noria', 'norma', 'norte', 'nota', 'noticia', 'novato', 'novela', 'novio', 'nube', 'nuca', 'núcleo', 'nudillo', 'nudo', 'nuera', 'nueve', 'nuez', 'nulo', 'número', 'nutria', 'oasis', 'obeso', 'obispo', 'objeto', 'obra', 'obrero', 'observar', 'obtener', 'obvio', 'oca', 'ocaso', 'océano', 'ochenta', 'ocho', 'ocio', 'ocre', 'octavo', 'octubre', 'oculto', 'ocupar', 'ocurrir', 'odiar', 'odio', 'odisea', 'oeste', 'ofensa', 'oferta', 'oficio', 'ofrecer', 'ogro', 'oído', 'oír', 'ojo', 'ola', 'oleada', 'olfato', 'olivo', 'olla', 'olmo', 'olor', 'olvido', 'ombligo', 'onda', 'onza', 'opaco', 'opción', 'ópera', 'opinar', 'oponer', 'optar', 'óptica', 'opuesto', 'oración', 'orador', 'oral', 'órbita', 'orca', 'orden', 'oreja', 'órgano', 'orgía', 'orgullo', 'oriente', 'origen', 'orilla', 'oro', 'orquesta', 'oruga', 'osadía', 'oscuro', 'osezno', 'oso', 'ostra', 'otoño', 'otro', 'oveja', 'óvulo', 'óxido', 'oxígeno', 'oyente', 'ozono', 'pacto', 'padre', 'paella', 'página', 'pago', 'país', 'pájaro', 'palabra', 'palco', 'paleta', 'pálido', 'palma', 'paloma', 'palpar', 'pan', 'panal', 'pánico', 'pantera', 'pañuelo', 'papá', 'papel', 'papilla', 'paquete', 'parar', 'parcela', 'pared', 'parir', 'paro', 'párpado', 'parque', 'párrafo', 'parte', 'pasar', 'paseo', 'pasión', 'paso', 'pasta', 'pata', 'patio', 'patria', 'pausa', 'pauta', 'pavo', 'payaso', 'peatón', 'pecado', 'pecera', 'pecho', 'pedal', 'pedir', 'pegar', 'peine', 'pelar', 'peldaño', 'pelea', 'peligro', 'pellejo', 'pelo', 'peluca', 'pena', 'pensar', 'peñón', 'peón', 'peor', 'pepino', 'pequeño', 'pera', 'percha', 'perder', 'pereza', 'perfil', 'perico', 'perla', 'permiso', 'perro', 'persona', 'pesa', 'pesca', 'pésimo', 'pestaña', 'pétalo', 'petróleo', 'pez', 'pezuña', 'picar', 'pichón', 'pie', 'piedra', 'pierna', 'pieza', 'pijama', 'pilar', 'piloto', 'pimienta', 'pino', 'pintor', 'pinza', 'piña', 'piojo', 'pipa', 'pirata', 'pisar', 'piscina', 'piso', 'pista', 'pitón', 'pizca', 'placa', 'plan', 'plata', 'playa', 'plaza', 'pleito', 'pleno', 'plomo', 'pluma', 'plural', 'pobre', 'poco', 'poder', 'podio', 'poema', 'poesía', 'poeta', 'polen', 'policía', 'pollo', 'polvo', 'pomada', 'pomelo', 'pomo', 'pompa', 'poner', 'porción', 'portal', 'posada', 'poseer', 'posible', 'poste', 'potencia', 'potro', 'pozo', 'prado', 'precoz', 'pregunta', 'premio', 'prensa', 'preso', 'previo', 'primo', 'príncipe', 'prisión', 'privar', 'proa', 'probar', 'proceso', 'producto', 'proeza', 'profesor', 'programa', 'prole', 'promesa', 'pronto', 'propio', 'próximo', 'prueba', 'público', 'puchero', 'pudor', 'pueblo', 'puerta', 'puesto', 'pulga', 'pulir', 'pulmón', 'pulpo', 'pulso', 'puma', 'punto', 'puñal', 'puño', 'pupa', 'pupila', 'puré', 'quedar', 'queja', 'quemar', 'querer', 'queso', 'quieto', 'química', 'quince', 'quitar', 'rábano', 'rabia', 'rabo', 'ración', 'radical', 'raíz', 'rama', 'rampa', 'rancho', 'rango', 'rapaz', 'rápido', 'rapto', 'rasgo', 'raspa', 'rato', 'rayo', 'raza', 'razón', 'reacción', 'realidad', 'rebaño', 'rebote', 'recaer', 'receta', 'rechazo', 'recoger', 'recreo', 'recto', 'recurso', 'red', 'redondo', 'reducir', 'reflejo', 'reforma', 'refrán', 'refugio', 'regalo', 'regir', 'regla', 'regreso', 'rehén', 'reino', 'reír', 'reja', 'relato', 'relevo', 'relieve', 'relleno', 'reloj', 'remar', 'remedio', 'remo', 'rencor', 'rendir', 'renta', 'reparto', 'repetir', 'reposo', 'reptil', 'res', 'rescate', 'resina', 'respeto', 'resto', 'resumen', 'retiro', 'retorno', 'retrato', 'reunir', 'revés', 'revista', 'rey', 'rezar', 'rico', 'riego', 'rienda', 'riesgo', 'rifa', 'rígido', 'rigor', 'rincón', 'riñón', 'río', 'riqueza', 'risa', 'ritmo', 'rito', 'rizo', 'roble', 'roce', 'rociar', 'rodar', 'rodeo', 'rodilla', 'roer', 'rojizo', 'rojo', 'romero', 'romper', 'ron', 'ronco', 'ronda', 'ropa', 'ropero', 'rosa', 'rosca', 'rostro', 'rotar', 'rubí', 'rubor', 'rudo', 'rueda', 'rugir', 'ruido', 'ruina', 'ruleta', 'rulo', 'rumbo', 'rumor', 'ruptura', 'ruta', 'rutina', 'sábado', 'saber', 'sabio', 'sable', 'sacar', 'sagaz', 'sagrado', 'sala', 'saldo', 'salero', 'salir', 'salmón', 'salón', 'salsa', 'salto', 'salud', 'salvar', 'samba', 'sanción', 'sandía', 'sanear', 'sangre', 'sanidad', 'sano', 'santo', 'sapo', 'saque', 'sardina', 'sartén', 'sastre', 'satán', 'sauna', 'saxofón', 'sección', 'seco', 'secreto', 'secta', 'sed', 'seguir', 'seis', 'sello', 'selva', 'semana', 'semilla', 'senda', 'sensor', 'señal', 'señor', 'separar', 'sepia', 'sequía', 'ser', 'serie', 'sermón', 'servir', 'sesenta', 'sesión', 'seta', 'setenta', 'severo', 'sexo', 'sexto', 'sidra', 'siesta', 'siete', 'siglo', 'signo', 'sílaba', 'silbar', 'silencio', 'silla', 'símbolo', 'simio', 'sirena', 'sistema', 'sitio', 'situar', 'sobre', 'socio', 'sodio', 'sol', 'solapa', 'soldado', 'soledad', 'sólido', 'soltar', 'solución', 'sombra', 'sondeo', 'sonido', 'sonoro', 'sonrisa', 'sopa', 'soplar', 'soporte', 'sordo', 'sorpresa', 'sorteo', 'sostén', 'sótano', 'suave', 'subir', 'suceso', 'sudor', 'suegra', 'suelo', 'sueño', 'suerte', 'sufrir', 'sujeto', 'sultán', 'sumar', 'superar', 'suplir', 'suponer', 'supremo', 'sur', 'surco', 'sureño', 'surgir', 'susto', 'sutil', 'tabaco', 'tabique', 'tabla', 'tabú', 'taco', 'tacto', 'tajo', 'talar', 'talco', 'talento', 'talla', 'talón', 'tamaño', 'tambor', 'tango', 'tanque', 'tapa', 'tapete', 'tapia', 'tapón', 'taquilla', 'tarde', 'tarea', 'tarifa', 'tarjeta', 'tarot', 'tarro', 'tarta', 'tatuaje', 'tauro', 'taza', 'tazón', 'teatro', 'techo', 'tecla', 'técnica', 'tejado', 'tejer', 'tejido', 'tela', 'teléfono', 'tema', 'temor', 'templo', 'tenaz', 'tender', 'tener', 'tenis', 'tenso', 'teoría', 'terapia', 'terco', 'término', 'ternura', 'terror', 'tesis', 'tesoro', 'testigo', 'tetera', 'texto', 'tez', 'tibio', 'tiburón', 'tiempo', 'tienda', 'tierra', 'tieso', 'tigre', 'tijera', 'tilde', 'timbre', 'tímido', 'timo', 'tinta', 'tío', 'típico', 'tipo', 'tira', 'tirón', 'titán', 'títere', 'título', 'tiza', 'toalla', 'tobillo', 'tocar', 'tocino', 'todo', 'toga', 'toldo', 'tomar', 'tono', 'tonto', 'topar', 'tope', 'toque', 'tórax', 'torero', 'tormenta', 'torneo', 'toro', 'torpedo', 'torre', 'torso', 'tortuga', 'tos', 'tosco', 'toser', 'tóxico', 'trabajo', 'tractor', 'traer', 'tráfico', 'trago', 'traje', 'tramo', 'trance', 'trato', 'trauma', 'trazar', 'trébol', 'tregua', 'treinta', 'tren', 'trepar', 'tres', 'tribu', 'trigo', 'tripa', 'triste', 'triunfo', 'trofeo', 'trompa', 'tronco', 'tropa', 'trote', 'trozo', 'truco', 'trueno', 'trufa', 'tubería', 'tubo', 'tuerto', 'tumba', 'tumor', 'túnel', 'túnica', 'turbina', 'turismo', 'turno', 'tutor', 'ubicar', 'úlcera', 'umbral', 'unidad', 'unir', 'universo', 'uno', 'untar', 'uña', 'urbano', 'urbe', 'urgente', 'urna', 'usar', 'usuario', 'útil', 'utopía', 'uva', 'vaca', 'vacío', 'vacuna', 'vagar', 'vago', 'vaina', 'vajilla', 'vale', 'válido', 'valle', 'valor', 'válvula', 'vampiro', 'vara', 'variar', 'varón', 'vaso', 'vecino', 'vector', 'vehículo', 'veinte', 'vejez', 'vela', 'velero', 'veloz', 'vena', 'vencer', 'venda', 'veneno', 'vengar', 'venir', 'venta', 'venus', 'ver', 'verano', 'verbo', 'verde', 'vereda', 'verja', 'verso', 'verter', 'vía', 'viaje', 'vibrar', 'vicio', 'víctima', 'vida', 'vídeo', 'vidrio', 'viejo', 'viernes', 'vigor', 'vil', 'villa', 'vinagre', 'vino', 'viñedo', 'violín', 'viral', 'virgo', 'virtud', 'visor', 'víspera', 'vista', 'vitamina', 'viudo', 'vivaz', 'vivero', 'vivir', 'vivo', 'volcán', 'volumen', 'volver', 'voraz', 'votar', 'voto', 'voz', 'vuelo', 'vulgar', 'yacer', 'yate', 'yegua', 'yema', 'yerno', 'yeso', 'yodo', 'yoga', 'yogur', 'zafiro', 'zanja', 'zapato', 'zarza', 'zona', 'zorro', 'zumo', 'zurdo'];
 
 module.exports = spanish;
 
-},{}],111:[function(_dereq_,module,exports){
+},{}],112:[function(_dereq_,module,exports){
 (function (module, exports) {
   'use strict';
 
@@ -34050,8 +34420,12 @@ module.exports = spanish;
   }
 
   BN.isBN = function isBN (num) {
+    if (num instanceof BN) {
+      return true;
+    }
+
     return num !== null && typeof num === 'object' &&
-      num.constructor.name === 'BN' && Array.isArray(num.words);
+      num.constructor.wordSize === BN.wordSize && Array.isArray(num.words);
   };
 
   BN.max = function max (left, right) {
@@ -36092,6 +36466,10 @@ module.exports = spanish;
 
     assert(this.negative === 0, 'imaskn works only with positive numbers');
 
+    if (this.length <= s) {
+      return this;
+    }
+
     if (r !== 0) {
       s++;
     }
@@ -37413,11 +37791,68 @@ module.exports = spanish;
   };
 })(typeof module === 'undefined' || module, this);
 
-},{}],112:[function(_dereq_,module,exports){
-arguments[4][89][0].apply(exports,arguments)
-},{"dup":89}],113:[function(_dereq_,module,exports){
+},{}],113:[function(_dereq_,module,exports){
+var r;
 
-},{}],114:[function(_dereq_,module,exports){
+module.exports = function rand(len) {
+  if (!r)
+    r = new Rand(null);
+
+  return r.generate(len);
+};
+
+function Rand(rand) {
+  this.rand = rand;
+}
+module.exports.Rand = Rand;
+
+Rand.prototype.generate = function generate(len) {
+  return this._rand(len);
+};
+
+if (typeof window === 'object') {
+  if (window.crypto && window.crypto.getRandomValues) {
+    // Modern browsers
+    Rand.prototype._rand = function _rand(n) {
+      var arr = new Uint8Array(n);
+      window.crypto.getRandomValues(arr);
+      return arr;
+    };
+  } else if (window.msCrypto && window.msCrypto.getRandomValues) {
+    // IE
+    Rand.prototype._rand = function _rand(n) {
+      var arr = new Uint8Array(n);
+      window.msCrypto.getRandomValues(arr);
+      return arr;
+    };
+  } else {
+    // Old junk
+    Rand.prototype._rand = function() {
+      throw new Error('Not implemented yet');
+    };
+  }
+} else {
+  // Node.js or Web worker
+  try {
+    var crypto = _dereq_('crypto');
+
+    Rand.prototype._rand = function _rand(n) {
+      return crypto.randomBytes(n);
+    };
+  } catch (e) {
+    // Emulate crypto API using randy
+    Rand.prototype._rand = function _rand(n) {
+      var res = new Uint8Array(n);
+      for (var i = 0; i < res.length; i++)
+        res[i] = this.rand.getByte();
+      return res;
+    };
+  }
+}
+
+},{"crypto":114}],114:[function(_dereq_,module,exports){
+
+},{}],115:[function(_dereq_,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -37598,7 +38033,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],115:[function(_dereq_,module,exports){
+},{"buffer":142}],116:[function(_dereq_,module,exports){
 (function (Buffer){
 var aes = _dereq_('./aes')
 var Transform = _dereq_('cipher-base')
@@ -37699,7 +38134,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./aes":114,"./ghash":119,"buffer":142,"buffer-xor":141,"cipher-base":144,"inherits":228}],116:[function(_dereq_,module,exports){
+},{"./aes":115,"./ghash":120,"buffer":142,"buffer-xor":141,"cipher-base":143,"inherits":226}],117:[function(_dereq_,module,exports){
 var ciphers = _dereq_('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -37712,7 +38147,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":117,"./encrypter":118,"./modes":120}],117:[function(_dereq_,module,exports){
+},{"./decrypter":118,"./encrypter":119,"./modes":121}],118:[function(_dereq_,module,exports){
 (function (Buffer){
 var aes = _dereq_('./aes')
 var Transform = _dereq_('cipher-base')
@@ -37853,7 +38288,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./aes":114,"./authCipher":115,"./modes":120,"./modes/cbc":121,"./modes/cfb":122,"./modes/cfb1":123,"./modes/cfb8":124,"./modes/ctr":125,"./modes/ecb":126,"./modes/ofb":127,"./streamCipher":128,"buffer":142,"cipher-base":144,"evp_bytestokey":219,"inherits":228}],118:[function(_dereq_,module,exports){
+},{"./aes":115,"./authCipher":116,"./modes":121,"./modes/cbc":122,"./modes/cfb":123,"./modes/cfb1":124,"./modes/cfb8":125,"./modes/ctr":126,"./modes/ecb":127,"./modes/ofb":128,"./streamCipher":129,"buffer":142,"cipher-base":143,"evp_bytestokey":217,"inherits":226}],119:[function(_dereq_,module,exports){
 (function (Buffer){
 var aes = _dereq_('./aes')
 var Transform = _dereq_('cipher-base')
@@ -37979,7 +38414,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./aes":114,"./authCipher":115,"./modes":120,"./modes/cbc":121,"./modes/cfb":122,"./modes/cfb1":123,"./modes/cfb8":124,"./modes/ctr":125,"./modes/ecb":126,"./modes/ofb":127,"./streamCipher":128,"buffer":142,"cipher-base":144,"evp_bytestokey":219,"inherits":228}],119:[function(_dereq_,module,exports){
+},{"./aes":115,"./authCipher":116,"./modes":121,"./modes/cbc":122,"./modes/cfb":123,"./modes/cfb1":124,"./modes/cfb8":125,"./modes/ctr":126,"./modes/ecb":127,"./modes/ofb":128,"./streamCipher":129,"buffer":142,"cipher-base":143,"evp_bytestokey":217,"inherits":226}],120:[function(_dereq_,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -38081,7 +38516,7 @@ function xor (a, b) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],120:[function(_dereq_,module,exports){
+},{"buffer":142}],121:[function(_dereq_,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -38254,7 +38689,7 @@ exports['aes-256-gcm'] = {
   type: 'auth'
 }
 
-},{}],121:[function(_dereq_,module,exports){
+},{}],122:[function(_dereq_,module,exports){
 var xor = _dereq_('buffer-xor')
 
 exports.encrypt = function (self, block) {
@@ -38273,7 +38708,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":141}],122:[function(_dereq_,module,exports){
+},{"buffer-xor":141}],123:[function(_dereq_,module,exports){
 (function (Buffer){
 var xor = _dereq_('buffer-xor')
 
@@ -38308,7 +38743,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"buffer-xor":141}],123:[function(_dereq_,module,exports){
+},{"buffer":142,"buffer-xor":141}],124:[function(_dereq_,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -38346,7 +38781,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],124:[function(_dereq_,module,exports){
+},{"buffer":142}],125:[function(_dereq_,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -38365,7 +38800,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],125:[function(_dereq_,module,exports){
+},{"buffer":142}],126:[function(_dereq_,module,exports){
 (function (Buffer){
 var xor = _dereq_('buffer-xor')
 
@@ -38400,7 +38835,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"buffer-xor":141}],126:[function(_dereq_,module,exports){
+},{"buffer":142,"buffer-xor":141}],127:[function(_dereq_,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -38408,7 +38843,7 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],127:[function(_dereq_,module,exports){
+},{}],128:[function(_dereq_,module,exports){
 (function (Buffer){
 var xor = _dereq_('buffer-xor')
 
@@ -38428,7 +38863,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"buffer-xor":141}],128:[function(_dereq_,module,exports){
+},{"buffer":142,"buffer-xor":141}],129:[function(_dereq_,module,exports){
 (function (Buffer){
 var aes = _dereq_('./aes')
 var Transform = _dereq_('cipher-base')
@@ -38457,7 +38892,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./aes":114,"buffer":142,"cipher-base":144,"inherits":228}],129:[function(_dereq_,module,exports){
+},{"./aes":115,"buffer":142,"cipher-base":143,"inherits":226}],130:[function(_dereq_,module,exports){
 var ebtk = _dereq_('evp_bytestokey')
 var aes = _dereq_('browserify-aes/browser')
 var DES = _dereq_('browserify-des')
@@ -38532,7 +38967,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"browserify-aes/browser":116,"browserify-aes/modes":120,"browserify-des":130,"browserify-des/modes":131,"evp_bytestokey":219}],130:[function(_dereq_,module,exports){
+},{"browserify-aes/browser":117,"browserify-aes/modes":121,"browserify-des":131,"browserify-des/modes":132,"evp_bytestokey":217}],131:[function(_dereq_,module,exports){
 (function (Buffer){
 var CipherBase = _dereq_('cipher-base')
 var des = _dereq_('des.js')
@@ -38579,7 +39014,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"cipher-base":144,"des.js":186,"inherits":228}],131:[function(_dereq_,module,exports){
+},{"buffer":142,"cipher-base":143,"des.js":185,"inherits":226}],132:[function(_dereq_,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -38605,7 +39040,7 @@ exports['des-ede'] = {
   iv: 0
 }
 
-},{}],132:[function(_dereq_,module,exports){
+},{}],133:[function(_dereq_,module,exports){
 (function (Buffer){
 var bn = _dereq_('bn.js');
 var randomBytes = _dereq_('randombytes');
@@ -38649,7 +39084,7 @@ function getr(priv) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"bn.js":111,"buffer":142,"randombytes":250}],133:[function(_dereq_,module,exports){
+},{"bn.js":112,"buffer":142,"randombytes":250}],134:[function(_dereq_,module,exports){
 (function (Buffer){
 const Sha3 = _dereq_('js-sha3')
 
@@ -38687,7 +39122,7 @@ module.exports = {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"js-sha3":230}],134:[function(_dereq_,module,exports){
+},{"buffer":142,"js-sha3":229}],135:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict'
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
@@ -38763,7 +39198,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],135:[function(_dereq_,module,exports){
+},{"buffer":142}],136:[function(_dereq_,module,exports){
 (function (Buffer){
 var _algos = _dereq_('./algos')
 var createHash = _dereq_('create-hash')
@@ -38870,7 +39305,7 @@ module.exports = {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./algos":134,"./sign":137,"./verify":138,"buffer":142,"create-hash":147,"inherits":228,"stream":268}],136:[function(_dereq_,module,exports){
+},{"./algos":135,"./sign":138,"./verify":139,"buffer":142,"create-hash":146,"inherits":226,"stream":279}],137:[function(_dereq_,module,exports){
 'use strict'
 exports['1.3.132.0.10'] = 'secp256k1'
 
@@ -38884,7 +39319,7 @@ exports['1.3.132.0.34'] = 'p384'
 
 exports['1.3.132.0.35'] = 'p521'
 
-},{}],137:[function(_dereq_,module,exports){
+},{}],138:[function(_dereq_,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = _dereq_('create-hmac')
@@ -39073,7 +39508,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./curves":136,"bn.js":111,"browserify-rsa":132,"buffer":142,"create-hmac":150,"elliptic":196,"parse-asn1":236}],138:[function(_dereq_,module,exports){
+},{"./curves":137,"bn.js":112,"browserify-rsa":133,"buffer":142,"create-hmac":149,"elliptic":195,"parse-asn1":236}],139:[function(_dereq_,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var curves = _dereq_('./curves')
@@ -39180,368 +39615,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./curves":136,"bn.js":111,"buffer":142,"elliptic":196,"parse-asn1":236}],139:[function(_dereq_,module,exports){
-// http://wiki.commonjs.org/wiki/Unit_Testing/1.0
-//
-// THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
-//
-// Originally from narwhal.js (http://narwhaljs.org)
-// Copyright (c) 2009 Thomas Robinson <280north.com>
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the 'Software'), to
-// deal in the Software without restriction, including without limitation the
-// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-// sell copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
-// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-// when used in node, this will actually load the util module we depend on
-// versus loading the builtin util module as happens otherwise
-// this is a bug in node module loading as far as I am concerned
-var util = _dereq_('util/');
-
-var pSlice = Array.prototype.slice;
-var hasOwn = Object.prototype.hasOwnProperty;
-
-// 1. The assert module provides functions that throw
-// AssertionError's when particular conditions are not met. The
-// assert module must conform to the following interface.
-
-var assert = module.exports = ok;
-
-// 2. The AssertionError is defined in assert.
-// new assert.AssertionError({ message: message,
-//                             actual: actual,
-//                             expected: expected })
-
-assert.AssertionError = function AssertionError(options) {
-  this.name = 'AssertionError';
-  this.actual = options.actual;
-  this.expected = options.expected;
-  this.operator = options.operator;
-  if (options.message) {
-    this.message = options.message;
-    this.generatedMessage = false;
-  } else {
-    this.message = getMessage(this);
-    this.generatedMessage = true;
-  }
-  var stackStartFunction = options.stackStartFunction || fail;
-
-  if (Error.captureStackTrace) {
-    Error.captureStackTrace(this, stackStartFunction);
-  }
-  else {
-    // non v8 browsers so we can have a stacktrace
-    var err = new Error();
-    if (err.stack) {
-      var out = err.stack;
-
-      // try to strip useless frames
-      var fn_name = stackStartFunction.name;
-      var idx = out.indexOf('\n' + fn_name);
-      if (idx >= 0) {
-        // once we have located the function frame
-        // we need to strip out everything before it (and its line)
-        var next_line = out.indexOf('\n', idx + 1);
-        out = out.substring(next_line + 1);
-      }
-
-      this.stack = out;
-    }
-  }
-};
-
-// assert.AssertionError instanceof Error
-util.inherits(assert.AssertionError, Error);
-
-function replacer(key, value) {
-  if (util.isUndefined(value)) {
-    return '' + value;
-  }
-  if (util.isNumber(value) && !isFinite(value)) {
-    return value.toString();
-  }
-  if (util.isFunction(value) || util.isRegExp(value)) {
-    return value.toString();
-  }
-  return value;
-}
-
-function truncate(s, n) {
-  if (util.isString(s)) {
-    return s.length < n ? s : s.slice(0, n);
-  } else {
-    return s;
-  }
-}
-
-function getMessage(self) {
-  return truncate(JSON.stringify(self.actual, replacer), 128) + ' ' +
-         self.operator + ' ' +
-         truncate(JSON.stringify(self.expected, replacer), 128);
-}
-
-// At present only the three keys mentioned above are used and
-// understood by the spec. Implementations or sub modules can pass
-// other keys to the AssertionError's constructor - they will be
-// ignored.
-
-// 3. All of the following functions must throw an AssertionError
-// when a corresponding condition is not met, with a message that
-// may be undefined if not provided.  All assertion methods provide
-// both the actual and expected values to the assertion error for
-// display purposes.
-
-function fail(actual, expected, message, operator, stackStartFunction) {
-  throw new assert.AssertionError({
-    message: message,
-    actual: actual,
-    expected: expected,
-    operator: operator,
-    stackStartFunction: stackStartFunction
-  });
-}
-
-// EXTENSION! allows for well behaved errors defined elsewhere.
-assert.fail = fail;
-
-// 4. Pure assertion tests whether a value is truthy, as determined
-// by !!guard.
-// assert.ok(guard, message_opt);
-// This statement is equivalent to assert.equal(true, !!guard,
-// message_opt);. To test strictly for the value true, use
-// assert.strictEqual(true, guard, message_opt);.
-
-function ok(value, message) {
-  if (!value) fail(value, true, message, '==', assert.ok);
-}
-assert.ok = ok;
-
-// 5. The equality assertion tests shallow, coercive equality with
-// ==.
-// assert.equal(actual, expected, message_opt);
-
-assert.equal = function equal(actual, expected, message) {
-  if (actual != expected) fail(actual, expected, message, '==', assert.equal);
-};
-
-// 6. The non-equality assertion tests for whether two objects are not equal
-// with != assert.notEqual(actual, expected, message_opt);
-
-assert.notEqual = function notEqual(actual, expected, message) {
-  if (actual == expected) {
-    fail(actual, expected, message, '!=', assert.notEqual);
-  }
-};
-
-// 7. The equivalence assertion tests a deep equality relation.
-// assert.deepEqual(actual, expected, message_opt);
-
-assert.deepEqual = function deepEqual(actual, expected, message) {
-  if (!_deepEqual(actual, expected)) {
-    fail(actual, expected, message, 'deepEqual', assert.deepEqual);
-  }
-};
-
-function _deepEqual(actual, expected) {
-  // 7.1. All identical values are equivalent, as determined by ===.
-  if (actual === expected) {
-    return true;
-
-  } else if (util.isBuffer(actual) && util.isBuffer(expected)) {
-    if (actual.length != expected.length) return false;
-
-    for (var i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) return false;
-    }
-
-    return true;
-
-  // 7.2. If the expected value is a Date object, the actual value is
-  // equivalent if it is also a Date object that refers to the same time.
-  } else if (util.isDate(actual) && util.isDate(expected)) {
-    return actual.getTime() === expected.getTime();
-
-  // 7.3 If the expected value is a RegExp object, the actual value is
-  // equivalent if it is also a RegExp object with the same source and
-  // properties (`global`, `multiline`, `lastIndex`, `ignoreCase`).
-  } else if (util.isRegExp(actual) && util.isRegExp(expected)) {
-    return actual.source === expected.source &&
-           actual.global === expected.global &&
-           actual.multiline === expected.multiline &&
-           actual.lastIndex === expected.lastIndex &&
-           actual.ignoreCase === expected.ignoreCase;
-
-  // 7.4. Other pairs that do not both pass typeof value == 'object',
-  // equivalence is determined by ==.
-  } else if (!util.isObject(actual) && !util.isObject(expected)) {
-    return actual == expected;
-
-  // 7.5 For all other Object pairs, including Array objects, equivalence is
-  // determined by having the same number of owned properties (as verified
-  // with Object.prototype.hasOwnProperty.call), the same set of keys
-  // (although not necessarily the same order), equivalent values for every
-  // corresponding key, and an identical 'prototype' property. Note: this
-  // accounts for both named and indexed properties on Arrays.
-  } else {
-    return objEquiv(actual, expected);
-  }
-}
-
-function isArguments(object) {
-  return Object.prototype.toString.call(object) == '[object Arguments]';
-}
-
-function objEquiv(a, b) {
-  if (util.isNullOrUndefined(a) || util.isNullOrUndefined(b))
-    return false;
-  // an identical 'prototype' property.
-  if (a.prototype !== b.prototype) return false;
-  // if one is a primitive, the other must be same
-  if (util.isPrimitive(a) || util.isPrimitive(b)) {
-    return a === b;
-  }
-  var aIsArgs = isArguments(a),
-      bIsArgs = isArguments(b);
-  if ((aIsArgs && !bIsArgs) || (!aIsArgs && bIsArgs))
-    return false;
-  if (aIsArgs) {
-    a = pSlice.call(a);
-    b = pSlice.call(b);
-    return _deepEqual(a, b);
-  }
-  var ka = objectKeys(a),
-      kb = objectKeys(b),
-      key, i;
-  // having the same number of owned properties (keys incorporates
-  // hasOwnProperty)
-  if (ka.length != kb.length)
-    return false;
-  //the same set of keys (although not necessarily the same order),
-  ka.sort();
-  kb.sort();
-  //~~~cheap key test
-  for (i = ka.length - 1; i >= 0; i--) {
-    if (ka[i] != kb[i])
-      return false;
-  }
-  //equivalent values for every corresponding key, and
-  //~~~possibly expensive deep test
-  for (i = ka.length - 1; i >= 0; i--) {
-    key = ka[i];
-    if (!_deepEqual(a[key], b[key])) return false;
-  }
-  return true;
-}
-
-// 8. The non-equivalence assertion tests for any deep inequality.
-// assert.notDeepEqual(actual, expected, message_opt);
-
-assert.notDeepEqual = function notDeepEqual(actual, expected, message) {
-  if (_deepEqual(actual, expected)) {
-    fail(actual, expected, message, 'notDeepEqual', assert.notDeepEqual);
-  }
-};
-
-// 9. The strict equality assertion tests strict equality, as determined by ===.
-// assert.strictEqual(actual, expected, message_opt);
-
-assert.strictEqual = function strictEqual(actual, expected, message) {
-  if (actual !== expected) {
-    fail(actual, expected, message, '===', assert.strictEqual);
-  }
-};
-
-// 10. The strict non-equality assertion tests for strict inequality, as
-// determined by !==.  assert.notStrictEqual(actual, expected, message_opt);
-
-assert.notStrictEqual = function notStrictEqual(actual, expected, message) {
-  if (actual === expected) {
-    fail(actual, expected, message, '!==', assert.notStrictEqual);
-  }
-};
-
-function expectedException(actual, expected) {
-  if (!actual || !expected) {
-    return false;
-  }
-
-  if (Object.prototype.toString.call(expected) == '[object RegExp]') {
-    return expected.test(actual);
-  } else if (actual instanceof expected) {
-    return true;
-  } else if (expected.call({}, actual) === true) {
-    return true;
-  }
-
-  return false;
-}
-
-function _throws(shouldThrow, block, expected, message) {
-  var actual;
-
-  if (util.isString(expected)) {
-    message = expected;
-    expected = null;
-  }
-
-  try {
-    block();
-  } catch (e) {
-    actual = e;
-  }
-
-  message = (expected && expected.name ? ' (' + expected.name + ').' : '.') +
-            (message ? ' ' + message : '.');
-
-  if (shouldThrow && !actual) {
-    fail(actual, expected, 'Missing expected exception' + message);
-  }
-
-  if (!shouldThrow && expectedException(actual, expected)) {
-    fail(actual, expected, 'Got unwanted exception' + message);
-  }
-
-  if ((shouldThrow && actual && expected &&
-      !expectedException(actual, expected)) || (!shouldThrow && actual)) {
-    throw actual;
-  }
-}
-
-// 11. Expected to throw an error:
-// assert.throws(block, Error_opt, message_opt);
-
-assert.throws = function(block, /*optional*/error, /*optional*/message) {
-  _throws.apply(this, [true].concat(pSlice.call(arguments)));
-};
-
-// EXTENSION! This is annoying to write outside this module.
-assert.doesNotThrow = function(block, /*optional*/message) {
-  _throws.apply(this, [false].concat(pSlice.call(arguments)));
-};
-
-assert.ifError = function(err) { if (err) {throw err;}};
-
-var objectKeys = Object.keys || function (obj) {
-  var keys = [];
-  for (var key in obj) {
-    if (hasOwn.call(obj, key)) keys.push(key);
-  }
-  return keys;
-};
-
-},{"util/":290}],140:[function(_dereq_,module,exports){
+},{"./curves":137,"bn.js":112,"buffer":142,"elliptic":195,"parse-asn1":236}],140:[function(_dereq_,module,exports){
 (function (global){
 'use strict';
 
@@ -41460,14 +41534,7 @@ function isnan (val) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":25,"ieee754":226,"isarray":143}],143:[function(_dereq_,module,exports){
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
-
-},{}],144:[function(_dereq_,module,exports){
+},{"base64-js":26,"ieee754":224,"isarray":228}],143:[function(_dereq_,module,exports){
 (function (Buffer){
 var Transform = _dereq_('stream').Transform
 var inherits = _dereq_('inherits')
@@ -41561,7 +41628,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"inherits":228,"stream":268,"string_decoder":281}],145:[function(_dereq_,module,exports){
+},{"buffer":142,"inherits":226,"stream":279,"string_decoder":280}],144:[function(_dereq_,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -41672,7 +41739,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":_dereq_("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":229}],146:[function(_dereq_,module,exports){
+},{"../../is-buffer/index.js":227}],145:[function(_dereq_,module,exports){
 (function (Buffer){
 var elliptic = _dereq_('elliptic');
 var BN = _dereq_('bn.js');
@@ -41798,7 +41865,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"bn.js":111,"buffer":142,"elliptic":196}],147:[function(_dereq_,module,exports){
+},{"bn.js":112,"buffer":142,"elliptic":195}],146:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 var inherits = _dereq_('inherits')
@@ -41854,7 +41921,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./md5":149,"buffer":142,"cipher-base":144,"inherits":228,"ripemd160":251,"sha.js":261}],148:[function(_dereq_,module,exports){
+},{"./md5":148,"buffer":142,"cipher-base":143,"inherits":226,"ripemd160":262,"sha.js":272}],147:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 var intSize = 4;
@@ -41891,7 +41958,7 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],149:[function(_dereq_,module,exports){
+},{"buffer":142}],148:[function(_dereq_,module,exports){
 'use strict';
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -42048,7 +42115,7 @@ function bit_rol(num, cnt)
 module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
-},{"./helpers":148}],150:[function(_dereq_,module,exports){
+},{"./helpers":147}],149:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = _dereq_('create-hash/browser');
@@ -42120,7 +42187,7 @@ module.exports = function createHmac(alg, key) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"create-hash/browser":147,"inherits":228,"stream":268}],151:[function(_dereq_,module,exports){
+},{"buffer":142,"create-hash/browser":146,"inherits":226,"stream":279}],150:[function(_dereq_,module,exports){
 'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = _dereq_('randombytes')
@@ -42199,7 +42266,7 @@ var publicEncrypt = _dereq_('public-encrypt')
   }
 })
 
-},{"browserify-cipher":129,"browserify-sign":135,"browserify-sign/algos":134,"create-ecdh":146,"create-hash":147,"create-hmac":150,"diffie-hellman":192,"pbkdf2":237,"public-encrypt":240,"randombytes":250}],152:[function(_dereq_,module,exports){
+},{"browserify-cipher":130,"browserify-sign":136,"browserify-sign/algos":135,"create-ecdh":145,"create-hash":146,"create-hmac":149,"diffie-hellman":191,"pbkdf2":237,"public-encrypt":240,"randombytes":250}],151:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -42427,7 +42494,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.AES;
 
 }));
-},{"./cipher-core":153,"./core":154,"./enc-base64":155,"./evpkdf":157,"./md5":162}],153:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153,"./enc-base64":154,"./evpkdf":156,"./md5":161}],152:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -43303,7 +43370,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 
 
 }));
-},{"./core":154}],154:[function(_dereq_,module,exports){
+},{"./core":153}],153:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44046,7 +44113,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS;
 
 }));
-},{}],155:[function(_dereq_,module,exports){
+},{}],154:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44171,7 +44238,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":154}],156:[function(_dereq_,module,exports){
+},{"./core":153}],155:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44321,7 +44388,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.enc.Utf16;
 
 }));
-},{"./core":154}],157:[function(_dereq_,module,exports){
+},{"./core":153}],156:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44454,7 +44521,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.EvpKDF;
 
 }));
-},{"./core":154,"./hmac":159,"./sha1":178}],158:[function(_dereq_,module,exports){
+},{"./core":153,"./hmac":158,"./sha1":177}],157:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44521,7 +44588,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.format.Hex;
 
 }));
-},{"./cipher-core":153,"./core":154}],159:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],158:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44665,7 +44732,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 
 
 }));
-},{"./core":154}],160:[function(_dereq_,module,exports){
+},{"./core":153}],159:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44684,7 +44751,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS;
 
 }));
-},{"./aes":152,"./cipher-core":153,"./core":154,"./enc-base64":155,"./enc-utf16":156,"./evpkdf":157,"./format-hex":158,"./hmac":159,"./lib-typedarrays":161,"./md5":162,"./mode-cfb":163,"./mode-ctr":165,"./mode-ctr-gladman":164,"./mode-ecb":166,"./mode-ofb":167,"./pad-ansix923":168,"./pad-iso10126":169,"./pad-iso97971":170,"./pad-nopadding":171,"./pad-zeropadding":172,"./pbkdf2":173,"./rabbit":175,"./rabbit-legacy":174,"./rc4":176,"./ripemd160":177,"./sha1":178,"./sha224":179,"./sha256":180,"./sha3":181,"./sha384":182,"./sha512":183,"./tripledes":184,"./x64-core":185}],161:[function(_dereq_,module,exports){
+},{"./aes":151,"./cipher-core":152,"./core":153,"./enc-base64":154,"./enc-utf16":155,"./evpkdf":156,"./format-hex":157,"./hmac":158,"./lib-typedarrays":160,"./md5":161,"./mode-cfb":162,"./mode-ctr":164,"./mode-ctr-gladman":163,"./mode-ecb":165,"./mode-ofb":166,"./pad-ansix923":167,"./pad-iso10126":168,"./pad-iso97971":169,"./pad-nopadding":170,"./pad-zeropadding":171,"./pbkdf2":172,"./rabbit":174,"./rabbit-legacy":173,"./rc4":175,"./ripemd160":176,"./sha1":177,"./sha224":178,"./sha256":179,"./sha3":180,"./sha384":181,"./sha512":182,"./tripledes":183,"./x64-core":184}],160:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -44761,7 +44828,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.lib.WordArray;
 
 }));
-},{"./core":154}],162:[function(_dereq_,module,exports){
+},{"./core":153}],161:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45030,7 +45097,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.MD5;
 
 }));
-},{"./core":154}],163:[function(_dereq_,module,exports){
+},{"./core":153}],162:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45109,7 +45176,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.mode.CFB;
 
 }));
-},{"./cipher-core":153,"./core":154}],164:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],163:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45226,7 +45293,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.mode.CTRGladman;
 
 }));
-},{"./cipher-core":153,"./core":154}],165:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],164:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45285,7 +45352,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.mode.CTR;
 
 }));
-},{"./cipher-core":153,"./core":154}],166:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],165:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45326,7 +45393,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.mode.ECB;
 
 }));
-},{"./cipher-core":153,"./core":154}],167:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],166:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45381,7 +45448,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.mode.OFB;
 
 }));
-},{"./cipher-core":153,"./core":154}],168:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],167:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45431,7 +45498,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.pad.Ansix923;
 
 }));
-},{"./cipher-core":153,"./core":154}],169:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],168:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45476,7 +45543,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.pad.Iso10126;
 
 }));
-},{"./cipher-core":153,"./core":154}],170:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],169:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45517,7 +45584,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.pad.Iso97971;
 
 }));
-},{"./cipher-core":153,"./core":154}],171:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],170:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45548,7 +45615,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.pad.NoPadding;
 
 }));
-},{"./cipher-core":153,"./core":154}],172:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],171:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45594,7 +45661,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.pad.ZeroPadding;
 
 }));
-},{"./cipher-core":153,"./core":154}],173:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153}],172:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45740,7 +45807,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.PBKDF2;
 
 }));
-},{"./core":154,"./hmac":159,"./sha1":178}],174:[function(_dereq_,module,exports){
+},{"./core":153,"./hmac":158,"./sha1":177}],173:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -45931,7 +45998,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.RabbitLegacy;
 
 }));
-},{"./cipher-core":153,"./core":154,"./enc-base64":155,"./evpkdf":157,"./md5":162}],175:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153,"./enc-base64":154,"./evpkdf":156,"./md5":161}],174:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46124,7 +46191,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.Rabbit;
 
 }));
-},{"./cipher-core":153,"./core":154,"./enc-base64":155,"./evpkdf":157,"./md5":162}],176:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153,"./enc-base64":154,"./evpkdf":156,"./md5":161}],175:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46264,7 +46331,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.RC4;
 
 }));
-},{"./cipher-core":153,"./core":154,"./enc-base64":155,"./evpkdf":157,"./md5":162}],177:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153,"./enc-base64":154,"./evpkdf":156,"./md5":161}],176:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46532,7 +46599,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.RIPEMD160;
 
 }));
-},{"./core":154}],178:[function(_dereq_,module,exports){
+},{"./core":153}],177:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46683,7 +46750,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA1;
 
 }));
-},{"./core":154}],179:[function(_dereq_,module,exports){
+},{"./core":153}],178:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46764,7 +46831,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA224;
 
 }));
-},{"./core":154,"./sha256":180}],180:[function(_dereq_,module,exports){
+},{"./core":153,"./sha256":179}],179:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -46964,7 +47031,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":154}],181:[function(_dereq_,module,exports){
+},{"./core":153}],180:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -47288,7 +47355,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA3;
 
 }));
-},{"./core":154,"./x64-core":185}],182:[function(_dereq_,module,exports){
+},{"./core":153,"./x64-core":184}],181:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -47372,7 +47439,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA384;
 
 }));
-},{"./core":154,"./sha512":183,"./x64-core":185}],183:[function(_dereq_,module,exports){
+},{"./core":153,"./sha512":182,"./x64-core":184}],182:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -47696,7 +47763,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.SHA512;
 
 }));
-},{"./core":154,"./x64-core":185}],184:[function(_dereq_,module,exports){
+},{"./core":153,"./x64-core":184}],183:[function(_dereq_,module,exports){
 ;(function (root, factory, undef) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -48467,7 +48534,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS.TripleDES;
 
 }));
-},{"./cipher-core":153,"./core":154,"./enc-base64":155,"./evpkdf":157,"./md5":162}],185:[function(_dereq_,module,exports){
+},{"./cipher-core":152,"./core":153,"./enc-base64":154,"./evpkdf":156,"./md5":161}],184:[function(_dereq_,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -48772,7 +48839,7 @@ var publicEncrypt = _dereq_('public-encrypt')
 	return CryptoJS;
 
 }));
-},{"./core":154}],186:[function(_dereq_,module,exports){
+},{"./core":153}],185:[function(_dereq_,module,exports){
 'use strict';
 
 exports.utils = _dereq_('./des/utils');
@@ -48781,7 +48848,7 @@ exports.DES = _dereq_('./des/des');
 exports.CBC = _dereq_('./des/cbc');
 exports.EDE = _dereq_('./des/ede');
 
-},{"./des/cbc":187,"./des/cipher":188,"./des/des":189,"./des/ede":190,"./des/utils":191}],187:[function(_dereq_,module,exports){
+},{"./des/cbc":186,"./des/cipher":187,"./des/des":188,"./des/ede":189,"./des/utils":190}],186:[function(_dereq_,module,exports){
 'use strict';
 
 var assert = _dereq_('minimalistic-assert');
@@ -48848,7 +48915,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
   }
 };
 
-},{"inherits":228,"minimalistic-assert":232}],188:[function(_dereq_,module,exports){
+},{"inherits":226,"minimalistic-assert":232}],187:[function(_dereq_,module,exports){
 'use strict';
 
 var assert = _dereq_('minimalistic-assert');
@@ -48991,7 +49058,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
   return this._unpad(out);
 };
 
-},{"minimalistic-assert":232}],189:[function(_dereq_,module,exports){
+},{"minimalistic-assert":232}],188:[function(_dereq_,module,exports){
 'use strict';
 
 var assert = _dereq_('minimalistic-assert');
@@ -49136,7 +49203,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
   utils.rip(l, r, out, off);
 };
 
-},{"../des":186,"inherits":228,"minimalistic-assert":232}],190:[function(_dereq_,module,exports){
+},{"../des":185,"inherits":226,"minimalistic-assert":232}],189:[function(_dereq_,module,exports){
 'use strict';
 
 var assert = _dereq_('minimalistic-assert');
@@ -49193,7 +49260,7 @@ EDE.prototype._update = function _update(inp, inOff, out, outOff) {
 EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
-},{"../des":186,"inherits":228,"minimalistic-assert":232}],191:[function(_dereq_,module,exports){
+},{"../des":185,"inherits":226,"minimalistic-assert":232}],190:[function(_dereq_,module,exports){
 'use strict';
 
 exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -49451,7 +49518,7 @@ exports.padSplit = function padSplit(num, size, group) {
   return out.join(' ');
 };
 
-},{}],192:[function(_dereq_,module,exports){
+},{}],191:[function(_dereq_,module,exports){
 (function (Buffer){
 var generatePrime = _dereq_('./lib/generatePrime')
 var primes = _dereq_('./lib/primes.json')
@@ -49497,7 +49564,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./lib/dh":193,"./lib/generatePrime":194,"./lib/primes.json":195,"buffer":142}],193:[function(_dereq_,module,exports){
+},{"./lib/dh":192,"./lib/generatePrime":193,"./lib/primes.json":194,"buffer":142}],192:[function(_dereq_,module,exports){
 (function (Buffer){
 var BN = _dereq_('bn.js');
 var MillerRabin = _dereq_('miller-rabin');
@@ -49665,7 +49732,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./generatePrime":194,"bn.js":111,"buffer":142,"miller-rabin":231,"randombytes":250}],194:[function(_dereq_,module,exports){
+},{"./generatePrime":193,"bn.js":112,"buffer":142,"miller-rabin":231,"randombytes":250}],193:[function(_dereq_,module,exports){
 var randomBytes = _dereq_('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -49772,7 +49839,7 @@ function findPrime(bits, gen) {
 
 }
 
-},{"bn.js":111,"miller-rabin":231,"randombytes":250}],195:[function(_dereq_,module,exports){
+},{"bn.js":112,"miller-rabin":231,"randombytes":250}],194:[function(_dereq_,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -49807,7 +49874,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],196:[function(_dereq_,module,exports){
+},{}],195:[function(_dereq_,module,exports){
 'use strict';
 
 var elliptic = exports;
@@ -49823,7 +49890,7 @@ elliptic.curves = _dereq_('./elliptic/curves');
 elliptic.ec = _dereq_('./elliptic/ec');
 elliptic.eddsa = _dereq_('./elliptic/eddsa');
 
-},{"../package.json":212,"./elliptic/curve":199,"./elliptic/curves":202,"./elliptic/ec":203,"./elliptic/eddsa":206,"./elliptic/hmac-drbg":209,"./elliptic/utils":211,"brorand":112}],197:[function(_dereq_,module,exports){
+},{"../package.json":211,"./elliptic/curve":198,"./elliptic/curves":201,"./elliptic/ec":202,"./elliptic/eddsa":205,"./elliptic/hmac-drbg":208,"./elliptic/utils":210,"brorand":113}],196:[function(_dereq_,module,exports){
 'use strict';
 
 var BN = _dereq_('bn.js');
@@ -50200,7 +50267,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":196,"bn.js":111}],198:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"bn.js":112}],197:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -50635,9 +50702,9 @@ Point.prototype.eqXToP = function eqXToP(x) {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":196,"../curve":199,"bn.js":111,"inherits":228}],199:[function(_dereq_,module,exports){
-arguments[4][79][0].apply(exports,arguments)
-},{"./base":197,"./edwards":198,"./mont":200,"./short":201,"dup":79}],200:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"../curve":198,"bn.js":112,"inherits":226}],198:[function(_dereq_,module,exports){
+arguments[4][80][0].apply(exports,arguments)
+},{"./base":196,"./edwards":197,"./mont":199,"./short":200,"dup":80}],199:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -50819,7 +50886,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":196,"../curve":199,"bn.js":111,"inherits":228}],201:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"../curve":198,"bn.js":112,"inherits":226}],200:[function(_dereq_,module,exports){
 'use strict';
 
 var curve = _dereq_('../curve');
@@ -51759,7 +51826,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":196,"../curve":199,"bn.js":111,"inherits":228}],202:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"../curve":198,"bn.js":112,"inherits":226}],201:[function(_dereq_,module,exports){
 'use strict';
 
 var curves = exports;
@@ -51966,7 +52033,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":196,"./precomputed/secp256k1":210,"hash.js":220}],203:[function(_dereq_,module,exports){
+},{"../elliptic":195,"./precomputed/secp256k1":209,"hash.js":218}],202:[function(_dereq_,module,exports){
 'use strict';
 
 var BN = _dereq_('bn.js');
@@ -52204,7 +52271,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
   throw new Error('Unable to find valid recovery factor');
 };
 
-},{"../../elliptic":196,"./key":204,"./signature":205,"bn.js":111}],204:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"./key":203,"./signature":204,"bn.js":112}],203:[function(_dereq_,module,exports){
 'use strict';
 
 var BN = _dereq_('bn.js');
@@ -52313,7 +52380,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"bn.js":111}],205:[function(_dereq_,module,exports){
+},{"bn.js":112}],204:[function(_dereq_,module,exports){
 'use strict';
 
 var BN = _dereq_('bn.js');
@@ -52450,7 +52517,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":196,"bn.js":111}],206:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"bn.js":112}],205:[function(_dereq_,module,exports){
 'use strict';
 
 var hash = _dereq_('hash.js');
@@ -52570,7 +52637,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
   return val instanceof this.pointClass;
 };
 
-},{"../../elliptic":196,"./key":207,"./signature":208,"hash.js":220}],207:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"./key":206,"./signature":207,"hash.js":218}],206:[function(_dereq_,module,exports){
 'use strict';
 
 var elliptic = _dereq_('../../elliptic');
@@ -52668,7 +52735,7 @@ KeyPair.prototype.getPublic = function getPublic(enc) {
 
 module.exports = KeyPair;
 
-},{"../../elliptic":196}],208:[function(_dereq_,module,exports){
+},{"../../elliptic":195}],207:[function(_dereq_,module,exports){
 'use strict';
 
 var BN = _dereq_('bn.js');
@@ -52736,11 +52803,11 @@ Signature.prototype.toHex = function toHex() {
 
 module.exports = Signature;
 
-},{"../../elliptic":196,"bn.js":111}],209:[function(_dereq_,module,exports){
-arguments[4][86][0].apply(exports,arguments)
-},{"../elliptic":196,"dup":86,"hash.js":220}],210:[function(_dereq_,module,exports){
+},{"../../elliptic":195,"bn.js":112}],208:[function(_dereq_,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"dup":87}],211:[function(_dereq_,module,exports){
+},{"../elliptic":195,"dup":87,"hash.js":218}],209:[function(_dereq_,module,exports){
+arguments[4][88][0].apply(exports,arguments)
+},{"dup":88}],210:[function(_dereq_,module,exports){
 'use strict';
 
 var utils = exports;
@@ -52914,15 +52981,23 @@ function intFromLE(bytes) {
 utils.intFromLE = intFromLE;
 
 
-},{"bn.js":111}],212:[function(_dereq_,module,exports){
+},{"bn.js":112}],211:[function(_dereq_,module,exports){
 module.exports={
   "_args": [
     [
-      "elliptic@^6.2.3",
+      {
+        "raw": "elliptic@^6.3.1",
+        "scope": null,
+        "escapedName": "elliptic",
+        "name": "elliptic",
+        "rawSpec": "^6.3.1",
+        "spec": ">=6.3.1 <7.0.0",
+        "type": "range"
+      },
       "/Users/pelleb/code/clients/consensys/eth-signer"
     ]
   ],
-  "_from": "elliptic@>=6.2.3 <7.0.0",
+  "_from": "elliptic@>=6.3.1 <7.0.0",
   "_id": "elliptic@6.3.1",
   "_inCache": true,
   "_installable": true,
@@ -52933,17 +53008,18 @@ module.exports={
     "tmp": "tmp/elliptic-6.3.1.tgz_1465921413402_0.5202967382501811"
   },
   "_npmUser": {
-    "email": "fedor@indutny.com",
-    "name": "indutny"
+    "name": "indutny",
+    "email": "fedor@indutny.com"
   },
   "_npmVersion": "3.8.6",
   "_phantomChildren": {},
   "_requested": {
-    "name": "elliptic",
-    "raw": "elliptic@^6.2.3",
-    "rawSpec": "^6.2.3",
+    "raw": "elliptic@^6.3.1",
     "scope": null,
-    "spec": ">=6.2.3 <7.0.0",
+    "escapedName": "elliptic",
+    "name": "elliptic",
+    "rawSpec": "^6.3.1",
+    "spec": ">=6.3.1 <7.0.0",
     "type": "range"
   },
   "_requiredBy": [
@@ -52955,11 +53031,11 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.3.1.tgz",
   "_shasum": "17781f2109ab0ec686b146bdcff5d2e8c6aeceda",
   "_shrinkwrap": null,
-  "_spec": "elliptic@^6.2.3",
+  "_spec": "elliptic@^6.3.1",
   "_where": "/Users/pelleb/code/clients/consensys/eth-signer",
   "author": {
-    "email": "fedor@indutny.com",
-    "name": "Fedor Indutny"
+    "name": "Fedor Indutny",
+    "email": "fedor@indutny.com"
   },
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
@@ -52997,10 +53073,10 @@ module.exports={
   "gitHead": "c53f5cf3d832c0073eb4a4ed423a464cbce68f3e",
   "homepage": "https://github.com/indutny/elliptic",
   "keywords": [
-    "Cryptography",
     "EC",
     "Elliptic",
-    "curve"
+    "curve",
+    "Cryptography"
   ],
   "license": "MIT",
   "main": "lib/elliptic.js",
@@ -53028,7 +53104,7 @@ module.exports={
   "version": "6.3.1"
 }
 
-},{}],213:[function(_dereq_,module,exports){
+},{}],212:[function(_dereq_,module,exports){
 module.exports={
   "genesisGasLimit": {
     "v": 5000,
@@ -53261,10 +53337,10 @@ module.exports={
   }
 }
 
-},{}],214:[function(_dereq_,module,exports){
+},{}],213:[function(_dereq_,module,exports){
 module.exports = _dereq_('./params.json')
 
-},{"./params.json":213}],215:[function(_dereq_,module,exports){
+},{"./params.json":212}],214:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict'
 const ethUtil = _dereq_('ethereumjs-util')
@@ -53521,7 +53597,7 @@ Transaction.prototype.validate = function (stringError) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"ethereum-common/params":214,"ethereumjs-util":216}],216:[function(_dereq_,module,exports){
+},{"buffer":142,"ethereum-common/params":213,"ethereumjs-util":215}],215:[function(_dereq_,module,exports){
 (function (Buffer){
 const SHA3 = _dereq_('keccakjs')
 const secp256k1 = _dereq_('secp256k1')
@@ -54226,10 +54302,7 @@ exports.defineProperties = function (self, fields, data) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"assert":139,"bn.js":111,"buffer":142,"create-hash":147,"keccakjs":217,"rlp":252,"secp256k1":254}],217:[function(_dereq_,module,exports){
-module.exports = _dereq_('browserify-sha3').SHA3Hash
-
-},{"browserify-sha3":133}],218:[function(_dereq_,module,exports){
+},{"assert":25,"bn.js":112,"buffer":142,"create-hash":146,"keccakjs":230,"rlp":263,"secp256k1":265}],216:[function(_dereq_,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -54533,7 +54606,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],219:[function(_dereq_,module,exports){
+},{}],217:[function(_dereq_,module,exports){
 (function (Buffer){
 var md5 = _dereq_('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -54605,19 +54678,19 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"create-hash/md5":149}],220:[function(_dereq_,module,exports){
-arguments[4][90][0].apply(exports,arguments)
-},{"./hash/common":221,"./hash/hmac":222,"./hash/ripemd":223,"./hash/sha":224,"./hash/utils":225,"dup":90}],221:[function(_dereq_,module,exports){
+},{"buffer":142,"create-hash/md5":148}],218:[function(_dereq_,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"../hash":220,"dup":91}],222:[function(_dereq_,module,exports){
+},{"./hash/common":219,"./hash/hmac":220,"./hash/ripemd":221,"./hash/sha":222,"./hash/utils":223,"dup":91}],219:[function(_dereq_,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"../hash":220,"dup":92}],223:[function(_dereq_,module,exports){
+},{"../hash":218,"dup":92}],220:[function(_dereq_,module,exports){
 arguments[4][93][0].apply(exports,arguments)
-},{"../hash":220,"dup":93}],224:[function(_dereq_,module,exports){
+},{"../hash":218,"dup":93}],221:[function(_dereq_,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"../hash":220,"dup":94}],225:[function(_dereq_,module,exports){
+},{"../hash":218,"dup":94}],222:[function(_dereq_,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95,"inherits":228}],226:[function(_dereq_,module,exports){
+},{"../hash":218,"dup":95}],223:[function(_dereq_,module,exports){
+arguments[4][96][0].apply(exports,arguments)
+},{"dup":96,"inherits":226}],224:[function(_dereq_,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -54703,7 +54776,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],227:[function(_dereq_,module,exports){
+},{}],225:[function(_dereq_,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -54714,9 +54787,9 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],228:[function(_dereq_,module,exports){
-arguments[4][97][0].apply(exports,arguments)
-},{"dup":97}],229:[function(_dereq_,module,exports){
+},{}],226:[function(_dereq_,module,exports){
+arguments[4][98][0].apply(exports,arguments)
+},{"dup":98}],227:[function(_dereq_,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -54739,7 +54812,14 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],230:[function(_dereq_,module,exports){
+},{}],228:[function(_dereq_,module,exports){
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+},{}],229:[function(_dereq_,module,exports){
 (function (global){
 /*
  * js-sha3 v0.3.1
@@ -55175,7 +55255,10 @@ function isSlowBuffer (obj) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],231:[function(_dereq_,module,exports){
+},{}],230:[function(_dereq_,module,exports){
+module.exports = _dereq_('browserify-sha3').SHA3Hash
+
+},{"browserify-sha3":134}],231:[function(_dereq_,module,exports){
 var bn = _dereq_('bn.js');
 var brorand = _dereq_('brorand');
 
@@ -55290,7 +55373,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":111,"brorand":112}],232:[function(_dereq_,module,exports){
+},{"bn.js":112,"brorand":113}],232:[function(_dereq_,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -55470,7 +55553,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"browserify-aes":116,"buffer":142,"evp_bytestokey":219}],236:[function(_dereq_,module,exports){
+},{"browserify-aes":117,"buffer":142,"evp_bytestokey":217}],236:[function(_dereq_,module,exports){
 (function (Buffer){
 var asn1 = _dereq_('./asn1')
 var aesid = _dereq_('./aesid.json')
@@ -55575,7 +55658,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"./aesid.json":233,"./asn1":234,"./fixProc":235,"browserify-aes":116,"buffer":142,"pbkdf2":237}],237:[function(_dereq_,module,exports){
+},{"./aesid.json":233,"./asn1":234,"./fixProc":235,"browserify-aes":117,"buffer":142,"pbkdf2":237}],237:[function(_dereq_,module,exports){
 (function (Buffer){
 var createHmac = _dereq_('create-hmac')
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -55659,7 +55742,7 @@ function pbkdf2Sync (password, salt, iterations, keylen, digest) {
 }
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"create-hmac":150}],238:[function(_dereq_,module,exports){
+},{"buffer":142,"create-hmac":149}],238:[function(_dereq_,module,exports){
 (function (process){
 'use strict';
 
@@ -55918,7 +56001,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142,"create-hash":147}],242:[function(_dereq_,module,exports){
+},{"buffer":142,"create-hash":146}],242:[function(_dereq_,module,exports){
 (function (Buffer){
 var parseKeys = _dereq_('parse-asn1');
 var mgf = _dereq_('./mgf');
@@ -56029,7 +56112,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,_dereq_("buffer").Buffer)
-},{"./mgf":241,"./withPublic":244,"./xor":245,"bn.js":111,"browserify-rsa":132,"buffer":142,"create-hash":147,"parse-asn1":236}],243:[function(_dereq_,module,exports){
+},{"./mgf":241,"./withPublic":244,"./xor":245,"bn.js":112,"browserify-rsa":133,"buffer":142,"create-hash":146,"parse-asn1":236}],243:[function(_dereq_,module,exports){
 (function (Buffer){
 var parseKeys = _dereq_('parse-asn1');
 var randomBytes = _dereq_('randombytes');
@@ -56127,7 +56210,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,_dereq_("buffer").Buffer)
-},{"./mgf":241,"./withPublic":244,"./xor":245,"bn.js":111,"browserify-rsa":132,"buffer":142,"create-hash":147,"parse-asn1":236,"randombytes":250}],244:[function(_dereq_,module,exports){
+},{"./mgf":241,"./withPublic":244,"./xor":245,"bn.js":112,"browserify-rsa":133,"buffer":142,"create-hash":146,"parse-asn1":236,"randombytes":250}],244:[function(_dereq_,module,exports){
 (function (Buffer){
 var bn = _dereq_('bn.js');
 function withPublic(paddedMsg, key) {
@@ -56140,7 +56223,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,_dereq_("buffer").Buffer)
-},{"bn.js":111,"buffer":142}],245:[function(_dereq_,module,exports){
+},{"bn.js":112,"buffer":142}],245:[function(_dereq_,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -56906,2709 +56989,9 @@ function randomBytes (size, cb) {
 
 }).call(this,_dereq_('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},_dereq_("buffer").Buffer)
 },{"_process":239,"buffer":142}],251:[function(_dereq_,module,exports){
-(function (Buffer){
-/*
-CryptoJS v3.1.2
-code.google.com/p/crypto-js
-(c) 2009-2013 by Jeff Mott. All rights reserved.
-code.google.com/p/crypto-js/wiki/License
-*/
-/** @preserve
-(c) 2012 by Cédric Mesnil. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-
-// constants table
-var zl = [
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-  7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8,
-  3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12,
-  1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2,
-  4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13
-]
-
-var zr = [
-  5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12,
-  6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2,
-  15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13,
-  8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14,
-  12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11
-]
-
-var sl = [
-  11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8,
-  7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12,
-  11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5,
-  11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12,
-  9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6
-]
-
-var sr = [
-  8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6,
-  9, 13, 15, 7, 12, 8, 9, 11, 7, 7, 12, 7, 6, 15, 13, 11,
-  9, 7, 15, 11, 8, 6, 6, 14, 12, 13, 5, 14, 13, 13, 7, 5,
-  15, 5, 8, 11, 14, 14, 6, 14, 6, 9, 12, 9, 12, 5, 15, 8,
-  8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
-]
-
-var hl = [0x00000000, 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xA953FD4E]
-var hr = [0x50A28BE6, 0x5C4DD124, 0x6D703EF3, 0x7A6D76E9, 0x00000000]
-
-function bytesToWords (bytes) {
-  var words = []
-  for (var i = 0, b = 0; i < bytes.length; i++, b += 8) {
-    words[b >>> 5] |= bytes[i] << (24 - b % 32)
-  }
-  return words
-}
-
-function wordsToBytes (words) {
-  var bytes = []
-  for (var b = 0; b < words.length * 32; b += 8) {
-    bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF)
-  }
-  return bytes
-}
-
-function processBlock (H, M, offset) {
-  // swap endian
-  for (var i = 0; i < 16; i++) {
-    var offset_i = offset + i
-    var M_offset_i = M[offset_i]
-
-    // Swap
-    M[offset_i] = (
-      (((M_offset_i << 8) | (M_offset_i >>> 24)) & 0x00ff00ff) |
-      (((M_offset_i << 24) | (M_offset_i >>> 8)) & 0xff00ff00)
-    )
-  }
-
-  // Working variables
-  var al, bl, cl, dl, el
-  var ar, br, cr, dr, er
-
-  ar = al = H[0]
-  br = bl = H[1]
-  cr = cl = H[2]
-  dr = dl = H[3]
-  er = el = H[4]
-
-  // computation
-  var t
-  for (i = 0; i < 80; i += 1) {
-    t = (al + M[offset + zl[i]]) | 0
-    if (i < 16) {
-      t += f1(bl, cl, dl) + hl[0]
-    } else if (i < 32) {
-      t += f2(bl, cl, dl) + hl[1]
-    } else if (i < 48) {
-      t += f3(bl, cl, dl) + hl[2]
-    } else if (i < 64) {
-      t += f4(bl, cl, dl) + hl[3]
-    } else {// if (i<80) {
-      t += f5(bl, cl, dl) + hl[4]
-    }
-    t = t | 0
-    t = rotl(t, sl[i])
-    t = (t + el) | 0
-    al = el
-    el = dl
-    dl = rotl(cl, 10)
-    cl = bl
-    bl = t
-
-    t = (ar + M[offset + zr[i]]) | 0
-    if (i < 16) {
-      t += f5(br, cr, dr) + hr[0]
-    } else if (i < 32) {
-      t += f4(br, cr, dr) + hr[1]
-    } else if (i < 48) {
-      t += f3(br, cr, dr) + hr[2]
-    } else if (i < 64) {
-      t += f2(br, cr, dr) + hr[3]
-    } else {// if (i<80) {
-      t += f1(br, cr, dr) + hr[4]
-    }
-
-    t = t | 0
-    t = rotl(t, sr[i])
-    t = (t + er) | 0
-    ar = er
-    er = dr
-    dr = rotl(cr, 10)
-    cr = br
-    br = t
-  }
-
-  // intermediate hash value
-  t = (H[1] + cl + dr) | 0
-  H[1] = (H[2] + dl + er) | 0
-  H[2] = (H[3] + el + ar) | 0
-  H[3] = (H[4] + al + br) | 0
-  H[4] = (H[0] + bl + cr) | 0
-  H[0] = t
-}
-
-function f1 (x, y, z) {
-  return ((x) ^ (y) ^ (z))
-}
-
-function f2 (x, y, z) {
-  return (((x) & (y)) | ((~x) & (z)))
-}
-
-function f3 (x, y, z) {
-  return (((x) | (~(y))) ^ (z))
-}
-
-function f4 (x, y, z) {
-  return (((x) & (z)) | ((y) & (~(z))))
-}
-
-function f5 (x, y, z) {
-  return ((x) ^ ((y) | (~(z))))
-}
-
-function rotl (x, n) {
-  return (x << n) | (x >>> (32 - n))
-}
-
-function ripemd160 (message) {
-  var H = [0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0]
-
-  if (typeof message === 'string') {
-    message = new Buffer(message, 'utf8')
-  }
-
-  var m = bytesToWords(message)
-
-  var nBitsLeft = message.length * 8
-  var nBitsTotal = message.length * 8
-
-  // Add padding
-  m[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32)
-  m[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
-    (((nBitsTotal << 8) | (nBitsTotal >>> 24)) & 0x00ff00ff) |
-    (((nBitsTotal << 24) | (nBitsTotal >>> 8)) & 0xff00ff00)
-  )
-
-  for (var i = 0; i < m.length; i += 16) {
-    processBlock(H, m, i)
-  }
-
-  // swap endian
-  for (i = 0; i < 5; i++) {
-    // shortcut
-    var H_i = H[i]
-
-    // Swap
-    H[i] = (((H_i << 8) | (H_i >>> 24)) & 0x00ff00ff) |
-      (((H_i << 24) | (H_i >>> 8)) & 0xff00ff00)
-  }
-
-  var digestbytes = wordsToBytes(H)
-  return new Buffer(digestbytes)
-}
-
-module.exports = ripemd160
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],252:[function(_dereq_,module,exports){
-(function (Buffer){
-const assert = _dereq_('assert')
-/**
- * RLP Encoding based on: https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP
- * This function takes in a data, convert it to buffer if not, and a length for recursion
- *
- * @param {Buffer,String,Integer,Array} data - will be converted to buffer
- * @returns {Buffer} - returns buffer of encoded data
- **/
-exports.encode = function (input) {
-  if (input instanceof Array) {
-    var output = []
-    for (var i = 0; i < input.length; i++) {
-      output.push(exports.encode(input[i]))
-    }
-    var buf = Buffer.concat(output)
-    return Buffer.concat([encodeLength(buf.length, 192), buf])
-  } else {
-    input = toBuffer(input)
-    if (input.length === 1 && input[0] < 128) {
-      return input
-    } else {
-      return Buffer.concat([encodeLength(input.length, 128), input])
-    }
-  }
-}
-
-function safeParseInt (v, base) {
-  if (v.slice(0, 2) === '00') {
-    throw (new Error('invalid RLP: extra zeros'))
-  }
-
-  return parseInt(v, base)
-}
-
-function encodeLength (len, offset) {
-  if (len < 56) {
-    return new Buffer([len + offset])
-  } else {
-    var hexLength = intToHex(len)
-    var lLength = hexLength.length / 2
-    var firstByte = intToHex(offset + 55 + lLength)
-    return new Buffer(firstByte + hexLength, 'hex')
-  }
-}
-
-/**
- * RLP Decoding based on: {@link https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP|RLP}
- * @param {Buffer,String,Integer,Array} data - will be converted to buffer
- * @returns {Array} - returns decode Array of Buffers containg the original message
- **/
-exports.decode = function (input, stream) {
-  if (!input || input.length === 0) {
-    return new Buffer([])
-  }
-
-  input = toBuffer(input)
-  var decoded = _decode(input)
-
-  if (stream) {
-    return decoded
-  }
-
-  assert.equal(decoded.remainder.length, 0, 'invalid remainder')
-  return decoded.data
-}
-
-exports.getLength = function (input) {
-  if (!input || input.length === 0) {
-    return new Buffer([])
-  }
-
-  input = toBuffer(input)
-  var firstByte = input[0]
-  if (firstByte <= 0x7f) {
-    return input.length
-  } else if (firstByte <= 0xb7) {
-    return firstByte - 0x7f
-  } else if (firstByte <= 0xbf) {
-    return firstByte - 0xb6
-  } else if (firstByte <= 0xf7) {
-    // a list between  0-55 bytes long
-    return firstByte - 0xbf
-  } else {
-    // a list  over 55 bytes long
-    var llength = firstByte - 0xf6
-    var length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
-    return llength + length
-  }
-}
-
-function _decode (input) {
-  var length, llength, data, innerRemainder, d
-  var decoded = []
-  var firstByte = input[0]
-
-  if (firstByte <= 0x7f) {
-    // a single byte whose value is in the [0x00, 0x7f] range, that byte is its own RLP encoding.
-    return {
-      data: input.slice(0, 1),
-      remainder: input.slice(1)
-    }
-  } else if (firstByte <= 0xb7) {
-    // string is 0-55 bytes long. A single byte with value 0x80 plus the length of the string followed by the string
-    // The range of the first byte is [0x80, 0xb7]
-    length = firstByte - 0x7f
-
-    // set 0x80 null to 0
-    if (firstByte === 0x80) {
-      data = new Buffer([])
-    } else {
-      data = input.slice(1, length)
-    }
-
-    if (length === 2 && data[0] < 0x80) {
-      throw new Error('invalid rlp encoding: byte must be less 0x80')
-    }
-
-    return {
-      data: data,
-      remainder: input.slice(length)
-    }
-  } else if (firstByte <= 0xbf) {
-    llength = firstByte - 0xb6
-    length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
-    data = input.slice(llength, length + llength)
-    if (data.length < length) {
-      throw (new Error('invalid RLP'))
-    }
-
-    return {
-      data: data,
-      remainder: input.slice(length + llength)
-    }
-  } else if (firstByte <= 0xf7) {
-    // a list between  0-55 bytes long
-    length = firstByte - 0xbf
-    innerRemainder = input.slice(1, length)
-    while (innerRemainder.length) {
-      d = _decode(innerRemainder)
-      decoded.push(d.data)
-      innerRemainder = d.remainder
-    }
-
-    return {
-      data: decoded,
-      remainder: input.slice(length)
-    }
-  } else {
-    // a list  over 55 bytes long
-    llength = firstByte - 0xf6
-    length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
-    var totalLength = llength + length
-    if (totalLength > input.length) {
-      throw new Error('invalid rlp: total length is larger than the data')
-    }
-
-    innerRemainder = input.slice(llength, totalLength)
-    if (innerRemainder.length === 0) {
-      throw new Error('invalid rlp, List has a invalid length')
-    }
-
-    while (innerRemainder.length) {
-      d = _decode(innerRemainder)
-      decoded.push(d.data)
-      innerRemainder = d.remainder
-    }
-    return {
-      data: decoded,
-      remainder: input.slice(totalLength)
-    }
-  }
-}
-
-function isHexPrefixed (str) {
-  return str.slice(0, 2) === '0x'
-}
-
-// Removes 0x from a given String
-function stripHexPrefix (str) {
-  if (typeof str !== 'string') {
-    return str
-  }
-  return isHexPrefixed(str) ? str.slice(2) : str
-}
-
-function intToHex (i) {
-  var hex = i.toString(16)
-  if (hex.length % 2) {
-    hex = '0' + hex
-  }
-
-  return hex
-}
-
-function padToEven (a) {
-  if (a.length % 2) a = '0' + a
-  return a
-}
-
-function intToBuffer (i) {
-  var hex = intToHex(i)
-  return new Buffer(hex, 'hex')
-}
-
-function toBuffer (v) {
-  if (!Buffer.isBuffer(v)) {
-    if (typeof v === 'string') {
-      if (isHexPrefixed(v)) {
-        v = new Buffer(padToEven(stripHexPrefix(v)), 'hex')
-      } else {
-        v = new Buffer(v)
-      }
-    } else if (typeof v === 'number') {
-      if (!v) {
-        v = new Buffer([])
-      } else {
-        v = intToBuffer(v)
-      }
-    } else if (v === null || v === undefined) {
-      v = new Buffer([])
-    } else if (v.toArray) {
-      // converts a BN to a Buffer
-      v = new Buffer(v.toArray())
-    } else {
-      throw new Error('invalid type')
-    }
-  }
-  return v
-}
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"assert":139,"buffer":142}],253:[function(_dereq_,module,exports){
-/*!
- * Fast "async" scrypt implementation in JavaScript.
- * Copyright (c) 2013-2016 Dmitry Chestnykh | BSD License
- * https://github.com/dchest/scrypt-async-js
- */
-
-/**
- * scrypt(password, salt, options, callback)
- *
- * where
- *
- * password and salt are strings or arrays of bytes (Array of Uint8Array)
- * options is
- *
- * {
- *    N:      // CPU/memory cost parameter, must be power of two
- *            // (alternatively, you can specify logN)
- *    r:      // block size
- *    p:      // parallelization parameter
- *    dkLen:  // length of derived key, default = 32
- *    encoding: // optional encoding:
- *                    "base64" - standard Base64 encoding
- *                    "hex" — hex encoding,
- *                    "binary" — Uint8Array,
- *                    undefined/null - Array of bytes
- *    interruptStep: // optional, steps to split calculations (default is 0)
- * }
- *
- * Derives a key from password and salt and calls callback
- * with derived key as the only argument.
- *
- * Calculations are interrupted with setImmediate (or zero setTimeout) at the
- * given interruptSteps to avoid freezing the browser. If it's undefined or zero,
- * the callback is called immediately after the calculation, avoiding setImmediate.
- *
- * Legacy way (only supports p = 1) to call this function is:
- *
- * scrypt(password, salt, logN, r, dkLen, [interruptStep], callback, [encoding])
- *
- * In legacy API, if interruptStep is not given, it defaults to 1000.
- * Pass 0 to have callback called immediately.
- *
- */
-function scrypt(password, salt, logN, r, dkLen, interruptStep, callback, encoding) {
-  'use strict';
-
-  function SHA256(m) {
-    /** @const */ var K = [
-      0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b,
-      0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98, 0x12835b01,
-      0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7,
-      0xc19bf174, 0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc,
-      0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152,
-      0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147,
-      0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc,
-      0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,
-      0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819,
-      0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08,
-      0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f,
-      0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,
-      0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
-    ];
-
-    var h0 = 0x6a09e667, h1 = 0xbb67ae85, h2 = 0x3c6ef372, h3 = 0xa54ff53a,
-        h4 = 0x510e527f, h5 = 0x9b05688c, h6 = 0x1f83d9ab, h7 = 0x5be0cd19,
-        w = new Array(64);
-
-    function blocks(p) {
-      var off = 0, len = p.length;
-      while (len >= 64) {
-        var a = h0, b = h1, c = h2, d = h3, e = h4, f = h5, g = h6, h = h7,
-            u, i, j, t1, t2;
-
-        for (i = 0; i < 16; i++) {
-          j = off + i*4;
-          w[i] = ((p[j] & 0xff)<<24) | ((p[j+1] & 0xff)<<16) |
-                 ((p[j+2] & 0xff)<<8) | (p[j+3] & 0xff);
-        }
-
-        for (i = 16; i < 64; i++) {
-          u = w[i-2];
-          t1 = ((u>>>17) | (u<<(32-17))) ^ ((u>>>19) | (u<<(32-19))) ^ (u>>>10);
-
-          u = w[i-15];
-          t2 = ((u>>>7) | (u<<(32-7))) ^ ((u>>>18) | (u<<(32-18))) ^ (u>>>3);
-
-          w[i] = (((t1 + w[i-7]) | 0) + ((t2 + w[i-16]) | 0)) | 0;
-        }
-
-        for (i = 0; i < 64; i++) {
-          t1 = ((((((e>>>6) | (e<<(32-6))) ^ ((e>>>11) | (e<<(32-11))) ^
-               ((e>>>25) | (e<<(32-25)))) + ((e & f) ^ (~e & g))) | 0) +
-               ((h + ((K[i] + w[i]) | 0)) | 0)) | 0;
-
-          t2 = ((((a>>>2) | (a<<(32-2))) ^ ((a>>>13) | (a<<(32-13))) ^
-               ((a>>>22) | (a<<(32-22)))) + ((a & b) ^ (a & c) ^ (b & c))) | 0;
-
-          h = g;
-          g = f;
-          f = e;
-          e = (d + t1) | 0;
-          d = c;
-          c = b;
-          b = a;
-          a = (t1 + t2) | 0;
-        }
-
-        h0 = (h0 + a) | 0;
-        h1 = (h1 + b) | 0;
-        h2 = (h2 + c) | 0;
-        h3 = (h3 + d) | 0;
-        h4 = (h4 + e) | 0;
-        h5 = (h5 + f) | 0;
-        h6 = (h6 + g) | 0;
-        h7 = (h7 + h) | 0;
-
-        off += 64;
-        len -= 64;
-      }
-    }
-
-    blocks(m);
-
-    var i, bytesLeft = m.length % 64,
-        bitLenHi = (m.length / 0x20000000) | 0,
-        bitLenLo = m.length << 3,
-        numZeros = (bytesLeft < 56) ? 56 : 120,
-        p = m.slice(m.length - bytesLeft, m.length);
-
-    p.push(0x80);
-    for (i = bytesLeft + 1; i < numZeros; i++) p.push(0);
-    p.push((bitLenHi>>>24) & 0xff);
-    p.push((bitLenHi>>>16) & 0xff);
-    p.push((bitLenHi>>>8)  & 0xff);
-    p.push((bitLenHi>>>0)  & 0xff);
-    p.push((bitLenLo>>>24) & 0xff);
-    p.push((bitLenLo>>>16) & 0xff);
-    p.push((bitLenLo>>>8)  & 0xff);
-    p.push((bitLenLo>>>0)  & 0xff);
-
-    blocks(p);
-
-    return [
-      (h0>>>24) & 0xff, (h0>>>16) & 0xff, (h0>>>8) & 0xff, (h0>>>0) & 0xff,
-      (h1>>>24) & 0xff, (h1>>>16) & 0xff, (h1>>>8) & 0xff, (h1>>>0) & 0xff,
-      (h2>>>24) & 0xff, (h2>>>16) & 0xff, (h2>>>8) & 0xff, (h2>>>0) & 0xff,
-      (h3>>>24) & 0xff, (h3>>>16) & 0xff, (h3>>>8) & 0xff, (h3>>>0) & 0xff,
-      (h4>>>24) & 0xff, (h4>>>16) & 0xff, (h4>>>8) & 0xff, (h4>>>0) & 0xff,
-      (h5>>>24) & 0xff, (h5>>>16) & 0xff, (h5>>>8) & 0xff, (h5>>>0) & 0xff,
-      (h6>>>24) & 0xff, (h6>>>16) & 0xff, (h6>>>8) & 0xff, (h6>>>0) & 0xff,
-      (h7>>>24) & 0xff, (h7>>>16) & 0xff, (h7>>>8) & 0xff, (h7>>>0) & 0xff
-    ];
-  }
-
-  function PBKDF2_HMAC_SHA256_OneIter(password, salt, dkLen) {
-    // compress password if it's longer than hash block length
-    password = password.length <= 64 ? password : SHA256(password);
-
-    var i, innerLen = 64 + salt.length + 4,
-        inner = new Array(innerLen),
-        outerKey = new Array(64),
-        dk = [];
-
-    // inner = (password ^ ipad) || salt || counter
-    for (i = 0; i < 64; i++) inner[i] = 0x36;
-    for (i = 0; i < password.length; i++) inner[i] ^= password[i];
-    for (i = 0; i < salt.length; i++) inner[64+i] = salt[i];
-    for (i = innerLen - 4; i < innerLen; i++) inner[i] = 0;
-
-    // outerKey = password ^ opad
-    for (i = 0; i < 64; i++) outerKey[i] = 0x5c;
-    for (i = 0; i < password.length; i++) outerKey[i] ^= password[i];
-
-    // increments counter inside inner
-    function incrementCounter() {
-      for (var i = innerLen-1; i >= innerLen-4; i--) {
-        inner[i]++;
-        if (inner[i] <= 0xff) return;
-        inner[i] = 0;
-      }
-    }
-
-    // output blocks = SHA256(outerKey || SHA256(inner)) ...
-    while (dkLen >= 32) {
-      incrementCounter();
-      dk = dk.concat(SHA256(outerKey.concat(SHA256(inner))));
-      dkLen -= 32;
-    }
-    if (dkLen > 0) {
-      incrementCounter();
-      dk = dk.concat(SHA256(outerKey.concat(SHA256(inner))).slice(0, dkLen));
-    }
-    return dk;
-  }
-
-  function salsaXOR(tmp, B, bin, bout) {
-    var j0  = tmp[0]  ^ B[bin++],
-        j1  = tmp[1]  ^ B[bin++],
-        j2  = tmp[2]  ^ B[bin++],
-        j3  = tmp[3]  ^ B[bin++],
-        j4  = tmp[4]  ^ B[bin++],
-        j5  = tmp[5]  ^ B[bin++],
-        j6  = tmp[6]  ^ B[bin++],
-        j7  = tmp[7]  ^ B[bin++],
-        j8  = tmp[8]  ^ B[bin++],
-        j9  = tmp[9]  ^ B[bin++],
-        j10 = tmp[10] ^ B[bin++],
-        j11 = tmp[11] ^ B[bin++],
-        j12 = tmp[12] ^ B[bin++],
-        j13 = tmp[13] ^ B[bin++],
-        j14 = tmp[14] ^ B[bin++],
-        j15 = tmp[15] ^ B[bin++],
-        u, i;
-
-    var x0 = j0, x1 = j1, x2 = j2, x3 = j3, x4 = j4, x5 = j5, x6 = j6, x7 = j7,
-        x8 = j8, x9 = j9, x10 = j10, x11 = j11, x12 = j12, x13 = j13, x14 = j14,
-        x15 = j15;
-
-    for (i = 0; i < 8; i += 2) {
-      u =  x0 + x12;   x4 ^= u<<7  | u>>>(32-7);
-      u =  x4 +  x0;   x8 ^= u<<9  | u>>>(32-9);
-      u =  x8 +  x4;  x12 ^= u<<13 | u>>>(32-13);
-      u = x12 +  x8;   x0 ^= u<<18 | u>>>(32-18);
-
-      u =  x5 +  x1;   x9 ^= u<<7  | u>>>(32-7);
-      u =  x9 +  x5;  x13 ^= u<<9  | u>>>(32-9);
-      u = x13 +  x9;   x1 ^= u<<13 | u>>>(32-13);
-      u =  x1 + x13;   x5 ^= u<<18 | u>>>(32-18);
-
-      u = x10 +  x6;  x14 ^= u<<7  | u>>>(32-7);
-      u = x14 + x10;   x2 ^= u<<9  | u>>>(32-9);
-      u =  x2 + x14;   x6 ^= u<<13 | u>>>(32-13);
-      u =  x6 +  x2;  x10 ^= u<<18 | u>>>(32-18);
-
-      u = x15 + x11;   x3 ^= u<<7  | u>>>(32-7);
-      u =  x3 + x15;   x7 ^= u<<9  | u>>>(32-9);
-      u =  x7 +  x3;  x11 ^= u<<13 | u>>>(32-13);
-      u = x11 +  x7;  x15 ^= u<<18 | u>>>(32-18);
-
-      u =  x0 +  x3;   x1 ^= u<<7  | u>>>(32-7);
-      u =  x1 +  x0;   x2 ^= u<<9  | u>>>(32-9);
-      u =  x2 +  x1;   x3 ^= u<<13 | u>>>(32-13);
-      u =  x3 +  x2;   x0 ^= u<<18 | u>>>(32-18);
-
-      u =  x5 +  x4;   x6 ^= u<<7  | u>>>(32-7);
-      u =  x6 +  x5;   x7 ^= u<<9  | u>>>(32-9);
-      u =  x7 +  x6;   x4 ^= u<<13 | u>>>(32-13);
-      u =  x4 +  x7;   x5 ^= u<<18 | u>>>(32-18);
-
-      u = x10 +  x9;  x11 ^= u<<7  | u>>>(32-7);
-      u = x11 + x10;   x8 ^= u<<9  | u>>>(32-9);
-      u =  x8 + x11;   x9 ^= u<<13 | u>>>(32-13);
-      u =  x9 +  x8;  x10 ^= u<<18 | u>>>(32-18);
-
-      u = x15 + x14;  x12 ^= u<<7  | u>>>(32-7);
-      u = x12 + x15;  x13 ^= u<<9  | u>>>(32-9);
-      u = x13 + x12;  x14 ^= u<<13 | u>>>(32-13);
-      u = x14 + x13;  x15 ^= u<<18 | u>>>(32-18);
-    }
-
-    B[bout++] = tmp[0]  = (x0  + j0)  | 0;
-    B[bout++] = tmp[1]  = (x1  + j1)  | 0;
-    B[bout++] = tmp[2]  = (x2  + j2)  | 0;
-    B[bout++] = tmp[3]  = (x3  + j3)  | 0;
-    B[bout++] = tmp[4]  = (x4  + j4)  | 0;
-    B[bout++] = tmp[5]  = (x5  + j5)  | 0;
-    B[bout++] = tmp[6]  = (x6  + j6)  | 0;
-    B[bout++] = tmp[7]  = (x7  + j7)  | 0;
-    B[bout++] = tmp[8]  = (x8  + j8)  | 0;
-    B[bout++] = tmp[9]  = (x9  + j9)  | 0;
-    B[bout++] = tmp[10] = (x10 + j10) | 0;
-    B[bout++] = tmp[11] = (x11 + j11) | 0;
-    B[bout++] = tmp[12] = (x12 + j12) | 0;
-    B[bout++] = tmp[13] = (x13 + j13) | 0;
-    B[bout++] = tmp[14] = (x14 + j14) | 0;
-    B[bout++] = tmp[15] = (x15 + j15) | 0;
-  }
-
-  function blockCopy(dst, di, src, si, len) {
-    while (len--) dst[di++] = src[si++];
-  }
-
-  function blockXOR(dst, di, src, si, len) {
-    while (len--) dst[di++] ^= src[si++];
-  }
-
-  function blockMix(tmp, B, bin, bout, r) {
-    blockCopy(tmp, 0, B, bin + (2*r-1)*16, 16);
-    for (var i = 0; i < 2*r; i += 2) {
-      salsaXOR(tmp, B, bin + i*16,      bout + i*8);
-      salsaXOR(tmp, B, bin + i*16 + 16, bout + i*8 + r*16);
-    }
-  }
-
-  function integerify(B, bi, r) {
-    return B[bi+(2*r-1)*16];
-  }
-
-  function stringToUTF8Bytes(s) {
-      var arr = [];
-      for (var i = 0; i < s.length; i++) {
-          var c = s.charCodeAt(i);
-          if (c < 128) {
-              arr.push(c);
-          } else if (c > 127 && c < 2048) {
-              arr.push((c>>6) | 192);
-              arr.push((c & 63) | 128);
-          } else {
-              arr.push((c>>12) | 224);
-              arr.push(((c>>6) & 63) | 128);
-              arr.push((c & 63) | 128);
-          }
-      }
-      return arr;
-  }
-
-  function bytesToHex(p) {
-    /** @const */
-    var enc = '0123456789abcdef'.split('');
-
-    var len = p.length,
-        arr = [],
-        i = 0;
-
-    for (; i < len; i++) {
-        arr.push(enc[(p[i]>>>4) & 15]);
-        arr.push(enc[(p[i]>>>0) & 15]);
-    }
-    return arr.join('');
-  }
-
-  function bytesToBase64(p) {
-    /** @const */
-    var enc = ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' +
-              '0123456789+/').split('');
-
-    var len = p.length,
-        arr = [],
-        i = 0,
-        a, b, c, t;
-
-    while (i < len) {
-      a = i < len ? p[i++] : 0;
-      b = i < len ? p[i++] : 0;
-      c = i < len ? p[i++] : 0;
-      t = (a << 16) + (b << 8) + c;
-      arr.push(enc[(t >>> 3 * 6) & 63]);
-      arr.push(enc[(t >>> 2 * 6) & 63]);
-      arr.push(enc[(t >>> 1 * 6) & 63]);
-      arr.push(enc[(t >>> 0 * 6) & 63]);
-    }
-    if (len % 3 > 0) {
-      arr[arr.length-1] = '=';
-      if (len % 3 === 1) arr[arr.length-2] = '=';
-    }
-    return arr.join('');
-  }
-
-
-  // Generate key.
-
-  var MAX_UINT = (-1)>>>0,
-      p = 1;
-
-  if (typeof logN === "object") {
-    // Called as: scrypt(password, salt, opts, callback)
-    if (arguments.length > 4) {
-      throw new Error('scrypt: incorrect number of arguments');
-    }
-
-    var opts = logN;
-
-    callback = r;
-    logN = opts.logN;
-    if (typeof logN === 'undefined') {
-      if (typeof opts.N !== 'undefined') {
-        if (opts.N < 2 || opts.N > MAX_UINT)
-          throw new Error('scrypt: N is out of range');
-
-        if ((opts.N & (opts.N - 1)) !== 0)
-          throw new Error('scrypt: N is not a power of 2');
-
-        logN = Math.log(opts.N) / Math.LN2;
-      } else {
-        throw new Error('scrypt: missing N parameter');
-      }
-    }
-    p = opts.p || 1;
-    r = opts.r;
-    dkLen = opts.dkLen || 32;
-    interruptStep = opts.interruptStep || 0;
-    encoding = opts.encoding;
-  }
-
-  if (p < 1)
-    throw new Error('scrypt: invalid p');
-
-  if (r <= 0)
-    throw new Error('scrypt: invalid r');
-
-  if (logN < 1 || logN > 31)
-    throw new Error('scrypt: logN must be between 1 and 31');
-
-
-  var N = (1<<logN)>>>0,
-      XY, V, B, tmp;
-
-  if (r*p >= 1<<30 || r > MAX_UINT/128/p || r > MAX_UINT/256 || N > MAX_UINT/128/r)
-    throw new Error('scrypt: parameters are too large');
-
-  // Decode strings.
-  if (typeof password === 'string')
-    password = stringToUTF8Bytes(password);
-  if (typeof salt === 'string')
-    salt = stringToUTF8Bytes(salt);
-
-  if (typeof Int32Array !== 'undefined') {
-    //XXX We can use Uint32Array, but Int32Array is faster in Safari.
-    XY = new Int32Array(64*r);
-    V = new Int32Array(32*N*r);
-    tmp = new Int32Array(16);
-  } else {
-    XY = [];
-    V = [];
-    tmp = new Array(16);
-  }
-  B = PBKDF2_HMAC_SHA256_OneIter(password, salt, p*128*r);
-
-  var xi = 0, yi = 32 * r;
-
-  function smixStart(pos) {
-    for (var i = 0; i < 32*r; i++) {
-      var j = pos + i*4;
-      XY[xi+i] = ((B[j+3] & 0xff)<<24) | ((B[j+2] & 0xff)<<16) |
-                 ((B[j+1] & 0xff)<<8)  | ((B[j+0] & 0xff)<<0);
-    }
-  }
-
-  function smixStep1(start, end) {
-    for (var i = start; i < end; i += 2) {
-      blockCopy(V, i*(32*r), XY, xi, 32*r);
-      blockMix(tmp, XY, xi, yi, r);
-
-      blockCopy(V, (i+1)*(32*r), XY, yi, 32*r);
-      blockMix(tmp, XY, yi, xi, r);
-    }
-  }
-
-  function smixStep2(start, end) {
-    for (var i = start; i < end; i += 2) {
-      var j = integerify(XY, xi, r) & (N-1);
-      blockXOR(XY, xi, V, j*(32*r), 32*r);
-      blockMix(tmp, XY, xi, yi, r);
-
-      j = integerify(XY, yi, r) & (N-1);
-      blockXOR(XY, yi, V, j*(32*r), 32*r);
-      blockMix(tmp, XY, yi, xi, r);
-    }
-  }
-
-  function smixFinish(pos) {
-    for (var i = 0; i < 32*r; i++) {
-      var j = XY[xi+i];
-      B[pos + i*4 + 0] = (j>>>0)  & 0xff;
-      B[pos + i*4 + 1] = (j>>>8)  & 0xff;
-      B[pos + i*4 + 2] = (j>>>16) & 0xff;
-      B[pos + i*4 + 3] = (j>>>24) & 0xff;
-    }
-  }
-
-  var nextTick = (typeof setImmediate !== 'undefined') ? setImmediate : setTimeout;
-
-  function interruptedFor(start, end, step, fn, donefn) {
-    (function performStep() {
-      nextTick(function() {
-        fn(start, start + step < end ? start + step : end);
-        start += step;
-        if (start < end)
-          performStep();
-        else
-          donefn();
-        });
-    })();
-  }
-
-  function getResult(enc) {
-      var result = PBKDF2_HMAC_SHA256_OneIter(password, B, dkLen);
-      if (enc === 'base64')
-        return bytesToBase64(result);
-      else if (enc === 'hex')
-        return bytesToHex(result);
-      else if (enc === 'binary')
-        return new Uint8Array(result);
-      else
-        return result;
-  }
-
-  // Blocking variant.
-  function calculateSync() {
-    for (var i = 0; i < p; i++) {
-      smixStart(i*128*r);
-      smixStep1(0, N);
-      smixStep2(0, N);
-      smixFinish(i*128*r);
-    }
-    callback(getResult(encoding));
-  }
-
-  // Async variant.
-  function calculateAsync(i) {
-      smixStart(i*128*r);
-      interruptedFor(0, N, interruptStep*2, smixStep1, function() {
-        interruptedFor(0, N, interruptStep*2, smixStep2, function () {
-          smixFinish(i*128*r);
-          if (i + 1 < p) {
-            nextTick(function() { calculateAsync(i + 1); });
-          } else {
-            callback(getResult(encoding));
-          }
-        });
-      });
-  }
-
-  if (typeof interruptStep === 'function') {
-    // Called as: scrypt(...,      callback, [encoding])
-    //  shifting: scrypt(..., interruptStep,  callback, [encoding])
-    encoding = callback;
-    callback = interruptStep;
-    interruptStep = 1000;
-  }
-
-  if (interruptStep <= 0) {
-    calculateSync();
-  } else {
-    calculateAsync(0);
-  }
-}
-
-if (typeof module !== 'undefined') module.exports = scrypt;
-
-},{}],254:[function(_dereq_,module,exports){
-'use strict'
-module.exports = _dereq_('./lib')(_dereq_('./lib/elliptic'))
-
-},{"./lib":258,"./lib/elliptic":257}],255:[function(_dereq_,module,exports){
-(function (Buffer){
-'use strict'
-var toString = Object.prototype.toString
-
-// TypeError
-exports.isArray = function (value, message) {
-  if (!Array.isArray(value)) throw TypeError(message)
-}
-
-exports.isBoolean = function (value, message) {
-  if (toString.call(value) !== '[object Boolean]') throw TypeError(message)
-}
-
-exports.isBuffer = function (value, message) {
-  if (!Buffer.isBuffer(value)) throw TypeError(message)
-}
-
-exports.isFunction = function (value, message) {
-  if (toString.call(value) !== '[object Function]') throw TypeError(message)
-}
-
-exports.isNumber = function (value, message) {
-  if (toString.call(value) !== '[object Number]') throw TypeError(message)
-}
-
-exports.isObject = function (value, message) {
-  if (toString.call(value) !== '[object Object]') throw TypeError(message)
-}
-
-// RangeError
-exports.isBufferLength = function (buffer, length, message) {
-  if (buffer.length !== length) throw RangeError(message)
-}
-
-exports.isBufferLength2 = function (buffer, length1, length2, message) {
-  if (buffer.length !== length1 && buffer.length !== length2) throw RangeError(message)
-}
-
-exports.isLengthGTZero = function (value, message) {
-  if (value.length === 0) throw RangeError(message)
-}
-
-exports.isNumberInInterval = function (number, x, y, message) {
-  if (number <= x || number >= y) throw RangeError(message)
-}
-
-}).call(this,{"isBuffer":_dereq_("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":229}],256:[function(_dereq_,module,exports){
-(function (Buffer){
-'use strict'
-var bip66 = _dereq_('bip66')
-
-var EC_PRIVKEY_EXPORT_DER_COMPRESSED = new Buffer([
-  // begin
-  0x30, 0x81, 0xd3, 0x02, 0x01, 0x01, 0x04, 0x20,
-  // private key
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  // middle
-  0xa0, 0x81, 0x85, 0x30, 0x81, 0x82, 0x02, 0x01, 0x01, 0x30, 0x2c, 0x06, 0x07, 0x2a, 0x86, 0x48,
-  0xcE, 0x3d, 0x01, 0x01, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xfE, 0xff, 0xff, 0xfc, 0x2f, 0x30, 0x06, 0x04, 0x01, 0x00, 0x04, 0x01, 0x07, 0x04,
-  0x21, 0x02, 0x79, 0xbE, 0x66, 0x7E, 0xf9, 0xdc, 0xbb, 0xac, 0x55, 0xa0, 0x62, 0x95, 0xcE, 0x87,
-  0x0b, 0x07, 0x02, 0x9b, 0xfc, 0xdb, 0x2d, 0xcE, 0x28, 0xd9, 0x59, 0xf2, 0x81, 0x5b, 0x16, 0xf8,
-  0x17, 0x98, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xff, 0xff, 0xfE, 0xba, 0xaE, 0xdc, 0xE6, 0xaf, 0x48, 0xa0, 0x3b, 0xbf, 0xd2, 0x5E,
-  0x8c, 0xd0, 0x36, 0x41, 0x41, 0x02, 0x01, 0x01, 0xa1, 0x24, 0x03, 0x22, 0x00,
-  // public key
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00
-])
-
-var EC_PRIVKEY_EXPORT_DER_UNCOMPRESSED = new Buffer([
-  // begin
-  0x30, 0x82, 0x01, 0x13, 0x02, 0x01, 0x01, 0x04, 0x20,
-  // private key
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  // middle
-  0xa0, 0x81, 0xa5, 0x30, 0x81, 0xa2, 0x02, 0x01, 0x01, 0x30, 0x2c, 0x06, 0x07, 0x2a, 0x86, 0x48,
-  0xcE, 0x3d, 0x01, 0x01, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xfE, 0xff, 0xff, 0xfc, 0x2f, 0x30, 0x06, 0x04, 0x01, 0x00, 0x04, 0x01, 0x07, 0x04,
-  0x41, 0x04, 0x79, 0xbE, 0x66, 0x7E, 0xf9, 0xdc, 0xbb, 0xac, 0x55, 0xa0, 0x62, 0x95, 0xcE, 0x87,
-  0x0b, 0x07, 0x02, 0x9b, 0xfc, 0xdb, 0x2d, 0xcE, 0x28, 0xd9, 0x59, 0xf2, 0x81, 0x5b, 0x16, 0xf8,
-  0x17, 0x98, 0x48, 0x3a, 0xda, 0x77, 0x26, 0xa3, 0xc4, 0x65, 0x5d, 0xa4, 0xfb, 0xfc, 0x0E, 0x11,
-  0x08, 0xa8, 0xfd, 0x17, 0xb4, 0x48, 0xa6, 0x85, 0x54, 0x19, 0x9c, 0x47, 0xd0, 0x8f, 0xfb, 0x10,
-  0xd4, 0xb8, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-  0xff, 0xff, 0xff, 0xff, 0xfE, 0xba, 0xaE, 0xdc, 0xE6, 0xaf, 0x48, 0xa0, 0x3b, 0xbf, 0xd2, 0x5E,
-  0x8c, 0xd0, 0x36, 0x41, 0x41, 0x02, 0x01, 0x01, 0xa1, 0x44, 0x03, 0x42, 0x00,
-  // public key
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00
-])
-
-var ZERO_BUFFER_32 = new Buffer([
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-])
-
-exports.privateKeyExport = function (privateKey, publicKey, compressed) {
-  var result = new Buffer(compressed ? EC_PRIVKEY_EXPORT_DER_COMPRESSED : EC_PRIVKEY_EXPORT_DER_UNCOMPRESSED)
-  privateKey.copy(result, compressed ? 8 : 9)
-  publicKey.copy(result, compressed ? 181 : 214)
-  return result
-}
-
-exports.privateKeyImport = function (privateKey) {
-  var length = privateKey.length
-
-  // sequence header
-  var index = 0
-  if (length < index + 1 || privateKey[index] !== 0x30) return
-  index += 1
-
-  // sequence length constructor
-  if (length < index + 1 || !(privateKey[index] & 0x80)) return
-
-  var lenb = privateKey[index] & 0x7f
-  index += 1
-  if (lenb < 1 || lenb > 2) return
-  if (length < index + lenb) return
-
-  // sequence length
-  var len = privateKey[index + lenb - 1] | (lenb > 1 ? privateKey[index + lenb - 2] << 8 : 0)
-  index += lenb
-  if (length < index + len) return
-
-  // sequence element 0: version number (=1)
-  if (length < index + 3 ||
-      privateKey[index] !== 0x02 ||
-      privateKey[index + 1] !== 0x01 ||
-      privateKey[index + 2] !== 0x01) {
-    return
-  }
-  index += 3
-
-  // sequence element 1: octet string, up to 32 bytes
-  if (length < index + 2 ||
-      privateKey[index] !== 0x04 ||
-      privateKey[index + 1] > 0x20 ||
-      length < index + 2 + privateKey[index + 1]) {
-    return
-  }
-
-  return privateKey.slice(index + 2, index + 2 + privateKey[index + 1])
-}
-
-exports.signatureExport = function (sigObj) {
-  var r = Buffer.concat([new Buffer([0]), sigObj.r])
-  for (var lenR = 33, posR = 0; lenR > 1 && r[posR] === 0x00 && !(r[posR + 1] & 0x80); --lenR, ++posR);
-
-  var s = Buffer.concat([new Buffer([0]), sigObj.s])
-  for (var lenS = 33, posS = 0; lenS > 1 && s[posS] === 0x00 && !(s[posS + 1] & 0x80); --lenS, ++posS);
-
-  return bip66.encode(r.slice(posR), s.slice(posS))
-}
-
-exports.signatureImport = function (sig) {
-  var r = new Buffer(ZERO_BUFFER_32)
-  var s = new Buffer(ZERO_BUFFER_32)
-
-  try {
-    var sigObj = bip66.decode(sig)
-    if (sigObj.r.length === 33 && sigObj.r[0] === 0x00) sigObj.r = sigObj.r.slice(1)
-    if (sigObj.r.length > 32) throw new Error('R length is too long')
-    if (sigObj.s.length === 33 && sigObj.s[0] === 0x00) sigObj.s = sigObj.s.slice(1)
-    if (sigObj.s.length > 32) throw new Error('S length is too long')
-  } catch (err) {
-    return
-  }
-
-  sigObj.r.copy(r, 32 - sigObj.r.length)
-  sigObj.s.copy(s, 32 - sigObj.s.length)
-
-  return { r: r, s: s }
-}
-
-exports.signatureImportLax = function (sig) {
-  var r = new Buffer(ZERO_BUFFER_32)
-  var s = new Buffer(ZERO_BUFFER_32)
-
-  var length = sig.length
-  var index = 0
-
-  // sequence tag byte
-  if (sig[index++] !== 0x30) return
-
-  // sequence length byte
-  var lenbyte = sig[index++]
-  if (lenbyte & 0x80) {
-    index += lenbyte - 0x80
-    if (index > length) return
-  }
-
-  // sequence tag byte for r
-  if (sig[index++] !== 0x02) return
-
-  // length for r
-  var rlen = sig[index++]
-  if (rlen & 0x80) {
-    lenbyte = rlen - 0x80
-    if (index + lenbyte > length) return
-    for (; lenbyte > 0 && sig[index] === 0x00; index += 1, lenbyte -= 1);
-    for (rlen = 0; lenbyte > 0; index += 1, lenbyte -= 1) rlen = (rlen << 8) + sig[index]
-  }
-  if (rlen > length - index) return
-  var rindex = index
-  index += rlen
-
-  // sequence tag byte for s
-  if (sig[index++] !== 0x02) return
-
-  // length for s
-  var slen = sig[index++]
-  if (slen & 0x80) {
-    lenbyte = slen - 0x80
-    if (index + lenbyte > length) return
-    for (; lenbyte > 0 && sig[index] === 0x00; index += 1, lenbyte -= 1);
-    for (slen = 0; lenbyte > 0; index += 1, lenbyte -= 1) slen = (slen << 8) + sig[index]
-  }
-  if (slen > length - index) return
-  var sindex = index
-  index += slen
-
-  // ignore leading zeros in r
-  for (; rlen > 0 && sig[rindex] === 0x00; rlen -= 1, rindex += 1);
-  // copy r value
-  if (rlen > 32) return
-  var rvalue = sig.slice(rindex, rindex + rlen)
-  rvalue.copy(r, 32 - rvalue.length)
-
-  // ignore leading zeros in s
-  for (; slen > 0 && sig[sindex] === 0x00; slen -= 1, sindex += 1);
-  // copy s value
-  if (slen > 32) return
-  var svalue = sig.slice(sindex, sindex + slen)
-  svalue.copy(s, 32 - svalue.length)
-
-  return { r: r, s: s }
-}
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"bip66":26,"buffer":142}],257:[function(_dereq_,module,exports){
-(function (Buffer){
-'use strict'
-var createHash = _dereq_('create-hash')
-var BN = _dereq_('bn.js')
-var EC = _dereq_('elliptic').ec
-
-var messages = _dereq_('../messages.json')
-
-var ec = new EC('secp256k1')
-var ecparams = ec.curve
-
-function loadCompressedPublicKey (first, xBuffer) {
-  var x = new BN(xBuffer)
-
-  // overflow
-  if (x.cmp(ecparams.p) >= 0) return null
-  x = x.toRed(ecparams.red)
-
-  // compute corresponding Y
-  var y = x.redSqr().redIMul(x).redIAdd(ecparams.b).redSqrt()
-  if ((first === 0x03) !== y.isOdd()) y = y.redNeg()
-
-  return ec.keyPair({ pub: { x: x, y: y } })
-}
-
-function loadUncompressedPublicKey (first, xBuffer, yBuffer) {
-  var x = new BN(xBuffer)
-  var y = new BN(yBuffer)
-
-  // overflow
-  if (x.cmp(ecparams.p) >= 0 || y.cmp(ecparams.p) >= 0) return null
-
-  x = x.toRed(ecparams.red)
-  y = y.toRed(ecparams.red)
-
-  // is odd flag
-  if ((first === 0x06 || first === 0x07) && y.isOdd() !== (first === 0x07)) return null
-
-  // x*x*x + b = y*y
-  var x3 = x.redSqr().redIMul(x)
-  if (!y.redSqr().redISub(x3.redIAdd(ecparams.b)).isZero()) return null
-
-  return ec.keyPair({ pub: { x: x, y: y } })
-}
-
-function loadPublicKey (publicKey) {
-  var first = publicKey[0]
-  switch (first) {
-    case 0x02:
-    case 0x03:
-      if (publicKey.length !== 33) return null
-      return loadCompressedPublicKey(first, publicKey.slice(1, 33))
-    case 0x04:
-    case 0x06:
-    case 0x07:
-      if (publicKey.length !== 65) return null
-      return loadUncompressedPublicKey(first, publicKey.slice(1, 33), publicKey.slice(33, 65))
-    default:
-      return null
-  }
-}
-
-exports.privateKeyVerify = function (privateKey) {
-  var bn = new BN(privateKey)
-  return bn.cmp(ecparams.n) < 0 && !bn.isZero()
-}
-
-exports.privateKeyExport = function (privateKey, compressed) {
-  var d = new BN(privateKey)
-  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.EC_PRIVATE_KEY_EXPORT_DER_FAIL)
-
-  return new Buffer(ec.keyFromPrivate(privateKey).getPublic(compressed, true))
-}
-
-exports.privateKeyTweakAdd = function (privateKey, tweak) {
-  var bn = new BN(tweak)
-  if (bn.cmp(ecparams.n) >= 0) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_ADD_FAIL)
-
-  bn.iadd(new BN(privateKey))
-  if (bn.cmp(ecparams.n) >= 0) bn.isub(ecparams.n)
-  if (bn.isZero()) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_ADD_FAIL)
-
-  return bn.toArrayLike(Buffer, 'be', 32)
-}
-
-exports.privateKeyTweakMul = function (privateKey, tweak) {
-  var bn = new BN(tweak)
-  if (bn.cmp(ecparams.n) >= 0 || bn.isZero()) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_MUL_FAIL)
-
-  bn.imul(new BN(privateKey))
-  if (bn.cmp(ecparams.n)) bn = bn.umod(ecparams.n)
-
-  return bn.toArrayLike(Buffer, 'be', 32)
-}
-
-exports.publicKeyCreate = function (privateKey, compressed) {
-  var d = new BN(privateKey)
-  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.EC_PUBLIC_KEY_CREATE_FAIL)
-
-  return new Buffer(ec.keyFromPrivate(privateKey).getPublic(compressed, true))
-}
-
-exports.publicKeyConvert = function (publicKey, compressed) {
-  var pair = loadPublicKey(publicKey)
-  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-
-  return new Buffer(pair.getPublic(compressed, true))
-}
-
-exports.publicKeyVerify = function (publicKey) {
-  return loadPublicKey(publicKey) !== null
-}
-
-exports.publicKeyTweakAdd = function (publicKey, tweak, compressed) {
-  var pair = loadPublicKey(publicKey)
-  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-
-  tweak = new BN(tweak)
-  if (tweak.cmp(ecparams.n) >= 0) throw new Error(messages.EC_PUBLIC_KEY_TWEAK_ADD_FAIL)
-
-  return new Buffer(ecparams.g.mul(tweak).add(pair.pub).encode(true, compressed))
-}
-
-exports.publicKeyTweakMul = function (publicKey, tweak, compressed) {
-  var pair = loadPublicKey(publicKey)
-  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-
-  tweak = new BN(tweak)
-  if (tweak.cmp(ecparams.n) >= 0 || tweak.isZero()) throw new Error(messages.EC_PUBLIC_KEY_TWEAK_MUL_FAIL)
-
-  return new Buffer(pair.pub.mul(tweak).encode(true, compressed))
-}
-
-exports.publicKeyCombine = function (publicKeys, compressed) {
-  var pairs = new Array(publicKeys.length)
-  for (var i = 0; i < publicKeys.length; ++i) {
-    pairs[i] = loadPublicKey(publicKeys[i])
-    if (pairs[i] === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-  }
-
-  var point = pairs[0].pub
-  for (var j = 1; j < pairs.length; ++j) point = point.add(pairs[j].pub)
-  if (point.isInfinity()) throw new Error(messages.EC_PUBLIC_KEY_COMBINE_FAIL)
-
-  return new Buffer(point.encode(true, compressed))
-}
-
-exports.signatureNormalize = function (signature) {
-  var r = new BN(signature.slice(0, 32))
-  var s = new BN(signature.slice(32, 64))
-  if (r.cmp(ecparams.n) >= 0 || s.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
-
-  var result = new Buffer(signature)
-  if (s.cmp(ec.nh) === 1) ecparams.n.sub(s).toArrayLike(Buffer, 'be', 32).copy(result, 32)
-
-  return result
-}
-
-exports.signatureExport = function (signature) {
-  var r = signature.slice(0, 32)
-  var s = signature.slice(32, 64)
-  if (new BN(r).cmp(ecparams.n) >= 0 || new BN(s).cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
-
-  return { r: r, s: s }
-}
-
-exports.signatureImport = function (sigObj) {
-  var r = new BN(sigObj.r)
-  if (r.cmp(ecparams.n) >= 0) r = new BN(0)
-
-  var s = new BN(sigObj.s)
-  if (s.cmp(ecparams.n) >= 0) s = new BN(0)
-
-  return Buffer.concat([
-    r.toArrayLike(Buffer, 'be', 32),
-    s.toArrayLike(Buffer, 'be', 32)
-  ])
-}
-
-exports.sign = function (message, privateKey, noncefn, data) {
-  if (typeof noncefn === 'function') {
-    var getNonce = noncefn
-    noncefn = function (counter) {
-      var nonce = getNonce(message, privateKey, null, data, counter)
-      if (!Buffer.isBuffer(nonce) || nonce.length !== 32) throw new Error(messages.ECDSA_SIGN_FAIL)
-
-      return new BN(nonce)
-    }
-  }
-
-  var d = new BN(privateKey)
-  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.ECDSA_SIGN_FAIL)
-
-  var result = ec.sign(message, privateKey, { canonical: true, k: noncefn, pers: data })
-  return {
-    signature: Buffer.concat([
-      result.r.toArrayLike(Buffer, 'be', 32),
-      result.s.toArrayLike(Buffer, 'be', 32)
-    ]),
-    recovery: result.recoveryParam
-  }
-}
-
-exports.verify = function (message, signature, publicKey) {
-  var sigObj = {r: signature.slice(0, 32), s: signature.slice(32, 64)}
-
-  var sigr = new BN(sigObj.r)
-  var sigs = new BN(sigObj.s)
-  if (sigr.cmp(ecparams.n) >= 0 || sigs.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
-  if (sigs.cmp(ec.nh) === 1 || sigr.isZero() || sigs.isZero()) return false
-
-  var pair = loadPublicKey(publicKey)
-  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-
-  return ec.verify(message, sigObj, {x: pair.pub.x, y: pair.pub.y})
-}
-
-exports.recover = function (message, signature, recovery, compressed) {
-  var sigObj = {r: signature.slice(0, 32), s: signature.slice(32, 64)}
-
-  var sigr = new BN(sigObj.r)
-  var sigs = new BN(sigObj.s)
-  if (sigr.cmp(ecparams.n) >= 0 || sigs.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
-
-  try {
-    if (sigr.isZero() || sigs.isZero()) throw new Error()
-
-    var point = ec.recoverPubKey(message, sigObj, recovery)
-    return new Buffer(point.encode(true, compressed))
-  } catch (err) {
-    throw new Error(messages.ECDSA_RECOVER_FAIL)
-  }
-}
-
-exports.ecdh = function (publicKey, privateKey) {
-  var shared = exports.ecdhUnsafe(publicKey, privateKey, true)
-  return createHash('sha256').update(shared).digest()
-}
-
-exports.ecdhUnsafe = function (publicKey, privateKey, compressed) {
-  var pair = loadPublicKey(publicKey)
-  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
-
-  var scalar = new BN(privateKey)
-  if (scalar.cmp(ecparams.n) >= 0 || scalar.isZero()) throw new Error(messages.ECDH_FAIL)
-
-  return new Buffer(pair.pub.mul(scalar).encode(true, compressed))
-}
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"../messages.json":259,"bn.js":111,"buffer":142,"create-hash":147,"elliptic":196}],258:[function(_dereq_,module,exports){
-'use strict'
-var assert = _dereq_('./assert')
-var der = _dereq_('./der')
-var messages = _dereq_('./messages.json')
-
-function initCompressedValue (value, defaultValue) {
-  if (value === undefined) return defaultValue
-
-  assert.isBoolean(value, messages.COMPRESSED_TYPE_INVALID)
-  return value
-}
-
-module.exports = function (secp256k1) {
-  return {
-    privateKeyVerify: function (privateKey) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      return privateKey.length === 32 && secp256k1.privateKeyVerify(privateKey)
-    },
-
-    privateKeyExport: function (privateKey, compressed) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-      var publicKey = secp256k1.privateKeyExport(privateKey, compressed)
-
-      return der.privateKeyExport(privateKey, publicKey, compressed)
-    },
-
-    privateKeyImport: function (privateKey) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-
-      privateKey = der.privateKeyImport(privateKey)
-      if (privateKey && privateKey.length === 32 && secp256k1.privateKeyVerify(privateKey)) return privateKey
-
-      throw new Error(messages.EC_PRIVATE_KEY_IMPORT_DER_FAIL)
-    },
-
-    privateKeyTweakAdd: function (privateKey, tweak) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
-      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
-
-      return secp256k1.privateKeyTweakAdd(privateKey, tweak)
-    },
-
-    privateKeyTweakMul: function (privateKey, tweak) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
-      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
-
-      return secp256k1.privateKeyTweakMul(privateKey, tweak)
-    },
-
-    publicKeyCreate: function (privateKey, compressed) {
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.publicKeyCreate(privateKey, compressed)
-    },
-
-    publicKeyConvert: function (publicKey, compressed) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.publicKeyConvert(publicKey, compressed)
-    },
-
-    publicKeyVerify: function (publicKey) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      return secp256k1.publicKeyVerify(publicKey)
-    },
-
-    publicKeyTweakAdd: function (publicKey, tweak, compressed) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
-      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.publicKeyTweakAdd(publicKey, tweak, compressed)
-    },
-
-    publicKeyTweakMul: function (publicKey, tweak, compressed) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
-      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.publicKeyTweakMul(publicKey, tweak, compressed)
-    },
-
-    publicKeyCombine: function (publicKeys, compressed) {
-      assert.isArray(publicKeys, messages.EC_PUBLIC_KEYS_TYPE_INVALID)
-      assert.isLengthGTZero(publicKeys, messages.EC_PUBLIC_KEYS_LENGTH_INVALID)
-      for (var i = 0; i < publicKeys.length; ++i) {
-        assert.isBuffer(publicKeys[i], messages.EC_PUBLIC_KEY_TYPE_INVALID)
-        assert.isBufferLength2(publicKeys[i], 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-      }
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.publicKeyCombine(publicKeys, compressed)
-    },
-
-    signatureNormalize: function (signature) {
-      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      return secp256k1.signatureNormalize(signature)
-    },
-
-    signatureExport: function (signature) {
-      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      var sigObj = secp256k1.signatureExport(signature)
-      return der.signatureExport(sigObj)
-    },
-
-    signatureImport: function (sig) {
-      assert.isBuffer(sig, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isLengthGTZero(sig, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      var sigObj = der.signatureImport(sig)
-      if (sigObj) return secp256k1.signatureImport(sigObj)
-
-      throw new Error(messages.ECDSA_SIGNATURE_PARSE_DER_FAIL)
-    },
-
-    signatureImportLax: function (sig) {
-      assert.isBuffer(sig, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isLengthGTZero(sig, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      var sigObj = der.signatureImportLax(sig)
-      if (sigObj) return secp256k1.signatureImport(sigObj)
-
-      throw new Error(messages.ECDSA_SIGNATURE_PARSE_DER_FAIL)
-    },
-
-    sign: function (message, privateKey, options) {
-      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
-      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
-
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      var data = null
-      var noncefn = null
-      if (options !== undefined) {
-        assert.isObject(options, messages.OPTIONS_TYPE_INVALID)
-
-        if (options.data !== undefined) {
-          assert.isBuffer(options.data, messages.OPTIONS_DATA_TYPE_INVALID)
-          assert.isBufferLength(options.data, 32, messages.OPTIONS_DATA_LENGTH_INVALID)
-          data = options.data
-        }
-
-        if (options.noncefn !== undefined) {
-          assert.isFunction(options.noncefn, messages.OPTIONS_NONCEFN_TYPE_INVALID)
-          noncefn = options.noncefn
-        }
-      }
-
-      return secp256k1.sign(message, privateKey, noncefn, data)
-    },
-
-    verify: function (message, signature, publicKey) {
-      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
-      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
-
-      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      return secp256k1.verify(message, signature, publicKey)
-    },
-
-    recover: function (message, signature, recovery, compressed) {
-      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
-      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
-
-      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
-      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
-
-      assert.isNumber(recovery, messages.RECOVERY_ID_TYPE_INVALID)
-      assert.isNumberInInterval(recovery, -1, 4, messages.RECOVERY_ID_VALUE_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.recover(message, signature, recovery, compressed)
-    },
-
-    ecdh: function (publicKey, privateKey) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      return secp256k1.ecdh(publicKey, privateKey)
-    },
-
-    ecdhUnsafe: function (publicKey, privateKey, compressed) {
-      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
-      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
-
-      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
-      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
-
-      compressed = initCompressedValue(compressed, true)
-
-      return secp256k1.ecdhUnsafe(publicKey, privateKey, compressed)
-    }
-  }
-}
-
-},{"./assert":255,"./der":256,"./messages.json":259}],259:[function(_dereq_,module,exports){
-module.exports={
-  "COMPRESSED_TYPE_INVALID": "compressed should be a boolean",
-  "EC_PRIVATE_KEY_TYPE_INVALID": "private key should be a Buffer",
-  "EC_PRIVATE_KEY_LENGTH_INVALID": "private key length is invalid",
-  "EC_PRIVATE_KEY_TWEAK_ADD_FAIL": "tweak out of range or resulting private key is invalid",
-  "EC_PRIVATE_KEY_TWEAK_MUL_FAIL": "tweak out of range",
-  "EC_PRIVATE_KEY_EXPORT_DER_FAIL": "couldn't export to DER format",
-  "EC_PRIVATE_KEY_IMPORT_DER_FAIL": "couldn't import from DER format",
-  "EC_PUBLIC_KEYS_TYPE_INVALID": "public keys should be an Array",
-  "EC_PUBLIC_KEYS_LENGTH_INVALID": "public keys Array should have at least 1 element",
-  "EC_PUBLIC_KEY_TYPE_INVALID": "public key should be a Buffer",
-  "EC_PUBLIC_KEY_LENGTH_INVALID": "public key length is invalid",
-  "EC_PUBLIC_KEY_PARSE_FAIL": "the public key could not be parsed or is invalid",
-  "EC_PUBLIC_KEY_CREATE_FAIL": "private was invalid, try again",
-  "EC_PUBLIC_KEY_TWEAK_ADD_FAIL": "tweak out of range or resulting public key is invalid",
-  "EC_PUBLIC_KEY_TWEAK_MUL_FAIL": "tweak out of range",
-  "EC_PUBLIC_KEY_COMBINE_FAIL": "the sum of the public keys is not valid",
-  "ECDH_FAIL": "scalar was invalid (zero or overflow)",
-  "ECDSA_SIGNATURE_TYPE_INVALID": "signature should be a Buffer",
-  "ECDSA_SIGNATURE_LENGTH_INVALID": "signature length is invalid",
-  "ECDSA_SIGNATURE_PARSE_FAIL": "couldn't parse signature",
-  "ECDSA_SIGNATURE_PARSE_DER_FAIL": "couldn't parse DER signature",
-  "ECDSA_SIGNATURE_SERIALIZE_DER_FAIL": "couldn't serialize signature to DER format",
-  "ECDSA_SIGN_FAIL": "nonce generation function failed or private key is invalid",
-  "ECDSA_RECOVER_FAIL": "couldn't recover public key from signature",
-  "MSG32_TYPE_INVALID": "message should be a Buffer",
-  "MSG32_LENGTH_INVALID": "message length is invalid",
-  "OPTIONS_TYPE_INVALID": "options should be an Object",
-  "OPTIONS_DATA_TYPE_INVALID": "options.data should be a Buffer",
-  "OPTIONS_DATA_LENGTH_INVALID": "options.data length is invalid",
-  "OPTIONS_NONCEFN_TYPE_INVALID": "options.noncefn should be a Function",
-  "RECOVERY_ID_TYPE_INVALID": "recovery should be a Number",
-  "RECOVERY_ID_VALUE_INVALID": "recovery should have value between -1 and 4",
-  "TWEAK_TYPE_INVALID": "tweak should be a Buffer",
-  "TWEAK_LENGTH_INVALID": "tweak length is invalid"
-}
-
-},{}],260:[function(_dereq_,module,exports){
-(function (Buffer){
-// prototype class for hash functions
-function Hash (blockSize, finalSize) {
-  this._block = new Buffer(blockSize)
-  this._finalSize = finalSize
-  this._blockSize = blockSize
-  this._len = 0
-  this._s = 0
-}
-
-Hash.prototype.update = function (data, enc) {
-  if (typeof data === 'string') {
-    enc = enc || 'utf8'
-    data = new Buffer(data, enc)
-  }
-
-  var l = this._len += data.length
-  var s = this._s || 0
-  var f = 0
-  var buffer = this._block
-
-  while (s < l) {
-    var t = Math.min(data.length, f + this._blockSize - (s % this._blockSize))
-    var ch = (t - f)
-
-    for (var i = 0; i < ch; i++) {
-      buffer[(s % this._blockSize) + i] = data[i + f]
-    }
-
-    s += ch
-    f += ch
-
-    if ((s % this._blockSize) === 0) {
-      this._update(buffer)
-    }
-  }
-  this._s = s
-
-  return this
-}
-
-Hash.prototype.digest = function (enc) {
-  // Suppose the length of the message M, in bits, is l
-  var l = this._len * 8
-
-  // Append the bit 1 to the end of the message
-  this._block[this._len % this._blockSize] = 0x80
-
-  // and then k zero bits, where k is the smallest non-negative solution to the equation (l + 1 + k) === finalSize mod blockSize
-  this._block.fill(0, this._len % this._blockSize + 1)
-
-  if (l % (this._blockSize * 8) >= this._finalSize * 8) {
-    this._update(this._block)
-    this._block.fill(0)
-  }
-
-  // to this append the block which is equal to the number l written in binary
-  // TODO: handle case where l is > Math.pow(2, 29)
-  this._block.writeInt32BE(l, this._blockSize - 4)
-
-  var hash = this._update(this._block) || this._hash()
-
-  return enc ? hash.toString(enc) : hash
-}
-
-Hash.prototype._update = function () {
-  throw new Error('_update must be implemented by subclass')
-}
-
-module.exports = Hash
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"buffer":142}],261:[function(_dereq_,module,exports){
-var exports = module.exports = function SHA (algorithm) {
-  algorithm = algorithm.toLowerCase()
-
-  var Algorithm = exports[algorithm]
-  if (!Algorithm) throw new Error(algorithm + ' is not supported (we accept pull requests)')
-
-  return new Algorithm()
-}
-
-exports.sha = _dereq_('./sha')
-exports.sha1 = _dereq_('./sha1')
-exports.sha224 = _dereq_('./sha224')
-exports.sha256 = _dereq_('./sha256')
-exports.sha384 = _dereq_('./sha384')
-exports.sha512 = _dereq_('./sha512')
-
-},{"./sha":262,"./sha1":263,"./sha224":264,"./sha256":265,"./sha384":266,"./sha512":267}],262:[function(_dereq_,module,exports){
-(function (Buffer){
-/*
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
- * in FIPS PUB 180-1
- * This source code is derived from sha1.js of the same repository.
- * The difference between SHA-0 and SHA-1 is just a bitwise rotate left
- * operation was added.
- */
-
-var inherits = _dereq_('inherits')
-var Hash = _dereq_('./hash')
-
-var K = [
-  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
-]
-
-var W = new Array(80)
-
-function Sha () {
-  this.init()
-  this._w = W
-
-  Hash.call(this, 64, 56)
-}
-
-inherits(Sha, Hash)
-
-Sha.prototype.init = function () {
-  this._a = 0x67452301
-  this._b = 0xefcdab89
-  this._c = 0x98badcfe
-  this._d = 0x10325476
-  this._e = 0xc3d2e1f0
-
-  return this
-}
-
-function rotl5 (num) {
-  return (num << 5) | (num >>> 27)
-}
-
-function rotl30 (num) {
-  return (num << 30) | (num >>> 2)
-}
-
-function ft (s, b, c, d) {
-  if (s === 0) return (b & c) | ((~b) & d)
-  if (s === 2) return (b & c) | (b & d) | (c & d)
-  return b ^ c ^ d
-}
-
-Sha.prototype._update = function (M) {
-  var W = this._w
-
-  var a = this._a | 0
-  var b = this._b | 0
-  var c = this._c | 0
-  var d = this._d | 0
-  var e = this._e | 0
-
-  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
-  for (; i < 80; ++i) W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]
-
-  for (var j = 0; j < 80; ++j) {
-    var s = ~~(j / 20)
-    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
-
-    e = d
-    d = c
-    c = rotl30(b)
-    b = a
-    a = t
-  }
-
-  this._a = (a + this._a) | 0
-  this._b = (b + this._b) | 0
-  this._c = (c + this._c) | 0
-  this._d = (d + this._d) | 0
-  this._e = (e + this._e) | 0
-}
-
-Sha.prototype._hash = function () {
-  var H = new Buffer(20)
-
-  H.writeInt32BE(this._a | 0, 0)
-  H.writeInt32BE(this._b | 0, 4)
-  H.writeInt32BE(this._c | 0, 8)
-  H.writeInt32BE(this._d | 0, 12)
-  H.writeInt32BE(this._e | 0, 16)
-
-  return H
-}
-
-module.exports = Sha
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"buffer":142,"inherits":228}],263:[function(_dereq_,module,exports){
-(function (Buffer){
-/*
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
- * in FIPS PUB 180-1
- * Version 2.1a Copyright Paul Johnston 2000 - 2002.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for details.
- */
-
-var inherits = _dereq_('inherits')
-var Hash = _dereq_('./hash')
-
-var K = [
-  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
-]
-
-var W = new Array(80)
-
-function Sha1 () {
-  this.init()
-  this._w = W
-
-  Hash.call(this, 64, 56)
-}
-
-inherits(Sha1, Hash)
-
-Sha1.prototype.init = function () {
-  this._a = 0x67452301
-  this._b = 0xefcdab89
-  this._c = 0x98badcfe
-  this._d = 0x10325476
-  this._e = 0xc3d2e1f0
-
-  return this
-}
-
-function rotl1 (num) {
-  return (num << 1) | (num >>> 31)
-}
-
-function rotl5 (num) {
-  return (num << 5) | (num >>> 27)
-}
-
-function rotl30 (num) {
-  return (num << 30) | (num >>> 2)
-}
-
-function ft (s, b, c, d) {
-  if (s === 0) return (b & c) | ((~b) & d)
-  if (s === 2) return (b & c) | (b & d) | (c & d)
-  return b ^ c ^ d
-}
-
-Sha1.prototype._update = function (M) {
-  var W = this._w
-
-  var a = this._a | 0
-  var b = this._b | 0
-  var c = this._c | 0
-  var d = this._d | 0
-  var e = this._e | 0
-
-  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
-  for (; i < 80; ++i) W[i] = rotl1(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16])
-
-  for (var j = 0; j < 80; ++j) {
-    var s = ~~(j / 20)
-    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
-
-    e = d
-    d = c
-    c = rotl30(b)
-    b = a
-    a = t
-  }
-
-  this._a = (a + this._a) | 0
-  this._b = (b + this._b) | 0
-  this._c = (c + this._c) | 0
-  this._d = (d + this._d) | 0
-  this._e = (e + this._e) | 0
-}
-
-Sha1.prototype._hash = function () {
-  var H = new Buffer(20)
-
-  H.writeInt32BE(this._a | 0, 0)
-  H.writeInt32BE(this._b | 0, 4)
-  H.writeInt32BE(this._c | 0, 8)
-  H.writeInt32BE(this._d | 0, 12)
-  H.writeInt32BE(this._e | 0, 16)
-
-  return H
-}
-
-module.exports = Sha1
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"buffer":142,"inherits":228}],264:[function(_dereq_,module,exports){
-(function (Buffer){
-/**
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
- * in FIPS 180-2
- * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- *
- */
-
-var inherits = _dereq_('inherits')
-var Sha256 = _dereq_('./sha256')
-var Hash = _dereq_('./hash')
-
-var W = new Array(64)
-
-function Sha224 () {
-  this.init()
-
-  this._w = W // new Array(64)
-
-  Hash.call(this, 64, 56)
-}
-
-inherits(Sha224, Sha256)
-
-Sha224.prototype.init = function () {
-  this._a = 0xc1059ed8
-  this._b = 0x367cd507
-  this._c = 0x3070dd17
-  this._d = 0xf70e5939
-  this._e = 0xffc00b31
-  this._f = 0x68581511
-  this._g = 0x64f98fa7
-  this._h = 0xbefa4fa4
-
-  return this
-}
-
-Sha224.prototype._hash = function () {
-  var H = new Buffer(28)
-
-  H.writeInt32BE(this._a, 0)
-  H.writeInt32BE(this._b, 4)
-  H.writeInt32BE(this._c, 8)
-  H.writeInt32BE(this._d, 12)
-  H.writeInt32BE(this._e, 16)
-  H.writeInt32BE(this._f, 20)
-  H.writeInt32BE(this._g, 24)
-
-  return H
-}
-
-module.exports = Sha224
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"./sha256":265,"buffer":142,"inherits":228}],265:[function(_dereq_,module,exports){
-(function (Buffer){
-/**
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
- * in FIPS 180-2
- * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- *
- */
-
-var inherits = _dereq_('inherits')
-var Hash = _dereq_('./hash')
-
-var K = [
-  0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
-  0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5,
-  0xD807AA98, 0x12835B01, 0x243185BE, 0x550C7DC3,
-  0x72BE5D74, 0x80DEB1FE, 0x9BDC06A7, 0xC19BF174,
-  0xE49B69C1, 0xEFBE4786, 0x0FC19DC6, 0x240CA1CC,
-  0x2DE92C6F, 0x4A7484AA, 0x5CB0A9DC, 0x76F988DA,
-  0x983E5152, 0xA831C66D, 0xB00327C8, 0xBF597FC7,
-  0xC6E00BF3, 0xD5A79147, 0x06CA6351, 0x14292967,
-  0x27B70A85, 0x2E1B2138, 0x4D2C6DFC, 0x53380D13,
-  0x650A7354, 0x766A0ABB, 0x81C2C92E, 0x92722C85,
-  0xA2BFE8A1, 0xA81A664B, 0xC24B8B70, 0xC76C51A3,
-  0xD192E819, 0xD6990624, 0xF40E3585, 0x106AA070,
-  0x19A4C116, 0x1E376C08, 0x2748774C, 0x34B0BCB5,
-  0x391C0CB3, 0x4ED8AA4A, 0x5B9CCA4F, 0x682E6FF3,
-  0x748F82EE, 0x78A5636F, 0x84C87814, 0x8CC70208,
-  0x90BEFFFA, 0xA4506CEB, 0xBEF9A3F7, 0xC67178F2
-]
-
-var W = new Array(64)
-
-function Sha256 () {
-  this.init()
-
-  this._w = W // new Array(64)
-
-  Hash.call(this, 64, 56)
-}
-
-inherits(Sha256, Hash)
-
-Sha256.prototype.init = function () {
-  this._a = 0x6a09e667
-  this._b = 0xbb67ae85
-  this._c = 0x3c6ef372
-  this._d = 0xa54ff53a
-  this._e = 0x510e527f
-  this._f = 0x9b05688c
-  this._g = 0x1f83d9ab
-  this._h = 0x5be0cd19
-
-  return this
-}
-
-function ch (x, y, z) {
-  return z ^ (x & (y ^ z))
-}
-
-function maj (x, y, z) {
-  return (x & y) | (z & (x | y))
-}
-
-function sigma0 (x) {
-  return (x >>> 2 | x << 30) ^ (x >>> 13 | x << 19) ^ (x >>> 22 | x << 10)
-}
-
-function sigma1 (x) {
-  return (x >>> 6 | x << 26) ^ (x >>> 11 | x << 21) ^ (x >>> 25 | x << 7)
-}
-
-function gamma0 (x) {
-  return (x >>> 7 | x << 25) ^ (x >>> 18 | x << 14) ^ (x >>> 3)
-}
-
-function gamma1 (x) {
-  return (x >>> 17 | x << 15) ^ (x >>> 19 | x << 13) ^ (x >>> 10)
-}
-
-Sha256.prototype._update = function (M) {
-  var W = this._w
-
-  var a = this._a | 0
-  var b = this._b | 0
-  var c = this._c | 0
-  var d = this._d | 0
-  var e = this._e | 0
-  var f = this._f | 0
-  var g = this._g | 0
-  var h = this._h | 0
-
-  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
-  for (; i < 64; ++i) W[i] = (gamma1(W[i - 2]) + W[i - 7] + gamma0(W[i - 15]) + W[i - 16]) | 0
-
-  for (var j = 0; j < 64; ++j) {
-    var T1 = (h + sigma1(e) + ch(e, f, g) + K[j] + W[j]) | 0
-    var T2 = (sigma0(a) + maj(a, b, c)) | 0
-
-    h = g
-    g = f
-    f = e
-    e = (d + T1) | 0
-    d = c
-    c = b
-    b = a
-    a = (T1 + T2) | 0
-  }
-
-  this._a = (a + this._a) | 0
-  this._b = (b + this._b) | 0
-  this._c = (c + this._c) | 0
-  this._d = (d + this._d) | 0
-  this._e = (e + this._e) | 0
-  this._f = (f + this._f) | 0
-  this._g = (g + this._g) | 0
-  this._h = (h + this._h) | 0
-}
-
-Sha256.prototype._hash = function () {
-  var H = new Buffer(32)
-
-  H.writeInt32BE(this._a, 0)
-  H.writeInt32BE(this._b, 4)
-  H.writeInt32BE(this._c, 8)
-  H.writeInt32BE(this._d, 12)
-  H.writeInt32BE(this._e, 16)
-  H.writeInt32BE(this._f, 20)
-  H.writeInt32BE(this._g, 24)
-  H.writeInt32BE(this._h, 28)
-
-  return H
-}
-
-module.exports = Sha256
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"buffer":142,"inherits":228}],266:[function(_dereq_,module,exports){
-(function (Buffer){
-var inherits = _dereq_('inherits')
-var SHA512 = _dereq_('./sha512')
-var Hash = _dereq_('./hash')
-
-var W = new Array(160)
-
-function Sha384 () {
-  this.init()
-  this._w = W
-
-  Hash.call(this, 128, 112)
-}
-
-inherits(Sha384, SHA512)
-
-Sha384.prototype.init = function () {
-  this._ah = 0xcbbb9d5d
-  this._bh = 0x629a292a
-  this._ch = 0x9159015a
-  this._dh = 0x152fecd8
-  this._eh = 0x67332667
-  this._fh = 0x8eb44a87
-  this._gh = 0xdb0c2e0d
-  this._hh = 0x47b5481d
-
-  this._al = 0xc1059ed8
-  this._bl = 0x367cd507
-  this._cl = 0x3070dd17
-  this._dl = 0xf70e5939
-  this._el = 0xffc00b31
-  this._fl = 0x68581511
-  this._gl = 0x64f98fa7
-  this._hl = 0xbefa4fa4
-
-  return this
-}
-
-Sha384.prototype._hash = function () {
-  var H = new Buffer(48)
-
-  function writeInt64BE (h, l, offset) {
-    H.writeInt32BE(h, offset)
-    H.writeInt32BE(l, offset + 4)
-  }
-
-  writeInt64BE(this._ah, this._al, 0)
-  writeInt64BE(this._bh, this._bl, 8)
-  writeInt64BE(this._ch, this._cl, 16)
-  writeInt64BE(this._dh, this._dl, 24)
-  writeInt64BE(this._eh, this._el, 32)
-  writeInt64BE(this._fh, this._fl, 40)
-
-  return H
-}
-
-module.exports = Sha384
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"./sha512":267,"buffer":142,"inherits":228}],267:[function(_dereq_,module,exports){
-(function (Buffer){
-var inherits = _dereq_('inherits')
-var Hash = _dereq_('./hash')
-
-var K = [
-  0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd,
-  0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
-  0x3956c25b, 0xf348b538, 0x59f111f1, 0xb605d019,
-  0x923f82a4, 0xaf194f9b, 0xab1c5ed5, 0xda6d8118,
-  0xd807aa98, 0xa3030242, 0x12835b01, 0x45706fbe,
-  0x243185be, 0x4ee4b28c, 0x550c7dc3, 0xd5ffb4e2,
-  0x72be5d74, 0xf27b896f, 0x80deb1fe, 0x3b1696b1,
-  0x9bdc06a7, 0x25c71235, 0xc19bf174, 0xcf692694,
-  0xe49b69c1, 0x9ef14ad2, 0xefbe4786, 0x384f25e3,
-  0x0fc19dc6, 0x8b8cd5b5, 0x240ca1cc, 0x77ac9c65,
-  0x2de92c6f, 0x592b0275, 0x4a7484aa, 0x6ea6e483,
-  0x5cb0a9dc, 0xbd41fbd4, 0x76f988da, 0x831153b5,
-  0x983e5152, 0xee66dfab, 0xa831c66d, 0x2db43210,
-  0xb00327c8, 0x98fb213f, 0xbf597fc7, 0xbeef0ee4,
-  0xc6e00bf3, 0x3da88fc2, 0xd5a79147, 0x930aa725,
-  0x06ca6351, 0xe003826f, 0x14292967, 0x0a0e6e70,
-  0x27b70a85, 0x46d22ffc, 0x2e1b2138, 0x5c26c926,
-  0x4d2c6dfc, 0x5ac42aed, 0x53380d13, 0x9d95b3df,
-  0x650a7354, 0x8baf63de, 0x766a0abb, 0x3c77b2a8,
-  0x81c2c92e, 0x47edaee6, 0x92722c85, 0x1482353b,
-  0xa2bfe8a1, 0x4cf10364, 0xa81a664b, 0xbc423001,
-  0xc24b8b70, 0xd0f89791, 0xc76c51a3, 0x0654be30,
-  0xd192e819, 0xd6ef5218, 0xd6990624, 0x5565a910,
-  0xf40e3585, 0x5771202a, 0x106aa070, 0x32bbd1b8,
-  0x19a4c116, 0xb8d2d0c8, 0x1e376c08, 0x5141ab53,
-  0x2748774c, 0xdf8eeb99, 0x34b0bcb5, 0xe19b48a8,
-  0x391c0cb3, 0xc5c95a63, 0x4ed8aa4a, 0xe3418acb,
-  0x5b9cca4f, 0x7763e373, 0x682e6ff3, 0xd6b2b8a3,
-  0x748f82ee, 0x5defb2fc, 0x78a5636f, 0x43172f60,
-  0x84c87814, 0xa1f0ab72, 0x8cc70208, 0x1a6439ec,
-  0x90befffa, 0x23631e28, 0xa4506ceb, 0xde82bde9,
-  0xbef9a3f7, 0xb2c67915, 0xc67178f2, 0xe372532b,
-  0xca273ece, 0xea26619c, 0xd186b8c7, 0x21c0c207,
-  0xeada7dd6, 0xcde0eb1e, 0xf57d4f7f, 0xee6ed178,
-  0x06f067aa, 0x72176fba, 0x0a637dc5, 0xa2c898a6,
-  0x113f9804, 0xbef90dae, 0x1b710b35, 0x131c471b,
-  0x28db77f5, 0x23047d84, 0x32caab7b, 0x40c72493,
-  0x3c9ebe0a, 0x15c9bebc, 0x431d67c4, 0x9c100d4c,
-  0x4cc5d4be, 0xcb3e42b6, 0x597f299c, 0xfc657e2a,
-  0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817
-]
-
-var W = new Array(160)
-
-function Sha512 () {
-  this.init()
-  this._w = W
-
-  Hash.call(this, 128, 112)
-}
-
-inherits(Sha512, Hash)
-
-Sha512.prototype.init = function () {
-  this._ah = 0x6a09e667
-  this._bh = 0xbb67ae85
-  this._ch = 0x3c6ef372
-  this._dh = 0xa54ff53a
-  this._eh = 0x510e527f
-  this._fh = 0x9b05688c
-  this._gh = 0x1f83d9ab
-  this._hh = 0x5be0cd19
-
-  this._al = 0xf3bcc908
-  this._bl = 0x84caa73b
-  this._cl = 0xfe94f82b
-  this._dl = 0x5f1d36f1
-  this._el = 0xade682d1
-  this._fl = 0x2b3e6c1f
-  this._gl = 0xfb41bd6b
-  this._hl = 0x137e2179
-
-  return this
-}
-
-function Ch (x, y, z) {
-  return z ^ (x & (y ^ z))
-}
-
-function maj (x, y, z) {
-  return (x & y) | (z & (x | y))
-}
-
-function sigma0 (x, xl) {
-  return (x >>> 28 | xl << 4) ^ (xl >>> 2 | x << 30) ^ (xl >>> 7 | x << 25)
-}
-
-function sigma1 (x, xl) {
-  return (x >>> 14 | xl << 18) ^ (x >>> 18 | xl << 14) ^ (xl >>> 9 | x << 23)
-}
-
-function Gamma0 (x, xl) {
-  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7)
-}
-
-function Gamma0l (x, xl) {
-  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7 | xl << 25)
-}
-
-function Gamma1 (x, xl) {
-  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6)
-}
-
-function Gamma1l (x, xl) {
-  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6 | xl << 26)
-}
-
-function getCarry (a, b) {
-  return (a >>> 0) < (b >>> 0) ? 1 : 0
-}
-
-Sha512.prototype._update = function (M) {
-  var W = this._w
-
-  var ah = this._ah | 0
-  var bh = this._bh | 0
-  var ch = this._ch | 0
-  var dh = this._dh | 0
-  var eh = this._eh | 0
-  var fh = this._fh | 0
-  var gh = this._gh | 0
-  var hh = this._hh | 0
-
-  var al = this._al | 0
-  var bl = this._bl | 0
-  var cl = this._cl | 0
-  var dl = this._dl | 0
-  var el = this._el | 0
-  var fl = this._fl | 0
-  var gl = this._gl | 0
-  var hl = this._hl | 0
-
-  for (var i = 0; i < 32; i += 2) {
-    W[i] = M.readInt32BE(i * 4)
-    W[i + 1] = M.readInt32BE(i * 4 + 4)
-  }
-  for (; i < 160; i += 2) {
-    var xh = W[i - 15 * 2]
-    var xl = W[i - 15 * 2 + 1]
-    var gamma0 = Gamma0(xh, xl)
-    var gamma0l = Gamma0l(xl, xh)
-
-    xh = W[i - 2 * 2]
-    xl = W[i - 2 * 2 + 1]
-    var gamma1 = Gamma1(xh, xl)
-    var gamma1l = Gamma1l(xl, xh)
-
-    // W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16]
-    var Wi7h = W[i - 7 * 2]
-    var Wi7l = W[i - 7 * 2 + 1]
-
-    var Wi16h = W[i - 16 * 2]
-    var Wi16l = W[i - 16 * 2 + 1]
-
-    var Wil = (gamma0l + Wi7l) | 0
-    var Wih = (gamma0 + Wi7h + getCarry(Wil, gamma0l)) | 0
-    Wil = (Wil + gamma1l) | 0
-    Wih = (Wih + gamma1 + getCarry(Wil, gamma1l)) | 0
-    Wil = (Wil + Wi16l) | 0
-    Wih = (Wih + Wi16h + getCarry(Wil, Wi16l)) | 0
-
-    W[i] = Wih
-    W[i + 1] = Wil
-  }
-
-  for (var j = 0; j < 160; j += 2) {
-    Wih = W[j]
-    Wil = W[j + 1]
-
-    var majh = maj(ah, bh, ch)
-    var majl = maj(al, bl, cl)
-
-    var sigma0h = sigma0(ah, al)
-    var sigma0l = sigma0(al, ah)
-    var sigma1h = sigma1(eh, el)
-    var sigma1l = sigma1(el, eh)
-
-    // t1 = h + sigma1 + ch + K[j] + W[j]
-    var Kih = K[j]
-    var Kil = K[j + 1]
-
-    var chh = Ch(eh, fh, gh)
-    var chl = Ch(el, fl, gl)
-
-    var t1l = (hl + sigma1l) | 0
-    var t1h = (hh + sigma1h + getCarry(t1l, hl)) | 0
-    t1l = (t1l + chl) | 0
-    t1h = (t1h + chh + getCarry(t1l, chl)) | 0
-    t1l = (t1l + Kil) | 0
-    t1h = (t1h + Kih + getCarry(t1l, Kil)) | 0
-    t1l = (t1l + Wil) | 0
-    t1h = (t1h + Wih + getCarry(t1l, Wil)) | 0
-
-    // t2 = sigma0 + maj
-    var t2l = (sigma0l + majl) | 0
-    var t2h = (sigma0h + majh + getCarry(t2l, sigma0l)) | 0
-
-    hh = gh
-    hl = gl
-    gh = fh
-    gl = fl
-    fh = eh
-    fl = el
-    el = (dl + t1l) | 0
-    eh = (dh + t1h + getCarry(el, dl)) | 0
-    dh = ch
-    dl = cl
-    ch = bh
-    cl = bl
-    bh = ah
-    bl = al
-    al = (t1l + t2l) | 0
-    ah = (t1h + t2h + getCarry(al, t1l)) | 0
-  }
-
-  this._al = (this._al + al) | 0
-  this._bl = (this._bl + bl) | 0
-  this._cl = (this._cl + cl) | 0
-  this._dl = (this._dl + dl) | 0
-  this._el = (this._el + el) | 0
-  this._fl = (this._fl + fl) | 0
-  this._gl = (this._gl + gl) | 0
-  this._hl = (this._hl + hl) | 0
-
-  this._ah = (this._ah + ah + getCarry(this._al, al)) | 0
-  this._bh = (this._bh + bh + getCarry(this._bl, bl)) | 0
-  this._ch = (this._ch + ch + getCarry(this._cl, cl)) | 0
-  this._dh = (this._dh + dh + getCarry(this._dl, dl)) | 0
-  this._eh = (this._eh + eh + getCarry(this._el, el)) | 0
-  this._fh = (this._fh + fh + getCarry(this._fl, fl)) | 0
-  this._gh = (this._gh + gh + getCarry(this._gl, gl)) | 0
-  this._hh = (this._hh + hh + getCarry(this._hl, hl)) | 0
-}
-
-Sha512.prototype._hash = function () {
-  var H = new Buffer(64)
-
-  function writeInt64BE (h, l, offset) {
-    H.writeInt32BE(h, offset)
-    H.writeInt32BE(l, offset + 4)
-  }
-
-  writeInt64BE(this._ah, this._al, 0)
-  writeInt64BE(this._bh, this._bl, 8)
-  writeInt64BE(this._ch, this._cl, 16)
-  writeInt64BE(this._dh, this._dl, 24)
-  writeInt64BE(this._eh, this._el, 32)
-  writeInt64BE(this._fh, this._fl, 40)
-  writeInt64BE(this._gh, this._gl, 48)
-  writeInt64BE(this._hh, this._hl, 56)
-
-  return H
-}
-
-module.exports = Sha512
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"./hash":260,"buffer":142,"inherits":228}],268:[function(_dereq_,module,exports){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-module.exports = Stream;
-
-var EE = _dereq_('events').EventEmitter;
-var inherits = _dereq_('inherits');
-
-inherits(Stream, EE);
-Stream.Readable = _dereq_('readable-stream/readable.js');
-Stream.Writable = _dereq_('readable-stream/writable.js');
-Stream.Duplex = _dereq_('readable-stream/duplex.js');
-Stream.Transform = _dereq_('readable-stream/transform.js');
-Stream.PassThrough = _dereq_('readable-stream/passthrough.js');
-
-// Backwards-compat with node 0.4.x
-Stream.Stream = Stream;
-
-
-
-// old-style streams.  Note that the pipe method (the only relevant
-// part of this class) is overridden in the Readable class.
-
-function Stream() {
-  EE.call(this);
-}
-
-Stream.prototype.pipe = function(dest, options) {
-  var source = this;
-
-  function ondata(chunk) {
-    if (dest.writable) {
-      if (false === dest.write(chunk) && source.pause) {
-        source.pause();
-      }
-    }
-  }
-
-  source.on('data', ondata);
-
-  function ondrain() {
-    if (source.readable && source.resume) {
-      source.resume();
-    }
-  }
-
-  dest.on('drain', ondrain);
-
-  // If the 'end' option is not supplied, dest.end() will be called when
-  // source gets the 'end' or 'close' events.  Only dest.end() once.
-  if (!dest._isStdio && (!options || options.end !== false)) {
-    source.on('end', onend);
-    source.on('close', onclose);
-  }
-
-  var didOnEnd = false;
-  function onend() {
-    if (didOnEnd) return;
-    didOnEnd = true;
-
-    dest.end();
-  }
-
-
-  function onclose() {
-    if (didOnEnd) return;
-    didOnEnd = true;
-
-    if (typeof dest.destroy === 'function') dest.destroy();
-  }
-
-  // don't leave dangling pipes when there are errors.
-  function onerror(er) {
-    cleanup();
-    if (EE.listenerCount(this, 'error') === 0) {
-      throw er; // Unhandled stream error in pipe.
-    }
-  }
-
-  source.on('error', onerror);
-  dest.on('error', onerror);
-
-  // remove all the event listeners that were added.
-  function cleanup() {
-    source.removeListener('data', ondata);
-    dest.removeListener('drain', ondrain);
-
-    source.removeListener('end', onend);
-    source.removeListener('close', onclose);
-
-    source.removeListener('error', onerror);
-    dest.removeListener('error', onerror);
-
-    source.removeListener('end', cleanup);
-    source.removeListener('close', cleanup);
-
-    dest.removeListener('close', cleanup);
-  }
-
-  source.on('end', cleanup);
-  source.on('close', cleanup);
-
-  dest.on('close', cleanup);
-
-  dest.emit('pipe', source);
-
-  // Allow for unix-like usage: A.pipe(B).pipe(C)
-  return dest;
-};
-
-},{"events":218,"inherits":228,"readable-stream/duplex.js":270,"readable-stream/passthrough.js":277,"readable-stream/readable.js":278,"readable-stream/transform.js":279,"readable-stream/writable.js":280}],269:[function(_dereq_,module,exports){
-arguments[4][143][0].apply(exports,arguments)
-},{"dup":143}],270:[function(_dereq_,module,exports){
 module.exports = _dereq_("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":271}],271:[function(_dereq_,module,exports){
+},{"./lib/_stream_duplex.js":252}],252:[function(_dereq_,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -59684,7 +57067,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":273,"./_stream_writable":275,"core-util-is":145,"inherits":228,"process-nextick-args":238}],272:[function(_dereq_,module,exports){
+},{"./_stream_readable":254,"./_stream_writable":256,"core-util-is":144,"inherits":226,"process-nextick-args":238}],253:[function(_dereq_,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -59711,7 +57094,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":274,"core-util-is":145,"inherits":228}],273:[function(_dereq_,module,exports){
+},{"./_stream_transform":255,"core-util-is":144,"inherits":226}],254:[function(_dereq_,module,exports){
 (function (process){
 'use strict';
 
@@ -60651,7 +58034,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,_dereq_('_process'))
-},{"./_stream_duplex":271,"./internal/streams/BufferList":276,"_process":239,"buffer":142,"buffer-shims":140,"core-util-is":145,"events":218,"inherits":228,"isarray":269,"process-nextick-args":238,"string_decoder/":281,"util":113}],274:[function(_dereq_,module,exports){
+},{"./_stream_duplex":252,"./internal/streams/BufferList":257,"_process":239,"buffer":142,"buffer-shims":140,"core-util-is":144,"events":216,"inherits":226,"isarray":228,"process-nextick-args":238,"string_decoder/":280,"util":114}],255:[function(_dereq_,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -60832,7 +58215,7 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":271,"core-util-is":145,"inherits":228}],275:[function(_dereq_,module,exports){
+},{"./_stream_duplex":252,"core-util-is":144,"inherits":226}],256:[function(_dereq_,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -61361,7 +58744,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,_dereq_('_process'))
-},{"./_stream_duplex":271,"_process":239,"buffer":142,"buffer-shims":140,"core-util-is":145,"events":218,"inherits":228,"process-nextick-args":238,"util-deprecate":288}],276:[function(_dereq_,module,exports){
+},{"./_stream_duplex":252,"_process":239,"buffer":142,"buffer-shims":140,"core-util-is":144,"events":216,"inherits":226,"process-nextick-args":238,"util-deprecate":287}],257:[function(_dereq_,module,exports){
 'use strict';
 
 var Buffer = _dereq_('buffer').Buffer;
@@ -61426,10 +58809,10 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":142,"buffer-shims":140}],277:[function(_dereq_,module,exports){
+},{"buffer":142,"buffer-shims":140}],258:[function(_dereq_,module,exports){
 module.exports = _dereq_("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":272}],278:[function(_dereq_,module,exports){
+},{"./lib/_stream_passthrough.js":253}],259:[function(_dereq_,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -61449,13 +58832,2711 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,_dereq_('_process'))
-},{"./lib/_stream_duplex.js":271,"./lib/_stream_passthrough.js":272,"./lib/_stream_readable.js":273,"./lib/_stream_transform.js":274,"./lib/_stream_writable.js":275,"_process":239}],279:[function(_dereq_,module,exports){
+},{"./lib/_stream_duplex.js":252,"./lib/_stream_passthrough.js":253,"./lib/_stream_readable.js":254,"./lib/_stream_transform.js":255,"./lib/_stream_writable.js":256,"_process":239}],260:[function(_dereq_,module,exports){
 module.exports = _dereq_("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":274}],280:[function(_dereq_,module,exports){
+},{"./lib/_stream_transform.js":255}],261:[function(_dereq_,module,exports){
 module.exports = _dereq_("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":275}],281:[function(_dereq_,module,exports){
+},{"./lib/_stream_writable.js":256}],262:[function(_dereq_,module,exports){
+(function (Buffer){
+/*
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
+/** @preserve
+(c) 2012 by Cédric Mesnil. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+// constants table
+var zl = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8,
+  3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12,
+  1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2,
+  4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13
+]
+
+var zr = [
+  5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12,
+  6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2,
+  15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13,
+  8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14,
+  12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11
+]
+
+var sl = [
+  11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8,
+  7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12,
+  11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5,
+  11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12,
+  9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6
+]
+
+var sr = [
+  8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6,
+  9, 13, 15, 7, 12, 8, 9, 11, 7, 7, 12, 7, 6, 15, 13, 11,
+  9, 7, 15, 11, 8, 6, 6, 14, 12, 13, 5, 14, 13, 13, 7, 5,
+  15, 5, 8, 11, 14, 14, 6, 14, 6, 9, 12, 9, 12, 5, 15, 8,
+  8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
+]
+
+var hl = [0x00000000, 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xA953FD4E]
+var hr = [0x50A28BE6, 0x5C4DD124, 0x6D703EF3, 0x7A6D76E9, 0x00000000]
+
+function bytesToWords (bytes) {
+  var words = []
+  for (var i = 0, b = 0; i < bytes.length; i++, b += 8) {
+    words[b >>> 5] |= bytes[i] << (24 - b % 32)
+  }
+  return words
+}
+
+function wordsToBytes (words) {
+  var bytes = []
+  for (var b = 0; b < words.length * 32; b += 8) {
+    bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF)
+  }
+  return bytes
+}
+
+function processBlock (H, M, offset) {
+  // swap endian
+  for (var i = 0; i < 16; i++) {
+    var offset_i = offset + i
+    var M_offset_i = M[offset_i]
+
+    // Swap
+    M[offset_i] = (
+      (((M_offset_i << 8) | (M_offset_i >>> 24)) & 0x00ff00ff) |
+      (((M_offset_i << 24) | (M_offset_i >>> 8)) & 0xff00ff00)
+    )
+  }
+
+  // Working variables
+  var al, bl, cl, dl, el
+  var ar, br, cr, dr, er
+
+  ar = al = H[0]
+  br = bl = H[1]
+  cr = cl = H[2]
+  dr = dl = H[3]
+  er = el = H[4]
+
+  // computation
+  var t
+  for (i = 0; i < 80; i += 1) {
+    t = (al + M[offset + zl[i]]) | 0
+    if (i < 16) {
+      t += f1(bl, cl, dl) + hl[0]
+    } else if (i < 32) {
+      t += f2(bl, cl, dl) + hl[1]
+    } else if (i < 48) {
+      t += f3(bl, cl, dl) + hl[2]
+    } else if (i < 64) {
+      t += f4(bl, cl, dl) + hl[3]
+    } else {// if (i<80) {
+      t += f5(bl, cl, dl) + hl[4]
+    }
+    t = t | 0
+    t = rotl(t, sl[i])
+    t = (t + el) | 0
+    al = el
+    el = dl
+    dl = rotl(cl, 10)
+    cl = bl
+    bl = t
+
+    t = (ar + M[offset + zr[i]]) | 0
+    if (i < 16) {
+      t += f5(br, cr, dr) + hr[0]
+    } else if (i < 32) {
+      t += f4(br, cr, dr) + hr[1]
+    } else if (i < 48) {
+      t += f3(br, cr, dr) + hr[2]
+    } else if (i < 64) {
+      t += f2(br, cr, dr) + hr[3]
+    } else {// if (i<80) {
+      t += f1(br, cr, dr) + hr[4]
+    }
+
+    t = t | 0
+    t = rotl(t, sr[i])
+    t = (t + er) | 0
+    ar = er
+    er = dr
+    dr = rotl(cr, 10)
+    cr = br
+    br = t
+  }
+
+  // intermediate hash value
+  t = (H[1] + cl + dr) | 0
+  H[1] = (H[2] + dl + er) | 0
+  H[2] = (H[3] + el + ar) | 0
+  H[3] = (H[4] + al + br) | 0
+  H[4] = (H[0] + bl + cr) | 0
+  H[0] = t
+}
+
+function f1 (x, y, z) {
+  return ((x) ^ (y) ^ (z))
+}
+
+function f2 (x, y, z) {
+  return (((x) & (y)) | ((~x) & (z)))
+}
+
+function f3 (x, y, z) {
+  return (((x) | (~(y))) ^ (z))
+}
+
+function f4 (x, y, z) {
+  return (((x) & (z)) | ((y) & (~(z))))
+}
+
+function f5 (x, y, z) {
+  return ((x) ^ ((y) | (~(z))))
+}
+
+function rotl (x, n) {
+  return (x << n) | (x >>> (32 - n))
+}
+
+function ripemd160 (message) {
+  var H = [0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0]
+
+  if (typeof message === 'string') {
+    message = new Buffer(message, 'utf8')
+  }
+
+  var m = bytesToWords(message)
+
+  var nBitsLeft = message.length * 8
+  var nBitsTotal = message.length * 8
+
+  // Add padding
+  m[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32)
+  m[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
+    (((nBitsTotal << 8) | (nBitsTotal >>> 24)) & 0x00ff00ff) |
+    (((nBitsTotal << 24) | (nBitsTotal >>> 8)) & 0xff00ff00)
+  )
+
+  for (var i = 0; i < m.length; i += 16) {
+    processBlock(H, m, i)
+  }
+
+  // swap endian
+  for (i = 0; i < 5; i++) {
+    // shortcut
+    var H_i = H[i]
+
+    // Swap
+    H[i] = (((H_i << 8) | (H_i >>> 24)) & 0x00ff00ff) |
+      (((H_i << 24) | (H_i >>> 8)) & 0xff00ff00)
+  }
+
+  var digestbytes = wordsToBytes(H)
+  return new Buffer(digestbytes)
+}
+
+module.exports = ripemd160
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":142}],263:[function(_dereq_,module,exports){
+(function (Buffer){
+const assert = _dereq_('assert')
+/**
+ * RLP Encoding based on: https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP
+ * This function takes in a data, convert it to buffer if not, and a length for recursion
+ *
+ * @param {Buffer,String,Integer,Array} data - will be converted to buffer
+ * @returns {Buffer} - returns buffer of encoded data
+ **/
+exports.encode = function (input) {
+  if (input instanceof Array) {
+    var output = []
+    for (var i = 0; i < input.length; i++) {
+      output.push(exports.encode(input[i]))
+    }
+    var buf = Buffer.concat(output)
+    return Buffer.concat([encodeLength(buf.length, 192), buf])
+  } else {
+    input = toBuffer(input)
+    if (input.length === 1 && input[0] < 128) {
+      return input
+    } else {
+      return Buffer.concat([encodeLength(input.length, 128), input])
+    }
+  }
+}
+
+function safeParseInt (v, base) {
+  if (v.slice(0, 2) === '00') {
+    throw (new Error('invalid RLP: extra zeros'))
+  }
+
+  return parseInt(v, base)
+}
+
+function encodeLength (len, offset) {
+  if (len < 56) {
+    return new Buffer([len + offset])
+  } else {
+    var hexLength = intToHex(len)
+    var lLength = hexLength.length / 2
+    var firstByte = intToHex(offset + 55 + lLength)
+    return new Buffer(firstByte + hexLength, 'hex')
+  }
+}
+
+/**
+ * RLP Decoding based on: {@link https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP|RLP}
+ * @param {Buffer,String,Integer,Array} data - will be converted to buffer
+ * @returns {Array} - returns decode Array of Buffers containg the original message
+ **/
+exports.decode = function (input, stream) {
+  if (!input || input.length === 0) {
+    return new Buffer([])
+  }
+
+  input = toBuffer(input)
+  var decoded = _decode(input)
+
+  if (stream) {
+    return decoded
+  }
+
+  assert.equal(decoded.remainder.length, 0, 'invalid remainder')
+  return decoded.data
+}
+
+exports.getLength = function (input) {
+  if (!input || input.length === 0) {
+    return new Buffer([])
+  }
+
+  input = toBuffer(input)
+  var firstByte = input[0]
+  if (firstByte <= 0x7f) {
+    return input.length
+  } else if (firstByte <= 0xb7) {
+    return firstByte - 0x7f
+  } else if (firstByte <= 0xbf) {
+    return firstByte - 0xb6
+  } else if (firstByte <= 0xf7) {
+    // a list between  0-55 bytes long
+    return firstByte - 0xbf
+  } else {
+    // a list  over 55 bytes long
+    var llength = firstByte - 0xf6
+    var length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
+    return llength + length
+  }
+}
+
+function _decode (input) {
+  var length, llength, data, innerRemainder, d
+  var decoded = []
+  var firstByte = input[0]
+
+  if (firstByte <= 0x7f) {
+    // a single byte whose value is in the [0x00, 0x7f] range, that byte is its own RLP encoding.
+    return {
+      data: input.slice(0, 1),
+      remainder: input.slice(1)
+    }
+  } else if (firstByte <= 0xb7) {
+    // string is 0-55 bytes long. A single byte with value 0x80 plus the length of the string followed by the string
+    // The range of the first byte is [0x80, 0xb7]
+    length = firstByte - 0x7f
+
+    // set 0x80 null to 0
+    if (firstByte === 0x80) {
+      data = new Buffer([])
+    } else {
+      data = input.slice(1, length)
+    }
+
+    if (length === 2 && data[0] < 0x80) {
+      throw new Error('invalid rlp encoding: byte must be less 0x80')
+    }
+
+    return {
+      data: data,
+      remainder: input.slice(length)
+    }
+  } else if (firstByte <= 0xbf) {
+    llength = firstByte - 0xb6
+    length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
+    data = input.slice(llength, length + llength)
+    if (data.length < length) {
+      throw (new Error('invalid RLP'))
+    }
+
+    return {
+      data: data,
+      remainder: input.slice(length + llength)
+    }
+  } else if (firstByte <= 0xf7) {
+    // a list between  0-55 bytes long
+    length = firstByte - 0xbf
+    innerRemainder = input.slice(1, length)
+    while (innerRemainder.length) {
+      d = _decode(innerRemainder)
+      decoded.push(d.data)
+      innerRemainder = d.remainder
+    }
+
+    return {
+      data: decoded,
+      remainder: input.slice(length)
+    }
+  } else {
+    // a list  over 55 bytes long
+    llength = firstByte - 0xf6
+    length = safeParseInt(input.slice(1, llength).toString('hex'), 16)
+    var totalLength = llength + length
+    if (totalLength > input.length) {
+      throw new Error('invalid rlp: total length is larger than the data')
+    }
+
+    innerRemainder = input.slice(llength, totalLength)
+    if (innerRemainder.length === 0) {
+      throw new Error('invalid rlp, List has a invalid length')
+    }
+
+    while (innerRemainder.length) {
+      d = _decode(innerRemainder)
+      decoded.push(d.data)
+      innerRemainder = d.remainder
+    }
+    return {
+      data: decoded,
+      remainder: input.slice(totalLength)
+    }
+  }
+}
+
+function isHexPrefixed (str) {
+  return str.slice(0, 2) === '0x'
+}
+
+// Removes 0x from a given String
+function stripHexPrefix (str) {
+  if (typeof str !== 'string') {
+    return str
+  }
+  return isHexPrefixed(str) ? str.slice(2) : str
+}
+
+function intToHex (i) {
+  var hex = i.toString(16)
+  if (hex.length % 2) {
+    hex = '0' + hex
+  }
+
+  return hex
+}
+
+function padToEven (a) {
+  if (a.length % 2) a = '0' + a
+  return a
+}
+
+function intToBuffer (i) {
+  var hex = intToHex(i)
+  return new Buffer(hex, 'hex')
+}
+
+function toBuffer (v) {
+  if (!Buffer.isBuffer(v)) {
+    if (typeof v === 'string') {
+      if (isHexPrefixed(v)) {
+        v = new Buffer(padToEven(stripHexPrefix(v)), 'hex')
+      } else {
+        v = new Buffer(v)
+      }
+    } else if (typeof v === 'number') {
+      if (!v) {
+        v = new Buffer([])
+      } else {
+        v = intToBuffer(v)
+      }
+    } else if (v === null || v === undefined) {
+      v = new Buffer([])
+    } else if (v.toArray) {
+      // converts a BN to a Buffer
+      v = new Buffer(v.toArray())
+    } else {
+      throw new Error('invalid type')
+    }
+  }
+  return v
+}
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"assert":25,"buffer":142}],264:[function(_dereq_,module,exports){
+/*!
+ * Fast "async" scrypt implementation in JavaScript.
+ * Copyright (c) 2013-2016 Dmitry Chestnykh | BSD License
+ * https://github.com/dchest/scrypt-async-js
+ */
+
+/**
+ * scrypt(password, salt, options, callback)
+ *
+ * where
+ *
+ * password and salt are strings or arrays of bytes (Array of Uint8Array)
+ * options is
+ *
+ * {
+ *    N:      // CPU/memory cost parameter, must be power of two
+ *            // (alternatively, you can specify logN)
+ *    r:      // block size
+ *    p:      // parallelization parameter
+ *    dkLen:  // length of derived key, default = 32
+ *    encoding: // optional encoding:
+ *                    "base64" - standard Base64 encoding
+ *                    "hex" — hex encoding,
+ *                    "binary" — Uint8Array,
+ *                    undefined/null - Array of bytes
+ *    interruptStep: // optional, steps to split calculations (default is 0)
+ * }
+ *
+ * Derives a key from password and salt and calls callback
+ * with derived key as the only argument.
+ *
+ * Calculations are interrupted with setImmediate (or zero setTimeout) at the
+ * given interruptSteps to avoid freezing the browser. If it's undefined or zero,
+ * the callback is called immediately after the calculation, avoiding setImmediate.
+ *
+ * Legacy way (only supports p = 1) to call this function is:
+ *
+ * scrypt(password, salt, logN, r, dkLen, [interruptStep], callback, [encoding])
+ *
+ * In legacy API, if interruptStep is not given, it defaults to 1000.
+ * Pass 0 to have callback called immediately.
+ *
+ */
+function scrypt(password, salt, logN, r, dkLen, interruptStep, callback, encoding) {
+  'use strict';
+
+  function SHA256(m) {
+    /** @const */ var K = [
+      0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b,
+      0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98, 0x12835b01,
+      0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7,
+      0xc19bf174, 0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc,
+      0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152,
+      0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147,
+      0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc,
+      0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,
+      0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819,
+      0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08,
+      0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f,
+      0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,
+      0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
+    ];
+
+    var h0 = 0x6a09e667, h1 = 0xbb67ae85, h2 = 0x3c6ef372, h3 = 0xa54ff53a,
+        h4 = 0x510e527f, h5 = 0x9b05688c, h6 = 0x1f83d9ab, h7 = 0x5be0cd19,
+        w = new Array(64);
+
+    function blocks(p) {
+      var off = 0, len = p.length;
+      while (len >= 64) {
+        var a = h0, b = h1, c = h2, d = h3, e = h4, f = h5, g = h6, h = h7,
+            u, i, j, t1, t2;
+
+        for (i = 0; i < 16; i++) {
+          j = off + i*4;
+          w[i] = ((p[j] & 0xff)<<24) | ((p[j+1] & 0xff)<<16) |
+                 ((p[j+2] & 0xff)<<8) | (p[j+3] & 0xff);
+        }
+
+        for (i = 16; i < 64; i++) {
+          u = w[i-2];
+          t1 = ((u>>>17) | (u<<(32-17))) ^ ((u>>>19) | (u<<(32-19))) ^ (u>>>10);
+
+          u = w[i-15];
+          t2 = ((u>>>7) | (u<<(32-7))) ^ ((u>>>18) | (u<<(32-18))) ^ (u>>>3);
+
+          w[i] = (((t1 + w[i-7]) | 0) + ((t2 + w[i-16]) | 0)) | 0;
+        }
+
+        for (i = 0; i < 64; i++) {
+          t1 = ((((((e>>>6) | (e<<(32-6))) ^ ((e>>>11) | (e<<(32-11))) ^
+               ((e>>>25) | (e<<(32-25)))) + ((e & f) ^ (~e & g))) | 0) +
+               ((h + ((K[i] + w[i]) | 0)) | 0)) | 0;
+
+          t2 = ((((a>>>2) | (a<<(32-2))) ^ ((a>>>13) | (a<<(32-13))) ^
+               ((a>>>22) | (a<<(32-22)))) + ((a & b) ^ (a & c) ^ (b & c))) | 0;
+
+          h = g;
+          g = f;
+          f = e;
+          e = (d + t1) | 0;
+          d = c;
+          c = b;
+          b = a;
+          a = (t1 + t2) | 0;
+        }
+
+        h0 = (h0 + a) | 0;
+        h1 = (h1 + b) | 0;
+        h2 = (h2 + c) | 0;
+        h3 = (h3 + d) | 0;
+        h4 = (h4 + e) | 0;
+        h5 = (h5 + f) | 0;
+        h6 = (h6 + g) | 0;
+        h7 = (h7 + h) | 0;
+
+        off += 64;
+        len -= 64;
+      }
+    }
+
+    blocks(m);
+
+    var i, bytesLeft = m.length % 64,
+        bitLenHi = (m.length / 0x20000000) | 0,
+        bitLenLo = m.length << 3,
+        numZeros = (bytesLeft < 56) ? 56 : 120,
+        p = m.slice(m.length - bytesLeft, m.length);
+
+    p.push(0x80);
+    for (i = bytesLeft + 1; i < numZeros; i++) p.push(0);
+    p.push((bitLenHi>>>24) & 0xff);
+    p.push((bitLenHi>>>16) & 0xff);
+    p.push((bitLenHi>>>8)  & 0xff);
+    p.push((bitLenHi>>>0)  & 0xff);
+    p.push((bitLenLo>>>24) & 0xff);
+    p.push((bitLenLo>>>16) & 0xff);
+    p.push((bitLenLo>>>8)  & 0xff);
+    p.push((bitLenLo>>>0)  & 0xff);
+
+    blocks(p);
+
+    return [
+      (h0>>>24) & 0xff, (h0>>>16) & 0xff, (h0>>>8) & 0xff, (h0>>>0) & 0xff,
+      (h1>>>24) & 0xff, (h1>>>16) & 0xff, (h1>>>8) & 0xff, (h1>>>0) & 0xff,
+      (h2>>>24) & 0xff, (h2>>>16) & 0xff, (h2>>>8) & 0xff, (h2>>>0) & 0xff,
+      (h3>>>24) & 0xff, (h3>>>16) & 0xff, (h3>>>8) & 0xff, (h3>>>0) & 0xff,
+      (h4>>>24) & 0xff, (h4>>>16) & 0xff, (h4>>>8) & 0xff, (h4>>>0) & 0xff,
+      (h5>>>24) & 0xff, (h5>>>16) & 0xff, (h5>>>8) & 0xff, (h5>>>0) & 0xff,
+      (h6>>>24) & 0xff, (h6>>>16) & 0xff, (h6>>>8) & 0xff, (h6>>>0) & 0xff,
+      (h7>>>24) & 0xff, (h7>>>16) & 0xff, (h7>>>8) & 0xff, (h7>>>0) & 0xff
+    ];
+  }
+
+  function PBKDF2_HMAC_SHA256_OneIter(password, salt, dkLen) {
+    // compress password if it's longer than hash block length
+    password = password.length <= 64 ? password : SHA256(password);
+
+    var i, innerLen = 64 + salt.length + 4,
+        inner = new Array(innerLen),
+        outerKey = new Array(64),
+        dk = [];
+
+    // inner = (password ^ ipad) || salt || counter
+    for (i = 0; i < 64; i++) inner[i] = 0x36;
+    for (i = 0; i < password.length; i++) inner[i] ^= password[i];
+    for (i = 0; i < salt.length; i++) inner[64+i] = salt[i];
+    for (i = innerLen - 4; i < innerLen; i++) inner[i] = 0;
+
+    // outerKey = password ^ opad
+    for (i = 0; i < 64; i++) outerKey[i] = 0x5c;
+    for (i = 0; i < password.length; i++) outerKey[i] ^= password[i];
+
+    // increments counter inside inner
+    function incrementCounter() {
+      for (var i = innerLen-1; i >= innerLen-4; i--) {
+        inner[i]++;
+        if (inner[i] <= 0xff) return;
+        inner[i] = 0;
+      }
+    }
+
+    // output blocks = SHA256(outerKey || SHA256(inner)) ...
+    while (dkLen >= 32) {
+      incrementCounter();
+      dk = dk.concat(SHA256(outerKey.concat(SHA256(inner))));
+      dkLen -= 32;
+    }
+    if (dkLen > 0) {
+      incrementCounter();
+      dk = dk.concat(SHA256(outerKey.concat(SHA256(inner))).slice(0, dkLen));
+    }
+    return dk;
+  }
+
+  function salsaXOR(tmp, B, bin, bout) {
+    var j0  = tmp[0]  ^ B[bin++],
+        j1  = tmp[1]  ^ B[bin++],
+        j2  = tmp[2]  ^ B[bin++],
+        j3  = tmp[3]  ^ B[bin++],
+        j4  = tmp[4]  ^ B[bin++],
+        j5  = tmp[5]  ^ B[bin++],
+        j6  = tmp[6]  ^ B[bin++],
+        j7  = tmp[7]  ^ B[bin++],
+        j8  = tmp[8]  ^ B[bin++],
+        j9  = tmp[9]  ^ B[bin++],
+        j10 = tmp[10] ^ B[bin++],
+        j11 = tmp[11] ^ B[bin++],
+        j12 = tmp[12] ^ B[bin++],
+        j13 = tmp[13] ^ B[bin++],
+        j14 = tmp[14] ^ B[bin++],
+        j15 = tmp[15] ^ B[bin++],
+        u, i;
+
+    var x0 = j0, x1 = j1, x2 = j2, x3 = j3, x4 = j4, x5 = j5, x6 = j6, x7 = j7,
+        x8 = j8, x9 = j9, x10 = j10, x11 = j11, x12 = j12, x13 = j13, x14 = j14,
+        x15 = j15;
+
+    for (i = 0; i < 8; i += 2) {
+      u =  x0 + x12;   x4 ^= u<<7  | u>>>(32-7);
+      u =  x4 +  x0;   x8 ^= u<<9  | u>>>(32-9);
+      u =  x8 +  x4;  x12 ^= u<<13 | u>>>(32-13);
+      u = x12 +  x8;   x0 ^= u<<18 | u>>>(32-18);
+
+      u =  x5 +  x1;   x9 ^= u<<7  | u>>>(32-7);
+      u =  x9 +  x5;  x13 ^= u<<9  | u>>>(32-9);
+      u = x13 +  x9;   x1 ^= u<<13 | u>>>(32-13);
+      u =  x1 + x13;   x5 ^= u<<18 | u>>>(32-18);
+
+      u = x10 +  x6;  x14 ^= u<<7  | u>>>(32-7);
+      u = x14 + x10;   x2 ^= u<<9  | u>>>(32-9);
+      u =  x2 + x14;   x6 ^= u<<13 | u>>>(32-13);
+      u =  x6 +  x2;  x10 ^= u<<18 | u>>>(32-18);
+
+      u = x15 + x11;   x3 ^= u<<7  | u>>>(32-7);
+      u =  x3 + x15;   x7 ^= u<<9  | u>>>(32-9);
+      u =  x7 +  x3;  x11 ^= u<<13 | u>>>(32-13);
+      u = x11 +  x7;  x15 ^= u<<18 | u>>>(32-18);
+
+      u =  x0 +  x3;   x1 ^= u<<7  | u>>>(32-7);
+      u =  x1 +  x0;   x2 ^= u<<9  | u>>>(32-9);
+      u =  x2 +  x1;   x3 ^= u<<13 | u>>>(32-13);
+      u =  x3 +  x2;   x0 ^= u<<18 | u>>>(32-18);
+
+      u =  x5 +  x4;   x6 ^= u<<7  | u>>>(32-7);
+      u =  x6 +  x5;   x7 ^= u<<9  | u>>>(32-9);
+      u =  x7 +  x6;   x4 ^= u<<13 | u>>>(32-13);
+      u =  x4 +  x7;   x5 ^= u<<18 | u>>>(32-18);
+
+      u = x10 +  x9;  x11 ^= u<<7  | u>>>(32-7);
+      u = x11 + x10;   x8 ^= u<<9  | u>>>(32-9);
+      u =  x8 + x11;   x9 ^= u<<13 | u>>>(32-13);
+      u =  x9 +  x8;  x10 ^= u<<18 | u>>>(32-18);
+
+      u = x15 + x14;  x12 ^= u<<7  | u>>>(32-7);
+      u = x12 + x15;  x13 ^= u<<9  | u>>>(32-9);
+      u = x13 + x12;  x14 ^= u<<13 | u>>>(32-13);
+      u = x14 + x13;  x15 ^= u<<18 | u>>>(32-18);
+    }
+
+    B[bout++] = tmp[0]  = (x0  + j0)  | 0;
+    B[bout++] = tmp[1]  = (x1  + j1)  | 0;
+    B[bout++] = tmp[2]  = (x2  + j2)  | 0;
+    B[bout++] = tmp[3]  = (x3  + j3)  | 0;
+    B[bout++] = tmp[4]  = (x4  + j4)  | 0;
+    B[bout++] = tmp[5]  = (x5  + j5)  | 0;
+    B[bout++] = tmp[6]  = (x6  + j6)  | 0;
+    B[bout++] = tmp[7]  = (x7  + j7)  | 0;
+    B[bout++] = tmp[8]  = (x8  + j8)  | 0;
+    B[bout++] = tmp[9]  = (x9  + j9)  | 0;
+    B[bout++] = tmp[10] = (x10 + j10) | 0;
+    B[bout++] = tmp[11] = (x11 + j11) | 0;
+    B[bout++] = tmp[12] = (x12 + j12) | 0;
+    B[bout++] = tmp[13] = (x13 + j13) | 0;
+    B[bout++] = tmp[14] = (x14 + j14) | 0;
+    B[bout++] = tmp[15] = (x15 + j15) | 0;
+  }
+
+  function blockCopy(dst, di, src, si, len) {
+    while (len--) dst[di++] = src[si++];
+  }
+
+  function blockXOR(dst, di, src, si, len) {
+    while (len--) dst[di++] ^= src[si++];
+  }
+
+  function blockMix(tmp, B, bin, bout, r) {
+    blockCopy(tmp, 0, B, bin + (2*r-1)*16, 16);
+    for (var i = 0; i < 2*r; i += 2) {
+      salsaXOR(tmp, B, bin + i*16,      bout + i*8);
+      salsaXOR(tmp, B, bin + i*16 + 16, bout + i*8 + r*16);
+    }
+  }
+
+  function integerify(B, bi, r) {
+    return B[bi+(2*r-1)*16];
+  }
+
+  function stringToUTF8Bytes(s) {
+      var arr = [];
+      for (var i = 0; i < s.length; i++) {
+          var c = s.charCodeAt(i);
+          if (c < 128) {
+              arr.push(c);
+          } else if (c > 127 && c < 2048) {
+              arr.push((c>>6) | 192);
+              arr.push((c & 63) | 128);
+          } else {
+              arr.push((c>>12) | 224);
+              arr.push(((c>>6) & 63) | 128);
+              arr.push((c & 63) | 128);
+          }
+      }
+      return arr;
+  }
+
+  function bytesToHex(p) {
+    /** @const */
+    var enc = '0123456789abcdef'.split('');
+
+    var len = p.length,
+        arr = [],
+        i = 0;
+
+    for (; i < len; i++) {
+        arr.push(enc[(p[i]>>>4) & 15]);
+        arr.push(enc[(p[i]>>>0) & 15]);
+    }
+    return arr.join('');
+  }
+
+  function bytesToBase64(p) {
+    /** @const */
+    var enc = ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' +
+              '0123456789+/').split('');
+
+    var len = p.length,
+        arr = [],
+        i = 0,
+        a, b, c, t;
+
+    while (i < len) {
+      a = i < len ? p[i++] : 0;
+      b = i < len ? p[i++] : 0;
+      c = i < len ? p[i++] : 0;
+      t = (a << 16) + (b << 8) + c;
+      arr.push(enc[(t >>> 3 * 6) & 63]);
+      arr.push(enc[(t >>> 2 * 6) & 63]);
+      arr.push(enc[(t >>> 1 * 6) & 63]);
+      arr.push(enc[(t >>> 0 * 6) & 63]);
+    }
+    if (len % 3 > 0) {
+      arr[arr.length-1] = '=';
+      if (len % 3 === 1) arr[arr.length-2] = '=';
+    }
+    return arr.join('');
+  }
+
+
+  // Generate key.
+
+  var MAX_UINT = (-1)>>>0,
+      p = 1;
+
+  if (typeof logN === "object") {
+    // Called as: scrypt(password, salt, opts, callback)
+    if (arguments.length > 4) {
+      throw new Error('scrypt: incorrect number of arguments');
+    }
+
+    var opts = logN;
+
+    callback = r;
+    logN = opts.logN;
+    if (typeof logN === 'undefined') {
+      if (typeof opts.N !== 'undefined') {
+        if (opts.N < 2 || opts.N > MAX_UINT)
+          throw new Error('scrypt: N is out of range');
+
+        if ((opts.N & (opts.N - 1)) !== 0)
+          throw new Error('scrypt: N is not a power of 2');
+
+        logN = Math.log(opts.N) / Math.LN2;
+      } else {
+        throw new Error('scrypt: missing N parameter');
+      }
+    }
+    p = opts.p || 1;
+    r = opts.r;
+    dkLen = opts.dkLen || 32;
+    interruptStep = opts.interruptStep || 0;
+    encoding = opts.encoding;
+  }
+
+  if (p < 1)
+    throw new Error('scrypt: invalid p');
+
+  if (r <= 0)
+    throw new Error('scrypt: invalid r');
+
+  if (logN < 1 || logN > 31)
+    throw new Error('scrypt: logN must be between 1 and 31');
+
+
+  var N = (1<<logN)>>>0,
+      XY, V, B, tmp;
+
+  if (r*p >= 1<<30 || r > MAX_UINT/128/p || r > MAX_UINT/256 || N > MAX_UINT/128/r)
+    throw new Error('scrypt: parameters are too large');
+
+  // Decode strings.
+  if (typeof password === 'string')
+    password = stringToUTF8Bytes(password);
+  if (typeof salt === 'string')
+    salt = stringToUTF8Bytes(salt);
+
+  if (typeof Int32Array !== 'undefined') {
+    //XXX We can use Uint32Array, but Int32Array is faster in Safari.
+    XY = new Int32Array(64*r);
+    V = new Int32Array(32*N*r);
+    tmp = new Int32Array(16);
+  } else {
+    XY = [];
+    V = [];
+    tmp = new Array(16);
+  }
+  B = PBKDF2_HMAC_SHA256_OneIter(password, salt, p*128*r);
+
+  var xi = 0, yi = 32 * r;
+
+  function smixStart(pos) {
+    for (var i = 0; i < 32*r; i++) {
+      var j = pos + i*4;
+      XY[xi+i] = ((B[j+3] & 0xff)<<24) | ((B[j+2] & 0xff)<<16) |
+                 ((B[j+1] & 0xff)<<8)  | ((B[j+0] & 0xff)<<0);
+    }
+  }
+
+  function smixStep1(start, end) {
+    for (var i = start; i < end; i += 2) {
+      blockCopy(V, i*(32*r), XY, xi, 32*r);
+      blockMix(tmp, XY, xi, yi, r);
+
+      blockCopy(V, (i+1)*(32*r), XY, yi, 32*r);
+      blockMix(tmp, XY, yi, xi, r);
+    }
+  }
+
+  function smixStep2(start, end) {
+    for (var i = start; i < end; i += 2) {
+      var j = integerify(XY, xi, r) & (N-1);
+      blockXOR(XY, xi, V, j*(32*r), 32*r);
+      blockMix(tmp, XY, xi, yi, r);
+
+      j = integerify(XY, yi, r) & (N-1);
+      blockXOR(XY, yi, V, j*(32*r), 32*r);
+      blockMix(tmp, XY, yi, xi, r);
+    }
+  }
+
+  function smixFinish(pos) {
+    for (var i = 0; i < 32*r; i++) {
+      var j = XY[xi+i];
+      B[pos + i*4 + 0] = (j>>>0)  & 0xff;
+      B[pos + i*4 + 1] = (j>>>8)  & 0xff;
+      B[pos + i*4 + 2] = (j>>>16) & 0xff;
+      B[pos + i*4 + 3] = (j>>>24) & 0xff;
+    }
+  }
+
+  var nextTick = (typeof setImmediate !== 'undefined') ? setImmediate : setTimeout;
+
+  function interruptedFor(start, end, step, fn, donefn) {
+    (function performStep() {
+      nextTick(function() {
+        fn(start, start + step < end ? start + step : end);
+        start += step;
+        if (start < end)
+          performStep();
+        else
+          donefn();
+        });
+    })();
+  }
+
+  function getResult(enc) {
+      var result = PBKDF2_HMAC_SHA256_OneIter(password, B, dkLen);
+      if (enc === 'base64')
+        return bytesToBase64(result);
+      else if (enc === 'hex')
+        return bytesToHex(result);
+      else if (enc === 'binary')
+        return new Uint8Array(result);
+      else
+        return result;
+  }
+
+  // Blocking variant.
+  function calculateSync() {
+    for (var i = 0; i < p; i++) {
+      smixStart(i*128*r);
+      smixStep1(0, N);
+      smixStep2(0, N);
+      smixFinish(i*128*r);
+    }
+    callback(getResult(encoding));
+  }
+
+  // Async variant.
+  function calculateAsync(i) {
+      smixStart(i*128*r);
+      interruptedFor(0, N, interruptStep*2, smixStep1, function() {
+        interruptedFor(0, N, interruptStep*2, smixStep2, function () {
+          smixFinish(i*128*r);
+          if (i + 1 < p) {
+            nextTick(function() { calculateAsync(i + 1); });
+          } else {
+            callback(getResult(encoding));
+          }
+        });
+      });
+  }
+
+  if (typeof interruptStep === 'function') {
+    // Called as: scrypt(...,      callback, [encoding])
+    //  shifting: scrypt(..., interruptStep,  callback, [encoding])
+    encoding = callback;
+    callback = interruptStep;
+    interruptStep = 1000;
+  }
+
+  if (interruptStep <= 0) {
+    calculateSync();
+  } else {
+    calculateAsync(0);
+  }
+}
+
+if (typeof module !== 'undefined') module.exports = scrypt;
+
+},{}],265:[function(_dereq_,module,exports){
+'use strict'
+module.exports = _dereq_('./lib')(_dereq_('./lib/elliptic'))
+
+},{"./lib":269,"./lib/elliptic":268}],266:[function(_dereq_,module,exports){
+(function (Buffer){
+'use strict'
+var toString = Object.prototype.toString
+
+// TypeError
+exports.isArray = function (value, message) {
+  if (!Array.isArray(value)) throw TypeError(message)
+}
+
+exports.isBoolean = function (value, message) {
+  if (toString.call(value) !== '[object Boolean]') throw TypeError(message)
+}
+
+exports.isBuffer = function (value, message) {
+  if (!Buffer.isBuffer(value)) throw TypeError(message)
+}
+
+exports.isFunction = function (value, message) {
+  if (toString.call(value) !== '[object Function]') throw TypeError(message)
+}
+
+exports.isNumber = function (value, message) {
+  if (toString.call(value) !== '[object Number]') throw TypeError(message)
+}
+
+exports.isObject = function (value, message) {
+  if (toString.call(value) !== '[object Object]') throw TypeError(message)
+}
+
+// RangeError
+exports.isBufferLength = function (buffer, length, message) {
+  if (buffer.length !== length) throw RangeError(message)
+}
+
+exports.isBufferLength2 = function (buffer, length1, length2, message) {
+  if (buffer.length !== length1 && buffer.length !== length2) throw RangeError(message)
+}
+
+exports.isLengthGTZero = function (value, message) {
+  if (value.length === 0) throw RangeError(message)
+}
+
+exports.isNumberInInterval = function (number, x, y, message) {
+  if (number <= x || number >= y) throw RangeError(message)
+}
+
+}).call(this,{"isBuffer":_dereq_("../../is-buffer/index.js")})
+},{"../../is-buffer/index.js":227}],267:[function(_dereq_,module,exports){
+(function (Buffer){
+'use strict'
+var bip66 = _dereq_('bip66')
+
+var EC_PRIVKEY_EXPORT_DER_COMPRESSED = new Buffer([
+  // begin
+  0x30, 0x81, 0xd3, 0x02, 0x01, 0x01, 0x04, 0x20,
+  // private key
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  // middle
+  0xa0, 0x81, 0x85, 0x30, 0x81, 0x82, 0x02, 0x01, 0x01, 0x30, 0x2c, 0x06, 0x07, 0x2a, 0x86, 0x48,
+  0xcE, 0x3d, 0x01, 0x01, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xfE, 0xff, 0xff, 0xfc, 0x2f, 0x30, 0x06, 0x04, 0x01, 0x00, 0x04, 0x01, 0x07, 0x04,
+  0x21, 0x02, 0x79, 0xbE, 0x66, 0x7E, 0xf9, 0xdc, 0xbb, 0xac, 0x55, 0xa0, 0x62, 0x95, 0xcE, 0x87,
+  0x0b, 0x07, 0x02, 0x9b, 0xfc, 0xdb, 0x2d, 0xcE, 0x28, 0xd9, 0x59, 0xf2, 0x81, 0x5b, 0x16, 0xf8,
+  0x17, 0x98, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xfE, 0xba, 0xaE, 0xdc, 0xE6, 0xaf, 0x48, 0xa0, 0x3b, 0xbf, 0xd2, 0x5E,
+  0x8c, 0xd0, 0x36, 0x41, 0x41, 0x02, 0x01, 0x01, 0xa1, 0x24, 0x03, 0x22, 0x00,
+  // public key
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00
+])
+
+var EC_PRIVKEY_EXPORT_DER_UNCOMPRESSED = new Buffer([
+  // begin
+  0x30, 0x82, 0x01, 0x13, 0x02, 0x01, 0x01, 0x04, 0x20,
+  // private key
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  // middle
+  0xa0, 0x81, 0xa5, 0x30, 0x81, 0xa2, 0x02, 0x01, 0x01, 0x30, 0x2c, 0x06, 0x07, 0x2a, 0x86, 0x48,
+  0xcE, 0x3d, 0x01, 0x01, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xfE, 0xff, 0xff, 0xfc, 0x2f, 0x30, 0x06, 0x04, 0x01, 0x00, 0x04, 0x01, 0x07, 0x04,
+  0x41, 0x04, 0x79, 0xbE, 0x66, 0x7E, 0xf9, 0xdc, 0xbb, 0xac, 0x55, 0xa0, 0x62, 0x95, 0xcE, 0x87,
+  0x0b, 0x07, 0x02, 0x9b, 0xfc, 0xdb, 0x2d, 0xcE, 0x28, 0xd9, 0x59, 0xf2, 0x81, 0x5b, 0x16, 0xf8,
+  0x17, 0x98, 0x48, 0x3a, 0xda, 0x77, 0x26, 0xa3, 0xc4, 0x65, 0x5d, 0xa4, 0xfb, 0xfc, 0x0E, 0x11,
+  0x08, 0xa8, 0xfd, 0x17, 0xb4, 0x48, 0xa6, 0x85, 0x54, 0x19, 0x9c, 0x47, 0xd0, 0x8f, 0xfb, 0x10,
+  0xd4, 0xb8, 0x02, 0x21, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+  0xff, 0xff, 0xff, 0xff, 0xfE, 0xba, 0xaE, 0xdc, 0xE6, 0xaf, 0x48, 0xa0, 0x3b, 0xbf, 0xd2, 0x5E,
+  0x8c, 0xd0, 0x36, 0x41, 0x41, 0x02, 0x01, 0x01, 0xa1, 0x44, 0x03, 0x42, 0x00,
+  // public key
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00
+])
+
+var ZERO_BUFFER_32 = new Buffer([
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+])
+
+exports.privateKeyExport = function (privateKey, publicKey, compressed) {
+  var result = new Buffer(compressed ? EC_PRIVKEY_EXPORT_DER_COMPRESSED : EC_PRIVKEY_EXPORT_DER_UNCOMPRESSED)
+  privateKey.copy(result, compressed ? 8 : 9)
+  publicKey.copy(result, compressed ? 181 : 214)
+  return result
+}
+
+exports.privateKeyImport = function (privateKey) {
+  var length = privateKey.length
+
+  // sequence header
+  var index = 0
+  if (length < index + 1 || privateKey[index] !== 0x30) return
+  index += 1
+
+  // sequence length constructor
+  if (length < index + 1 || !(privateKey[index] & 0x80)) return
+
+  var lenb = privateKey[index] & 0x7f
+  index += 1
+  if (lenb < 1 || lenb > 2) return
+  if (length < index + lenb) return
+
+  // sequence length
+  var len = privateKey[index + lenb - 1] | (lenb > 1 ? privateKey[index + lenb - 2] << 8 : 0)
+  index += lenb
+  if (length < index + len) return
+
+  // sequence element 0: version number (=1)
+  if (length < index + 3 ||
+      privateKey[index] !== 0x02 ||
+      privateKey[index + 1] !== 0x01 ||
+      privateKey[index + 2] !== 0x01) {
+    return
+  }
+  index += 3
+
+  // sequence element 1: octet string, up to 32 bytes
+  if (length < index + 2 ||
+      privateKey[index] !== 0x04 ||
+      privateKey[index + 1] > 0x20 ||
+      length < index + 2 + privateKey[index + 1]) {
+    return
+  }
+
+  return privateKey.slice(index + 2, index + 2 + privateKey[index + 1])
+}
+
+exports.signatureExport = function (sigObj) {
+  var r = Buffer.concat([new Buffer([0]), sigObj.r])
+  for (var lenR = 33, posR = 0; lenR > 1 && r[posR] === 0x00 && !(r[posR + 1] & 0x80); --lenR, ++posR);
+
+  var s = Buffer.concat([new Buffer([0]), sigObj.s])
+  for (var lenS = 33, posS = 0; lenS > 1 && s[posS] === 0x00 && !(s[posS + 1] & 0x80); --lenS, ++posS);
+
+  return bip66.encode(r.slice(posR), s.slice(posS))
+}
+
+exports.signatureImport = function (sig) {
+  var r = new Buffer(ZERO_BUFFER_32)
+  var s = new Buffer(ZERO_BUFFER_32)
+
+  try {
+    var sigObj = bip66.decode(sig)
+    if (sigObj.r.length === 33 && sigObj.r[0] === 0x00) sigObj.r = sigObj.r.slice(1)
+    if (sigObj.r.length > 32) throw new Error('R length is too long')
+    if (sigObj.s.length === 33 && sigObj.s[0] === 0x00) sigObj.s = sigObj.s.slice(1)
+    if (sigObj.s.length > 32) throw new Error('S length is too long')
+  } catch (err) {
+    return
+  }
+
+  sigObj.r.copy(r, 32 - sigObj.r.length)
+  sigObj.s.copy(s, 32 - sigObj.s.length)
+
+  return { r: r, s: s }
+}
+
+exports.signatureImportLax = function (sig) {
+  var r = new Buffer(ZERO_BUFFER_32)
+  var s = new Buffer(ZERO_BUFFER_32)
+
+  var length = sig.length
+  var index = 0
+
+  // sequence tag byte
+  if (sig[index++] !== 0x30) return
+
+  // sequence length byte
+  var lenbyte = sig[index++]
+  if (lenbyte & 0x80) {
+    index += lenbyte - 0x80
+    if (index > length) return
+  }
+
+  // sequence tag byte for r
+  if (sig[index++] !== 0x02) return
+
+  // length for r
+  var rlen = sig[index++]
+  if (rlen & 0x80) {
+    lenbyte = rlen - 0x80
+    if (index + lenbyte > length) return
+    for (; lenbyte > 0 && sig[index] === 0x00; index += 1, lenbyte -= 1);
+    for (rlen = 0; lenbyte > 0; index += 1, lenbyte -= 1) rlen = (rlen << 8) + sig[index]
+  }
+  if (rlen > length - index) return
+  var rindex = index
+  index += rlen
+
+  // sequence tag byte for s
+  if (sig[index++] !== 0x02) return
+
+  // length for s
+  var slen = sig[index++]
+  if (slen & 0x80) {
+    lenbyte = slen - 0x80
+    if (index + lenbyte > length) return
+    for (; lenbyte > 0 && sig[index] === 0x00; index += 1, lenbyte -= 1);
+    for (slen = 0; lenbyte > 0; index += 1, lenbyte -= 1) slen = (slen << 8) + sig[index]
+  }
+  if (slen > length - index) return
+  var sindex = index
+  index += slen
+
+  // ignore leading zeros in r
+  for (; rlen > 0 && sig[rindex] === 0x00; rlen -= 1, rindex += 1);
+  // copy r value
+  if (rlen > 32) return
+  var rvalue = sig.slice(rindex, rindex + rlen)
+  rvalue.copy(r, 32 - rvalue.length)
+
+  // ignore leading zeros in s
+  for (; slen > 0 && sig[sindex] === 0x00; slen -= 1, sindex += 1);
+  // copy s value
+  if (slen > 32) return
+  var svalue = sig.slice(sindex, sindex + slen)
+  svalue.copy(s, 32 - svalue.length)
+
+  return { r: r, s: s }
+}
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"bip66":27,"buffer":142}],268:[function(_dereq_,module,exports){
+(function (Buffer){
+'use strict'
+var createHash = _dereq_('create-hash')
+var BN = _dereq_('bn.js')
+var EC = _dereq_('elliptic').ec
+
+var messages = _dereq_('../messages.json')
+
+var ec = new EC('secp256k1')
+var ecparams = ec.curve
+
+function loadCompressedPublicKey (first, xBuffer) {
+  var x = new BN(xBuffer)
+
+  // overflow
+  if (x.cmp(ecparams.p) >= 0) return null
+  x = x.toRed(ecparams.red)
+
+  // compute corresponding Y
+  var y = x.redSqr().redIMul(x).redIAdd(ecparams.b).redSqrt()
+  if ((first === 0x03) !== y.isOdd()) y = y.redNeg()
+
+  return ec.keyPair({ pub: { x: x, y: y } })
+}
+
+function loadUncompressedPublicKey (first, xBuffer, yBuffer) {
+  var x = new BN(xBuffer)
+  var y = new BN(yBuffer)
+
+  // overflow
+  if (x.cmp(ecparams.p) >= 0 || y.cmp(ecparams.p) >= 0) return null
+
+  x = x.toRed(ecparams.red)
+  y = y.toRed(ecparams.red)
+
+  // is odd flag
+  if ((first === 0x06 || first === 0x07) && y.isOdd() !== (first === 0x07)) return null
+
+  // x*x*x + b = y*y
+  var x3 = x.redSqr().redIMul(x)
+  if (!y.redSqr().redISub(x3.redIAdd(ecparams.b)).isZero()) return null
+
+  return ec.keyPair({ pub: { x: x, y: y } })
+}
+
+function loadPublicKey (publicKey) {
+  var first = publicKey[0]
+  switch (first) {
+    case 0x02:
+    case 0x03:
+      if (publicKey.length !== 33) return null
+      return loadCompressedPublicKey(first, publicKey.slice(1, 33))
+    case 0x04:
+    case 0x06:
+    case 0x07:
+      if (publicKey.length !== 65) return null
+      return loadUncompressedPublicKey(first, publicKey.slice(1, 33), publicKey.slice(33, 65))
+    default:
+      return null
+  }
+}
+
+exports.privateKeyVerify = function (privateKey) {
+  var bn = new BN(privateKey)
+  return bn.cmp(ecparams.n) < 0 && !bn.isZero()
+}
+
+exports.privateKeyExport = function (privateKey, compressed) {
+  var d = new BN(privateKey)
+  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.EC_PRIVATE_KEY_EXPORT_DER_FAIL)
+
+  return new Buffer(ec.keyFromPrivate(privateKey).getPublic(compressed, true))
+}
+
+exports.privateKeyTweakAdd = function (privateKey, tweak) {
+  var bn = new BN(tweak)
+  if (bn.cmp(ecparams.n) >= 0) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_ADD_FAIL)
+
+  bn.iadd(new BN(privateKey))
+  if (bn.cmp(ecparams.n) >= 0) bn.isub(ecparams.n)
+  if (bn.isZero()) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_ADD_FAIL)
+
+  return bn.toArrayLike(Buffer, 'be', 32)
+}
+
+exports.privateKeyTweakMul = function (privateKey, tweak) {
+  var bn = new BN(tweak)
+  if (bn.cmp(ecparams.n) >= 0 || bn.isZero()) throw new Error(messages.EC_PRIVATE_KEY_TWEAK_MUL_FAIL)
+
+  bn.imul(new BN(privateKey))
+  if (bn.cmp(ecparams.n)) bn = bn.umod(ecparams.n)
+
+  return bn.toArrayLike(Buffer, 'be', 32)
+}
+
+exports.publicKeyCreate = function (privateKey, compressed) {
+  var d = new BN(privateKey)
+  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.EC_PUBLIC_KEY_CREATE_FAIL)
+
+  return new Buffer(ec.keyFromPrivate(privateKey).getPublic(compressed, true))
+}
+
+exports.publicKeyConvert = function (publicKey, compressed) {
+  var pair = loadPublicKey(publicKey)
+  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+
+  return new Buffer(pair.getPublic(compressed, true))
+}
+
+exports.publicKeyVerify = function (publicKey) {
+  return loadPublicKey(publicKey) !== null
+}
+
+exports.publicKeyTweakAdd = function (publicKey, tweak, compressed) {
+  var pair = loadPublicKey(publicKey)
+  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+
+  tweak = new BN(tweak)
+  if (tweak.cmp(ecparams.n) >= 0) throw new Error(messages.EC_PUBLIC_KEY_TWEAK_ADD_FAIL)
+
+  return new Buffer(ecparams.g.mul(tweak).add(pair.pub).encode(true, compressed))
+}
+
+exports.publicKeyTweakMul = function (publicKey, tweak, compressed) {
+  var pair = loadPublicKey(publicKey)
+  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+
+  tweak = new BN(tweak)
+  if (tweak.cmp(ecparams.n) >= 0 || tweak.isZero()) throw new Error(messages.EC_PUBLIC_KEY_TWEAK_MUL_FAIL)
+
+  return new Buffer(pair.pub.mul(tweak).encode(true, compressed))
+}
+
+exports.publicKeyCombine = function (publicKeys, compressed) {
+  var pairs = new Array(publicKeys.length)
+  for (var i = 0; i < publicKeys.length; ++i) {
+    pairs[i] = loadPublicKey(publicKeys[i])
+    if (pairs[i] === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+  }
+
+  var point = pairs[0].pub
+  for (var j = 1; j < pairs.length; ++j) point = point.add(pairs[j].pub)
+  if (point.isInfinity()) throw new Error(messages.EC_PUBLIC_KEY_COMBINE_FAIL)
+
+  return new Buffer(point.encode(true, compressed))
+}
+
+exports.signatureNormalize = function (signature) {
+  var r = new BN(signature.slice(0, 32))
+  var s = new BN(signature.slice(32, 64))
+  if (r.cmp(ecparams.n) >= 0 || s.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
+
+  var result = new Buffer(signature)
+  if (s.cmp(ec.nh) === 1) ecparams.n.sub(s).toArrayLike(Buffer, 'be', 32).copy(result, 32)
+
+  return result
+}
+
+exports.signatureExport = function (signature) {
+  var r = signature.slice(0, 32)
+  var s = signature.slice(32, 64)
+  if (new BN(r).cmp(ecparams.n) >= 0 || new BN(s).cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
+
+  return { r: r, s: s }
+}
+
+exports.signatureImport = function (sigObj) {
+  var r = new BN(sigObj.r)
+  if (r.cmp(ecparams.n) >= 0) r = new BN(0)
+
+  var s = new BN(sigObj.s)
+  if (s.cmp(ecparams.n) >= 0) s = new BN(0)
+
+  return Buffer.concat([
+    r.toArrayLike(Buffer, 'be', 32),
+    s.toArrayLike(Buffer, 'be', 32)
+  ])
+}
+
+exports.sign = function (message, privateKey, noncefn, data) {
+  if (typeof noncefn === 'function') {
+    var getNonce = noncefn
+    noncefn = function (counter) {
+      var nonce = getNonce(message, privateKey, null, data, counter)
+      if (!Buffer.isBuffer(nonce) || nonce.length !== 32) throw new Error(messages.ECDSA_SIGN_FAIL)
+
+      return new BN(nonce)
+    }
+  }
+
+  var d = new BN(privateKey)
+  if (d.cmp(ecparams.n) >= 0 || d.isZero()) throw new Error(messages.ECDSA_SIGN_FAIL)
+
+  var result = ec.sign(message, privateKey, { canonical: true, k: noncefn, pers: data })
+  return {
+    signature: Buffer.concat([
+      result.r.toArrayLike(Buffer, 'be', 32),
+      result.s.toArrayLike(Buffer, 'be', 32)
+    ]),
+    recovery: result.recoveryParam
+  }
+}
+
+exports.verify = function (message, signature, publicKey) {
+  var sigObj = {r: signature.slice(0, 32), s: signature.slice(32, 64)}
+
+  var sigr = new BN(sigObj.r)
+  var sigs = new BN(sigObj.s)
+  if (sigr.cmp(ecparams.n) >= 0 || sigs.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
+  if (sigs.cmp(ec.nh) === 1 || sigr.isZero() || sigs.isZero()) return false
+
+  var pair = loadPublicKey(publicKey)
+  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+
+  return ec.verify(message, sigObj, {x: pair.pub.x, y: pair.pub.y})
+}
+
+exports.recover = function (message, signature, recovery, compressed) {
+  var sigObj = {r: signature.slice(0, 32), s: signature.slice(32, 64)}
+
+  var sigr = new BN(sigObj.r)
+  var sigs = new BN(sigObj.s)
+  if (sigr.cmp(ecparams.n) >= 0 || sigs.cmp(ecparams.n) >= 0) throw new Error(messages.ECDSA_SIGNATURE_PARSE_FAIL)
+
+  try {
+    if (sigr.isZero() || sigs.isZero()) throw new Error()
+
+    var point = ec.recoverPubKey(message, sigObj, recovery)
+    return new Buffer(point.encode(true, compressed))
+  } catch (err) {
+    throw new Error(messages.ECDSA_RECOVER_FAIL)
+  }
+}
+
+exports.ecdh = function (publicKey, privateKey) {
+  var shared = exports.ecdhUnsafe(publicKey, privateKey, true)
+  return createHash('sha256').update(shared).digest()
+}
+
+exports.ecdhUnsafe = function (publicKey, privateKey, compressed) {
+  var pair = loadPublicKey(publicKey)
+  if (pair === null) throw new Error(messages.EC_PUBLIC_KEY_PARSE_FAIL)
+
+  var scalar = new BN(privateKey)
+  if (scalar.cmp(ecparams.n) >= 0 || scalar.isZero()) throw new Error(messages.ECDH_FAIL)
+
+  return new Buffer(pair.pub.mul(scalar).encode(true, compressed))
+}
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"../messages.json":270,"bn.js":112,"buffer":142,"create-hash":146,"elliptic":195}],269:[function(_dereq_,module,exports){
+'use strict'
+var assert = _dereq_('./assert')
+var der = _dereq_('./der')
+var messages = _dereq_('./messages.json')
+
+function initCompressedValue (value, defaultValue) {
+  if (value === undefined) return defaultValue
+
+  assert.isBoolean(value, messages.COMPRESSED_TYPE_INVALID)
+  return value
+}
+
+module.exports = function (secp256k1) {
+  return {
+    privateKeyVerify: function (privateKey) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      return privateKey.length === 32 && secp256k1.privateKeyVerify(privateKey)
+    },
+
+    privateKeyExport: function (privateKey, compressed) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+      var publicKey = secp256k1.privateKeyExport(privateKey, compressed)
+
+      return der.privateKeyExport(privateKey, publicKey, compressed)
+    },
+
+    privateKeyImport: function (privateKey) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+
+      privateKey = der.privateKeyImport(privateKey)
+      if (privateKey && privateKey.length === 32 && secp256k1.privateKeyVerify(privateKey)) return privateKey
+
+      throw new Error(messages.EC_PRIVATE_KEY_IMPORT_DER_FAIL)
+    },
+
+    privateKeyTweakAdd: function (privateKey, tweak) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
+      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
+
+      return secp256k1.privateKeyTweakAdd(privateKey, tweak)
+    },
+
+    privateKeyTweakMul: function (privateKey, tweak) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
+      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
+
+      return secp256k1.privateKeyTweakMul(privateKey, tweak)
+    },
+
+    publicKeyCreate: function (privateKey, compressed) {
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.publicKeyCreate(privateKey, compressed)
+    },
+
+    publicKeyConvert: function (publicKey, compressed) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.publicKeyConvert(publicKey, compressed)
+    },
+
+    publicKeyVerify: function (publicKey) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      return secp256k1.publicKeyVerify(publicKey)
+    },
+
+    publicKeyTweakAdd: function (publicKey, tweak, compressed) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
+      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.publicKeyTweakAdd(publicKey, tweak, compressed)
+    },
+
+    publicKeyTweakMul: function (publicKey, tweak, compressed) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(tweak, messages.TWEAK_TYPE_INVALID)
+      assert.isBufferLength(tweak, 32, messages.TWEAK_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.publicKeyTweakMul(publicKey, tweak, compressed)
+    },
+
+    publicKeyCombine: function (publicKeys, compressed) {
+      assert.isArray(publicKeys, messages.EC_PUBLIC_KEYS_TYPE_INVALID)
+      assert.isLengthGTZero(publicKeys, messages.EC_PUBLIC_KEYS_LENGTH_INVALID)
+      for (var i = 0; i < publicKeys.length; ++i) {
+        assert.isBuffer(publicKeys[i], messages.EC_PUBLIC_KEY_TYPE_INVALID)
+        assert.isBufferLength2(publicKeys[i], 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+      }
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.publicKeyCombine(publicKeys, compressed)
+    },
+
+    signatureNormalize: function (signature) {
+      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      return secp256k1.signatureNormalize(signature)
+    },
+
+    signatureExport: function (signature) {
+      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      var sigObj = secp256k1.signatureExport(signature)
+      return der.signatureExport(sigObj)
+    },
+
+    signatureImport: function (sig) {
+      assert.isBuffer(sig, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isLengthGTZero(sig, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      var sigObj = der.signatureImport(sig)
+      if (sigObj) return secp256k1.signatureImport(sigObj)
+
+      throw new Error(messages.ECDSA_SIGNATURE_PARSE_DER_FAIL)
+    },
+
+    signatureImportLax: function (sig) {
+      assert.isBuffer(sig, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isLengthGTZero(sig, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      var sigObj = der.signatureImportLax(sig)
+      if (sigObj) return secp256k1.signatureImport(sigObj)
+
+      throw new Error(messages.ECDSA_SIGNATURE_PARSE_DER_FAIL)
+    },
+
+    sign: function (message, privateKey, options) {
+      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
+      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
+
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      var data = null
+      var noncefn = null
+      if (options !== undefined) {
+        assert.isObject(options, messages.OPTIONS_TYPE_INVALID)
+
+        if (options.data !== undefined) {
+          assert.isBuffer(options.data, messages.OPTIONS_DATA_TYPE_INVALID)
+          assert.isBufferLength(options.data, 32, messages.OPTIONS_DATA_LENGTH_INVALID)
+          data = options.data
+        }
+
+        if (options.noncefn !== undefined) {
+          assert.isFunction(options.noncefn, messages.OPTIONS_NONCEFN_TYPE_INVALID)
+          noncefn = options.noncefn
+        }
+      }
+
+      return secp256k1.sign(message, privateKey, noncefn, data)
+    },
+
+    verify: function (message, signature, publicKey) {
+      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
+      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
+
+      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      return secp256k1.verify(message, signature, publicKey)
+    },
+
+    recover: function (message, signature, recovery, compressed) {
+      assert.isBuffer(message, messages.MSG32_TYPE_INVALID)
+      assert.isBufferLength(message, 32, messages.MSG32_LENGTH_INVALID)
+
+      assert.isBuffer(signature, messages.ECDSA_SIGNATURE_TYPE_INVALID)
+      assert.isBufferLength(signature, 64, messages.ECDSA_SIGNATURE_LENGTH_INVALID)
+
+      assert.isNumber(recovery, messages.RECOVERY_ID_TYPE_INVALID)
+      assert.isNumberInInterval(recovery, -1, 4, messages.RECOVERY_ID_VALUE_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.recover(message, signature, recovery, compressed)
+    },
+
+    ecdh: function (publicKey, privateKey) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      return secp256k1.ecdh(publicKey, privateKey)
+    },
+
+    ecdhUnsafe: function (publicKey, privateKey, compressed) {
+      assert.isBuffer(publicKey, messages.EC_PUBLIC_KEY_TYPE_INVALID)
+      assert.isBufferLength2(publicKey, 33, 65, messages.EC_PUBLIC_KEY_LENGTH_INVALID)
+
+      assert.isBuffer(privateKey, messages.EC_PRIVATE_KEY_TYPE_INVALID)
+      assert.isBufferLength(privateKey, 32, messages.EC_PRIVATE_KEY_LENGTH_INVALID)
+
+      compressed = initCompressedValue(compressed, true)
+
+      return secp256k1.ecdhUnsafe(publicKey, privateKey, compressed)
+    }
+  }
+}
+
+},{"./assert":266,"./der":267,"./messages.json":270}],270:[function(_dereq_,module,exports){
+module.exports={
+  "COMPRESSED_TYPE_INVALID": "compressed should be a boolean",
+  "EC_PRIVATE_KEY_TYPE_INVALID": "private key should be a Buffer",
+  "EC_PRIVATE_KEY_LENGTH_INVALID": "private key length is invalid",
+  "EC_PRIVATE_KEY_TWEAK_ADD_FAIL": "tweak out of range or resulting private key is invalid",
+  "EC_PRIVATE_KEY_TWEAK_MUL_FAIL": "tweak out of range",
+  "EC_PRIVATE_KEY_EXPORT_DER_FAIL": "couldn't export to DER format",
+  "EC_PRIVATE_KEY_IMPORT_DER_FAIL": "couldn't import from DER format",
+  "EC_PUBLIC_KEYS_TYPE_INVALID": "public keys should be an Array",
+  "EC_PUBLIC_KEYS_LENGTH_INVALID": "public keys Array should have at least 1 element",
+  "EC_PUBLIC_KEY_TYPE_INVALID": "public key should be a Buffer",
+  "EC_PUBLIC_KEY_LENGTH_INVALID": "public key length is invalid",
+  "EC_PUBLIC_KEY_PARSE_FAIL": "the public key could not be parsed or is invalid",
+  "EC_PUBLIC_KEY_CREATE_FAIL": "private was invalid, try again",
+  "EC_PUBLIC_KEY_TWEAK_ADD_FAIL": "tweak out of range or resulting public key is invalid",
+  "EC_PUBLIC_KEY_TWEAK_MUL_FAIL": "tweak out of range",
+  "EC_PUBLIC_KEY_COMBINE_FAIL": "the sum of the public keys is not valid",
+  "ECDH_FAIL": "scalar was invalid (zero or overflow)",
+  "ECDSA_SIGNATURE_TYPE_INVALID": "signature should be a Buffer",
+  "ECDSA_SIGNATURE_LENGTH_INVALID": "signature length is invalid",
+  "ECDSA_SIGNATURE_PARSE_FAIL": "couldn't parse signature",
+  "ECDSA_SIGNATURE_PARSE_DER_FAIL": "couldn't parse DER signature",
+  "ECDSA_SIGNATURE_SERIALIZE_DER_FAIL": "couldn't serialize signature to DER format",
+  "ECDSA_SIGN_FAIL": "nonce generation function failed or private key is invalid",
+  "ECDSA_RECOVER_FAIL": "couldn't recover public key from signature",
+  "MSG32_TYPE_INVALID": "message should be a Buffer",
+  "MSG32_LENGTH_INVALID": "message length is invalid",
+  "OPTIONS_TYPE_INVALID": "options should be an Object",
+  "OPTIONS_DATA_TYPE_INVALID": "options.data should be a Buffer",
+  "OPTIONS_DATA_LENGTH_INVALID": "options.data length is invalid",
+  "OPTIONS_NONCEFN_TYPE_INVALID": "options.noncefn should be a Function",
+  "RECOVERY_ID_TYPE_INVALID": "recovery should be a Number",
+  "RECOVERY_ID_VALUE_INVALID": "recovery should have value between -1 and 4",
+  "TWEAK_TYPE_INVALID": "tweak should be a Buffer",
+  "TWEAK_LENGTH_INVALID": "tweak length is invalid"
+}
+
+},{}],271:[function(_dereq_,module,exports){
+(function (Buffer){
+// prototype class for hash functions
+function Hash (blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}
+
+Hash.prototype.update = function (data, enc) {
+  if (typeof data === 'string') {
+    enc = enc || 'utf8'
+    data = new Buffer(data, enc)
+  }
+
+  var l = this._len += data.length
+  var s = this._s || 0
+  var f = 0
+  var buffer = this._block
+
+  while (s < l) {
+    var t = Math.min(data.length, f + this._blockSize - (s % this._blockSize))
+    var ch = (t - f)
+
+    for (var i = 0; i < ch; i++) {
+      buffer[(s % this._blockSize) + i] = data[i + f]
+    }
+
+    s += ch
+    f += ch
+
+    if ((s % this._blockSize) === 0) {
+      this._update(buffer)
+    }
+  }
+  this._s = s
+
+  return this
+}
+
+Hash.prototype.digest = function (enc) {
+  // Suppose the length of the message M, in bits, is l
+  var l = this._len * 8
+
+  // Append the bit 1 to the end of the message
+  this._block[this._len % this._blockSize] = 0x80
+
+  // and then k zero bits, where k is the smallest non-negative solution to the equation (l + 1 + k) === finalSize mod blockSize
+  this._block.fill(0, this._len % this._blockSize + 1)
+
+  if (l % (this._blockSize * 8) >= this._finalSize * 8) {
+    this._update(this._block)
+    this._block.fill(0)
+  }
+
+  // to this append the block which is equal to the number l written in binary
+  // TODO: handle case where l is > Math.pow(2, 29)
+  this._block.writeInt32BE(l, this._blockSize - 4)
+
+  var hash = this._update(this._block) || this._hash()
+
+  return enc ? hash.toString(enc) : hash
+}
+
+Hash.prototype._update = function () {
+  throw new Error('_update must be implemented by subclass')
+}
+
+module.exports = Hash
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":142}],272:[function(_dereq_,module,exports){
+var exports = module.exports = function SHA (algorithm) {
+  algorithm = algorithm.toLowerCase()
+
+  var Algorithm = exports[algorithm]
+  if (!Algorithm) throw new Error(algorithm + ' is not supported (we accept pull requests)')
+
+  return new Algorithm()
+}
+
+exports.sha = _dereq_('./sha')
+exports.sha1 = _dereq_('./sha1')
+exports.sha224 = _dereq_('./sha224')
+exports.sha256 = _dereq_('./sha256')
+exports.sha384 = _dereq_('./sha384')
+exports.sha512 = _dereq_('./sha512')
+
+},{"./sha":273,"./sha1":274,"./sha224":275,"./sha256":276,"./sha384":277,"./sha512":278}],273:[function(_dereq_,module,exports){
+(function (Buffer){
+/*
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
+ * in FIPS PUB 180-1
+ * This source code is derived from sha1.js of the same repository.
+ * The difference between SHA-0 and SHA-1 is just a bitwise rotate left
+ * operation was added.
+ */
+
+var inherits = _dereq_('inherits')
+var Hash = _dereq_('./hash')
+
+var K = [
+  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
+]
+
+var W = new Array(80)
+
+function Sha () {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}
+
+inherits(Sha, Hash)
+
+Sha.prototype.init = function () {
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
+
+  return this
+}
+
+function rotl5 (num) {
+  return (num << 5) | (num >>> 27)
+}
+
+function rotl30 (num) {
+  return (num << 30) | (num >>> 2)
+}
+
+function ft (s, b, c, d) {
+  if (s === 0) return (b & c) | ((~b) & d)
+  if (s === 2) return (b & c) | (b & d) | (c & d)
+  return b ^ c ^ d
+}
+
+Sha.prototype._update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 80; ++i) W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]
+
+  for (var j = 0; j < 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
+
+    e = d
+    d = c
+    c = rotl30(b)
+    b = a
+    a = t
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+}
+
+Sha.prototype._hash = function () {
+  var H = new Buffer(20)
+
+  H.writeInt32BE(this._a | 0, 0)
+  H.writeInt32BE(this._b | 0, 4)
+  H.writeInt32BE(this._c | 0, 8)
+  H.writeInt32BE(this._d | 0, 12)
+  H.writeInt32BE(this._e | 0, 16)
+
+  return H
+}
+
+module.exports = Sha
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"buffer":142,"inherits":226}],274:[function(_dereq_,module,exports){
+(function (Buffer){
+/*
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
+ * in FIPS PUB 180-1
+ * Version 2.1a Copyright Paul Johnston 2000 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for details.
+ */
+
+var inherits = _dereq_('inherits')
+var Hash = _dereq_('./hash')
+
+var K = [
+  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
+]
+
+var W = new Array(80)
+
+function Sha1 () {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}
+
+inherits(Sha1, Hash)
+
+Sha1.prototype.init = function () {
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
+
+  return this
+}
+
+function rotl1 (num) {
+  return (num << 1) | (num >>> 31)
+}
+
+function rotl5 (num) {
+  return (num << 5) | (num >>> 27)
+}
+
+function rotl30 (num) {
+  return (num << 30) | (num >>> 2)
+}
+
+function ft (s, b, c, d) {
+  if (s === 0) return (b & c) | ((~b) & d)
+  if (s === 2) return (b & c) | (b & d) | (c & d)
+  return b ^ c ^ d
+}
+
+Sha1.prototype._update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 80; ++i) W[i] = rotl1(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16])
+
+  for (var j = 0; j < 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
+
+    e = d
+    d = c
+    c = rotl30(b)
+    b = a
+    a = t
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+}
+
+Sha1.prototype._hash = function () {
+  var H = new Buffer(20)
+
+  H.writeInt32BE(this._a | 0, 0)
+  H.writeInt32BE(this._b | 0, 4)
+  H.writeInt32BE(this._c | 0, 8)
+  H.writeInt32BE(this._d | 0, 12)
+  H.writeInt32BE(this._e | 0, 16)
+
+  return H
+}
+
+module.exports = Sha1
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"buffer":142,"inherits":226}],275:[function(_dereq_,module,exports){
+(function (Buffer){
+/**
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
+ * in FIPS 180-2
+ * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ *
+ */
+
+var inherits = _dereq_('inherits')
+var Sha256 = _dereq_('./sha256')
+var Hash = _dereq_('./hash')
+
+var W = new Array(64)
+
+function Sha224 () {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}
+
+inherits(Sha224, Sha256)
+
+Sha224.prototype.init = function () {
+  this._a = 0xc1059ed8
+  this._b = 0x367cd507
+  this._c = 0x3070dd17
+  this._d = 0xf70e5939
+  this._e = 0xffc00b31
+  this._f = 0x68581511
+  this._g = 0x64f98fa7
+  this._h = 0xbefa4fa4
+
+  return this
+}
+
+Sha224.prototype._hash = function () {
+  var H = new Buffer(28)
+
+  H.writeInt32BE(this._a, 0)
+  H.writeInt32BE(this._b, 4)
+  H.writeInt32BE(this._c, 8)
+  H.writeInt32BE(this._d, 12)
+  H.writeInt32BE(this._e, 16)
+  H.writeInt32BE(this._f, 20)
+  H.writeInt32BE(this._g, 24)
+
+  return H
+}
+
+module.exports = Sha224
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"./sha256":276,"buffer":142,"inherits":226}],276:[function(_dereq_,module,exports){
+(function (Buffer){
+/**
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
+ * in FIPS 180-2
+ * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ *
+ */
+
+var inherits = _dereq_('inherits')
+var Hash = _dereq_('./hash')
+
+var K = [
+  0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
+  0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5,
+  0xD807AA98, 0x12835B01, 0x243185BE, 0x550C7DC3,
+  0x72BE5D74, 0x80DEB1FE, 0x9BDC06A7, 0xC19BF174,
+  0xE49B69C1, 0xEFBE4786, 0x0FC19DC6, 0x240CA1CC,
+  0x2DE92C6F, 0x4A7484AA, 0x5CB0A9DC, 0x76F988DA,
+  0x983E5152, 0xA831C66D, 0xB00327C8, 0xBF597FC7,
+  0xC6E00BF3, 0xD5A79147, 0x06CA6351, 0x14292967,
+  0x27B70A85, 0x2E1B2138, 0x4D2C6DFC, 0x53380D13,
+  0x650A7354, 0x766A0ABB, 0x81C2C92E, 0x92722C85,
+  0xA2BFE8A1, 0xA81A664B, 0xC24B8B70, 0xC76C51A3,
+  0xD192E819, 0xD6990624, 0xF40E3585, 0x106AA070,
+  0x19A4C116, 0x1E376C08, 0x2748774C, 0x34B0BCB5,
+  0x391C0CB3, 0x4ED8AA4A, 0x5B9CCA4F, 0x682E6FF3,
+  0x748F82EE, 0x78A5636F, 0x84C87814, 0x8CC70208,
+  0x90BEFFFA, 0xA4506CEB, 0xBEF9A3F7, 0xC67178F2
+]
+
+var W = new Array(64)
+
+function Sha256 () {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}
+
+inherits(Sha256, Hash)
+
+Sha256.prototype.init = function () {
+  this._a = 0x6a09e667
+  this._b = 0xbb67ae85
+  this._c = 0x3c6ef372
+  this._d = 0xa54ff53a
+  this._e = 0x510e527f
+  this._f = 0x9b05688c
+  this._g = 0x1f83d9ab
+  this._h = 0x5be0cd19
+
+  return this
+}
+
+function ch (x, y, z) {
+  return z ^ (x & (y ^ z))
+}
+
+function maj (x, y, z) {
+  return (x & y) | (z & (x | y))
+}
+
+function sigma0 (x) {
+  return (x >>> 2 | x << 30) ^ (x >>> 13 | x << 19) ^ (x >>> 22 | x << 10)
+}
+
+function sigma1 (x) {
+  return (x >>> 6 | x << 26) ^ (x >>> 11 | x << 21) ^ (x >>> 25 | x << 7)
+}
+
+function gamma0 (x) {
+  return (x >>> 7 | x << 25) ^ (x >>> 18 | x << 14) ^ (x >>> 3)
+}
+
+function gamma1 (x) {
+  return (x >>> 17 | x << 15) ^ (x >>> 19 | x << 13) ^ (x >>> 10)
+}
+
+Sha256.prototype._update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+  var f = this._f | 0
+  var g = this._g | 0
+  var h = this._h | 0
+
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 64; ++i) W[i] = (gamma1(W[i - 2]) + W[i - 7] + gamma0(W[i - 15]) + W[i - 16]) | 0
+
+  for (var j = 0; j < 64; ++j) {
+    var T1 = (h + sigma1(e) + ch(e, f, g) + K[j] + W[j]) | 0
+    var T2 = (sigma0(a) + maj(a, b, c)) | 0
+
+    h = g
+    g = f
+    f = e
+    e = (d + T1) | 0
+    d = c
+    c = b
+    b = a
+    a = (T1 + T2) | 0
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+  this._f = (f + this._f) | 0
+  this._g = (g + this._g) | 0
+  this._h = (h + this._h) | 0
+}
+
+Sha256.prototype._hash = function () {
+  var H = new Buffer(32)
+
+  H.writeInt32BE(this._a, 0)
+  H.writeInt32BE(this._b, 4)
+  H.writeInt32BE(this._c, 8)
+  H.writeInt32BE(this._d, 12)
+  H.writeInt32BE(this._e, 16)
+  H.writeInt32BE(this._f, 20)
+  H.writeInt32BE(this._g, 24)
+  H.writeInt32BE(this._h, 28)
+
+  return H
+}
+
+module.exports = Sha256
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"buffer":142,"inherits":226}],277:[function(_dereq_,module,exports){
+(function (Buffer){
+var inherits = _dereq_('inherits')
+var SHA512 = _dereq_('./sha512')
+var Hash = _dereq_('./hash')
+
+var W = new Array(160)
+
+function Sha384 () {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}
+
+inherits(Sha384, SHA512)
+
+Sha384.prototype.init = function () {
+  this._ah = 0xcbbb9d5d
+  this._bh = 0x629a292a
+  this._ch = 0x9159015a
+  this._dh = 0x152fecd8
+  this._eh = 0x67332667
+  this._fh = 0x8eb44a87
+  this._gh = 0xdb0c2e0d
+  this._hh = 0x47b5481d
+
+  this._al = 0xc1059ed8
+  this._bl = 0x367cd507
+  this._cl = 0x3070dd17
+  this._dl = 0xf70e5939
+  this._el = 0xffc00b31
+  this._fl = 0x68581511
+  this._gl = 0x64f98fa7
+  this._hl = 0xbefa4fa4
+
+  return this
+}
+
+Sha384.prototype._hash = function () {
+  var H = new Buffer(48)
+
+  function writeInt64BE (h, l, offset) {
+    H.writeInt32BE(h, offset)
+    H.writeInt32BE(l, offset + 4)
+  }
+
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
+
+  return H
+}
+
+module.exports = Sha384
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"./sha512":278,"buffer":142,"inherits":226}],278:[function(_dereq_,module,exports){
+(function (Buffer){
+var inherits = _dereq_('inherits')
+var Hash = _dereq_('./hash')
+
+var K = [
+  0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd,
+  0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
+  0x3956c25b, 0xf348b538, 0x59f111f1, 0xb605d019,
+  0x923f82a4, 0xaf194f9b, 0xab1c5ed5, 0xda6d8118,
+  0xd807aa98, 0xa3030242, 0x12835b01, 0x45706fbe,
+  0x243185be, 0x4ee4b28c, 0x550c7dc3, 0xd5ffb4e2,
+  0x72be5d74, 0xf27b896f, 0x80deb1fe, 0x3b1696b1,
+  0x9bdc06a7, 0x25c71235, 0xc19bf174, 0xcf692694,
+  0xe49b69c1, 0x9ef14ad2, 0xefbe4786, 0x384f25e3,
+  0x0fc19dc6, 0x8b8cd5b5, 0x240ca1cc, 0x77ac9c65,
+  0x2de92c6f, 0x592b0275, 0x4a7484aa, 0x6ea6e483,
+  0x5cb0a9dc, 0xbd41fbd4, 0x76f988da, 0x831153b5,
+  0x983e5152, 0xee66dfab, 0xa831c66d, 0x2db43210,
+  0xb00327c8, 0x98fb213f, 0xbf597fc7, 0xbeef0ee4,
+  0xc6e00bf3, 0x3da88fc2, 0xd5a79147, 0x930aa725,
+  0x06ca6351, 0xe003826f, 0x14292967, 0x0a0e6e70,
+  0x27b70a85, 0x46d22ffc, 0x2e1b2138, 0x5c26c926,
+  0x4d2c6dfc, 0x5ac42aed, 0x53380d13, 0x9d95b3df,
+  0x650a7354, 0x8baf63de, 0x766a0abb, 0x3c77b2a8,
+  0x81c2c92e, 0x47edaee6, 0x92722c85, 0x1482353b,
+  0xa2bfe8a1, 0x4cf10364, 0xa81a664b, 0xbc423001,
+  0xc24b8b70, 0xd0f89791, 0xc76c51a3, 0x0654be30,
+  0xd192e819, 0xd6ef5218, 0xd6990624, 0x5565a910,
+  0xf40e3585, 0x5771202a, 0x106aa070, 0x32bbd1b8,
+  0x19a4c116, 0xb8d2d0c8, 0x1e376c08, 0x5141ab53,
+  0x2748774c, 0xdf8eeb99, 0x34b0bcb5, 0xe19b48a8,
+  0x391c0cb3, 0xc5c95a63, 0x4ed8aa4a, 0xe3418acb,
+  0x5b9cca4f, 0x7763e373, 0x682e6ff3, 0xd6b2b8a3,
+  0x748f82ee, 0x5defb2fc, 0x78a5636f, 0x43172f60,
+  0x84c87814, 0xa1f0ab72, 0x8cc70208, 0x1a6439ec,
+  0x90befffa, 0x23631e28, 0xa4506ceb, 0xde82bde9,
+  0xbef9a3f7, 0xb2c67915, 0xc67178f2, 0xe372532b,
+  0xca273ece, 0xea26619c, 0xd186b8c7, 0x21c0c207,
+  0xeada7dd6, 0xcde0eb1e, 0xf57d4f7f, 0xee6ed178,
+  0x06f067aa, 0x72176fba, 0x0a637dc5, 0xa2c898a6,
+  0x113f9804, 0xbef90dae, 0x1b710b35, 0x131c471b,
+  0x28db77f5, 0x23047d84, 0x32caab7b, 0x40c72493,
+  0x3c9ebe0a, 0x15c9bebc, 0x431d67c4, 0x9c100d4c,
+  0x4cc5d4be, 0xcb3e42b6, 0x597f299c, 0xfc657e2a,
+  0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817
+]
+
+var W = new Array(160)
+
+function Sha512 () {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}
+
+inherits(Sha512, Hash)
+
+Sha512.prototype.init = function () {
+  this._ah = 0x6a09e667
+  this._bh = 0xbb67ae85
+  this._ch = 0x3c6ef372
+  this._dh = 0xa54ff53a
+  this._eh = 0x510e527f
+  this._fh = 0x9b05688c
+  this._gh = 0x1f83d9ab
+  this._hh = 0x5be0cd19
+
+  this._al = 0xf3bcc908
+  this._bl = 0x84caa73b
+  this._cl = 0xfe94f82b
+  this._dl = 0x5f1d36f1
+  this._el = 0xade682d1
+  this._fl = 0x2b3e6c1f
+  this._gl = 0xfb41bd6b
+  this._hl = 0x137e2179
+
+  return this
+}
+
+function Ch (x, y, z) {
+  return z ^ (x & (y ^ z))
+}
+
+function maj (x, y, z) {
+  return (x & y) | (z & (x | y))
+}
+
+function sigma0 (x, xl) {
+  return (x >>> 28 | xl << 4) ^ (xl >>> 2 | x << 30) ^ (xl >>> 7 | x << 25)
+}
+
+function sigma1 (x, xl) {
+  return (x >>> 14 | xl << 18) ^ (x >>> 18 | xl << 14) ^ (xl >>> 9 | x << 23)
+}
+
+function Gamma0 (x, xl) {
+  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7)
+}
+
+function Gamma0l (x, xl) {
+  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7 | xl << 25)
+}
+
+function Gamma1 (x, xl) {
+  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6)
+}
+
+function Gamma1l (x, xl) {
+  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6 | xl << 26)
+}
+
+function getCarry (a, b) {
+  return (a >>> 0) < (b >>> 0) ? 1 : 0
+}
+
+Sha512.prototype._update = function (M) {
+  var W = this._w
+
+  var ah = this._ah | 0
+  var bh = this._bh | 0
+  var ch = this._ch | 0
+  var dh = this._dh | 0
+  var eh = this._eh | 0
+  var fh = this._fh | 0
+  var gh = this._gh | 0
+  var hh = this._hh | 0
+
+  var al = this._al | 0
+  var bl = this._bl | 0
+  var cl = this._cl | 0
+  var dl = this._dl | 0
+  var el = this._el | 0
+  var fl = this._fl | 0
+  var gl = this._gl | 0
+  var hl = this._hl | 0
+
+  for (var i = 0; i < 32; i += 2) {
+    W[i] = M.readInt32BE(i * 4)
+    W[i + 1] = M.readInt32BE(i * 4 + 4)
+  }
+  for (; i < 160; i += 2) {
+    var xh = W[i - 15 * 2]
+    var xl = W[i - 15 * 2 + 1]
+    var gamma0 = Gamma0(xh, xl)
+    var gamma0l = Gamma0l(xl, xh)
+
+    xh = W[i - 2 * 2]
+    xl = W[i - 2 * 2 + 1]
+    var gamma1 = Gamma1(xh, xl)
+    var gamma1l = Gamma1l(xl, xh)
+
+    // W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16]
+    var Wi7h = W[i - 7 * 2]
+    var Wi7l = W[i - 7 * 2 + 1]
+
+    var Wi16h = W[i - 16 * 2]
+    var Wi16l = W[i - 16 * 2 + 1]
+
+    var Wil = (gamma0l + Wi7l) | 0
+    var Wih = (gamma0 + Wi7h + getCarry(Wil, gamma0l)) | 0
+    Wil = (Wil + gamma1l) | 0
+    Wih = (Wih + gamma1 + getCarry(Wil, gamma1l)) | 0
+    Wil = (Wil + Wi16l) | 0
+    Wih = (Wih + Wi16h + getCarry(Wil, Wi16l)) | 0
+
+    W[i] = Wih
+    W[i + 1] = Wil
+  }
+
+  for (var j = 0; j < 160; j += 2) {
+    Wih = W[j]
+    Wil = W[j + 1]
+
+    var majh = maj(ah, bh, ch)
+    var majl = maj(al, bl, cl)
+
+    var sigma0h = sigma0(ah, al)
+    var sigma0l = sigma0(al, ah)
+    var sigma1h = sigma1(eh, el)
+    var sigma1l = sigma1(el, eh)
+
+    // t1 = h + sigma1 + ch + K[j] + W[j]
+    var Kih = K[j]
+    var Kil = K[j + 1]
+
+    var chh = Ch(eh, fh, gh)
+    var chl = Ch(el, fl, gl)
+
+    var t1l = (hl + sigma1l) | 0
+    var t1h = (hh + sigma1h + getCarry(t1l, hl)) | 0
+    t1l = (t1l + chl) | 0
+    t1h = (t1h + chh + getCarry(t1l, chl)) | 0
+    t1l = (t1l + Kil) | 0
+    t1h = (t1h + Kih + getCarry(t1l, Kil)) | 0
+    t1l = (t1l + Wil) | 0
+    t1h = (t1h + Wih + getCarry(t1l, Wil)) | 0
+
+    // t2 = sigma0 + maj
+    var t2l = (sigma0l + majl) | 0
+    var t2h = (sigma0h + majh + getCarry(t2l, sigma0l)) | 0
+
+    hh = gh
+    hl = gl
+    gh = fh
+    gl = fl
+    fh = eh
+    fl = el
+    el = (dl + t1l) | 0
+    eh = (dh + t1h + getCarry(el, dl)) | 0
+    dh = ch
+    dl = cl
+    ch = bh
+    cl = bl
+    bh = ah
+    bl = al
+    al = (t1l + t2l) | 0
+    ah = (t1h + t2h + getCarry(al, t1l)) | 0
+  }
+
+  this._al = (this._al + al) | 0
+  this._bl = (this._bl + bl) | 0
+  this._cl = (this._cl + cl) | 0
+  this._dl = (this._dl + dl) | 0
+  this._el = (this._el + el) | 0
+  this._fl = (this._fl + fl) | 0
+  this._gl = (this._gl + gl) | 0
+  this._hl = (this._hl + hl) | 0
+
+  this._ah = (this._ah + ah + getCarry(this._al, al)) | 0
+  this._bh = (this._bh + bh + getCarry(this._bl, bl)) | 0
+  this._ch = (this._ch + ch + getCarry(this._cl, cl)) | 0
+  this._dh = (this._dh + dh + getCarry(this._dl, dl)) | 0
+  this._eh = (this._eh + eh + getCarry(this._el, el)) | 0
+  this._fh = (this._fh + fh + getCarry(this._fl, fl)) | 0
+  this._gh = (this._gh + gh + getCarry(this._gl, gl)) | 0
+  this._hh = (this._hh + hh + getCarry(this._hl, hl)) | 0
+}
+
+Sha512.prototype._hash = function () {
+  var H = new Buffer(64)
+
+  function writeInt64BE (h, l, offset) {
+    H.writeInt32BE(h, offset)
+    H.writeInt32BE(l, offset + 4)
+  }
+
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
+  writeInt64BE(this._gh, this._gl, 48)
+  writeInt64BE(this._hh, this._hl, 56)
+
+  return H
+}
+
+module.exports = Sha512
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./hash":271,"buffer":142,"inherits":226}],279:[function(_dereq_,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+module.exports = Stream;
+
+var EE = _dereq_('events').EventEmitter;
+var inherits = _dereq_('inherits');
+
+inherits(Stream, EE);
+Stream.Readable = _dereq_('readable-stream/readable.js');
+Stream.Writable = _dereq_('readable-stream/writable.js');
+Stream.Duplex = _dereq_('readable-stream/duplex.js');
+Stream.Transform = _dereq_('readable-stream/transform.js');
+Stream.PassThrough = _dereq_('readable-stream/passthrough.js');
+
+// Backwards-compat with node 0.4.x
+Stream.Stream = Stream;
+
+
+
+// old-style streams.  Note that the pipe method (the only relevant
+// part of this class) is overridden in the Readable class.
+
+function Stream() {
+  EE.call(this);
+}
+
+Stream.prototype.pipe = function(dest, options) {
+  var source = this;
+
+  function ondata(chunk) {
+    if (dest.writable) {
+      if (false === dest.write(chunk) && source.pause) {
+        source.pause();
+      }
+    }
+  }
+
+  source.on('data', ondata);
+
+  function ondrain() {
+    if (source.readable && source.resume) {
+      source.resume();
+    }
+  }
+
+  dest.on('drain', ondrain);
+
+  // If the 'end' option is not supplied, dest.end() will be called when
+  // source gets the 'end' or 'close' events.  Only dest.end() once.
+  if (!dest._isStdio && (!options || options.end !== false)) {
+    source.on('end', onend);
+    source.on('close', onclose);
+  }
+
+  var didOnEnd = false;
+  function onend() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    dest.end();
+  }
+
+
+  function onclose() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    if (typeof dest.destroy === 'function') dest.destroy();
+  }
+
+  // don't leave dangling pipes when there are errors.
+  function onerror(er) {
+    cleanup();
+    if (EE.listenerCount(this, 'error') === 0) {
+      throw er; // Unhandled stream error in pipe.
+    }
+  }
+
+  source.on('error', onerror);
+  dest.on('error', onerror);
+
+  // remove all the event listeners that were added.
+  function cleanup() {
+    source.removeListener('data', ondata);
+    dest.removeListener('drain', ondrain);
+
+    source.removeListener('end', onend);
+    source.removeListener('close', onclose);
+
+    source.removeListener('error', onerror);
+    dest.removeListener('error', onerror);
+
+    source.removeListener('end', cleanup);
+    source.removeListener('close', cleanup);
+
+    dest.removeListener('close', cleanup);
+  }
+
+  source.on('end', cleanup);
+  source.on('close', cleanup);
+
+  dest.on('close', cleanup);
+
+  dest.emit('pipe', source);
+
+  // Allow for unix-like usage: A.pipe(B).pipe(C)
+  return dest;
+};
+
+},{"events":216,"inherits":226,"readable-stream/duplex.js":251,"readable-stream/passthrough.js":258,"readable-stream/readable.js":259,"readable-stream/transform.js":260,"readable-stream/writable.js":261}],280:[function(_dereq_,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -61678,7 +61759,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":142}],282:[function(_dereq_,module,exports){
+},{"buffer":142}],281:[function(_dereq_,module,exports){
 (function (Buffer){
 // Written in 2014-2016 by Dmitry Chestnykh and Devi Mandiri.
 // Public domain.
@@ -61732,7 +61813,7 @@ function base64DetectIncompleteChar(buffer) {
 }));
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"buffer":113}],283:[function(_dereq_,module,exports){
+},{"buffer":114}],282:[function(_dereq_,module,exports){
 (function(nacl) {
 'use strict';
 
@@ -64122,7 +64203,7 @@ nacl.setPRNG = function(fn) {
 
 })(typeof module !== 'undefined' && module.exports ? module.exports : (self.nacl = self.nacl || {}));
 
-},{"crypto":113}],284:[function(_dereq_,module,exports){
+},{"crypto":114}],283:[function(_dereq_,module,exports){
 (function (root) {
    "use strict";
 
@@ -64566,7 +64647,7 @@ UChar.udata={
    }
 }(this));
 
-},{}],285:[function(_dereq_,module,exports){
+},{}],284:[function(_dereq_,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -65300,7 +65381,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":286,"punycode":246,"querystring":249}],286:[function(_dereq_,module,exports){
+},{"./util":285,"punycode":246,"querystring":249}],285:[function(_dereq_,module,exports){
 'use strict';
 
 module.exports = {
@@ -65318,7 +65399,7 @@ module.exports = {
   }
 };
 
-},{}],287:[function(_dereq_,module,exports){
+},{}],286:[function(_dereq_,module,exports){
 (function (global){
 /*! https://mths.be/utf8js v2.0.0 by @mathias */
 ;(function(root) {
@@ -65566,7 +65647,7 @@ module.exports = {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],288:[function(_dereq_,module,exports){
+},{}],287:[function(_dereq_,module,exports){
 (function (global){
 
 /**
@@ -65637,7 +65718,9 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],289:[function(_dereq_,module,exports){
+},{}],288:[function(_dereq_,module,exports){
+arguments[4][98][0].apply(exports,arguments)
+},{"dup":98}],289:[function(_dereq_,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
@@ -66234,7 +66317,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,_dereq_('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":289,"_process":239,"inherits":228}],291:[function(_dereq_,module,exports){
+},{"./support/isBuffer":289,"_process":239,"inherits":288}],291:[function(_dereq_,module,exports){
 var indexOf = _dereq_('indexof');
 
 var Object_keys = function (obj) {
@@ -66374,7 +66457,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":227}],292:[function(_dereq_,module,exports){
+},{"indexof":225}],292:[function(_dereq_,module,exports){
 var f = _dereq_('./formatters');
 var SolidityType = _dereq_('./type');
 
@@ -67721,7 +67804,7 @@ module.exports = function (value, options) {
 };
 
 
-},{"crypto-js":160,"crypto-js/sha3":181}],307:[function(_dereq_,module,exports){
+},{"crypto-js":159,"crypto-js/sha3":180}],307:[function(_dereq_,module,exports){
 /*
     This file is part of web3.js.
 
@@ -68320,7 +68403,7 @@ module.exports = {
     isJson: isJson
 };
 
-},{"./sha3.js":306,"bignumber.js":308,"utf8":287}],308:[function(_dereq_,module,exports){
+},{"./sha3.js":306,"bignumber.js":308,"utf8":286}],308:[function(_dereq_,module,exports){
 /*! bignumber.js v2.0.7 https://github.com/MikeMcl/bignumber.js/LICENCE */
 
 ;(function (global) {
@@ -71005,5 +71088,5 @@ module.exports = {
     }
 })(this);
 
-},{"crypto":151}]},{},[1])(1)
+},{"crypto":150}]},{},[1])(1)
 });
