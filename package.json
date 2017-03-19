@@ -1,6 +1,6 @@
 {
   "name": "eth-signer",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A lightweight ethereum javascript signer.",
   "main": "index.js",
   "repository": {
