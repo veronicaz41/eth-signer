@@ -1,6 +1,6 @@
 {
   "name": "eth-signer",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A lightweight ethereum javascript signer.",
   "main": "index.js",
   "repository": {
@@ -59,7 +59,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "bignumber.js": "debris/bignumber.js#94d7146671b9719e00a09c29b01a691bc85048c2",
     "bitcore-lib": "^0.14.0",
     "bitcore-mnemonic": "^1.2.2",
     "buffer": "^4.9.1",
@@ -72,7 +71,7 @@
     "secp256k1": "^3.2.0",
     "tweetnacl": "0.14.3",
     "tweetnacl-util": "^0.13.3",
-    "web3": "^0.15.3"
+    "web3": "^0.19.1"
   },
   "devDependencies": {
     "async": "^1.4.2",
