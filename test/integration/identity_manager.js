@@ -117,8 +117,10 @@ describe("IdentityManager, signers with contracts", function() {
     var identityManagerSigner
 
     before(function() {
+      // the simple singer is the service that will be sending the txs
       simpleSigner = new SimpleSigner(keypair2)
       simpleSigner = Promise.promisifyAll(simpleSigner)
+      // relaySigner and identityManagerSigner are used to meta sign the txs
       relaySigner = new TxRelaySigner(keypair1, txRelay.address, keypair2.address)
       relaySigner = Promise.promisifyAll(relaySigner)
       identityManagerSigner = new IdentityManagerSigner(proxy.address, relaySigner, identityManager.address)
@@ -135,7 +137,10 @@ describe("IdentityManager, signers with contracts", function() {
         gasLimit: 2000000
       })
       var rawTx = txutils.functionTx(testRegArtifact.abi, 'register', [testNum], wrapperTx)
+      // tx is meta signed on users device
       var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
+
+      // tx is signed and sent to the network by a separate service
       var signedRawTx = await simpleSigner.signRawTxAsync(metaSignedRawTx)
       await web3.eth.sendRawTransactionAsync(signedRawTx)
 
