@@ -140,6 +140,9 @@ describe("IdentityManager, signers with contracts", function() {
       // tx is meta signed on users device
       var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
 
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, metaSignedRawTx, nonce, simpleSigner.getAddress())
+      expect(validMetaSig).to.be.true;
+
       // tx is signed and sent to the network by a separate service
       var signedRawTx = await simpleSigner.signRawTxAsync(metaSignedRawTx)
       await web3.eth.sendRawTransactionAsync(signedRawTx)
@@ -162,6 +165,9 @@ describe("IdentityManager, signers with contracts", function() {
         gasLimit: 2000000
       }).serialize().toString('hex')
       var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
+
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, metaSignedRawTx, nonce, simpleSigner.getAddress())
+      expect(validMetaSig).to.be.true;
 
       var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
       txCopy.nonce = await web3.eth.getTransactionCountAsync(keypair2.address)
@@ -189,6 +195,9 @@ describe("IdentityManager, signers with contracts", function() {
         [keypair1.address, proxy.address, keypair2.address], wrapperTx)
 
       var metaSignedRawTx = await relaySigner.signRawTxAsync(rawForwardTx)
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, metaSignedRawTx, nonce, simpleSigner.getAddress())
+      expect(validMetaSig).to.be.true;
+
       var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
       txCopy.nonce = await web3.eth.getTransactionCountAsync(keypair2.address)
       var metaSignedRawTxWithNonce = txCopy.serialize().toString('hex')
