@@ -8,7 +8,7 @@ const Promise = require('bluebird')
 var ProxySigner = require('../../lib/proxy_signer')
 var SimpleSigner = require('../../lib/simple_signer')
 var TxRelaySigner = require('../../lib/tx_relay_signer')
-var IdentityManagerSigner = require('../../lib/identity_manager_signer')
+var MIMProxySigner = require('../../lib/mim_proxy_signer')
 var KeyPair = require('../../lib/generators/key_pair')
 var txutils = require('../../lib/txutils')
 var testRegArtifact = require('../fixtures/TestRegistry')
@@ -32,7 +32,7 @@ function getRandomNumber() {
 }
 
 
-describe("IdentityManager, signers with contracts", function() {
+describe("MetaIdentityManager, signers with contracts", function() {
   var accounts = Object.keys(provider.manager.state.accounts)
   // user1 will be our sender of meta txs
   var user1 = accounts[0]
@@ -67,7 +67,7 @@ describe("IdentityManager, signers with contracts", function() {
     before(function() {
       simpleSigner = new SimpleSigner(keypair1)
       simpleSigner = Promise.promisifyAll(simpleSigner)
-      identityManagerSigner = new IdentityManagerSigner(proxy.address, simpleSigner, identityManager.address)
+      identityManagerSigner = new MIMProxySigner(proxy.address, simpleSigner, identityManager.address)
       identityManagerSigner = Promise.promisifyAll(identityManagerSigner)
     })
 
@@ -123,7 +123,7 @@ describe("IdentityManager, signers with contracts", function() {
       // relaySigner and identityManagerSigner are used to meta sign the txs
       relaySigner = new TxRelaySigner(keypair1, txRelay.address, keypair2.address)
       relaySigner = Promise.promisifyAll(relaySigner)
-      identityManagerSigner = new IdentityManagerSigner(proxy.address, relaySigner, identityManager.address)
+      identityManagerSigner = new MIMProxySigner(proxy.address, relaySigner, identityManager.address)
       identityManagerSigner = Promise.promisifyAll(identityManagerSigner)
     })
 

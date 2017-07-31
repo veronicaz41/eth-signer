@@ -1,17 +1,17 @@
 var expect = require('chai').expect
 var TxRelaySigner = require('../lib/tx_relay_signer');
-var IdentityManagerSigner = require('../lib/identity_manager_signer');
+var MIMProxySigner = require('../lib/mim_proxy_signer');
 var keypair = require('./fixtures/keypair')
 var util = require("ethereumjs-util");
 
-describe("IdentityManagerSigner", function () {
+describe("MetaIdentityManagerSigner", function () {
   var proxyAddress = "0xdaeee689e6fb3e0971ecffba4082a24cfb23ed48";
   var metaIdentityManagerAddress = "0xeffd2f248e6ea7a756bb76415d88ce5d5cd44351";
   var relayAddress = "0xf85c44a9062acddcb5b174868fc62dd1f8c9e7f9";
   var txSenderAddress = "0xea674fdde714fd979de3edf0f56aa9716b898ec8";
   var rawTx = "f601850ba43b7400832fefd8949e2068cce22de4e1e80f15cb71ef435a20a3b37c880de0b6b3a7640000890abcdef012345678901c8080";
   var relaySigner = new TxRelaySigner(keypair, relayAddress, txSenderAddress);
-  var signer = new IdentityManagerSigner(proxyAddress, relaySigner, metaIdentityManagerAddress);
+  var signer = new MIMProxySigner(proxyAddress, relaySigner, metaIdentityManagerAddress);
 
   describe("getAddress", function() {
     it("returns its address", function(done) {
