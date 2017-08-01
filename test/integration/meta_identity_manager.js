@@ -17,7 +17,7 @@ var provider = TestRPC.provider()
 var web3 = new Web3(provider)
 var TestRegistry = Contract(testRegArtifact)
 var Proxy = Contract(UportIdentity.Proxy)
-var IdentityManager = Contract(UportIdentity.IdentityManager)
+var IdentityManager = Contract(UportIdentity.MetaIdentityManager)
 var TxRelay = Contract(UportIdentity.TxRelay)
 TestRegistry.setProvider(provider)
 Proxy.setProvider(provider)
@@ -69,6 +69,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
       simpleSigner = Promise.promisifyAll(simpleSigner)
       identityManagerSigner = new MIMProxySigner(proxy.address, simpleSigner, identityManager.address)
       identityManagerSigner = Promise.promisifyAll(identityManagerSigner)
+
     })
 
     it("Should send tx correctly", async function() {
