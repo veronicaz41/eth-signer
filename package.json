@@ -72,7 +72,7 @@
     "solidity-sha3": "^0.4.1",
     "tweetnacl": "0.14.3",
     "tweetnacl-util": "^0.13.3",
-    "uport-identity": "uport-project/uport-identity#feature/new-meta-tx",
+    "uport-identity": "^1.2.0",
     "web3": "^0.19.1"
   },
   "devDependencies": {

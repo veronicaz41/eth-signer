@@ -977,9 +977,9 @@ bignumber.js@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-4.0.2.tgz#2d1dc37ee5968867ecea90b6da4d16e68608d21d"
 
-"bignumber.js@git+https://github.com/debris/bignumber.js.git#master":
+"bignumber.js@git+https://github.com/debris/bignumber.js#master":
   version "2.0.7"
-  resolved "git+https://github.com/debris/bignumber.js.git#c7a38de919ed75e6fb6ba38051986e294b328df9"
+  resolved "git+https://github.com/debris/bignumber.js#c7a38de919ed75e6fb6ba38051986e294b328df9"
 
 "bignumber.js@git+https://github.com/frozeman/bignumber.js-nolookahead.git":
   version "2.0.7"
@@ -3858,9 +3858,9 @@ unzip-response@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-1.0.2.tgz#b984f0877fc0a89c2c773cc1ef7b5b232b5b06fe"
 
-uport-identity@uport-project/uport-identity#feature/new-meta-tx:
-  version "1.0.5"
-  resolved "https://codeload.github.com/uport-project/uport-identity/tar.gz/2021bcb39d33a24dd09f2bb969d41c4824442df3"
+uport-identity@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/uport-identity/-/uport-identity-1.2.0.tgz#10ec17fd83881db2db5db8415d4dc1fb394b145f"
 
 url@^0.11.0, url@~0.11.0:
   version "0.11.0"
