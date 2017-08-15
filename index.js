@@ -7,7 +7,10 @@ module.exports = {
   signers: {
     SimpleSigner: require('./lib/simple_signer.js'),
     HDSigner: require('./lib/hd_signer.js'),
-    ProxySigner: require('./lib/proxy_signer.js')
+    ProxySigner: require('./lib/proxy_signer.js'),
+    IMProxySigner: require('./lib/im_proxy_signer.js'),
+    MIMProxySigner: require('./lib/mim_proxy_signer.js'),
+    TxRelaySigner: require('./lib/tx_relay_signer.js')
   },
 
   generators: {
