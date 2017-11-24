@@ -59,7 +59,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "bitcore-lib": "^0.14.0",
     "bitcore-mnemonic": "^1.2.2",
     "buffer": "^4.9.1",
     "elliptic": "^6.3.1",
