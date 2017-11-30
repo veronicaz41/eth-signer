@@ -213,5 +213,81 @@ describe("MetaIdentityManager, signers with contracts", function() {
 
       expect('0x' + tx.logs[0].topics[2].slice(26)).to.equal(keypair2.address)
     })
+
+    describe("With whitelist", function () {
+      var whitelistOwner
+
+      before(function() {
+        whitelistOwner = user1
+        // relaySigner and identityManagerSigner are used to meta sign the txs
+        relaySigner = new TxRelaySigner(keypair1, txRelay.address, keypair2.address, whitelistOwner)
+        relaySigner = Promise.promisifyAll(relaySigner)
+        identityManagerSigner = new MIMProxySigner(proxy.address, relaySigner, identityManager.address)
+        identityManagerSigner = Promise.promisifyAll(identityManagerSigner)
+      })
+
+      it("Should throw tx if sender not on whitelist", async function() {
+        var testNum = getRandomNumber()
+        var nonce = await txRelay.getNonce(keypair1.address)
+        var wrapperTx = new Transaction({
+          to: testReg.address,
+          value: 0,
+          nonce: nonce.toNumber(),
+          gasLimit: 2000000
+        })
+        var rawTx = txutils.functionTx(testRegArtifact.abi, 'register', [testNum], wrapperTx)
+        // tx is meta signed on users device
+        var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
+
+        var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
+        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), whitelistOwner)
+        expect(validMetaSig).to.be.true;
+
+        // tx is signed and sent to the network by a separate service
+        var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
+        txCopy.nonce = await web3.eth.getTransactionCountAsync(keypair2.address)
+        var metaSignedRawTxWithNonce = txCopy.serialize().toString('hex')
+        var signedRawTx = await simpleSigner.signRawTxAsync(metaSignedRawTxWithNonce)
+
+        var error = {}
+        try {
+          await web3.eth.sendRawTransactionAsync(signedRawTx)
+        } catch (e) {
+          error = e
+        }
+        expect(error.message).to.equal("VM Exception while processing transaction: invalid opcode")
+      })
+
+      it("Should send tx correctly with whitelist", async function() {
+        await txRelay.addToWhitelist([keypair2.address], {from: user1})
+        var isOnWhitelist = await txRelay.whitelist.call(user1, keypair2.address)
+        expect(isOnWhitelist).to.be.true;
+        var testNum = getRandomNumber()
+        var nonce = await txRelay.getNonce(keypair1.address)
+        var wrapperTx = new Transaction({
+          to: testReg.address,
+          value: 0,
+          nonce: nonce.toNumber(),
+          gasLimit: 2000000
+        })
+        var rawTx = txutils.functionTx(testRegArtifact.abi, 'register', [testNum], wrapperTx)
+        // tx is meta signed on users device
+        var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
+
+        var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
+        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), whitelistOwner)
+        expect(validMetaSig).to.be.true;
+
+        // tx is signed and sent to the network by a separate service
+        var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
+        txCopy.nonce = await web3.eth.getTransactionCountAsync(keypair2.address)
+        var metaSignedRawTxWithNonce = txCopy.serialize().toString('hex')
+        var signedRawTx = await simpleSigner.signRawTxAsync(metaSignedRawTxWithNonce)
+        await web3.eth.sendRawTransactionAsync(signedRawTx)
+
+        var registeredNum = await testReg.registry.call(proxy.address)
+        expect(registeredNum.toNumber()).to.equal(testNum)
+      })
+    })
   })
 })
