@@ -71,7 +71,7 @@
     "solidity-sha3": "^0.4.1",
     "tweetnacl": "0.14.3",
     "tweetnacl-util": "^0.13.3",
-    "uport-identity": "^1.2.0",
+    "uport-identity": "^2.0.0-beta",
     "web3": "^0.19.1"
   },
   "devDependencies": {

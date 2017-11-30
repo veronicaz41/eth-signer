@@ -16,9 +16,9 @@ var testRegArtifact = require('../fixtures/TestRegistry')
 var provider = TestRPC.provider()
 var web3 = new Web3(provider)
 var TestRegistry = Contract(testRegArtifact)
-var Proxy = Contract(UportIdentity.Proxy)
-var IdentityManager = Contract(UportIdentity.MetaIdentityManager)
-var TxRelay = Contract(UportIdentity.TxRelay)
+var Proxy = Contract(UportIdentity.Proxy[UportIdentity.Proxy.latestVersion])
+var IdentityManager = Contract(UportIdentity.MetaIdentityManager[UportIdentity.MetaIdentityManager.latestVersion])
+var TxRelay = Contract(UportIdentity.TxRelay[UportIdentity.TxRelay.latestVersion])
 TestRegistry.setProvider(provider)
 Proxy.setProvider(provider)
 IdentityManager.setProvider(provider)
@@ -26,6 +26,8 @@ TxRelay.setProvider(provider)
 
 web3.eth = Promise.promisifyAll(web3.eth)
 KeyPair = Promise.promisifyAll(KeyPair)
+
+var zeroAddress = "0x0000000000000000000000000000000000000000"
 
 function getRandomNumber() {
   return Math.floor(Math.random() * (1000000 - 1)) + 1;
@@ -122,7 +124,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
       simpleSigner = new SimpleSigner(keypair2)
       simpleSigner = Promise.promisifyAll(simpleSigner)
       // relaySigner and identityManagerSigner are used to meta sign the txs
-      relaySigner = new TxRelaySigner(keypair1, txRelay.address, keypair2.address)
+      relaySigner = new TxRelaySigner(keypair1, txRelay.address, keypair2.address, zeroAddress)
       relaySigner = Promise.promisifyAll(relaySigner)
       identityManagerSigner = new MIMProxySigner(proxy.address, relaySigner, identityManager.address)
       identityManagerSigner = Promise.promisifyAll(identityManagerSigner)
@@ -142,7 +144,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
       var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
 
       var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
-      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), simpleSigner.getAddress())
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), zeroAddress)
       expect(validMetaSig).to.be.true;
 
       // tx is signed and sent to the network by a separate service
@@ -169,7 +171,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
       var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
 
       var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
-      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), simpleSigner.getAddress())
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), zeroAddress)
       expect(validMetaSig).to.be.true;
 
       var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
@@ -199,7 +201,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
 
       var metaSignedRawTx = await relaySigner.signRawTxAsync(rawForwardTx)
       var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
-      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), simpleSigner.getAddress())
+      var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), zeroAddress)
       expect(validMetaSig).to.be.true;
 
       var txCopy = new Transaction(Buffer.from(metaSignedRawTx, 'hex'))
