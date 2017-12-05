@@ -240,7 +240,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
         var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
 
         var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
-        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), whitelistOwner)
+        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString())
         expect(validMetaSig).to.be.true;
 
         // tx is signed and sent to the network by a separate service
@@ -275,7 +275,7 @@ describe("MetaIdentityManager, signers with contracts", function() {
         var metaSignedRawTx = await identityManagerSigner.signRawTxAsync(rawTx)
 
         var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
-        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString(), whitelistOwner)
+        var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce.toString())
         expect(validMetaSig).to.be.true;
 
         // tx is signed and sent to the network by a separate service

@@ -50,9 +50,10 @@ var proxyAddress = // the address of your proxy contract
 var metaIdentityManagerAddress = // the address of the metaIdentityManager contract
 var relayAddress = // the address of the txRelay contract
 var txSenderAddress = // the address of the service that is sending your tx
+var whitelistOwner = // the owner of a specific whitelist in the txRelay contract. Can be the zero address for no whitelist.
 var keyPair = // your keypair that will be used to meta sign a transaction
 
-var relaySigner = new TxRelaySigner(keypair, relayAddress, txSenderAddress);
+var relaySigner = new TxRelaySigner(keypair, relayAddress, txSenderAddress, whitelistOwner);
 var signer = new MIMProxySigner(proxyAddress, relaySigner, metaIdentityManagerAddress);
 
 var rawTx = // a raw tx that you want to send
@@ -71,7 +72,7 @@ The relay service will want to verify that the metaTx it's relaying has a valid 
 var decodedMetaTx = TxRelaySigner.decodeMetaTx(metaSignedRawTx)
 txRelay.getNonce(decodedMetaTx.claimedAddress).then(nonce => {
   nonce = nonce.toString() // the nonce has to be a string
-  var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce, simpleSigner.getAddress())
+  var validMetaSig = TxRelaySigner.isMetaSignatureValid(txRelay.address, decodedMetaTx, nonce)
   if (validMetaSig) {
     // send the tx
   }
