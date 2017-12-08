@@ -1,5 +1,11 @@
 # Release notes
 
+## v0.3.4
+Support the new uport-identity contracts.
+
+## v0.3.3
+Fix bitcore-lib bug
+
 ## v0.3.2
 Small fix for npm releases to work with react-native
 
